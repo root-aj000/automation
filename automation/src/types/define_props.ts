@@ -86,7 +86,6 @@ export interface list_headerProps {
     };
 }
 
-
 export interface FeatureGridProps {
     grid: {
         title: string;
@@ -100,7 +99,6 @@ export interface FeatureGridProps {
         };
     };
 }
-
 
 export interface StatsProps {
     stats: {
@@ -123,40 +121,38 @@ export interface SubscribeFormProps {
 }
 
 export interface BlogCardProps {
-    title: string;
-    author: string;
-    contentType: string;
-    serviceName: string;
-    date: string;
-    image: string;
-    excerpt: string;
-    tags: string[];
-    category: string;
-    href: string;
+    blog_data: {
+        title: string;
+        author: string;
+        contentType: string;
+        serviceName: string;
+        date: string;
+        image: string;
+        excerpt: string;
+        tags: string[];
+        category: string;
+        href: string;
+    }
 }
 
-export interface BlogCard {
-    blog_data: BlogCardProps;
-    contentType: string;
-    serviceName: string;
-}
+
 
 export interface caseCardProps {
-    title: string;
-    author: string;
-    contentType: string;
-    serviceName: string;
-    date: string;
-    image: string;
-    excerpt: string;
-    tags: string[];
-    category: string;
-    href: string;
+    case_data: {
+        title: string;
+        author: string;
+        contentType: string;
+        serviceName: string;
+        date: string;
+        image: string;
+        excerpt: string;
+        tags: string[];
+        category: string;
+        href: string;
+    };
 }
 
-export interface caseCard {
-    case_data: caseCardProps;
-}
+
 export interface Home_header_blogProps {
     Home_header_blog: {
         title: string;
@@ -184,7 +180,8 @@ export interface IndexProps {
         grid: FeatureGridProps["grid"];
         stats: StatsProps["stats"];
         subscribe: SubscribeFormProps["subscribe"];
-        blog_data: BlogCardProps;
+        blog_data: BlogCardProps["blog_data"];
+        case_data: caseCardProps["case_data"];
         Home_header_blog: Home_header_blogProps["Home_header_blog"];
         Home_header_cases: Home_header_casesProps["Home_header_cases"];
     };
