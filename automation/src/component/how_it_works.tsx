@@ -1,4 +1,5 @@
+import { HowItWorksProps } from "@/types/define_props";
 import React from "react";
-export const HowItWorks: React.FC = ({}) => {
+export const HowItWorks = ({ Howitworks }: HowItWorksProps) => {
   return <></>;
 };

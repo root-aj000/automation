@@ -1,4 +1,4 @@
 import React from "react";
-export const Steps: React.FC = ({}) => {
+export const Steps = ({steps}: ) => {
   return <></>;
 };

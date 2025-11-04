@@ -1,4 +1,4 @@
 import React from "react";
-export const subscribe: React.FC = ({}) => {
+export const subscribe = ({subscribe}: subscribeProps) => {
   return <></>;
 };

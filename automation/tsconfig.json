@@ -18,6 +18,7 @@
       "@/styles/*": ["styles/*"],
       "@/component/*": ["component/*"],
       "@/utils/*" : ["utils/*"],
+      "@/types/*": ["types/*"],
     },
     "plugins": [
       {

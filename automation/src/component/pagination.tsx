@@ -1,4 +1,4 @@
 import React from "react";
-export const Pagination: React.FC = ({}) => {
+export const Pagination = ({}) => {
   return <></>;
 };
