@@ -1,0 +1,33 @@
+# Blog Website Development Plan
+
+## Summary of Findings:
+
+*   **`src/utils/BlogPage.ts`**: This utility efficiently fetches and processes MDX blog posts, sorting them by date, and provides the necessary data.
+*   **`src/app/blogs/page.tsx`**: This page is set up for a blog listing with pagination, but the pagination logic is incomplete. It currently hardcodes the `currentPage` to 1, and the `Pagination` component is present but not fully integrated to control the displayed blogs dynamically. It uses `HomeBlogSection` to display the blog list.
+*   **`src/app/blogs/[slug]/page.tsx`**: This page correctly handles dynamic routing for individual blog posts, uses `generateStaticParams` for static site generation, and renders MDX content using `MDXRemote`. This part of the blog functionality is robust.
+*   **`src/component/blog_list.tsx`**: This component is currently empty and appears to be unused, as `HomeBlogSection` directly uses `UniversalCard`. For this task, I will assume `UniversalCard` is the primary component for displaying blog items.
+*   **`src/component/universal_card.tsx`**: This component is well-designed for displaying individual blog items, handling `BlogCardProps` and generating correct links. However, the image rendering functionality is commented out.
+*   **`src/app/page.tsx`**: The homepage correctly fetches a limited number of recent blogs and passes them to `HomeBlogSection`.
+*   **`src/component/home_blog_section.tsx`**: This component effectively displays the blog section header and uses `UniversalCard` to render the provided blog data.
+
+## Refined Plan:
+
+The primary focus will be on completing the pagination functionality for the main blog page and enabling image display in the blog cards.
+
+### Phase 1: Implement and Refine Blog Functionality
+
+1.  **Implement Full Pagination for `src/app/blogs/page/[page]/page.tsx`**:
+    *   Modify `src/app/blogs/page/[page]/page.tsx` to dynamically calculate `startIndex` and `endIndex` based on the `page` parameter from the URL.
+    *   Ensure the `Pagination` component correctly generates links for different pages and updates the displayed blogs based on the current page.
+    *   Update `src/app/blogs/page.tsx` to redirect to `/blogs/page/1` or use the paginated component directly.
+2.  **Enable Image Rendering in `src/component/universal_card.tsx`**:
+    *   Uncomment and properly configure the `Image` component from `next/image` to display blog post images. This will involve importing `Image` and ensuring the `blog.image` path is correctly used.
+3.  **Data Fetching and Prop Passing**: Verify that all blog-related components receive and correctly use their respective props as defined in `src/types/define_props.ts`.
+4.  **Styling and Responsiveness**: Ensure that all blog pages and components are styled consistently using `src/app/globals.css` and are responsive across different screen sizes.
+5.  **Navigation**: Confirm that navigation links to the blog listing page and individual blog posts are correctly implemented throughout the site.
+
+### Phase 2: Testing and Verification
+
+1.  **Local Development Server**: Start the Next.js development server to test the website locally.
+2.  **Browser Verification**: Use the browser tool to navigate through the blog listing page, individual blog posts, and the homepage to ensure all components render correctly and functionality (like pagination and image display) works as expected.
+3.  **Prop Validation**: Visually inspect components to ensure data is displayed according to the prop definitions.
