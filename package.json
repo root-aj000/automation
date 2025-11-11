@@ -9,14 +9,6 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "fs": "0.0.1-security",
-    "gray-matter": "^4.0.3",
-    "next": "16.0.1",
-    "path": "^0.12.7",
-    "react": "19.2.0",
-    "react-dom": "19.2.0",
-
-
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
@@ -24,6 +16,13 @@
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9",
     "eslint-config-next": "16.0.1",
+    "fs": "0.0.1-security",
+    "gray-matter": "^4.0.3",
+    "next": "16.0.1",
+    "next-mdx-remote": "^5.0.0",
+    "path": "^0.12.7",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   },
