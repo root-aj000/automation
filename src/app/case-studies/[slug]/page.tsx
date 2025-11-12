@@ -2,10 +2,11 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 // import { notFound } from "next/navigation";
+// import Image from "next/image";
 import { Blogitem } from "@/types/define_props";
 import { MDXRemote } from "next-mdx-remote/rsc"; // if you’re using MDX
 
-const CASE_DIR = path.join(process.cwd(), "content", "case");
+const CASE_DIR = path.join(process.cwd(), "content", "case-studies");
 
 export async function generateStaticParams() {
   const files = fs.readdirSync(CASE_DIR);
@@ -39,7 +40,7 @@ export default async function BlogPostPage({
         By {blog.author} • {blog.date}
       </p>
       {/* {blog.image && (
-        <img
+        <Image
           src={blog.image}
           alt={blog.title}
           className="w-full rounded-lg my-6"

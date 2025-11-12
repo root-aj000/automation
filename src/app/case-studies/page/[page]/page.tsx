@@ -1,5 +1,5 @@
 import { getAllCase } from "@/utils/CasePage";
-import { HomeBlogSection } from "@/component/home_blog_section";
+import { HomeCaseSection } from "@/component/home_case_section";
 import { Pagination } from "@/component/pagination";
 import { notFound } from "next/navigation";
 
@@ -40,12 +40,12 @@ export default async function CasePaginationPage(props: {
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-12 bg-white">
-      <HomeBlogSection
-        Home_header_blog={{
+      <HomeCaseSection
+        Home_header_cases={{
           title: "Our Blog",
           subtitle: "Insights, stories, and updates from our team.",
         }}
-        blog_data={paginatedCase}
+        case_data={paginatedCase}
       />
       <Pagination
         currentPage={currentPage}

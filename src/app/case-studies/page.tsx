@@ -1,9 +1,9 @@
 import { getAllCase } from "@/utils/CasePage";
-import { HomeBlogSection } from "@/component/home_blog_section";
+import { HomeCaseSection } from "@/component/home_case_section";
 import { Pagination } from "@/component/pagination";
-import { Home_header_blogProps } from "@/types/define_props";
+import { Home_header_casesProps } from "@/types/define_props";
 
-const ITEMS_PER_PAGE = 20; // ✅ 5 blogs per page
+const ITEMS_PER_PAGE = 20; 
 
 export default async function CasePage() {
   const allCase = getAllCase();
@@ -12,16 +12,16 @@ export default async function CasePage() {
   const endIndex = ITEMS_PER_PAGE;
   const paginatedCase = allCase.slice(startIndex, endIndex);
 
-  const Home_header_blog: Home_header_blogProps["Home_header_blog"] = {
-    title: "Our Blog",
+  const Home_header_case: Home_header_casesProps["Home_header_cases"] = {
+    title: "Our casestudy",
     subtitle: "Insights, stories, and updates from our team.",
   };
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-12 bg-white">
-      <HomeBlogSection
-        Home_header_blog={Home_header_blog}
-        blog_data={paginatedCase}
+      <HomeCaseSection
+        Home_header_cases={Home_header_case}
+        case_data={paginatedCase}
       />
       <Pagination
         currentPage={currentPage}

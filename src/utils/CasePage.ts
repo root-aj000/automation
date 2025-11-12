@@ -1,12 +1,12 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { Blogitem } from "@/types/define_props";
+import { CaseStudyItem } from "@/types/define_props";
 
 // Get absolute path to /content/post
-const CASE_DIR = path.join(process.cwd(), "content", "post");
+const CASE_DIR = path.join(process.cwd(), "content", "case-studies");
 
-export function getAllCase(): Blogitem[] {
+export function getAllCase(): CaseStudyItem[] {
   if (!fs.existsSync(CASE_DIR)) {
     console.warn(`Blog directory not found: ${CASE_DIR}`);
     return [];
@@ -14,7 +14,7 @@ export function getAllCase(): Blogitem[] {
 
   const files = fs.readdirSync(CASE_DIR);
 
-  const blogs: Blogitem[] = files
+  const cases: CaseStudyItem[] = files
     .filter((file) => file.endsWith(".mdx"))
     .map((filename) => {
       const filePath = path.join(CASE_DIR, filename);
@@ -36,7 +36,7 @@ export function getAllCase(): Blogitem[] {
     });
 
   // Sort by newest date
-  return blogs.sort(
+  return cases.sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
 }

@@ -96,9 +96,38 @@ export interface FeatureGridProps {
       cta: string;
       link: string;
       icon: string;
-    };
+    }[];
   };
 }
+
+export interface FeatureProps {
+  features: {
+    title: string;
+    description: string;
+    cta: string;
+    link: string;
+    icon: string;
+  };
+}
+
+export interface UsecaseProps {
+  usecase: {
+    title: string;
+    description: string;
+  };
+}
+
+export interface UseCaseItem {
+  icon: string;
+  title: string;
+  href: string;
+}
+
+export interface UseCaseCardprops {
+  usecase_data: UseCaseItem[] | UseCaseItem;
+}
+
+
 
 export interface StatsProps {
   stats: {
@@ -107,7 +136,7 @@ export interface StatsProps {
     items: {
       value: string;
       label: string;
-    };
+    }[];
   };
 }
 
@@ -137,19 +166,20 @@ export interface BlogCardProps {
   blog_data: Blogitem[] | Blogitem;
 }
 
-export interface caseCardProps {
-  case_data: {
-    title: string;
-    author: string;
-    contentType: string;
-    serviceName: string;
-    date: string;
-    image: string;
-    excerpt: string;
-    tags: string[];
-    category: string;
-    href: string;
-  };
+export interface CaseStudyItem {
+  title: string;
+  author: string;
+  contentType: string;
+  serviceName: string;
+  date: string;
+  image: string;
+  excerpt: string;
+  tags: string[];
+  category: string;
+  href: string;
+}
+export interface CaseStudyProps {
+  case_data: CaseStudyItem[] | CaseStudyItem;
 }
 
 export interface Home_header_blogProps {
@@ -180,7 +210,7 @@ export interface IndexProps {
     stats: StatsProps["stats"];
     subscribe: SubscribeFormProps["subscribe"];
     blog_data: BlogCardProps["blog_data"];
-    case_data: caseCardProps["case_data"];
+    case_data: CaseStudyProps["case_data"];
     Home_header_blog: Home_header_blogProps["Home_header_blog"];
     Home_header_cases: Home_header_casesProps["Home_header_cases"];
   };
