@@ -120,11 +120,32 @@ export interface UsecaseProps {
 export interface UseCaseItem {
   icon: string;
   title: string;
-  href: string;
+  href?: string;
 }
 
 export interface UseCaseCardprops {
   usecase_data: UseCaseItem[] | UseCaseItem;
+}
+
+export interface UniversalUseCaseItem {
+  title: string;
+  description: string;
+  href: string;
+}
+
+export interface UniversalUseCaseCardProps {
+  usecase_data: UniversalUseCaseItem[] | UniversalUseCaseItem;
+  industryname: string;
+}
+
+export interface IndustryItem {
+  title: string;
+  icon: string;
+  href: string;
+}
+
+export interface IndustryCardProps {
+  industry_data: IndustryItem[] | IndustryItem;
 }
 
 

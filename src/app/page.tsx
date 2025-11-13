@@ -8,10 +8,12 @@ import {HomeData} from "@/utils/homepage";
 import { FeatureData } from "@/utils/FeatureBlock";
 import { HomeCaseSection } from "@/component/home_case_section";
 import { getAllCase } from "@/utils/CasePage";
-// import {UseCaseData} from "@/utils/use-cases";
-//  import { UseCaseCard } from "@/component/use-case";
+import { getIndustries } from "@/utils/use-cases";
+import { UseCaseCard } from "@/component/use-case";
+
 const blog_data = getAllBlogs().slice(0, 4);
 const case_data = getAllCase().slice(0, 4);
+const industries = getIndustries();
 
 export default async function HomePage() {
   return (
@@ -26,6 +28,7 @@ export default async function HomePage() {
         Home_header_cases={HomeData.Home_header_cases}
         case_data={case_data}
       />
+      <UseCaseCard usecase_data={industries} />
       {/* <Hero_3 Hero_3 ={HomeData.Hero_3} /> */}
       <Feature grid={FeatureData.grid} />
       {/* <UseCaseCard usecase_data={UseCaseData.usecase_data} /> */}

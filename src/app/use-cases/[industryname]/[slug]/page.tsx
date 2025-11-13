@@ -8,21 +8,34 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 const USECASE_DIR = path.join(process.cwd(), "content", "use-cases");
 
 export async function generateStaticParams() {
-  const files = fs.readdirSync(USECASE_DIR);
-  return files
-    .filter((file) => file.endsWith(".mdx"))
-    .map((filename) => ({
-      slug: filename.replace(".mdx", ""),
-    }));
+  const industries = fs.readdirSync(USECASE_DIR);
+  const params = [];
+
+  for (const industry of industries) {
+    const industryPath = path.join(USECASE_DIR, industry);
+    if (fs.statSync(industryPath).isDirectory()) {
+      const files = fs.readdirSync(industryPath);
+      for (const file of files) {
+        if (file.endsWith(".mdx")) {
+          params.push({
+            industryname: industry,
+            slug: file.replace(".mdx", ""),
+          });
+        }
+      }
+    }
+  }
+
+  return params;
 }
 
 export default async function UseCasePage({
   params,
 }: {
-  params: { slug: string };
+  params: { industryname: string; slug: string };
 }) {
-  const { slug } = await params;
-  const filepath = path.join(USECASE_DIR, `${slug}.mdx`);
+  const { industryname, slug } = await params;
+  const filepath = path.join(USECASE_DIR, industryname, `${slug}.mdx`);
 
   if (!fs.existsSync(filepath)) {
     return notFound();
@@ -30,7 +43,7 @@ export default async function UseCasePage({
 
   const fileContent = fs.readFileSync(filepath, "utf-8");
   const { data, content } = matter(fileContent);
-  const { usecase: usecase } = data as UsecaseProps;
+  const { usecase } = data as UsecaseProps;
 
   return (
     <article className="max-w-4xl mx-auto px-4 py-12 prose">
