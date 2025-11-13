@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+// import Image from "next/image";
 // import { notFound } from "next/navigation";
 import { Blogitem } from "@/types/define_props";
 import { MDXRemote } from "next-mdx-remote/rsc"; // if you’re using MDX
@@ -33,19 +34,61 @@ export default async function BlogPostPage({
   const blog = data as Blogitem;
 
   return (
-    <article className="max-w-4xl mx-auto px-4 py-12 prose">
-      <h1>{blog.title}</h1>
-      <p className="text-sm text-gray-500">
-        By {blog.author} • {blog.date}
-      </p>
-      {/* {blog.image && (
-        <img
-          src={blog.image}
-          alt={blog.title}
-          className="w-full rounded-lg my-6"
+    <>
+      <div className="bg-white py-6 sm:py-8 lg:py-12 mb-24">
+        <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
+          <div className="w-full bg-gray-200 rounded-full h-2.5 mb-4 fixed">
+            <div className="bg-gray-600 h-2.5 rounded-full"></div>{" "}
+            {/* style="width: 0%" */}
+          </div>
+
+          <div className="mx-auto w-full max-w-screen-lg px-6 py-16">
+            <h1 className="lg:text-5xl text-3xl">{blog.title}</h1>
+          </div>
+
+          <section className="bg-white">
+            <div className="py-3 px-4 mx-auto max-w-screen-lg text-center">
+              <div className="flex flex-row justify-between text-gray-700">
+                <span className="flex px-6 text-base font-medium">
+                  {" "}
+                  Author: {blog.author}
+                </span>
+                <span className="px-6 font-medium">
+                  {" "}
+                  date:{" "}
+                  {new Date(blog.date).toLocaleDateString(undefined, {
+                    year: "numeric",
+                    month: "short",
+                    day: "numeric",
+                  })}{" "}
+                </span>
+              </div>
+            </div>
+          </section>
+
+          <hr className="w-96 h-0.5 mx-auto my-0 bg-[#ff4f1f] border-0 rounded" />
+
+          <div className="bg-white py-6 sm:py-8 lg:py-12 mb-24">
+            <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
+              <MDXRemote source={content} />
+            </div>
+          </div>
+
+          {/* <figure className="max-w-lg mx-auto px-6 py-6">
+        <Image
+          className="h-auto max-w-full rounded-lg"
+          src={data.src}
+          alt={data.alt}
+          loading="lazy"
         />
-      )} */}
-      <MDXRemote source={content} />
-    </article>
+        <figcaption className="mt-2 text-sm text-center text-gray-700">
+          {data.caption}
+        </figcaption>
+      </figure> */}
+
+          <hr className="w-1/2 h-0.5 mx-auto my-1 bg-[#ff4f1f] border-0 rounded" />
+        </div>
+      </div>
+    </>
   );
 }
