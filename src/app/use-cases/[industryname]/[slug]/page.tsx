@@ -4,6 +4,12 @@ import matter from "gray-matter";
 import { notFound } from "next/navigation";
 import { UsecaseProps } from "@/types/define_props";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import UseCaseHero from "@/component/use_case_hero";
+import BenefitsSection from "@/component/benefits_section";
+import ChallengesSection from "@/component/challenges_section";
+import ResultsSection from "@/component/results_section";
+import ScrollProgressBar from "@/component/scroll";
+
 
 const USECASE_DIR = path.join(process.cwd(), "content", "use-cases");
 
@@ -46,10 +52,21 @@ export default async function UseCasePage({
   const { usecase } = data as UsecaseProps;
 
   return (
-    <article className="max-w-4xl mx-auto px-4 py-12 prose">
-      <h1>{usecase.title}</h1>
-      <p className="text-lg text-gray-600">{usecase.description}</p>
-      <MDXRemote source={content} />
-    </article>
+    <>
+    <ScrollProgressBar />
+    <div className="mx-auto max-w-5xl">
+      <UseCaseHero
+        title={usecase.title}
+        description={usecase.description}
+        hero_image={usecase.hero_image}
+      />
+      <BenefitsSection benefits={usecase.benefits} />
+      <ChallengesSection challenges={usecase.challenges} />
+      <ResultsSection results={usecase.results} />
+      <article className="max-w-4xl mx-auto px-4 py-12 prose">
+        <MDXRemote source={content} />
+      </article>
+    </div>
+    </>
   );
 }

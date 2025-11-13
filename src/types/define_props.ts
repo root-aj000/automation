@@ -114,6 +114,10 @@ export interface UsecaseProps {
   usecase: {
     title: string;
     description: string;
+    hero_image: string;
+    benefits: string[];
+    challenges: string[];
+    results: string;
   };
 }
 

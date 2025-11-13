@@ -5,6 +5,8 @@ import matter from "gray-matter";
 // import Image from "next/image";
 import { Blogitem } from "@/types/define_props";
 import { MDXRemote } from "next-mdx-remote/rsc"; // if you’re using MDX
+import ScrollProgressBar from "@/component/scroll";
+
 
 const CASE_DIR = path.join(process.cwd(), "content", "case-studies");
 
@@ -34,6 +36,8 @@ export default async function BlogPostPage({
   const blog = data as Blogitem;
 
   return (
+    <>
+    <ScrollProgressBar />
     <article className="max-w-4xl mx-auto px-4 py-12 prose">
       <h1>{blog.title}</h1>
       <p className="text-sm text-gray-500">
@@ -48,5 +52,6 @@ export default async function BlogPostPage({
       )} */}
       <MDXRemote source={content} />
     </article>
+    </>
   );
 }
