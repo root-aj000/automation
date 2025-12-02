@@ -16,7 +16,7 @@ export default function ChallengesSection({ challenges }: ChallengesSectionProps
           <h2 className="text-base text-red-600 font-semibold tracking-wide uppercase">
             Challenges
           </h2>
-          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-foreground sm:text-4xl">
             Problems this use case addresses
           </p>
         </div>
@@ -44,7 +44,7 @@ export default function ChallengesSection({ challenges }: ChallengesSectionProps
                       />
                     </svg>
                   </div>
-                  <p className="ml-16 text-lg leading-6 font-medium text-gray-900">
+                  <p className="ml-16 text-lg leading-6 font-medium text-foreground">
                     {challenge}
                   </p>
                 </dt>

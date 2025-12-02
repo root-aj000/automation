@@ -38,7 +38,7 @@ export const Pagination: React.FC<PaginationProps> = ({
   if (totalPages <= 1) return null;
 
   return (
-    <nav aria-label="Pagination" className="flex justify-center mt-10 bg-white">
+    <nav aria-label="Pagination" className="flex justify-center mt-10 bg-background">
       <ul className="flex items-center space-x-2 text-sm">
         {/* Prev */}
         {currentPage > 1 && (
@@ -73,11 +73,10 @@ export const Pagination: React.FC<PaginationProps> = ({
             <Link
               href={getPageUrl(page)}
               aria-current={page === currentPage ? "page" : undefined}
-              className={`px-3 py-1 border rounded ${
-                page === currentPage
+              className={`px-3 py-1 border rounded ${page === currentPage
                   ? "bg-orange-500 text-white border-orange-600"
                   : "hover:bg-gray-100"
-              }`}
+                }`}
             >
               {page}
             </Link>

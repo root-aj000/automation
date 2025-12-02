@@ -39,7 +39,7 @@ export default async function BlogPaginationPage(props: {
   });
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-12 bg-white">
+    <div className="max-w-6xl mx-auto px-4 py-12">
       <HomeBlogSection
         Home_header_blog={{
           title: "Our Blog",

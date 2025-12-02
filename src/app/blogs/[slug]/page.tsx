@@ -50,17 +50,17 @@ export default async function BlogPostPage({
       <ScrollProgressBar />
 
 
-      <div className="bg-white sm:py-8 lg:py-12 mx-auto max-w-5xl">
+      <div className="bg-background sm:py-8 lg:py-12 mx-auto max-w-5xl">
         {/* <div className="mx-auto px-4 md:px-8"> */}
 
 
         <div className="mx-auto w-full max-w-5xl px-6 py-16">
-          <h1 className="lg:text-5xl text-3xl">{blog.title}</h1>
+          <h1 className="lg:text-5xl text-3xl text-foreground">{blog.title}</h1>
         </div>
 
-        <section className="bg-white">
+        <section className="bg-background">
           <div className="py-3 px-4 mx-auto max-w-5xl text-center">
-            <div className="flex flex-row justify-between text-gray-700">
+            <div className="flex flex-row justify-between text-gray-700 dark:text-gray-300">
               <span className="flex px-6 text-base font-medium">
                 {" "}
                 Author: {blog.author}
@@ -80,7 +80,7 @@ export default async function BlogPostPage({
 
         <hr className="w-96 h-0.5 mx-auto my-0 bg-[#ff4f1f] border-0 rounded" />
 
-        <div className="bg-white py-6 sm:py-8 lg:py-12 mb-24">
+        <div className="bg-background py-6 sm:py-8 lg:py-12 mb-24">
           <div className="mx-auto max-w-4xl px-4 md:px-8">
             <MDXRemote source={content} />
           </div>

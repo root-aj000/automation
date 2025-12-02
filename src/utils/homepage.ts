@@ -17,4 +17,4 @@ const blog_url = (filepath.replace(/\\/g, "/").split("/").pop() ?? "").replace(
 );
 
 console.log(blog_url);
-export { HomeData, blog_url};
+export { HomeData, blog_url };

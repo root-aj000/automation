@@ -18,10 +18,10 @@ export const UniversalUseCaseCard = ({ usecase_data, industryname }: UniversalUs
           <Link
             key={slug}
             href={href}
-            className="block group cursor-pointer border border-gray-300 rounded-2xl p-5 transition-all duration-300 hover:border-indigo-600 hover:bg-gray-100"
+            className="block group cursor-pointer border border-gray-300 dark:border-gray-700 rounded-2xl p-5 transition-all duration-300 hover:border-primary hover:bg-primary/5"
           >
             <div>
-              <h4 className="text-gray-900 font-medium leading-8 mb-4">
+              <h4 className="text-foreground font-medium leading-8 mb-4">
                 {usecase.title}
               </h4>
               <p className="text-gray-600 text-sm">

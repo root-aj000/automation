@@ -10,10 +10,10 @@ export const UseCaseCard = ({ usecase_data, industryname }: UseCaseCardprops & {
   const usecases = Array.isArray(usecase_data) ? usecase_data : [usecase_data];
 
   return (
-    <section className="bg-white py-8 antialiased md:py-16">
-      <div className="mx-auto max-w-screen-xl px-4 2xl:px-0">
+    <section className="bg-background py-8 antialiased md:py-16">
+      <div className="mx-auto max-w-7xl px-4 2xl:px-0">
         <div className="mb-4 flex items-center justify-between gap-4 md:mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 sm:text-2xl">
+          <h2 className="text-xl font-semibold text-foreground sm:text-2xl">
             Explore Our Use Cases by Industry
           </h2>
         </div>
@@ -25,13 +25,13 @@ export const UseCaseCard = ({ usecase_data, industryname }: UseCaseCardprops & {
               <Link
                 href={href}
                 key={href}
-                className="flex items-center rounded-lg border border-gray-200 bg-white px-4 py-2 hover:bg-gray-50"
+                className="flex items-center rounded-lg border border-gray-200 dark:border-gray-700 bg-background px-4 py-2 hover:bg-gray-50 dark:hover:bg-gray-800"
               >
                 <div
-                  className="me-2 h-4 w-4 shrink-0 text-gray-900"
-                  // dangerouslySetInnerHTML={{ __html: usecase.icon }}
+                  className="me-2 h-4 w-4 shrink-0 text-foreground"
+                // dangerouslySetInnerHTML={{ __html: usecase.icon }}
                 />
-                <span className="text-sm font-medium text-gray-900">
+                <span className="text-sm font-medium text-foreground">
                   {usecase.title}
                 </span>
               </Link>

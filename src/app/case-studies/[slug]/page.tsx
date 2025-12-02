@@ -37,21 +37,21 @@ export default async function BlogPostPage({
 
   return (
     <>
-    <ScrollProgressBar />
-    <article className="max-w-4xl mx-auto px-4 py-12 prose">
-      <h1>{blog.title}</h1>
-      <p className="text-sm text-gray-500">
-        By {blog.author} • {blog.date}
-      </p>
-      {/* {blog.image && (
+      <ScrollProgressBar />
+      <article className="max-w-4xl mx-auto px-4 py-12 prose dark:prose-invert">
+        <h1>{blog.title}</h1>
+        <p className="text-sm text-gray-500 dark:text-gray-400">
+          By {blog.author} • {blog.date}
+        </p>
+        {/* {blog.image && (
         <Image
           src={blog.image}
           alt={blog.title}
           className="w-full rounded-lg my-6"
         />
       )} */}
-      <MDXRemote source={content} />
-    </article>
+        <MDXRemote source={content} />
+      </article>
     </>
   );
 }

@@ -39,7 +39,7 @@ export default async function CasePaginationPage(props: {
   });
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-12 bg-white">
+    <div className="max-w-6xl mx-auto px-4 py-12">
       <HomeCaseSection
         Home_header_cases={{
           title: "Our Blog",

@@ -1,5 +1,5 @@
 import { BlogCardProps } from "@/types/define_props";
-// import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 
 function slugify(title: string) {
@@ -23,7 +23,7 @@ export const UniversalCard = ({ blog_data }: BlogCardProps) => {
           <Link
             key={slug}
             href={href}
-            className="block group cursor-pointer border border-gray-300 rounded-2xl p-5 transition-all duration-300 hover:border-indigo-600 hover:bg-gray-100"
+            className="block group cursor-pointer border border-gray-300 dark:border-gray-700 rounded-2xl p-5 transition-all duration-300 hover:border-primary hover:bg-primary/5"
           >
             {/* {blog.image && (
               <div className="mb-6">
@@ -38,12 +38,12 @@ export const UniversalCard = ({ blog_data }: BlogCardProps) => {
             )} */}
 
             <div>
-              <h4 className="text-gray-900 font-medium leading-8 mb-9">
+              <h4 className="text-foreground font-medium leading-8 mb-9">
                 {blog.title}
               </h4>
               <div className="flex items-center justify-between font-medium">
                 <h6 className="text-sm text-gray-500">By {blog.author}</h6>
-                <span className="text-sm text-indigo-600">
+                <span className="text-sm text-primary">
                   {new Date(blog.date).toLocaleDateString(undefined, {
                     year: "numeric",
                     month: "short",

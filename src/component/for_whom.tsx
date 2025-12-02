@@ -1,4 +1,5 @@
 import React from "react";
-export const ForWhom: React.FC = ({}) => {
+import { ForWhomBlock } from "@/types/define_props";
+export const ForWhom = ({ForWhom}: ForWhomBlock) => {
   return <></>;
 };
