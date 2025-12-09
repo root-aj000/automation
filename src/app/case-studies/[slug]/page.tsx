@@ -3,6 +3,11 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import ScrollProgressBar from "@/component/scroll";
 import { getCaseBySlug, getAllCaseSlugs } from "@/utils/CasePage";
 import { notFound } from "next/navigation";
+import UseCaseHero from "@/component/use_case_hero";
+import ChallengesSection from "@/component/challenges_section";
+import BenefitsSection from "@/component/benefits_section";
+import ResultsSection from "@/component/results_section";
+import TestimonialSection from "@/component/testimonial_section";
 
 type Props = {
   params: { slug: string };
@@ -61,46 +66,97 @@ export default async function CaseStudyPage({ params }: Props) {
   return (
     <>
       <ScrollProgressBar />
-      <article className="bg-background py-8 lg:py-12">
-        <div className="mx-auto max-w-4xl px-4 md:px-8">
-          {/* Header */}
-          <header className="mb-8 md:mb-12">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-6">
-              Case Study
-            </span>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-6">
-              {caseStudy.title}
-            </h1>
 
-            {/* Meta info */}
-            <div className="flex flex-wrap items-center gap-4 py-4 border-t border-b border-gray-200 dark:border-gray-800">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-                  <span className="text-sm font-semibold text-primary">
-                    {caseStudy.author?.charAt(0).toUpperCase() || 'A'}
-                  </span>
-                </div>
-                <span className="text-sm text-muted">
-                  By <span className="font-medium text-foreground">{caseStudy.author}</span>
-                </span>
-              </div>
-              <span className="text-sm text-primary font-medium">
-                {caseStudy.date}
-              </span>
+      {/* Hero Section */}
+      <UseCaseHero
+        title={caseStudy.title}
+        description={caseStudy.excerpt || caseStudy.title}
+        hero_image={caseStudy.hero_image || caseStudy.image}
+        industry={caseStudy.category || "Case Study"}
+        tagline={caseStudy.tagline || "Success Story"}
+      />
+
+      {/* Challenges Section */}
+      {caseStudy.challenges && (
+        <ChallengesSection
+          challenges={caseStudy.challenges}
+          title="The Challenge"
+          subtitle="Obstacles that were standing in the way"
+        />
+      )}
+
+      {/* Solution Section (using Benefits component) */}
+      {caseStudy.solution && (
+        <BenefitsSection
+          benefits={caseStudy.solution}
+          title="The Solution"
+          subtitle="How we addressed the challenges"
+        />
+      )}
+
+      {/* Results Section */}
+      {caseStudy.results && (
+        <ResultsSection
+          results={caseStudy.results}
+          title="Key Results"
+          subtitle="Measurable impact and outcomes"
+        />
+      )}
+
+      {/* Testimonial Section */}
+      {caseStudy.testimonial && (
+        <TestimonialSection testimonial={caseStudy.testimonial} />
+      )}
+
+      {/* MDX Content */}
+      {content && content.trim() && (
+        <section className="py-16 md:py-24 bg-surface">
+          <div className="max-w-4xl mx-auto px-4 md:px-8">
+            <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:text-foreground prose-p:text-muted prose-a:text-primary prose-strong:text-foreground">
+              <MDXRemote source={content} />
             </div>
-          </header>
-
-          {/* Content */}
-          <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:text-foreground prose-p:text-muted prose-a:text-primary prose-strong:text-foreground">
-            <MDXRemote source={content} />
           </div>
+        </section>
+      )}
 
-          {/* Footer divider */}
-          <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
-            <div className="w-24 h-1 mx-auto bg-gradient-to-r from-primary to-primary/50 rounded-full" />
+      {/* CTA Section */}
+      {caseStudy.cta && (
+        <section className="py-16 md:py-24 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary to-primary/80" />
+
+          {/* Decorative elements */}
+          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-white/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-white/5 rounded-full blur-3xl" />
+
+          <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+              {caseStudy.cta.title}
+            </h2>
+            <p className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto">
+              {caseStudy.cta.description}
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a
+                href="#"
+                className="group px-8 py-4 rounded-xl bg-white text-primary font-semibold hover:bg-gray-100 transition-colors inline-flex items-center gap-2"
+              >
+                {caseStudy.cta.primary_button}
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+              {caseStudy.cta.secondary_button && (
+                <a
+                  href="#"
+                  className="px-8 py-4 rounded-xl border-2 border-white/30 text-white font-semibold hover:bg-white/10 transition-colors"
+                >
+                  {caseStudy.cta.secondary_button}
+                </a>
+              )}
+            </div>
           </div>
-        </div>
-      </article>
+        </section>
+      )}
     </>
   );
 }

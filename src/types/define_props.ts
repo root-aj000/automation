@@ -251,6 +251,37 @@ export interface CaseStudyItem {
   tags: string[];
   category: string;
   href: string;
+  // Extended fields for case study detail page
+  tagline?: string;
+  hero_image?: string;
+  challenges?: {
+    title: string;
+    description: string;
+    icon?: string;
+  }[];
+  solution?: {
+    title: string;
+    description: string;
+    icon?: string;
+  }[];
+  results?: {
+    metric: string;
+    value: string;
+    description?: string;
+  }[];
+  testimonial?: {
+    quote: string;
+    author: string;
+    role: string;
+    company: string;
+    avatar?: string;
+  };
+  cta?: {
+    title: string;
+    description: string;
+    primary_button: string;
+    secondary_button?: string;
+  };
 }
 export interface CaseStudyProps {
   case_data: CaseStudyItem[] | CaseStudyItem;
