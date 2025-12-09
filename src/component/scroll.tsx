@@ -9,8 +9,8 @@ interface ScrollProgressProps {
 }
 
 export default function ScrollProgressBar({
-  color = "bg-orange-500",
-  height = "h-2.5",
+  color = "gradient-primary",
+  height = "h-1",
 }: ScrollProgressProps) {
   const [progress, setProgress] = useState(0);
 
@@ -25,11 +25,14 @@ export default function ScrollProgressBar({
   }, []);
 
   return (
-    <div className={`fixed top-16 left-1/2 -translate-x-1/2 w-full max-w-5xl bg-gray-200 rounded-full h-2.5 mb-4" ${height} `}>
+    <div className={`fixed top-16 lg:top-20 left-0 right-0 z-40 ${height} bg-gray-200/50 dark:bg-gray-800/50 backdrop-blur-sm`}>
       <div
-        className={`${color} ${height} rounded-full transition-all duration-100`}
+        className={`${color} ${height} transition-all duration-150 ease-out relative overflow-hidden`}
         style={{ width: `${progress}%` }}
-      ></div>
+      >
+        {/* Shimmer effect */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer" />
+      </div>
     </div>
   );
 }

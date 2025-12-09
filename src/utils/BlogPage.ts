@@ -1,42 +1,64 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
 import { Blogitem } from "@/types/define_props";
+import { CONTENT_CONFIG } from "@/config/content.config";
+import { listMdxFiles } from "@/services/github-content";
 
-// Get absolute path to /content/post
-const BLOG_DIR = path.join(process.cwd(), "content", "post");
+/**
+ * Get all blogs from GitHub
+ */
+export async function getAllBlogs(): Promise<Blogitem[]> {
+  try {
+    const files = await listMdxFiles<Blogitem>(CONTENT_CONFIG.paths.blogs);
 
-export function getAllBlogs(): Blogitem[] {
-  if (!fs.existsSync(BLOG_DIR)) {
-    console.warn(`Blog directory not found: ${BLOG_DIR}`);
+    const blogs: Blogitem[] = files.map(({ filename, data }) => ({
+      title: data.title || "",
+      author: data.author || "",
+      contentType: data.contentType || "Blog",
+      serviceName: data.serviceName || "",
+      date: data.date || "",
+      image: data.image || "",
+      excerpt: data.excerpt || "",
+      tags: data.tags || [],
+      category: data.category || "",
+      href: `/blogs/${filename.replace(".mdx", "")}`,
+    }));
+
+    return blogs.sort(
+      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+    );
+  } catch (error) {
+    console.error("Failed to fetch blogs from GitHub:", error);
     return [];
   }
+}
 
-  const files = fs.readdirSync(BLOG_DIR);
+/**
+ * Get a single blog post content from GitHub
+ */
+export async function getBlogBySlug(slug: string): Promise<{ data: Blogitem; content: string } | null> {
+  try {
+    const { fetchMdxWithFrontmatter } = await import("@/services/github-content");
+    const result = await fetchMdxWithFrontmatter<Blogitem>(
+      `${CONTENT_CONFIG.paths.blogs}/${slug}.mdx`
+    );
+    return result;
+  } catch (error) {
+    console.error(`Failed to fetch blog ${slug} from GitHub:`, error);
+    return null;
+  }
+}
 
-  const blogs: Blogitem[] = files
-    .filter((file) => file.endsWith(".mdx"))
-    .map((filename) => {
-      const filePath = path.join(BLOG_DIR, filename);
-      const fileContent = fs.readFileSync(filePath, "utf-8");
-      const { data } = matter(fileContent);
-
-      return {
-        title: data.title || "",
-        author: data.author || "",
-        contentType: data.contentType || "Blog",
-        serviceName: data.serviceName || "",
-        date: data.date || "",
-        image: data.image || "",
-        excerpt: data.excerpt || "",
-        tags: data.tags || [],
-        category: data.category || "",
-        href: `/blogs/${filename.replace(".mdx", "")}`,
-      };
-    });
-
-  // Sort by newest date
-  return blogs.sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-  );
+/**
+ * Get all blog slugs for static generation
+ */
+export async function getAllBlogSlugs(): Promise<string[]> {
+  try {
+    const { listDirectory } = await import("@/services/github-content");
+    const files = await listDirectory(CONTENT_CONFIG.paths.blogs);
+    return files
+      .filter((file) => file.type === "file" && file.name.endsWith(".mdx"))
+      .map((file) => file.name.replace(".mdx", ""));
+  } catch (error) {
+    console.error("Failed to fetch blog slugs from GitHub:", error);
+    return [];
+  }
 }

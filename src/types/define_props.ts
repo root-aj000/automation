@@ -75,7 +75,8 @@ export interface ForWhomBlock {
       title: string;
       description: string;
       icon: string;
-    };
+      href: string;
+    }[];
   };
 }
 
@@ -107,6 +108,27 @@ export interface FeatureProps {
     cta: string;
     link: string;
     icon: string;
+    // Extended fields for feature detail page
+    tagline?: string;
+    hero_image?: string;
+    benefits?: {
+      title: string;
+      description: string;
+      icon?: string;
+    }[];
+    how_it_works?: {
+      title: string;
+      description: string;
+      step?: number;
+    }[];
+    integrations?: string[];
+    testimonial?: {
+      quote: string;
+      author: string;
+      role: string;
+      company: string;
+      avatar?: string;
+    };
   };
 }
 
@@ -115,9 +137,36 @@ export interface UsecaseProps {
     title: string;
     description: string;
     hero_image: string;
-    benefits: string[];
-    challenges: string[];
-    results: string;
+    industry?: string;
+    tagline?: string;
+    benefits: {
+      title: string;
+      description: string;
+      icon?: string;
+    }[] | string[];
+    challenges: {
+      title: string;
+      description: string;
+      icon?: string;
+    }[] | string[];
+    results: {
+      metric: string;
+      value: string;
+      description?: string;
+    }[] | string;
+    testimonial?: {
+      quote: string;
+      author: string;
+      role: string;
+      company: string;
+      avatar?: string;
+    };
+    cta?: {
+      title: string;
+      description: string;
+      primary_button: string;
+      secondary_button?: string;
+    };
   };
 }
 

@@ -37,16 +37,23 @@ export const Pagination: React.FC<PaginationProps> = ({
 
   if (totalPages <= 1) return null;
 
+  const buttonBase = "flex items-center justify-center min-w-[40px] h-10 rounded-xl text-sm font-medium transition-all duration-300";
+  const buttonInactive = `${buttonBase} bg-surface-elevated border border-gray-200 dark:border-gray-800 text-foreground hover:border-primary/50 hover:text-primary card-hover`;
+  const buttonActive = `${buttonBase} btn-primary text-white`;
+
   return (
-    <nav aria-label="Pagination" className="flex justify-center mt-10 bg-background">
-      <ul className="flex items-center space-x-2 text-sm">
+    <nav aria-label="Pagination" className="flex justify-center mt-12">
+      <ul className="flex items-center gap-2">
         {/* Prev */}
         {currentPage > 1 && (
           <li>
             <Link
               href={getPageUrl(currentPage - 1)}
-              className="px-3 py-1 border rounded hover:bg-gray-100"
+              className={buttonInactive}
             >
+              <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
               Prev
             </Link>
           </li>
@@ -57,7 +64,7 @@ export const Pagination: React.FC<PaginationProps> = ({
           <li>
             <Link
               href={getPageUrl(1)}
-              className="px-3 py-1 border rounded hover:bg-gray-100"
+              className={buttonInactive}
             >
               1
             </Link>
@@ -65,7 +72,11 @@ export const Pagination: React.FC<PaginationProps> = ({
         )}
 
         {/* Left Ellipsis */}
-        {startPage > 2 && <li><span className="px-2">…</span></li>}
+        {startPage > 2 && (
+          <li>
+            <span className="px-2 text-muted">…</span>
+          </li>
+        )}
 
         {/* Pages */}
         {pagesToShow.map((page) => (
@@ -73,10 +84,7 @@ export const Pagination: React.FC<PaginationProps> = ({
             <Link
               href={getPageUrl(page)}
               aria-current={page === currentPage ? "page" : undefined}
-              className={`px-3 py-1 border rounded ${page === currentPage
-                  ? "bg-orange-500 text-white border-orange-600"
-                  : "hover:bg-gray-100"
-                }`}
+              className={page === currentPage ? buttonActive : buttonInactive}
             >
               {page}
             </Link>
@@ -84,14 +92,18 @@ export const Pagination: React.FC<PaginationProps> = ({
         ))}
 
         {/* Right Ellipsis */}
-        {endPage < totalPages - 1 && <li><span className="px-2">…</span></li>}
+        {endPage < totalPages - 1 && (
+          <li>
+            <span className="px-2 text-muted">…</span>
+          </li>
+        )}
 
         {/* Last */}
         {endPage < totalPages && (
           <li>
             <Link
               href={getPageUrl(totalPages)}
-              className="px-3 py-1 border rounded hover:bg-gray-100"
+              className={buttonInactive}
             >
               {totalPages}
             </Link>
@@ -103,9 +115,12 @@ export const Pagination: React.FC<PaginationProps> = ({
           <li>
             <Link
               href={getPageUrl(currentPage + 1)}
-              className="px-3 py-1 border rounded hover:bg-gray-100"
+              className={buttonInactive}
             >
               Next
+              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
             </Link>
           </li>
         )}

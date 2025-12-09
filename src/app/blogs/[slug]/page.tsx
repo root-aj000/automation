@@ -1,106 +1,109 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-// import Image from "next/image";
-// import { notFound } from "next/navigation";
-import { Blogitem } from "@/types/define_props";
-import { MDXRemote } from "next-mdx-remote/rsc"; // if you’re using MDX
+import type { Metadata } from "next";
+import { MDXRemote } from "next-mdx-remote/rsc";
 import ScrollProgressBar from "@/component/scroll";
+import { getBlogBySlug, getAllBlogSlugs } from "@/utils/BlogPage";
+import { notFound } from "next/navigation";
+import { siteConfig } from "@/config/site.config";
 
-
-
-
-
-const BLOG_DIR = path.join(process.cwd(), "content", "post");
+type Props = {
+  params: { slug: string };
+};
 
 export async function generateStaticParams() {
-  const files = fs.readdirSync(BLOG_DIR);
-  return files
-    .filter((file) => file.endsWith(".mdx"))
-    .map((filename) => ({
-      slug: filename.replace(".mdx", ""),
-    }));
+  const slugs = await getAllBlogSlugs();
+  return slugs.map((slug) => ({ slug }));
 }
 
-export default async function BlogPostPage({
-  params,
-}: {
-  params: { slug: string };
-}) {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const filepath = path.join(BLOG_DIR, `${slug}.mdx`);
+  const result = await getBlogBySlug(slug);
 
-  // if (!fs.existsSync(filepath)) {
-  //   return notFound();
-  // }
+  if (!result) {
+    return {
+      title: "Blog Not Found",
+    };
+  }
 
-  const fileContent = fs.readFileSync(filepath, "utf-8");
-  const { data, content } = matter(fileContent);
-  const blog = data as Blogitem;
+  const { data: blog } = result;
 
+  return {
+    title: blog.title,
+    description: blog.excerpt || `Read ${blog.title} by ${blog.author}`,
+    authors: [{ name: blog.author }],
+    openGraph: {
+      title: blog.title,
+      description: blog.excerpt || `Read ${blog.title} by ${blog.author}`,
+      type: "article",
+      publishedTime: blog.date,
+      authors: [blog.author],
+      images: blog.image ? [{ url: blog.image }] : undefined,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: blog.title,
+      description: blog.excerpt || `Read ${blog.title} by ${blog.author}`,
+      images: blog.image ? [blog.image] : undefined,
+    },
+  };
+}
 
+export default async function BlogPostPage({ params }: Props) {
+  const { slug } = await params;
 
+  // Fetch from GitHub
+  const result = await getBlogBySlug(slug);
 
+  if (!result) {
+    return notFound();
+  }
 
+  const { data: blog, content } = result;
 
   return (
     <>
-
-
       <ScrollProgressBar />
 
+      <article className="bg-background py-8 lg:py-12">
+        <div className="mx-auto max-w-4xl px-4 md:px-8">
+          {/* Header */}
+          <header className="mb-8 md:mb-12">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-6">
+              {blog.title}
+            </h1>
 
-      <div className="bg-background sm:py-8 lg:py-12 mx-auto max-w-5xl">
-        {/* <div className="mx-auto px-4 md:px-8"> */}
-
-
-        <div className="mx-auto w-full max-w-5xl px-6 py-16">
-          <h1 className="lg:text-5xl text-3xl text-foreground">{blog.title}</h1>
-        </div>
-
-        <section className="bg-background">
-          <div className="py-3 px-4 mx-auto max-w-5xl text-center">
-            <div className="flex flex-row justify-between text-gray-700 dark:text-gray-300">
-              <span className="flex px-6 text-base font-medium">
-                {" "}
-                Author: {blog.author}
-              </span>
-              <span className="px-6 font-medium">
-                {" "}
-                date:{" "}
+            {/* Meta info */}
+            <div className="flex flex-wrap items-center justify-between gap-4 py-4 border-t border-b border-gray-200 dark:border-gray-800">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
+                  <span className="text-sm font-semibold text-primary">
+                    {blog.author?.charAt(0).toUpperCase() || 'A'}
+                  </span>
+                </div>
+                <span className="text-sm text-muted">
+                  By <span className="font-medium text-foreground">{blog.author}</span>
+                </span>
+              </div>
+              <span className="text-sm text-primary font-medium">
                 {new Date(blog.date).toLocaleDateString(undefined, {
                   year: "numeric",
                   month: "short",
                   day: "numeric",
-                })}{" "}
+                })}
               </span>
             </div>
-          </div>
-        </section>
+          </header>
 
-        <hr className="w-96 h-0.5 mx-auto my-0 bg-[#ff4f1f] border-0 rounded" />
-
-        <div className="bg-background py-6 sm:py-8 lg:py-12 mb-24">
-          <div className="mx-auto max-w-4xl px-4 md:px-8">
+          {/* Content */}
+          <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:text-foreground prose-p:text-muted prose-a:text-primary prose-strong:text-foreground">
             <MDXRemote source={content} />
           </div>
+
+          {/* Footer divider */}
+          <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
+            <div className="w-24 h-1 mx-auto bg-gradient-to-r from-primary to-primary/50 rounded-full" />
+          </div>
         </div>
-
-        {/* <figure className="max-w-lg mx-auto px-6 py-6">
-        <Image
-          className="h-auto max-w-full rounded-lg"
-          src={data.src}
-          alt={data.alt}
-          loading="lazy"
-        />
-        <figcaption className="mt-2 text-sm text-center text-gray-700">
-          {data.caption}
-        </figcaption>
-      </figure> */}
-
-        <hr className="w-1/2 h-0.5 mx-auto my-1 bg-[#ff4f1f] border-0 rounded" />
-      </div>
-      {/* </div> */}
+      </article>
     </>
   );
 }

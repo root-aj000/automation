@@ -4,26 +4,396 @@
     --color-primary: #ff4f1f;
     --color-primary-dark: #d43b10;
     --color-primary-light: #ffefe9;
+    --color-secondary: #1a1a2e;
+    --color-accent: #ff6b35;
 
     --color-background: #ffffff;
     --color-foreground: #171717;
+    --color-muted: #6b7280;
+    --color-surface: #f8fafc;
+    --color-surface-elevated: #ffffff;
 }
+
+/* :root {
+    --background: #ffffff;
+    --foreground: #171717;
+    --surface: #f8fafc;
+    --surface-elevated: #ffffff;
+    --muted: #6b7280;
+} */
 
 @media (prefers-color-scheme: dark) {
     :root {
         --background: #0a0a0a;
         --foreground: #ededed;
+        --surface: #1a1a1a;
+        --surface-elevated: #262626;
+        --muted: #a1a1aa;
     }
 }
 
+/* Dark mode via class selector (for next-themes with attribute="class") */
 :root {
     --background: #ffffff;
     --foreground: #171717;
+    --surface: #f8fafc;
+    --surface-elevated: #ffffff;
+    --muted: #6b7280;
+
+    --color-background: #ffffff;
+    --color-foreground: #171717;
+    --color-surface: #f8fafc;
+    --color-surface-elevated: #ffffff;
+    --color-muted: #6b7280;
 }
 
-[data-theme='dark'] {
+.dark :root,
+.dark {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --surface: #1a1a1a;
+    --surface-elevated: #262626;
+    --muted: #a1a1aa;
+
     --color-background: #0a0a0a;
     --color-foreground: #ededed;
+    --color-surface: #1a1a1a;
+    --color-surface-elevated: #262626;
+    --color-muted: #a1a1aa;
+}
+
+
+/* ========================================
+   ANIMATION KEYFRAMES
+   ======================================== */
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pulse-glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(255, 79, 31, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 40px rgba(255, 79, 31, 0.6);
+    }
+}
+
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scale-in {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes bounce-subtle {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+/* Animations */
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-shift 4s ease infinite;
+}
+
+.animate-fade-in-up {
+    animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.animate-scale-in {
+    animation: scale-in 0.4s ease-out forwards;
+}
+
+.animate-bounce-subtle {
+    animation: bounce-subtle 2s ease-in-out infinite;
+}
+
+.animate-shimmer {
+    animation: shimmer 2s infinite;
+}
+
+/* Glassmorphism */
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.glass-dark {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Gradients */
+.gradient-primary {
+    background: linear-gradient(135deg, #ff4f1f 0%, #ff6b35 50%, #ff8a5c 100%);
+}
+
+.gradient-hero {
+    background: linear-gradient(135deg,
+            rgba(255, 79, 31, 0.05) 0%,
+            rgba(255, 107, 53, 0.08) 50%,
+            rgba(255, 138, 92, 0.05) 100%);
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #ff4f1f 0%, #ff6b35 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.gradient-border {
+    position: relative;
+}
+
+.gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, #ff4f1f, #ff6b35);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gradient-border:hover::before {
+    opacity: 1;
+}
+
+/* Card Effects */
+.card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 20px 25px -5px rgba(0, 0, 0, 0.1),
+        0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.card-glow:hover {
+    box-shadow:
+        0 0 30px rgba(255, 79, 31, 0.15),
+        0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Effects */
+.btn-primary {
+    background: linear-gradient(135deg, #ff4f1f 0%, #ff6b35 100%);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(255, 79, 31, 0.3);
+}
+
+.btn-primary::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-primary:hover::after {
+    left: 100%;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid currentColor;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 79, 31, 0.1);
+    border-color: #ff4f1f;
+    color: #ff4f1f;
+}
+
+/* Section Backgrounds */
+.section-gradient {
+    background: linear-gradient(180deg,
+            var(--background) 0%,
+            var(--surface) 50%,
+            var(--background) 100%);
+}
+
+.section-mesh {
+    background-color: var(--background);
+    background-image: radial-gradient(at 40% 20%,
+            rgba(255, 79, 31, 0.03) 0px,
+            transparent 50%),
+        radial-gradient(at 80% 0%,
+            rgba(255, 107, 53, 0.04) 0px,
+            transparent 50%),
+        radial-gradient(at 0% 50%,
+            rgba(255, 138, 92, 0.03) 0px,
+            transparent 50%);
+}
+
+/* Background Blobs */
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.blob-primary {
+    background: radial-gradient(circle, rgba(255, 79, 31, 0.15) 0%, transparent 70%);
+}
+
+.blob-secondary {
+    background: radial-gradient(circle, rgba(255, 107, 53, 0.1) 0%, transparent 70%);
+}
+
+/* Icon Container */
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(255, 79, 31, 0.1) 0%, rgba(255, 107, 53, 0.05) 100%);
+    border: 1px solid rgba(255, 79, 31, 0.2);
+    transition: all 0.3s ease;
+}
+
+.icon-container:hover {
+    background: linear-gradient(135deg, rgba(255, 79, 31, 0.15) 0%, rgba(255, 107, 53, 0.1) 100%);
+    border-color: rgba(255, 79, 31, 0.4);
+}
+
+/* ========================================
+   GLOBAL STYLES
+   ======================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+/* Custom utilities for theme colors */
+.bg-surface {
+    background-color: var(--surface);
+}
+
+.bg-surface-elevated {
+    background-color: var(--surface-elevated);
+}
+
+.text-muted {
+    color: var(--muted);
+}
+
+/* Focus states */
+*:focus-visible {
+    outline: 2px solid #ff4f1f;
+    outline-offset: 2px;
+}
+
+/* Selection */
+::selection {
+    background-color: rgba(255, 79, 31, 0.2);
+    color: inherit;
 }

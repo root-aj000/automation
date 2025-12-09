@@ -1,20 +1,54 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
 import { IndexProps } from "@/types/define_props";
+import { CONTENT_CONFIG } from "@/config/content.config";
+import { fetchMdxWithFrontmatter } from "@/services/github-content";
 
-const filepath = path.join(process.cwd(), "content", "main", "homepage.mdx");
-// console.log("Filepath:", filepath);
-const file = fs.readFileSync(filepath, "utf-8");
-const { data } = matter(file);
-const HomeData = data as IndexProps["HomePage"];
-// console.log("path", filepath);
+// Default empty data structure
+const defaultHomeData: IndexProps["HomePage"] = {
+  Hero_1: { mh_line: "", tg_line: "", discription: "", p_cta: "", s_cta: "", image: "", alt: "" },
+  Hero_2: { mh_line: "", tg_line: "", discription: "", p_cta: "", s_cta: "", image: "", alt: "" },
+  Hero_3: { mh_line: "", tg_line: "", discription: "", p_cta: "", s_cta: "", image: "", alt: "" },
+  Hero_4: { mh_line: "", tg_line: "", discription: "", p_cta: "", s_cta: "", image: "", alt: "" },
+  logo_cloud: { title: "", logos: [] },
+  stats: { heading: "", description: "", items: [] },
+  Howitworks: { title: "", subtitle: "", image: "", steps: [] },
+  subscribe: { title: "", description: "", placeholder: "", buttonText: "" },
+  forwhom: { title: "", description: "", p_cta: "", items: [] },
+  list_header: { title: "", discription: "" },
+  grid: { title: "", subtitle: "", features: [] },
+  blog_data: [],
+  case_data: [],
+  Home_header_blog: { title: "", subtitle: "" },
+  Home_header_cases: { title: "", subtitle: "" },
+};
 
+/**
+ * Get homepage data from GitHub
+ */
+export async function getHomeData(): Promise<IndexProps["HomePage"]> {
+  try {
+    const { data } = await fetchMdxWithFrontmatter<IndexProps["HomePage"]>(
+      CONTENT_CONFIG.paths.homepage
+    );
 
-const blog_url = (filepath.replace(/\\/g, "/").split("/").pop() ?? "").replace(
-  ".mdx",
-  ""
-);
-
-console.log(blog_url);
-export { HomeData, blog_url };
+    // Merge with defaults to ensure all properties exist
+    return {
+      ...defaultHomeData,
+      ...data,
+      // Ensure nested objects have defaults
+      Hero_1: { ...defaultHomeData.Hero_1, ...data?.Hero_1 },
+      Hero_2: { ...defaultHomeData.Hero_2, ...data?.Hero_2 },
+      Hero_3: { ...defaultHomeData.Hero_3, ...data?.Hero_3 },
+      Hero_4: { ...defaultHomeData.Hero_4, ...data?.Hero_4 },
+      logo_cloud: { ...defaultHomeData.logo_cloud, ...data?.logo_cloud },
+      stats: { ...defaultHomeData.stats, ...data?.stats },
+      Howitworks: { ...defaultHomeData.Howitworks, ...data?.Howitworks },
+      subscribe: { ...defaultHomeData.subscribe, ...data?.subscribe },
+      forwhom: { ...defaultHomeData.forwhom, ...data?.forwhom },
+      Home_header_blog: { ...defaultHomeData.Home_header_blog, ...data?.Home_header_blog },
+      Home_header_cases: { ...defaultHomeData.Home_header_cases, ...data?.Home_header_cases },
+    };
+  } catch (error) {
+    console.error("Failed to fetch homepage data from GitHub:", error);
+    return defaultHomeData;
+  }
+}

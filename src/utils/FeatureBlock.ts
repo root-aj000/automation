@@ -1,12 +1,25 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import { FeatureGridProps} from "@/types/define_props";
+import { FeatureGridProps } from "@/types/define_props";
+import { CONTENT_CONFIG } from "@/config/content.config";
+import { fetchMdxWithFrontmatter } from "@/services/github-content";
 
-const filepath = path.join(process.cwd(), "content", "main", "features.mdx");
-// console.log("Filepath:", filepath);
-const file = fs.readFileSync(filepath, "utf-8");
-const { data } = matter(file);
-const FeatureData = data as FeatureGridProps;
-// console.log("path", filepath);
- export { FeatureData };
+/**
+ * Get feature data from GitHub
+ */
+export async function getFeatureData(): Promise<FeatureGridProps> {
+    try {
+        const { data } = await fetchMdxWithFrontmatter<FeatureGridProps>(
+            CONTENT_CONFIG.paths.features
+        );
+        return data;
+    } catch (error) {
+        console.error("Failed to fetch feature data from GitHub:", error);
+        // Return empty/default data structure matching FeatureGridProps
+        return {
+            grid: {
+                title: "",
+                subtitle: "",
+                features: [],
+            },
+        };
+    }
+}

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { getAllCase } from "@/utils/CasePage";
 import { HomeCaseSection } from "@/component/home_case_section";
 import { Pagination } from "@/component/pagination";
@@ -5,24 +6,33 @@ import { notFound } from "next/navigation";
 
 const ITEMS_PER_PAGE = 20;
 
-export async function generateStaticParams() {
-  const allCases = getAllCase();
-  const totalPages = Math.ceil(allCases.length / ITEMS_PER_PAGE);
-
-  return Array.from({ length: totalPages }, (_, i) => ({
-    page: (i + 1).toString(),
-  }));
-}
+export const metadata: Metadata = {
+  title: "Case Studies",
+  description: "Explore our success stories and see how we've helped businesses transform with automation.",
+  openGraph: {
+    title: "Case Studies | AJ Automation",
+    description: "Explore our success stories and see how we've helped businesses transform with automation.",
+  },
+};
 
 export default async function CasePaginationPage(props: {
   params: { page: string } | Promise<{ page: string }>;
 }) {
-  // ✅ Handle both sync & async params (Next.js 14/15+)
   const { page } = await Promise.resolve(props.params);
   const currentPage = Number(page);
 
-  const allCases = getAllCase();
+  // Fetch from GitHub
+  const allCases = await getAllCase();
   const totalPages = Math.ceil(allCases.length / ITEMS_PER_PAGE);
+
+  if (allCases.length === 0) {
+    return (
+      <div className="max-w-6xl mx-auto px-4 py-12 text-center">
+        <h1 className="text-2xl font-bold text-foreground mb-4">No case studies found</h1>
+        <p className="text-muted">Check your GitHub configuration.</p>
+      </div>
+    );
+  }
 
   if (currentPage < 1 || currentPage > totalPages) return notFound();
 
@@ -30,20 +40,12 @@ export default async function CasePaginationPage(props: {
   const endIndex = startIndex + ITEMS_PER_PAGE;
   const paginatedCase = allCases.slice(startIndex, endIndex);
 
-  console.log({
-    total: allCases.length,
-    currentPage,
-    startIndex,
-    endIndex,
-    blogs: paginatedCase.map((b) => b.title),
-  });
-
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
       <HomeCaseSection
         Home_header_cases={{
-          title: "Our Blog",
-          subtitle: "Insights, stories, and updates from our team.",
+          title: "Case Studies",
+          subtitle: "Success stories and insights from our projects.",
         }}
         case_data={paginatedCase}
       />

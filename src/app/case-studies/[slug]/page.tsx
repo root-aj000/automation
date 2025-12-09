@@ -1,56 +1,105 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-// import { notFound } from "next/navigation";
-// import Image from "next/image";
-import { Blogitem } from "@/types/define_props";
-import { MDXRemote } from "next-mdx-remote/rsc"; // if you’re using MDX
+import type { Metadata } from "next";
+import { MDXRemote } from "next-mdx-remote/rsc";
 import ScrollProgressBar from "@/component/scroll";
+import { getCaseBySlug, getAllCaseSlugs } from "@/utils/CasePage";
+import { notFound } from "next/navigation";
 
-
-const CASE_DIR = path.join(process.cwd(), "content", "case-studies");
+type Props = {
+  params: { slug: string };
+};
 
 export async function generateStaticParams() {
-  const files = fs.readdirSync(CASE_DIR);
-  return files
-    .filter((file) => file.endsWith(".mdx"))
-    .map((filename) => ({
-      slug: filename.replace(".mdx", ""),
-    }));
+  const slugs = await getAllCaseSlugs();
+  return slugs.map((slug) => ({ slug }));
 }
 
-export default async function BlogPostPage({
-  params,
-}: {
-  params: { slug: string };
-}) {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const filepath = path.join(CASE_DIR, `${slug}.mdx`);
+  const result = await getCaseBySlug(slug);
 
-  // if (!fs.existsSync(filepath)) {
-  //   return notFound();
-  // }
+  if (!result) {
+    return {
+      title: "Case Study Not Found",
+    };
+  }
 
-  const fileContent = fs.readFileSync(filepath, "utf-8");
-  const { data, content } = matter(fileContent);
-  const blog = data as Blogitem;
+  const { data: caseStudy } = result;
+
+  return {
+    title: caseStudy.title,
+    description: caseStudy.excerpt || `Case Study: ${caseStudy.title}`,
+    authors: [{ name: caseStudy.author }],
+    openGraph: {
+      title: `${caseStudy.title} | Case Study`,
+      description: caseStudy.excerpt || `Case Study: ${caseStudy.title}`,
+      type: "article",
+      publishedTime: caseStudy.date,
+      authors: [caseStudy.author],
+      images: caseStudy.image ? [{ url: caseStudy.image }] : undefined,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${caseStudy.title} | Case Study`,
+      description: caseStudy.excerpt || `Case Study: ${caseStudy.title}`,
+      images: caseStudy.image ? [caseStudy.image] : undefined,
+    },
+  };
+}
+
+export default async function CaseStudyPage({ params }: Props) {
+  const { slug } = await params;
+
+  // Fetch from GitHub
+  const result = await getCaseBySlug(slug);
+
+  if (!result) {
+    return notFound();
+  }
+
+  const { data: caseStudy, content } = result;
 
   return (
     <>
       <ScrollProgressBar />
-      <article className="max-w-4xl mx-auto px-4 py-12 prose dark:prose-invert">
-        <h1>{blog.title}</h1>
-        <p className="text-sm text-gray-500 dark:text-gray-400">
-          By {blog.author} • {blog.date}
-        </p>
-        {/* {blog.image && (
-        <Image
-          src={blog.image}
-          alt={blog.title}
-          className="w-full rounded-lg my-6"
-        />
-      )} */}
-        <MDXRemote source={content} />
+      <article className="bg-background py-8 lg:py-12">
+        <div className="mx-auto max-w-4xl px-4 md:px-8">
+          {/* Header */}
+          <header className="mb-8 md:mb-12">
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-6">
+              Case Study
+            </span>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-6">
+              {caseStudy.title}
+            </h1>
+
+            {/* Meta info */}
+            <div className="flex flex-wrap items-center gap-4 py-4 border-t border-b border-gray-200 dark:border-gray-800">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
+                  <span className="text-sm font-semibold text-primary">
+                    {caseStudy.author?.charAt(0).toUpperCase() || 'A'}
+                  </span>
+                </div>
+                <span className="text-sm text-muted">
+                  By <span className="font-medium text-foreground">{caseStudy.author}</span>
+                </span>
+              </div>
+              <span className="text-sm text-primary font-medium">
+                {caseStudy.date}
+              </span>
+            </div>
+          </header>
+
+          {/* Content */}
+          <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:text-foreground prose-p:text-muted prose-a:text-primary prose-strong:text-foreground">
+            <MDXRemote source={content} />
+          </div>
+
+          {/* Footer divider */}
+          <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
+            <div className="w-24 h-1 mx-auto bg-gradient-to-r from-primary to-primary/50 rounded-full" />
+          </div>
+        </div>
       </article>
     </>
   );
