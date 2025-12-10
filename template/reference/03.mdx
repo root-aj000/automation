@@ -1,0 +1,103 @@
+
+
+
+---
+
+🧠 Real-Life Buyer Questions on a Homepage
+
+🥇 First Impressions (0–5 seconds)
+
+“Okay… what is this thing?”
+
+“Do I get it right away or do I have to think too hard?”
+
+“Does this even apply to me or is it for someone else?”
+
+“Why should I keep reading instead of closing this tab?”
+
+
+🤔 Curiosity + Skepticism (scrolling a bit)
+
+“What problem are you actually solving for me?”
+
+“Why should I care about this problem — is it really worth fixing?”
+
+“Haven’t I seen 10 other companies say the same thing?”
+
+“So… what exactly do you do in plain English?”
+
+“Are you going to waste my time with fluff?”
+
+
+🛡️ Trust & Believability
+
+“Who are you — a real company or just some random site?”
+
+“Do real people/companies actually use this?”
+
+“Can I believe your promises, or are these just marketing words?”
+
+“Show me proof. Where are the numbers, logos, or testimonials?”
+
+“Will you disappear after I give you money?”
+
+
+💸 Value & Differentiation
+
+“Why should I choose you over [competitor I know]?”
+
+“What makes you different from the last site I looked at?”
+
+“What’s in it for me — do I save time, money, stress, status?”
+
+“How fast will I see results?”
+
+“Is this worth the cost, effort, or risk?”
+
+
+🧱 Objections & Barriers
+
+“How much does this cost? Just tell me already.”
+
+“Is this hard to set up? Will I need a tech team?”
+
+“What if it doesn’t work for me?”
+
+“Am I locked into a long contract?”
+
+“How safe is my data/money with you?”
+
+“Is this another shiny tool I’ll never actually use?”
+
+
+🚀 Action / Decision Point
+
+“What happens if I click this button?”
+
+“Do I have to talk to sales right away?”
+
+“Can I try it before I buy it?”
+
+“Is there a free/low-risk way to start?”
+
+“How much time will this first step take me?”
+
+“Will I regret not doing this sooner?”
+
+
+
+---
+
+🔑 Why This Is Gold
+
+These aren’t marketing frameworks — these are human friction points. The job of your homepage is to pre-answer them in a way that feels effortless, almost like you’re reading their mind.
+
+For example:
+
+Instead of saying “We offer cloud solutions,” answer their inner question: “Will this be a pain to set up?” → “Migrate in weeks, not months — with zero downtime.”
+
+Instead of bragging “Trusted by 100+ clients,” answer: “Do real people use this?” → “Over 100 businesses like [Customer X] cut their costs by 30% with us.”
+
+
+
+---
