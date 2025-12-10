@@ -19,6 +19,29 @@ const defaultHomeData: IndexProps["HomePage"] = {
   case_data: [],
   Home_header_blog: { title: "", subtitle: "" },
   Home_header_cases: { title: "", subtitle: "" },
+  // faq: { title: "", description: "", items: [] },
+  faq: {
+    title: "Frequently Asked Questions",
+    description: "Everything you need to know about our managed automation service.",
+    items: [
+      {
+        question: "Do I need technical skills?",
+        answer: "No, we handle all the technical implementation. You just describe your process.",
+      },
+      {
+        question: "How much does it cost?",
+        answer: "We offer flat-rate pricing based on the number of workflows.",
+      },
+      {
+        question: "Is my data secure?",
+        answer: "Yes, we use enterprise-grade encryption and strictly adhere to data privacy standards.",
+      },
+      {
+        question: "Can I cancel anytime?",
+        answer: "Yes, our plans are monthly with no long-term commitment required.",
+      },
+    ],
+  },
 };
 
 /**
@@ -46,6 +69,11 @@ export async function getHomeData(): Promise<IndexProps["HomePage"]> {
       forwhom: { ...defaultHomeData.forwhom, ...data?.forwhom },
       Home_header_blog: { ...defaultHomeData.Home_header_blog, ...data?.Home_header_blog },
       Home_header_cases: { ...defaultHomeData.Home_header_cases, ...data?.Home_header_cases },
+      faq: {
+        title: data?.faq?.title ?? defaultHomeData.faq!.title,
+        description: data?.faq?.description ?? defaultHomeData.faq!.description,
+        items: data?.faq?.items ?? defaultHomeData.faq!.items,
+      },
     };
   } catch (error) {
     console.error("Failed to fetch homepage data from GitHub:", error);

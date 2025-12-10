@@ -55,6 +55,16 @@ export const Hero_1 = ({ Hero_1 }: Hero_1Props) => {
                 <div className="absolute inset-0 gradient-primary rounded-3xl blur-3xl opacity-20 animate-pulse-glow" />
                 <div className="relative glass rounded-3xl p-8 min-h-[300px] md:min-h-[400px] flex items-center justify-center">
                   {/* Placeholder for automation visual */}
+                  {/* 
+                  // TODO: To enable hero image, uncomment this code and remove the icon container below
+                  <Image 
+                    src={Hero_1.image || "/placeholder.jpg"} 
+                    alt={Hero_1.alt || "Hero Image"} 
+                    width={600} 
+                    height={400} 
+                    className="rounded-3xl shadow-2xl"
+                  /> 
+                  */}
                   <div className="text-center">
                     <div className="icon-container w-20 h-20 mx-auto rounded-2xl mb-4">
                       <svg className="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">

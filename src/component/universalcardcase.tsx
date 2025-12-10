@@ -23,6 +23,24 @@ export const UniversalCardCase = ({ case_data }: CaseStudyProps) => {
             {/* Gradient overlay on hover */}
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
 
+            {/* 
+            // TODO: To enable cover image, uncomment this code and remove the placeholder below
+            <div className="relative h-48 w-full overflow-hidden">
+              <Image 
+                src={casedata.image || "/placeholder.jpg"} 
+                alt={casedata.title} 
+                fill 
+                className="object-cover transition-transform duration-500 group-hover:scale-105" 
+              />
+            </div>
+            */}
+            {/* Cover Image Placeholder */}
+            <div className="relative h-48 w-full bg-surface-elevated overflow-hidden flex items-center justify-center border-b border-gray-100 dark:border-gray-800">
+              <svg className="w-12 h-12 text-muted/20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+              </svg>
+            </div>
+
             {/* Card content */}
             <div className="relative z-20 p-6">
               {/* Industry badge */}

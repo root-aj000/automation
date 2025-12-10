@@ -22,11 +22,19 @@ export const HowItWorks = ({ Howitworks }: HowItWorksProps) => {
           <div className="relative">
             <div className="absolute inset-0 gradient-primary rounded-3xl blur-3xl opacity-15 animate-pulse-glow" />
             <div className="relative rounded-3xl overflow-hidden border border-gray-200 dark:border-gray-800">
+              {/* 
+              // TODO: To enable the main image, uncomment this code and remove the placeholder
               <Image
                 className="object-cover w-full"
                 src={Howitworks.image}
                 alt={Howitworks.title}
               />
+              */}
+              <div className="w-full h-64 md:h-96 bg-surface-elevated flex items-center justify-center">
+                <svg className="w-20 h-20 text-muted/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
             </div>
           </div>
 
@@ -60,11 +68,17 @@ export const HowItWorks = ({ Howitworks }: HowItWorksProps) => {
                   {/* Step image if available */}
                   {step.svg && (
                     <div className="mt-4 rounded-xl overflow-hidden">
+                      {/* 
+                      // TODO: To enable step image, uncomment this code
                       <Image
                         className="rounded-xl w-full h-auto max-w-sm"
                         src={step.svg}
                         alt={step.title}
                       />
+                      */}
+                      <div className="rounded-xl w-full h-40 bg-background/50 flex items-center justify-center border border-dashed border-gray-300 dark:border-gray-700">
+                        <span className="text-xs text-muted">Feature Preview</span>
+                      </div>
                     </div>
                   )}
                 </div>

@@ -1,0 +1,48 @@
+# Implementation Plan - Specific Business Model Playbooks
+
+# Goal Description
+Refine the copywriting playbooks to be strictly tailored to the **"Fully Managed Automation Service"** business model described in [reference/01.mdx](file:///u:/automation/template/reference/01.mdx).
+The templates must explicitly force the writer to answer the specific buyer questions from [reference/03.mdx](file:///u:/automation/template/reference/03.mdx) using the "We handle everything" value proposition.
+
+## User Review Required
+> [!IMPORTANT]
+> **Business Model Integration**: The playbooks will no longer be generic. They will specifically instruct the user to write about "Managed Automation", "No technical skills needed", and "Hosted on our servers", as per `reference/01`.
+> **FAQ Requirement**: Every relevant template will now include an FAQ section at the end.
+
+## Proposed Changes
+
+I will update the files in `u:\automation\template\playbook`.
+
+### Core Strategy: The "Answer The Question" Format
+Each section in the playbook will now look like this:
+1.  **The Buyer Question**: (From `reference/03`) e.g., *"Do I get it right away or do I have to think too hard?"*
+2.  **The Business Answer**: (From `reference/01`) e.g., *"We automate it end-to-end. You just tell us the process."*
+3.  **The Framework**: How to write this answer.
+
+### Playbook Updates
+
+#### [MODIFY] [homepage-template.mdx](file:///u:/automation/template/playbook/homepage-template.mdx)
+-   **Hero**: Must answer *"What is this?"* using *"Fully managed automation service"*.
+-   **How It Works**: Must answer *"Is it hard?"* using *"1. Requirement -> 2. Design -> 3. Dev -> 4. Hosting"*.
+-   **Value Prop**: Must answer *"Why makes you different?"* using *"No DIY, Unlimited Runs, Hosted Servers"*.
+-   **FAQ**: Added at the end.
+
+#### [MODIFY] [case-study-template.mdx](file:///u:/automation/template/playbook/case-study-template.mdx)
+-   **Focus**: Proof that "Managed Service" > "DIY Tools".
+-   **Before**: "Struggling with Zapier/Manual work" (Ref 01).
+-   **After**: "Done-for-you system running on our servers".
+
+#### [MODIFY] [feature-template.mdx](file:///u:/automation/template/playbook/feature-template.mdx)
+-   **Focus**: Explaining specific capabilities (e.g., "AI Decision Making").
+-   **Question**: *"Is this hard to set up?"* -> **Answer**: *"We build it for you."*
+
+#### [MODIFY] [use-case-template.mdx](file:///u:/automation/template/playbook/use-case-template.mdx)
+-   **Focus**: Industry context.
+-   **Question**: *"Does this apply to me?"* -> **Answer**: *"Yes, we handle Retail/Logistics/etc processes."*
+
+#### [MODIFY] [blog-template.mdx](file:///u:/automation/template/playbook/blog-template.mdx)
+-   **Focus**: Educating on the "Managed vs DIY" problem.
+
+## Verification Plan
+1.  **Business Logic Check**: Verify that every template forces the writer to mention "Managed Service", "No Tech Needed", or "SIM AI" (Ref 01).
+2.  **Question Map Check**: Verify that specific questions from Ref 03 are listed as header/checks in each section.

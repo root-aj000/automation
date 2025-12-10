@@ -46,7 +46,9 @@ export default function TestimonialSection({ testimonial }: TestimonialProps) {
 
                         {/* Author */}
                         <div className="flex items-center justify-center gap-4">
-                            {testimonial.avatar ? (
+                            {/* 
+                                // TODO: To enable author avatar image, uncomment this block
+                                testimonial.avatar ? (
                                 <Image
                                     src={testimonial.avatar}
                                     alt={testimonial.author}
@@ -54,11 +56,12 @@ export default function TestimonialSection({ testimonial }: TestimonialProps) {
                                     height={64}
                                     className="rounded-full ring-4 ring-primary/10"
                                 />
-                            ) : (
-                                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center text-white font-bold text-xl ring-4 ring-primary/10">
-                                    {testimonial.author.charAt(0)}
-                                </div>
-                            )}
+                            ) : ( 
+                            */}
+                            <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center text-white font-bold text-xl ring-4 ring-primary/10">
+                                {testimonial.author.charAt(0)}
+                            </div>
+                            {/* ) */}
                             <div className="text-left">
                                 <div className="text-lg font-semibold text-foreground">
                                     {testimonial.author}

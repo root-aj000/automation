@@ -53,6 +53,16 @@ export const Hero_2 = ({ Hero_2 }: Hero_2Props) => {
                 <div className="absolute inset-0 gradient-primary rounded-3xl blur-3xl opacity-20 animate-pulse-glow" />
                 <div className="relative glass rounded-3xl p-8 min-h-[300px] md:min-h-[400px] flex items-center justify-center">
                   {/* Automation workflow visual */}
+                  {/* 
+                  // TODO: To enable hero image, uncomment this code and remove the grid below
+                  <Image 
+                    src={Hero_2.image || "/placeholder.jpg"} 
+                    alt={Hero_2.alt || "Hero Image"} 
+                    width={600} 
+                    height={400} 
+                    className="rounded-3xl shadow-2xl"
+                  /> 
+                  */}
                   <div className="grid grid-cols-3 gap-4">
                     {[1, 2, 3].map((i) => (
                       <div

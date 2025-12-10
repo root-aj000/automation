@@ -113,7 +113,9 @@ export default function UseCaseHero({
                 <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-primary/5 rounded-3xl blur-xl opacity-60" />
 
                 <div className="relative rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 shadow-2xl bg-surface-elevated">
-                  {hero_image ? (
+                  {/* 
+                    // TODO: To enable the hero image, uncomment the following code and remove the placeholder below
+                    hero_image ? (
                     <Image
                       src={hero_image}
                       alt={title}
@@ -122,13 +124,14 @@ export default function UseCaseHero({
                       className="w-full h-auto object-cover"
                       priority
                     />
-                  ) : (
-                    <div className="aspect-[4/3] bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center">
-                      <svg className="w-24 h-24 text-primary/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                      </svg>
-                    </div>
-                  )}
+                  ) : ( 
+                  */}
+                  <div className="aspect-[4/3] bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center">
+                    <svg className="w-24 h-24 text-primary/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  {/* ) */}
                 </div>
 
                 {/* Floating badge */}

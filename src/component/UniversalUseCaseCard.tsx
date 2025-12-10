@@ -24,6 +24,24 @@ export const UniversalUseCaseCard = ({ usecase_data, industryname }: UniversalUs
             {/* Gradient border overlay on hover */}
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
+            {/* 
+            // TODO: To enable cover image, uncomment this code and remove the placeholder below
+            <div className="relative h-40 w-full overflow-hidden rounded-t-2xl">
+              <Image 
+                src={usecase.hero_image || "/placeholder.jpg"} 
+                alt={usecase.title} 
+                fill 
+                className="object-cover transition-transform duration-500 group-hover:scale-105" 
+              />
+            </div>
+            */}
+            {/* Cover Image Placeholder */}
+            <div className="relative h-40 w-full bg-surface-elevated overflow-hidden rounded-t-2xl flex items-center justify-center border-b border-gray-100 dark:border-gray-800">
+              <svg className="w-10 h-10 text-muted/20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </div>
+
             <div className="relative z-10">
               {/* Icon */}
               <div className="icon-container w-12 h-12 rounded-xl mb-4">

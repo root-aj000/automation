@@ -54,6 +54,16 @@ export const Hero_3 = ({ Hero_3 }: Hero_3Props) => {
                 <div className="absolute inset-0 gradient-primary rounded-3xl blur-3xl opacity-15 animate-pulse-glow" />
                 <div className="relative glass rounded-3xl p-6 md:p-10">
                   {/* Dashboard Preview Grid */}
+                  {/* 
+                  // TODO: To enable hero image, uncomment this code and remove the grid below
+                  <Image 
+                    src={Hero_3.image || "/placeholder.jpg"} 
+                    alt={Hero_3.alt || "Hero Image"} 
+                    width={1000} 
+                    height={600} 
+                    className="rounded-2xl shadow-2xl w-full"
+                  /> 
+                  */}
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
                     {[
                       { icon: "M13 10V3L4 14h7v7l9-11h-7z", label: "Triggers" },

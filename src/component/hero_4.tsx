@@ -66,6 +66,16 @@ export const Hero_4 = ({ Hero_4 }: Hero_4Props) => {
                 <div className="absolute inset-0 gradient-primary rounded-3xl blur-3xl opacity-20 animate-pulse-glow" />
                 <div className="relative glass rounded-3xl p-8 min-h-[350px] md:min-h-[450px]">
                   {/* Animated automation flow */}
+                  {/* 
+                  // TODO: To enable hero image, uncomment this code and remove the flex container below
+                  <Image 
+                    src={Hero_4.image || "/placeholder.jpg"} 
+                    alt={Hero_4.alt || "Hero Image"} 
+                    width={600} 
+                    height={600} 
+                    className="rounded-3xl shadow-2xl"
+                  /> 
+                  */}
                   <div className="flex flex-col items-center justify-center h-full gap-6">
                     <div className="flex items-center gap-4">
                       <div className="icon-container w-16 h-16 rounded-2xl animate-bounce-subtle">

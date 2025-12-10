@@ -17,6 +17,7 @@ import { LogoCloud } from "@/component/logo_cloud";
 import { Subscribe } from "@/component/subscribe";
 import { Steps } from "@/component/steps";
 import { ForWhom } from "@/component/for_whom";
+import { Faq } from "@/component/faq";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -60,6 +61,7 @@ export default async function HomePage() {
       />
       <Steps Howitworks={homeData.Howitworks} />
       <ForWhom forwhom={homeData.forwhom} />
+      <Faq faq={homeData.faq ?? { title: "", description: "", items: [] }} />
       <Subscribe subscribe={homeData.subscribe} />
     </>
   );

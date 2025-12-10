@@ -318,5 +318,19 @@ export interface IndexProps {
     case_data: CaseStudyProps["case_data"];
     Home_header_blog: Home_header_blogProps["Home_header_blog"];
     Home_header_cases: Home_header_casesProps["Home_header_cases"];
+    faq?: FaqProps["faq"];
+  };
+}
+
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+export interface FaqProps {
+  faq: {
+    title: string;
+    description: string;
+    items: FaqItem[];
   };
 }
