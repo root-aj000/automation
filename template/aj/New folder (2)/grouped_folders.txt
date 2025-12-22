@@ -1,0 +1,3772 @@
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\[workflowId]\components\panel\components\deploy\components\deploy-modal\components\chat\hooks (depth=16)
+  - index.ts
+  - use-chat-deployment.ts
+  - use-identifier-validation.ts
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\[workflowId]\components\panel\components\deploy\components\deploy-modal\components\general\components (depth=16)
+  - index.ts
+  - versions.tsx
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\[workflowId]\components\panel\components\editor\components\sub-block\components\tag-dropdown\components (depth=16)
+  - index.ts
+  - keyboard-navigation-handler.tsx
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\[workflowId]\components\panel\components\editor\components\sub-block\components\tool-input\components (depth=16)
+  - mcp-tools-list.tsx
+  - tool-credential-selector.tsx
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\[workflowId]\components\panel\components\editor\components\sub-block\components\mcp-server-modal (depth=15)
+  - mcp-server-selector.tsx
+  - mcp-tool-selector.tsx
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\[workflowId]\components\panel\components\editor\components\sub-block\components\tag-dropdown (depth=15)
+  - tag-dropdown.tsx
+  - types.ts
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\components\sidebar\components\settings-modal\components\subscription\components\cancel-subscription (depth=14)
+  - cancel-subscription.tsx
+  - index.ts
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\components\sidebar\components\settings-modal\components\subscription\components\cost-breakdown (depth=14)
+  - cost-breakdown.tsx
+  - index.ts
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\components\sidebar\components\settings-modal\components\subscription\components\credit-balance (depth=14)
+  - credit-balance.tsx
+  - index.ts
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\components\sidebar\components\settings-modal\components\subscription\components\plan-card (depth=14)
+  - index.ts
+  - plan-card.tsx
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\components\sidebar\components\settings-modal\components\subscription\components\usage-limit (depth=14)
+  - index.ts
+  - usage-limit.tsx
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\[workflowId]\components\panel\components\copilot\components\copilot-message\components (depth=14)
+  - file-display.tsx
+  - index.ts
+  - markdown-renderer.tsx
+  - smooth-streaming.tsx
+  - thinking-block.tsx
+  - usage-limit-actions.tsx
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\[workflowId]\components\panel\components\copilot\components\copilot-message\hooks (depth=14)
+  - index.ts
+  - use-checkpoint-management.ts
+  - use-message-editing.ts
+  - use-message-feedback.ts
+  - use-success-timers.ts
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\[workflowId]\components\panel\components\copilot\components\user-input\hooks (depth=14)
+  - index.ts
+  - use-context-management.ts
+  - use-file-attachments.ts
+  - use-mention-data.ts
+  - use-mention-insert-handlers.ts
+  - use-mention-keyboard.ts
+  - use-mention-menu.ts
+  - use-mention-tokens.ts
+  - use-textarea-auto-resize.ts
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\[workflowId]\components\panel\components\editor\components\sub-block\components (depth=14)
+  - env-var-dropdown.tsx
+  - formatted-text.tsx
+  - index.ts
+  - sub-block-dropdowns.tsx
+  - sub-block-input-controller.tsx
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\[workflowId]\components\panel\components\editor\components\sub-block\hooks (depth=14)
+  - use-depends-on-gate.ts
+  - use-foreign-credential.ts
+  - use-sub-block-dropdowns.ts
+  - use-sub-block-input.ts
+  - use-sub-block-value.ts
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\components\sidebar\components\settings-modal\components\mcp\components (depth=13)
+  - index.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\components\sidebar\components\workspace-header\components\invite-modal\components (depth=13)
+  - email-tag.tsx
+  - index.ts
+  - permission-selector.tsx
+  - permissions-table-skeleton.tsx
+  - permissions-table.tsx
+  - types.ts
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\[workflowId]\components\panel\components\copilot\components\user-input (depth=13)
+  - constants.ts
+  - user-input.tsx
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\[workflowId]\components\panel\components\editor\components\connection-blocks (depth=13)
+  - connection-blocks.tsx
+  - index.ts
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\logs\components\logs-toolbar\components\notifications\components\slack-channel-selector (depth=12)
+  - index.ts
+  - slack-channel-selector.tsx
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\logs\components\logs-toolbar\components\notifications\components\workflow-selector (depth=12)
+  - index.ts
+  - workflow-selector.tsx
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\components\sidebar\components\settings-modal\components\subscription (depth=12)
+  - plan-configs.ts
+  - subscription-permissions.ts
+  - subscription.tsx
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\[workflowId]\components\panel\components\copilot\hooks (depth=12)
+  - index.ts
+  - use-chat-history.ts
+  - use-copilot-initialization.ts
+  - use-landing-prompt.ts
+  - use-todo-management.ts
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\[workflowId]\components\panel\components\deploy\hooks (depth=12)
+  - index.ts
+  - use-change-detection.ts
+  - use-deployed-state.ts
+  - use-deployment.ts
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\[workflowId]\components\panel\components\editor\hooks (depth=12)
+  - index.ts
+  - use-block-connections.ts
+  - use-connections-resize.ts
+  - use-editor-block-properties.ts
+  - use-editor-subblock-layout.ts
+  - use-subflow-editor.ts
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\[workflowId]\components\panel\components\toolbar\components (depth=12)
+  - drag-preview.ts
+  - index.ts
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\[workflowId]\components\panel\components\toolbar\hooks (depth=12)
+  - index.ts
+  - use-toolbar-item-interactions.ts
+  - use-toolbar-resize.ts
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\[workflowId]\components\panel\components\deploy (depth=11)
+  - deploy.tsx
+  - index.ts
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\[workflowId]\components\panel\components\toolbar (depth=11)
+  - index.ts
+  - toolbar.tsx
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\logs\components\dashboard\components\line-chart (depth=10)
+  - index.ts
+  - line-chart.tsx
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\logs\components\dashboard\components\status-bar (depth=10)
+  - index.ts
+  - status-bar.tsx
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\logs\components\dashboard\components\workflows-list (depth=10)
+  - index.ts
+  - workflows-list.tsx
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\logs\components\log-details\components\file-download (depth=10)
+  - file-download.tsx
+  - index.ts
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\logs\components\log-details\components\frozen-canvas (depth=10)
+  - frozen-canvas.tsx
+  - index.ts
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\logs\components\log-details\components\trace-spans (depth=10)
+  - index.ts
+  - trace-spans.tsx
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\logs\components\logs-toolbar\components\controls (depth=10)
+  - controls.tsx
+  - index.ts
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\logs\components\logs-toolbar\components\notifications (depth=10)
+  - index.ts
+  - notifications.tsx
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\logs\components\logs-toolbar\components\search (depth=10)
+  - index.ts
+  - search.tsx
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\components\sidebar\components\search-modal (depth=10)
+  - search-modal.tsx
+  - search-utils.ts
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\components\sidebar\components\workspace-header (depth=10)
+  - index.ts
+  - workspace-header.tsx
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\[workflowId]\components\chat\hooks (depth=10)
+  - index.ts
+  - use-chat-file-upload.ts
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\[workflowId]\components\panel\hooks (depth=10)
+  - index.ts
+  - use-panel-resize.ts
+  - use-usage-limits.ts
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\[workflowId]\components\terminal\components (depth=10)
+  - index.ts
+  - prettier-output.tsx
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\[workflowId]\components\terminal\hooks (depth=10)
+  - index.ts
+  - use-output-panel-resize.ts
+  - use-terminal-filters.ts
+  - use-terminal-resize.ts
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\[workflowId]\components\workflow-block\hooks (depth=10)
+  - index.ts
+  - use-block-properties.ts
+  - use-block-state.ts
+  - use-child-deployment.ts
+  - use-child-workflow.ts
+  - use-schedule-info.ts
+  - use-webhook-info.ts
+
+U:/foldersim/sim\apps\sim\app\(landing)\components\hero\components\landing-canvas\landing-block (depth=9)
+  - landing-block.tsx
+  - landing-loop-node.tsx
+  - landing-node.tsx
+  - loop-block.tsx
+  - tag.tsx
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\components\sidebar\hooks (depth=9)
+  - index.ts
+  - use-auto-scroll.ts
+  - use-context-menu.ts
+  - use-drag-drop.ts
+  - use-folder-expand.ts
+  - use-folder-operations.ts
+  - use-item-drag.ts
+  - use-item-rename.ts
+  - use-sidebar-resize.ts
+  - use-workflow-operations.ts
+  - use-workflow-selection.ts
+  - use-workspace-management.ts
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\[workflowId]\components\terminal (depth=9)
+  - index.ts
+  - terminal.tsx
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\[workflowId]\components\workflow-block (depth=9)
+  - constants.ts
+  - types.ts
+  - utils.ts
+  - workflow-block.tsx
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\[workflowId]\hooks\use-float (depth=9)
+  - index.ts
+  - use-float-boundary-sync.ts
+  - use-float-drag.ts
+  - use-float-resize.ts
+
+U:/foldersim/sim\apps\sim\app\(landing)\components\hero\components\landing-canvas (depth=8)
+  - dot-pattern.tsx
+  - landing-canvas.tsx
+  - landing-flow.tsx
+
+U:/foldersim/sim\apps\sim\app\api\knowledge\[id]\documents\[documentId] (depth=8)
+  - route.test.ts
+  - route.ts
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\files\[fileId]\view (depth=8)
+  - file-viewer.tsx
+  - page.tsx
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\knowledge\[id]\[documentId] (depth=8)
+  - document.tsx
+  - page.tsx
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\logs\components\dashboard (depth=8)
+  - dashboard.tsx
+  - index.ts
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\logs\components\log-details (depth=8)
+  - index.ts
+  - log-details.tsx
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\logs\components\logs-toolbar (depth=8)
+  - index.ts
+  - logs-toolbar.tsx
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\components\workflow-preview (depth=8)
+  - workflow-preview-block.tsx
+  - workflow-preview-subflow.tsx
+  - workflow-preview.tsx
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\[workflowId]\hooks (depth=8)
+  - index.ts
+  - use-accessible-reference-prefixes.ts
+  - use-auto-layout.ts
+  - use-block-connections.ts
+  - use-block-dimensions.ts
+  - use-block-output-fields.ts
+  - use-block-visual.ts
+  - use-current-workflow.ts
+  - use-node-utilities.ts
+  - use-scroll-management.ts
+  - use-wand.ts
+  - use-workflow-execution.ts
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\[workflowId]\utils (depth=8)
+  - auto-layout-utils.ts
+  - block-ring-utils.ts
+  - index.ts
+  - workflow-execution-utils.ts
+
+U:/foldersim/sim\apps\sim\app\(landing)\components\footer\components (depth=7)
+  - compliance-badges.tsx
+  - index.ts
+  - logo.tsx
+  - social-links.tsx
+  - status-indicator.tsx
+
+U:/foldersim/sim\apps\sim\app\(landing)\components\hero\components (depth=7)
+  - icon-button.tsx
+  - index.ts
+
+U:/foldersim/sim\apps\sim\app\api\auth\oauth\connections (depth=7)
+  - route.test.ts
+  - route.ts
+
+U:/foldersim/sim\apps\sim\app\api\auth\oauth\credentials (depth=7)
+  - route.test.ts
+  - route.ts
+
+U:/foldersim/sim\apps\sim\app\api\auth\oauth\disconnect (depth=7)
+  - route.test.ts
+  - route.ts
+
+U:/foldersim/sim\apps\sim\app\api\auth\oauth\token (depth=7)
+  - route.test.ts
+  - route.ts
+
+U:/foldersim/sim\apps\sim\app\api\chat\manage\[id] (depth=7)
+  - route.test.ts
+  - route.ts
+
+U:/foldersim/sim\apps\sim\app\api\copilot\chat\update-messages (depth=7)
+  - route.test.ts
+  - route.ts
+
+U:/foldersim/sim\apps\sim\app\api\copilot\checkpoints\revert (depth=7)
+  - route.test.ts
+  - route.ts
+
+U:/foldersim/sim\apps\sim\app\api\files\serve\[...path] (depth=7)
+  - route.test.ts
+  - route.ts
+
+U:/foldersim/sim\apps\sim\app\api\knowledge\[id]\documents (depth=7)
+  - route.test.ts
+  - route.ts
+
+U:/foldersim/sim\apps\sim\app\api\schedules\[id]\status (depth=7)
+  - route.test.ts
+  - route.ts
+
+U:/foldersim/sim\apps\sim\app\api\webhooks\trigger\[path] (depth=7)
+  - route.test.ts
+  - route.ts
+
+U:/foldersim/sim\apps\sim\app\api\workflows\[id]\variables (depth=7)
+  - route.test.ts
+  - route.ts
+
+U:/foldersim/sim\apps\sim\app\api\workspaces\invitations\[invitationId] (depth=7)
+  - route.test.ts
+  - route.ts
+
+U:/foldersim/sim\apps\sim\app\api\workspaces\[id]\notifications (depth=7)
+  - constants.ts
+  - route.ts
+
+U:/foldersim/sim\apps\sim\app\chat\components\message\components (depth=7)
+  - file-download.tsx
+  - markdown-renderer.tsx
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\knowledge\components (depth=7)
+  - constants.ts
+  - index.ts
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\knowledge\[id] (depth=7)
+  - base.tsx
+  - page.tsx
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\logs\hooks (depth=7)
+  - index.ts
+  - use-log-details-resize.ts
+  - use-search-state.ts
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\templates\components (depth=7)
+  - navigation-tabs.tsx
+  - template-card.tsx
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\hooks (depth=7)
+  - index.ts
+  - use-can-delete.ts
+  - use-delete-folder.ts
+  - use-delete-workflow.ts
+  - use-duplicate-folder.ts
+  - use-duplicate-workflow.ts
+  - use-duplicate-workspace.ts
+  - use-export-workflow.ts
+  - use-export-workspace.ts
+  - use-import-workflow.ts
+  - use-import-workspace.ts
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\w\[workflowId] (depth=7)
+  - layout.tsx
+  - page.tsx
+  - workflow.tsx
+
+U:/foldersim/sim\apps\sim\lib\copilot\tools\client\blocks (depth=7)
+  - get-blocks-and-tools.ts
+  - get-blocks-metadata.ts
+  - get-trigger-blocks.ts
+
+U:/foldersim/sim\apps\sim\lib\copilot\tools\client\examples (depth=7)
+  - get-examples-rag.ts
+  - get-operations-examples.ts
+  - get-trigger-examples.ts
+  - summarize.ts
+
+U:/foldersim/sim\apps\sim\lib\copilot\tools\client\other (depth=7)
+  - checkoff-todo.ts
+  - make-api-request.ts
+  - mark-todo-in-progress.ts
+  - oauth-request-access.ts
+  - plan.ts
+  - remember-debug.ts
+  - search-documentation.ts
+  - search-errors.ts
+  - search-online.ts
+  - search-patterns.ts
+  - sleep.ts
+
+U:/foldersim/sim\apps\sim\lib\copilot\tools\client\user (depth=7)
+  - get-credentials.ts
+  - set-environment-variables.ts
+
+U:/foldersim/sim\apps\sim\lib\copilot\tools\client\workflow (depth=7)
+  - check-deployment-status.ts
+  - deploy-workflow.ts
+  - edit-workflow.ts
+  - get-user-workflow.ts
+  - get-workflow-console.ts
+  - get-workflow-data.ts
+  - get-workflow-from-name.ts
+  - list-user-workflows.ts
+  - manage-custom-tool.ts
+  - manage-mcp-tool.ts
+  - run-workflow.ts
+  - set-global-workflow-variables.ts
+
+U:/foldersim/sim\apps\sim\lib\copilot\tools\server\blocks (depth=7)
+  - get-blocks-and-tools.ts
+  - get-blocks-metadata-tool.ts
+  - get-trigger-blocks.ts
+
+U:/foldersim/sim\apps\sim\lib\copilot\tools\server\other (depth=7)
+  - make-api-request.ts
+  - search-online.ts
+
+U:/foldersim/sim\apps\sim\lib\copilot\tools\server\user (depth=7)
+  - get-credentials.ts
+  - set-environment-variables.ts
+
+U:/foldersim/sim\apps\sim\lib\copilot\tools\server\workflow (depth=7)
+  - edit-workflow.ts
+  - get-workflow-console.ts
+
+U:/foldersim/sim\apps\sim\app\(landing)\components\background (depth=6)
+  - background-svg.tsx
+  - background.tsx
+
+U:/foldersim/sim\apps\sim\app\(landing)\components\footer (depth=6)
+  - consts.ts
+  - footer.tsx
+
+U:/foldersim/sim\apps\sim\app\api\auth\forget-password (depth=6)
+  - route.test.ts
+  - route.ts
+
+U:/foldersim/sim\apps\sim\app\api\auth\oauth (depth=6)
+  - utils.test.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\app\api\auth\reset-password (depth=6)
+  - route.test.ts
+  - route.ts
+
+U:/foldersim/sim\apps\sim\app\api\chat\[identifier] (depth=6)
+  - route.test.ts
+  - route.ts
+
+U:/foldersim/sim\apps\sim\app\api\copilot\checkpoints (depth=6)
+  - route.test.ts
+  - route.ts
+
+U:/foldersim/sim\apps\sim\app\api\copilot\confirm (depth=6)
+  - route.test.ts
+  - route.ts
+
+U:/foldersim/sim\apps\sim\app\api\files\delete (depth=6)
+  - route.test.ts
+  - route.ts
+
+U:/foldersim/sim\apps\sim\app\api\files\parse (depth=6)
+  - route.test.ts
+  - route.ts
+
+U:/foldersim/sim\apps\sim\app\api\files\presigned (depth=6)
+  - route.test.ts
+  - route.ts
+
+U:/foldersim/sim\apps\sim\app\api\files\upload (depth=6)
+  - route.test.ts
+  - route.ts
+
+U:/foldersim/sim\apps\sim\app\api\folders\[id] (depth=6)
+  - route.test.ts
+  - route.ts
+
+U:/foldersim/sim\apps\sim\app\api\function\execute (depth=6)
+  - route.test.ts
+  - route.ts
+
+U:/foldersim/sim\apps\sim\app\api\knowledge\search (depth=6)
+  - route.test.ts
+  - route.ts
+  - utils.test.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\app\api\knowledge\[id] (depth=6)
+  - route.test.ts
+  - route.ts
+
+U:/foldersim/sim\apps\sim\app\api\schedules\execute (depth=6)
+  - route.test.ts
+  - route.ts
+
+U:/foldersim/sim\apps\sim\app\api\tools\custom (depth=6)
+  - route.test.ts
+  - route.ts
+
+U:/foldersim/sim\apps\sim\app\api\v1\admin (depth=6)
+  - auth.ts
+  - index.ts
+  - middleware.ts
+  - responses.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\app\api\v1\logs (depth=6)
+  - filters.ts
+  - meta.ts
+  - route.ts
+
+U:/foldersim/sim\apps\sim\app\api\workflows\[id] (depth=6)
+  - route.test.ts
+  - route.ts
+
+U:/foldersim/sim\apps\sim\app\api\workspaces\invitations (depth=6)
+  - route.test.ts
+  - route.ts
+
+U:/foldersim/sim\apps\sim\app\chat\components\input (depth=6)
+  - input.tsx
+  - voice-input.tsx
+
+U:/foldersim/sim\apps\sim\app\resume\[workflowId]\[executionId] (depth=6)
+  - page.tsx
+  - resume-page-client.tsx
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\knowledge (depth=6)
+  - knowledge.tsx
+  - layout.tsx
+  - page.tsx
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\logs (depth=6)
+  - layout.tsx
+  - logs.tsx
+  - page.tsx
+  - types.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\providers (depth=6)
+  - global-commands-provider.tsx
+  - provider-models-loader.tsx
+  - settings-loader.tsx
+  - workspace-permissions-provider.tsx
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId]\templates (depth=6)
+  - layout.tsx
+  - page.tsx
+  - templates.tsx
+
+U:/foldersim/sim\apps\sim\lib\copilot\tools\client (depth=6)
+  - base-tool.ts
+  - manager.ts
+  - registry.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\lib\copilot\tools\server (depth=6)
+  - base-tool.ts
+  - router.ts
+
+U:/foldersim/sim\apps\sim\lib\core\rate-limiter\storage (depth=6)
+  - adapter.ts
+  - db-token-bucket.ts
+  - factory.ts
+  - index.ts
+  - redis-token-bucket.ts
+
+U:/foldersim/sim\apps\sim\lib\logs\execution\snapshot (depth=6)
+  - service.test.ts
+  - service.ts
+
+U:/foldersim/sim\apps\sim\lib\logs\execution\trace-spans (depth=6)
+  - trace-spans.test.ts
+  - trace-spans.ts
+
+U:/foldersim/sim\apps\sim\lib\uploads\contexts\chat (depth=6)
+  - chat-file-manager.ts
+  - index.ts
+
+U:/foldersim/sim\apps\sim\lib\uploads\contexts\copilot (depth=6)
+  - copilot-file-manager.ts
+  - index.ts
+
+U:/foldersim/sim\apps\sim\lib\uploads\contexts\execution (depth=6)
+  - execution-file-manager.ts
+  - index.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\lib\uploads\contexts\workspace (depth=6)
+  - index.ts
+  - workspace-file-manager.ts
+
+U:/foldersim/sim\apps\sim\lib\uploads\providers\blob (depth=6)
+  - client.test.ts
+  - client.ts
+  - index.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\lib\uploads\providers\s3 (depth=6)
+  - client.test.ts
+  - client.ts
+  - index.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\app\(auth)\components (depth=5)
+  - auth-background-svg.tsx
+  - auth-background.tsx
+  - oauth-provider-checker.tsx
+  - social-login-buttons.tsx
+  - sso-login-button.tsx
+
+U:/foldersim/sim\apps\sim\app\(auth)\login (depth=5)
+  - login-form.tsx
+  - page.tsx
+
+U:/foldersim/sim\apps\sim\app\(auth)\reset-password (depth=5)
+  - page.tsx
+  - reset-password-form.tsx
+
+U:/foldersim/sim\apps\sim\app\(auth)\signup (depth=5)
+  - page.tsx
+  - signup-form.tsx
+
+U:/foldersim/sim\apps\sim\app\(auth)\sso (depth=5)
+  - page.tsx
+  - sso-form.tsx
+
+U:/foldersim/sim\apps\sim\app\(auth)\verify (depth=5)
+  - page.tsx
+  - use-verification.ts
+  - verify-content.tsx
+
+U:/foldersim/sim\apps\sim\app\(landing)\components (depth=5)
+  - index.ts
+  - legal-layout.tsx
+  - structured-data.tsx
+
+U:/foldersim/sim\apps\sim\app\(landing)\studio (depth=5)
+  - head.tsx
+  - layout.tsx
+  - page.tsx
+  - post-grid.tsx
+
+U:/foldersim/sim\apps\sim\app\api\chat (depth=5)
+  - route.test.ts
+  - route.ts
+  - utils.test.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\app\api\files (depth=5)
+  - authorization.ts
+  - utils.test.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\app\api\folders (depth=5)
+  - route.test.ts
+  - route.ts
+
+U:/foldersim/sim\apps\sim\app\api\knowledge (depth=5)
+  - route.test.ts
+  - route.ts
+  - utils.test.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\app\api\schedules (depth=5)
+  - route.test.ts
+  - route.ts
+
+U:/foldersim/sim\apps\sim\app\api\status (depth=5)
+  - route.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\app\api\v1 (depth=5)
+  - auth.ts
+  - middleware.ts
+
+U:/foldersim/sim\apps\sim\app\api\workflows (depth=5)
+  - middleware.ts
+  - route.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\app\changelog\components (depth=5)
+  - changelog-content.tsx
+  - timeline-list.tsx
+
+U:/foldersim/sim\apps\sim\app\chat\hooks (depth=5)
+  - index.ts
+  - use-audio-streaming.ts
+  - use-chat-streaming.ts
+
+U:/foldersim/sim\apps\sim\app\chat\[identifier] (depth=5)
+  - chat.tsx
+  - page.tsx
+
+U:/foldersim/sim\apps\sim\app\invite\components (depth=5)
+  - index.ts
+  - layout.tsx
+  - status-card.tsx
+
+U:/foldersim/sim\apps\sim\app\invite\[id] (depth=5)
+  - invite.tsx
+  - page.tsx
+
+U:/foldersim/sim\apps\sim\app\templates\[id] (depth=5)
+  - layout.tsx
+  - page.tsx
+  - template.tsx
+
+U:/foldersim/sim\apps\sim\app\workspace\[workspaceId] (depth=5)
+  - error.tsx
+  - global-error.tsx
+  - layout.tsx
+  - page.tsx
+
+U:/foldersim/sim\apps\sim\app\_shell\providers (depth=5)
+  - posthog-provider.tsx
+  - query-provider.tsx
+  - session-provider.tsx
+  - theme-provider.tsx
+
+U:/foldersim/sim\apps\sim\components\emails\billing (depth=5)
+  - credit-purchase-email.tsx
+  - enterprise-subscription-email.tsx
+  - free-tier-upgrade-email.tsx
+  - payment-failed-email.tsx
+  - plan-welcome-email.tsx
+  - usage-threshold-email.tsx
+
+U:/foldersim/sim\apps\sim\components\emails\careers (depth=5)
+  - careers-confirmation-email.tsx
+  - careers-submission-email.tsx
+
+U:/foldersim/sim\apps\sim\components\emcn\icons (depth=5)
+  - bubble-chat-preview.tsx
+  - card.tsx
+  - chevron-down.tsx
+  - connections.tsx
+  - copy.tsx
+  - document-attachment.tsx
+  - duplicate.tsx
+  - eye.tsx
+  - folder-code.tsx
+  - folder-plus.tsx
+  - hex-simple.tsx
+  - index.ts
+  - key.tsx
+  - layout.tsx
+  - library.tsx
+  - more-horizontal.tsx
+  - no-wrap.tsx
+  - panel-left.tsx
+  - play.tsx
+  - redo.tsx
+  - rocket.tsx
+  - trash.tsx
+  - trash2.tsx
+  - undo.tsx
+  - wrap.tsx
+  - zoom-in.tsx
+  - zoom-out.tsx
+
+U:/foldersim/sim\apps\sim\executor\dag\construction (depth=5)
+  - edges.test.ts
+  - edges.ts
+  - loops.ts
+  - nodes.ts
+  - paths.ts
+
+U:/foldersim/sim\apps\sim\executor\handlers\agent (depth=5)
+  - agent-handler.test.ts
+  - agent-handler.ts
+  - memory.test.ts
+  - memory.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\executor\handlers\api (depth=5)
+  - api-handler.test.ts
+  - api-handler.ts
+
+U:/foldersim/sim\apps\sim\executor\handlers\condition (depth=5)
+  - condition-handler.test.ts
+  - condition-handler.ts
+
+U:/foldersim/sim\apps\sim\executor\handlers\evaluator (depth=5)
+  - evaluator-handler.test.ts
+  - evaluator-handler.ts
+
+U:/foldersim/sim\apps\sim\executor\handlers\function (depth=5)
+  - function-handler.test.ts
+  - function-handler.ts
+
+U:/foldersim/sim\apps\sim\executor\handlers\generic (depth=5)
+  - generic-handler.test.ts
+  - generic-handler.ts
+
+U:/foldersim/sim\apps\sim\executor\handlers\router (depth=5)
+  - router-handler.test.ts
+  - router-handler.ts
+
+U:/foldersim/sim\apps\sim\executor\handlers\trigger (depth=5)
+  - trigger-handler.test.ts
+  - trigger-handler.ts
+
+U:/foldersim/sim\apps\sim\executor\handlers\workflow (depth=5)
+  - workflow-handler.test.ts
+  - workflow-handler.ts
+
+U:/foldersim/sim\apps\sim\executor\variables\resolvers (depth=5)
+  - block.ts
+  - env.ts
+  - loop.ts
+  - parallel.ts
+  - reference.ts
+  - workflow.test.ts
+  - workflow.ts
+
+U:/foldersim/sim\apps\sim\hooks\queries\utils (depth=5)
+  - index.ts
+  - optimistic-mutation.ts
+
+U:/foldersim/sim\apps\sim\lib\billing\client (depth=5)
+  - index.ts
+  - types.ts
+  - upgrade.ts
+  - usage-visualization.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\lib\billing\core (depth=5)
+  - billing.ts
+  - organization.ts
+  - subscription.ts
+  - usage-log.ts
+  - usage.ts
+
+U:/foldersim/sim\apps\sim\lib\billing\credits (depth=5)
+  - balance.ts
+  - purchase.ts
+
+U:/foldersim/sim\apps\sim\lib\billing\storage (depth=5)
+  - index.ts
+  - limits.ts
+  - tracking.ts
+
+U:/foldersim/sim\apps\sim\lib\billing\webhooks (depth=5)
+  - disputes.ts
+  - enterprise.ts
+  - invoices.ts
+  - subscription.ts
+
+U:/foldersim/sim\apps\sim\lib\core\config (depth=5)
+  - api-keys.ts
+  - env.ts
+  - feature-flags.ts
+  - redis.ts
+
+U:/foldersim/sim\apps\sim\lib\core\idempotency (depth=5)
+  - cleanup.ts
+  - index.ts
+  - service.ts
+
+U:/foldersim/sim\apps\sim\lib\core\rate-limiter (depth=5)
+  - index.ts
+  - rate-limiter.test.ts
+  - rate-limiter.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\lib\core\security (depth=5)
+  - csp.ts
+  - encryption.ts
+  - input-validation.test.ts
+  - input-validation.ts
+  - redaction.test.ts
+  - redaction.ts
+
+U:/foldersim/sim\apps\sim\lib\core\storage (depth=5)
+  - index.ts
+  - storage.ts
+
+U:/foldersim/sim\apps\sim\lib\core\utils (depth=5)
+  - browser-storage.ts
+  - cn.ts
+  - display-filters.ts
+  - formatting.ts
+  - optimistic-update.ts
+  - request.ts
+  - response-format.ts
+  - scheduling.ts
+  - sse.ts
+  - theme.ts
+  - urls.ts
+  - validation.ts
+
+U:/foldersim/sim\apps\sim\lib\knowledge\chunks (depth=5)
+  - service.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\lib\knowledge\documents (depth=5)
+  - document-processor.ts
+  - queue.ts
+  - service.ts
+  - types.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\lib\knowledge\filters (depth=5)
+  - index.ts
+  - query-builder.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\lib\knowledge\tags (depth=5)
+  - service.ts
+  - types.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\lib\logs\execution (depth=5)
+  - logger.test.ts
+  - logger.ts
+  - logging-factory.ts
+  - logging-session.ts
+
+U:/foldersim/sim\apps\sim\lib\mcp\storage (depth=5)
+  - adapter.ts
+  - factory.ts
+  - index.ts
+  - memory-cache.ts
+  - redis-cache.ts
+
+U:/foldersim/sim\apps\sim\lib\messaging\email (depth=5)
+  - mailer.test.ts
+  - mailer.ts
+  - unsubscribe.test.ts
+  - unsubscribe.ts
+  - utils.test.ts
+  - utils.ts
+  - validation.test.ts
+  - validation.ts
+
+U:/foldersim/sim\apps\sim\lib\uploads\core (depth=5)
+  - setup.server.ts
+  - storage-client.ts
+  - storage-service.ts
+
+U:/foldersim/sim\apps\sim\lib\uploads\utils (depth=5)
+  - file-utils.server.ts
+  - file-utils.ts
+  - index.ts
+  - validation.ts
+
+U:/foldersim/sim\apps\sim\lib\workflows\autolayout (depth=5)
+  - constants.ts
+  - containers.ts
+  - core.ts
+  - index.ts
+  - targeted.ts
+  - types.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\lib\workflows\blocks (depth=5)
+  - block-dimensions.ts
+  - block-outputs.ts
+  - block-path-calculator.ts
+
+U:/foldersim/sim\apps\sim\lib\workflows\credentials (depth=5)
+  - credential-extractor.ts
+  - credential-resolver.ts
+
+U:/foldersim/sim\apps\sim\lib\workflows\diff (depth=5)
+  - diff-engine.ts
+  - index.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\lib\workflows\executor (depth=5)
+  - execution-core.ts
+  - execution-events.ts
+  - human-in-the-loop-manager.ts
+
+U:/foldersim/sim\apps\sim\lib\workflows\operations (depth=5)
+  - deployment-utils.ts
+  - import-export.ts
+  - socket-operations.ts
+
+U:/foldersim/sim\apps\sim\lib\workflows\persistence (depth=5)
+  - custom-tools-persistence.ts
+  - duplicate.ts
+  - utils.test.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\lib\workflows\sanitization (depth=5)
+  - json-sanitizer.ts
+  - key-validation.ts
+  - references.test.ts
+  - references.ts
+  - validation.ts
+
+U:/foldersim/sim\apps\sim\lib\workflows\schedules (depth=5)
+  - utils.test.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\lib\workflows\triggers (depth=5)
+  - execution-events.ts
+  - trigger-utils.ts
+  - triggers.ts
+
+U:/foldersim/sim\apps\sim\lib\workflows\variables (depth=5)
+  - variable-manager.test.ts
+  - variable-manager.ts
+
+U:/foldersim/sim\apps\sim\lib\workspaces\organization (depth=5)
+  - index.ts
+  - types.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\lib\workspaces\permissions (depth=5)
+  - utils.test.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\stores\logs\filters (depth=5)
+  - store.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\stores\panel\copilot (depth=5)
+  - constants.ts
+  - index.ts
+  - preview-store.ts
+  - store.ts
+  - tools.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\stores\panel\variables (depth=5)
+  - store.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\stores\settings\environment (depth=5)
+  - store.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\stores\settings\general (depth=5)
+  - store.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\stores\terminal\console (depth=5)
+  - index.ts
+  - store.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\stores\workflows\json (depth=5)
+  - importer.ts
+  - store.ts
+
+U:/foldersim/sim\apps\sim\stores\workflows\registry (depth=5)
+  - store.ts
+  - types.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\stores\workflows\subblock (depth=5)
+  - store.ts
+  - types.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\stores\workflows\workflow (depth=5)
+  - store.test.ts
+  - store.ts
+  - types.ts
+  - utils.test.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\stores\workflows\yaml (depth=5)
+  - importer.ts
+  - parsing-utils.ts
+  - store.ts
+
+U:/foldersim/sim\apps\docs\app\[lang] (depth=4)
+  - layout.tsx
+  - not-found.tsx
+
+U:/foldersim/sim\apps\docs\components\docs-layout (depth=4)
+  - page-navigation-arrows.tsx
+  - sidebar-components.tsx
+  - toc-footer.tsx
+
+U:/foldersim/sim\apps\docs\components\ui (depth=4)
+  - block-info-card.tsx
+  - button.tsx
+  - code-block.tsx
+  - heading.tsx
+  - icon-mapping.ts
+  - image.tsx
+  - language-dropdown.tsx
+  - lightbox.tsx
+  - search-trigger.tsx
+  - theme-toggle.tsx
+  - video.tsx
+
+U:/foldersim/sim\apps\sim\app\(landing) (depth=4)
+  - landing.tsx
+  - layout.tsx
+
+U:/foldersim/sim\apps\sim\app\changelog (depth=4)
+  - layout.tsx
+  - page.tsx
+
+U:/foldersim/sim\apps\sim\app\templates (depth=4)
+  - layout-client.tsx
+  - layout.tsx
+  - page.tsx
+  - templates.tsx
+
+U:/foldersim/sim\apps\sim\app\unsubscribe (depth=4)
+  - page.tsx
+  - unsubscribe.tsx
+
+U:/foldersim/sim\apps\sim\app\workspace (depth=4)
+  - layout.tsx
+  - page.tsx
+
+U:/foldersim/sim\apps\sim\app\_shell (depth=4)
+  - hydration-error-handler.tsx
+  - zoom-prevention.tsx
+
+U:/foldersim/sim\apps\sim\blocks\blocks (depth=4)
+  - agent.test.ts
+  - agent.ts
+  - ahrefs.ts
+  - airtable.ts
+  - api.ts
+  - apify.ts
+  - api_trigger.ts
+  - apollo.ts
+  - arxiv.ts
+  - asana.ts
+  - browser_use.ts
+  - calendly.ts
+  - chat_trigger.ts
+  - clay.ts
+  - condition.ts
+  - confluence.ts
+  - cursor.ts
+  - datadog.ts
+  - discord.ts
+  - dropbox.ts
+  - duckduckgo.ts
+  - dynamodb.ts
+  - elasticsearch.ts
+  - elevenlabs.ts
+  - evaluator.ts
+  - exa.ts
+  - file.ts
+  - firecrawl.ts
+  - function.ts
+  - generic_webhook.ts
+  - github.ts
+  - gitlab.ts
+  - gmail.ts
+  - google.ts
+  - google_calendar.ts
+  - google_docs.ts
+  - google_drive.ts
+  - google_form.ts
+  - google_groups.ts
+  - google_sheets.ts
+  - google_slides.ts
+  - google_vault.ts
+  - grafana.ts
+  - guardrails.ts
+  - hubspot.ts
+  - huggingface.ts
+  - human_in_the_loop.ts
+  - hunter.ts
+  - image_generator.ts
+  - incidentio.ts
+  - input_trigger.ts
+  - intercom.ts
+  - jina.ts
+  - jira.ts
+  - kalshi.ts
+  - knowledge.ts
+  - linear.ts
+  - linkedin.ts
+  - linkup.ts
+  - mailchimp.ts
+  - mailgun.ts
+  - manual_trigger.ts
+  - mcp.ts
+  - mem0.ts
+  - memory.ts
+  - microsoft_excel.ts
+  - microsoft_planner.ts
+  - microsoft_teams.ts
+  - mistral_parse.ts
+  - mongodb.ts
+  - mysql.ts
+  - neo4j.ts
+  - note.ts
+  - notion.ts
+  - onedrive.ts
+  - openai.ts
+  - outlook.ts
+  - parallel.ts
+  - perplexity.ts
+  - pinecone.ts
+  - pipedrive.ts
+  - polymarket.ts
+  - postgresql.ts
+  - posthog.ts
+  - qdrant.ts
+  - rds.ts
+  - reddit.ts
+  - resend.ts
+  - response.ts
+  - router.ts
+  - rss.ts
+  - s3.ts
+  - salesforce.ts
+  - schedule.ts
+  - search.ts
+  - sendgrid.ts
+  - sentry.ts
+  - serper.ts
+  - servicenow.ts
+  - sftp.ts
+  - sharepoint.ts
+  - shopify.ts
+  - slack.ts
+  - smtp.ts
+  - spotify.ts
+  - sqs.ts
+  - ssh.ts
+  - stagehand.ts
+  - starter.ts
+  - start_trigger.ts
+  - stripe.ts
+  - stt.ts
+  - supabase.ts
+  - tavily.ts
+  - telegram.ts
+  - thinking.ts
+  - translate.ts
+  - trello.ts
+  - tts.ts
+  - twilio.ts
+  - twilio_voice.ts
+  - typeform.ts
+  - variables.ts
+  - video_generator.ts
+  - vision.ts
+  - wait.ts
+  - wealthbox.ts
+  - webflow.ts
+  - webhook.ts
+  - whatsapp.ts
+  - wikipedia.ts
+  - wordpress.ts
+  - workflow.ts
+  - workflow_input.ts
+  - x.ts
+  - youtube.ts
+  - zendesk.ts
+  - zep.ts
+  - zoom.ts
+
+U:/foldersim/sim\apps\sim\components\emails (depth=4)
+  - base-styles.ts
+  - batch-invitation-email.tsx
+  - footer.tsx
+  - help-confirmation-email.tsx
+  - index.ts
+  - invitation-email.tsx
+  - otp-verification-email.tsx
+  - render-email.ts
+  - reset-password-email.tsx
+  - workspace-invitation.tsx
+
+U:/foldersim/sim\apps\sim\components\ui (depth=4)
+  - alert-dialog.tsx
+  - alert.tsx
+  - avatar.tsx
+  - badge.tsx
+  - breadcrumb.tsx
+  - button.tsx
+  - card.tsx
+  - checkbox.tsx
+  - code-block.tsx
+  - collapsible.tsx
+  - color-picker.tsx
+  - command.tsx
+  - copy-button.tsx
+  - dialog.tsx
+  - dropdown-menu.tsx
+  - form.tsx
+  - index.ts
+  - input-otp-form.tsx
+  - input-otp.tsx
+  - input.tsx
+  - label.tsx
+  - notice.tsx
+  - popover.tsx
+  - progress.tsx
+  - radio-group.tsx
+  - scroll-area.tsx
+  - search-highlight.tsx
+  - select.tsx
+  - separator.tsx
+  - sheet.tsx
+  - skeleton.tsx
+  - slider.tsx
+  - switch.tsx
+  - table.tsx
+  - tabs.tsx
+  - tag-input.tsx
+  - textarea.tsx
+  - toggle.tsx
+  - tool-call.tsx
+  - verified-badge.tsx
+
+U:/foldersim/sim\apps\sim\executor\dag (depth=4)
+  - builder.test.ts
+  - builder.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\executor\execution (depth=4)
+  - block-executor.ts
+  - edge-manager.test.ts
+  - edge-manager.ts
+  - engine.ts
+  - executor.ts
+  - snapshot-serializer.ts
+  - snapshot.ts
+  - state.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\executor\handlers (depth=4)
+  - index.ts
+  - registry.ts
+
+U:/foldersim/sim\apps\sim\executor\orchestrators (depth=4)
+  - loop.ts
+  - node.ts
+  - parallel.ts
+
+U:/foldersim/sim\apps\sim\executor\types (depth=4)
+  - loop.ts
+  - parallel.ts
+
+U:/foldersim/sim\apps\sim\executor\utils (depth=4)
+  - block-data.ts
+  - connections.ts
+  - errors.ts
+  - file-tool-processor.ts
+  - http.ts
+  - json.ts
+  - lazy-cleanup.ts
+  - reference-validation.ts
+  - start-block.test.ts
+  - start-block.ts
+  - subflow-utils.ts
+
+U:/foldersim/sim\apps\sim\executor\__test-utils__ (depth=4)
+  - executor-mocks.ts
+  - mock-dependencies.ts
+  - test-executor.ts
+
+U:/foldersim/sim\apps\sim\hooks\queries (depth=4)
+  - api-keys.ts
+  - copilot-keys.ts
+  - creator-profile.ts
+  - custom-tools.ts
+  - environment.ts
+  - folders.ts
+  - general-settings.ts
+  - knowledge.ts
+  - logs.ts
+  - mcp.ts
+  - notifications.ts
+  - oauth-connections.ts
+  - oauth-credentials.ts
+  - organization.ts
+  - providers.ts
+  - sso.ts
+  - status.ts
+  - subscription.ts
+  - templates.ts
+  - user-profile.ts
+  - workflows.ts
+  - workspace-files.ts
+  - workspace.ts
+
+U:/foldersim/sim\apps\sim\hooks\selectors (depth=4)
+  - helpers.ts
+  - registry.ts
+  - resolution.ts
+  - types.ts
+  - use-selector-query.ts
+
+U:/foldersim/sim\apps\sim\lib\api-key (depth=4)
+  - auth.ts
+  - crypto.ts
+  - service.ts
+
+U:/foldersim/sim\apps\sim\lib\audio (depth=4)
+  - extractor.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\lib\auth (depth=4)
+  - anonymous.ts
+  - auth-client.ts
+  - auth.ts
+  - constants.ts
+  - credential-access.ts
+  - hybrid.ts
+  - index.ts
+  - internal.ts
+
+U:/foldersim/sim\apps\sim\lib\billing (depth=4)
+  - authorization.ts
+  - constants.ts
+  - index.ts
+  - organization.ts
+  - plans.ts
+  - stripe-client.ts
+  - threshold-billing.ts
+
+U:/foldersim/sim\apps\sim\lib\blog (depth=4)
+  - code.tsx
+  - faq.tsx
+  - mdx.tsx
+  - registry.ts
+  - schema.ts
+  - seo.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\lib\branding (depth=4)
+  - branding.ts
+  - inject-theme.ts
+  - metadata.ts
+
+U:/foldersim/sim\apps\sim\lib\chunkers (depth=4)
+  - docs-chunker.ts
+  - index.ts
+  - json-yaml-chunker.ts
+  - structured-data-chunker.ts
+  - text-chunker.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\lib\copilot (depth=4)
+  - api.ts
+  - chat-title.ts
+  - client.ts
+  - config.ts
+  - constants.ts
+  - process-contents.ts
+  - prompts.ts
+  - registry.ts
+  - request-helpers.ts
+  - types.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\lib\core (depth=4)
+  - telemetry.ts
+  - utils.test.ts
+
+U:/foldersim/sim\apps\sim\lib\environment (depth=4)
+  - api.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\lib\execution (depth=4)
+  - constants.ts
+  - e2b.ts
+  - files.ts
+  - isolated-vm.ts
+  - languages.ts
+  - preprocessing.ts
+
+U:/foldersim/sim\apps\sim\lib\file-parsers (depth=4)
+  - csv-parser.ts
+  - doc-parser.ts
+  - docx-parser.ts
+  - html-parser.ts
+  - index.test.ts
+  - index.ts
+  - json-parser.ts
+  - md-parser.ts
+  - pdf-parser.ts
+  - pptx-parser.ts
+  - txt-parser.ts
+  - types.ts
+  - utils.ts
+  - xlsx-parser.ts
+  - yaml-parser.ts
+
+U:/foldersim/sim\apps\sim\lib\guardrails (depth=4)
+  - validate_hallucination.ts
+  - validate_json.ts
+  - validate_pii.py
+  - validate_pii.ts
+  - validate_regex.ts
+
+U:/foldersim/sim\apps\sim\lib\knowledge (depth=4)
+  - constants.ts
+  - embeddings.ts
+  - service.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\lib\logs (depth=4)
+  - events.ts
+  - get-trigger-options.ts
+  - query-parser.ts
+  - search-suggestions.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\lib\mcp (depth=4)
+  - client.ts
+  - middleware.ts
+  - service.ts
+  - tool-validation.ts
+  - types.ts
+  - url-validator.ts
+  - utils.test.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\lib\notifications (depth=4)
+  - alert-rules.ts
+  - inactivity-polling.ts
+
+U:/foldersim/sim\apps\sim\lib\oauth (depth=4)
+  - index.ts
+  - oauth.test.ts
+  - oauth.ts
+
+U:/foldersim/sim\apps\sim\lib\og (depth=4)
+  - capture-preview.ts
+  - index.ts
+
+U:/foldersim/sim\apps\sim\lib\tokenization (depth=4)
+  - calculators.ts
+  - constants.ts
+  - errors.ts
+  - estimators.ts
+  - index.ts
+  - streaming.ts
+  - types.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\lib\uploads (depth=4)
+  - config.ts
+  - index.ts
+
+U:/foldersim/sim\apps\sim\lib\webhooks (depth=4)
+  - attachment-processor.ts
+  - env-resolver.ts
+  - gmail-polling-service.ts
+  - outlook-polling-service.ts
+  - processor.ts
+  - provider-subscriptions.ts
+  - provider-utils.ts
+  - rss-polling-service.ts
+  - test-tokens.ts
+  - utils.server.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\lib\workflows (depth=4)
+  - defaults.ts
+  - input-format-utils.ts
+  - state-builder.ts
+  - types.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\lib\workspaces (depth=4)
+  - duplicate.ts
+  - naming.ts
+  - presence-colors.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\providers\anthropic (depth=4)
+  - index.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\providers\azure-openai (depth=4)
+  - index.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\providers\cerebras (depth=4)
+  - index.ts
+  - types.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\providers\deepseek (depth=4)
+  - index.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\providers\google (depth=4)
+  - index.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\providers\groq (depth=4)
+  - index.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\providers\mistral (depth=4)
+  - index.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\providers\ollama (depth=4)
+  - index.ts
+  - types.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\providers\openai (depth=4)
+  - index.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\providers\openrouter (depth=4)
+  - index.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\providers\vertex (depth=4)
+  - index.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\providers\vllm (depth=4)
+  - index.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\providers\xai (depth=4)
+  - index.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\socket-server\handlers (depth=4)
+  - connection.ts
+  - index.ts
+  - operations.ts
+  - presence.ts
+  - subblocks.ts
+  - variables.ts
+  - workflow.ts
+
+U:/foldersim/sim\apps\sim\socket-server\middleware (depth=4)
+  - auth.ts
+  - permissions.ts
+
+U:/foldersim/sim\apps\sim\stores\custom-tools (depth=4)
+  - store.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\stores\execution (depth=4)
+  - store.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\stores\notifications (depth=4)
+  - index.ts
+  - store.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\stores\panel (depth=4)
+  - store.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\stores\providers (depth=4)
+  - store.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\stores\terminal (depth=4)
+  - index.ts
+  - store.ts
+
+U:/foldersim/sim\apps\sim\stores\undo-redo (depth=4)
+  - index.ts
+  - store.ts
+  - types.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\stores\variables (depth=4)
+  - store.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\stores\workflow-diff (depth=4)
+  - index.ts
+  - store.ts
+
+U:/foldersim/sim\apps\sim\stores\workflows (depth=4)
+  - index.ts
+  - server-utils.ts
+  - utils.test.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\tools\ahrefs (depth=4)
+  - backlinks.ts
+  - backlinks_stats.ts
+  - broken_backlinks.ts
+  - domain_rating.ts
+  - index.ts
+  - keyword_overview.ts
+  - organic_keywords.ts
+  - referring_domains.ts
+  - top_pages.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\airtable (depth=4)
+  - create_records.ts
+  - get_record.ts
+  - index.ts
+  - list_records.ts
+  - types.ts
+  - update_multiple_records.ts
+  - update_record.ts
+
+U:/foldersim/sim\apps\sim\tools\apify (depth=4)
+  - index.ts
+  - run_actor_async.ts
+  - run_actor_sync.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\apollo (depth=4)
+  - account_bulk_create.ts
+  - account_bulk_update.ts
+  - account_create.ts
+  - account_search.ts
+  - account_update.ts
+  - contact_bulk_create.ts
+  - contact_bulk_update.ts
+  - contact_create.ts
+  - contact_search.ts
+  - contact_update.ts
+  - email_accounts.ts
+  - index.ts
+  - opportunity_create.ts
+  - opportunity_get.ts
+  - opportunity_search.ts
+  - opportunity_update.ts
+  - organization_bulk_enrich.ts
+  - organization_enrich.ts
+  - organization_search.ts
+  - people_bulk_enrich.ts
+  - people_enrich.ts
+  - people_search.ts
+  - sequence_add_contacts.ts
+  - sequence_search.ts
+  - task_create.ts
+  - task_search.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\arxiv (depth=4)
+  - get_author_papers.ts
+  - get_paper.ts
+  - index.ts
+  - search.ts
+  - types.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\tools\asana (depth=4)
+  - add_comment.ts
+  - create_task.ts
+  - get_projects.ts
+  - get_task.ts
+  - index.ts
+  - search_tasks.ts
+  - types.ts
+  - update_task.ts
+
+U:/foldersim/sim\apps\sim\tools\browser_use (depth=4)
+  - index.ts
+  - run_task.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\calendly (depth=4)
+  - cancel_event.ts
+  - create_webhook.ts
+  - delete_webhook.ts
+  - get_current_user.ts
+  - get_event_type.ts
+  - get_scheduled_event.ts
+  - index.ts
+  - list_event_invitees.ts
+  - list_event_types.ts
+  - list_scheduled_events.ts
+  - list_webhooks.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\clay (depth=4)
+  - index.ts
+  - populate.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\confluence (depth=4)
+  - create_comment.ts
+  - create_page.ts
+  - delete_attachment.ts
+  - delete_comment.ts
+  - delete_page.ts
+  - get_space.ts
+  - index.ts
+  - list_attachments.ts
+  - list_comments.ts
+  - list_labels.ts
+  - list_spaces.ts
+  - retrieve.ts
+  - search.ts
+  - types.ts
+  - update.ts
+  - update_comment.ts
+  - upload_attachment.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\tools\cursor (depth=4)
+  - add_followup.ts
+  - delete_agent.ts
+  - get_agent.ts
+  - get_conversation.ts
+  - index.ts
+  - launch_agent.ts
+  - list_agents.ts
+  - stop_agent.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\datadog (depth=4)
+  - cancel_downtime.ts
+  - create_downtime.ts
+  - create_event.ts
+  - create_monitor.ts
+  - get_monitor.ts
+  - index.ts
+  - list_downtimes.ts
+  - list_monitors.ts
+  - mute_monitor.ts
+  - query_logs.ts
+  - query_timeseries.ts
+  - send_logs.ts
+  - submit_metrics.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\discord (depth=4)
+  - add_reaction.ts
+  - archive_thread.ts
+  - assign_role.ts
+  - ban_member.ts
+  - create_channel.ts
+  - create_invite.ts
+  - create_role.ts
+  - create_thread.ts
+  - create_webhook.ts
+  - delete_channel.ts
+  - delete_invite.ts
+  - delete_message.ts
+  - delete_role.ts
+  - delete_webhook.ts
+  - edit_message.ts
+  - execute_webhook.ts
+  - get_channel.ts
+  - get_invite.ts
+  - get_member.ts
+  - get_messages.ts
+  - get_server.ts
+  - get_user.ts
+  - get_webhook.ts
+  - index.ts
+  - join_thread.ts
+  - kick_member.ts
+  - leave_thread.ts
+  - pin_message.ts
+  - remove_reaction.ts
+  - remove_role.ts
+  - send_message.ts
+  - types.ts
+  - unban_member.ts
+  - unpin_message.ts
+  - update_channel.ts
+  - update_member.ts
+  - update_role.ts
+
+U:/foldersim/sim\apps\sim\tools\dropbox (depth=4)
+  - copy.ts
+  - create_folder.ts
+  - create_shared_link.ts
+  - delete.ts
+  - download.ts
+  - get_metadata.ts
+  - index.ts
+  - list_folder.ts
+  - move.ts
+  - search.ts
+  - types.ts
+  - upload.ts
+
+U:/foldersim/sim\apps\sim\tools\duckduckgo (depth=4)
+  - index.ts
+  - search.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\dynamodb (depth=4)
+  - delete.ts
+  - get.ts
+  - index.ts
+  - put.ts
+  - query.ts
+  - scan.ts
+  - types.ts
+  - update.ts
+
+U:/foldersim/sim\apps\sim\tools\elasticsearch (depth=4)
+  - bulk.ts
+  - cluster_health.ts
+  - cluster_stats.ts
+  - count.ts
+  - create_index.ts
+  - delete_document.ts
+  - delete_index.ts
+  - get_document.ts
+  - get_index.ts
+  - index.ts
+  - index_document.ts
+  - search.ts
+  - types.ts
+  - update_document.ts
+
+U:/foldersim/sim\apps\sim\tools\elevenlabs (depth=4)
+  - index.ts
+  - tts.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\exa (depth=4)
+  - answer.ts
+  - find_similar_links.ts
+  - get_contents.ts
+  - index.ts
+  - research.ts
+  - search.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\file (depth=4)
+  - index.ts
+  - parser.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\firecrawl (depth=4)
+  - crawl.ts
+  - extract.ts
+  - index.ts
+  - map.ts
+  - scrape.ts
+  - search.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\function (depth=4)
+  - execute.test.ts
+  - execute.ts
+  - index.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\github (depth=4)
+  - add_assignees.ts
+  - add_labels.ts
+  - cancel_workflow_run.ts
+  - close_issue.ts
+  - close_pr.ts
+  - comment.ts
+  - create_branch.ts
+  - create_file.ts
+  - create_issue.ts
+  - create_pr.ts
+  - create_project.ts
+  - create_release.ts
+  - delete_branch.ts
+  - delete_comment.ts
+  - delete_file.ts
+  - delete_project.ts
+  - delete_release.ts
+  - get_branch.ts
+  - get_branch_protection.ts
+  - get_file_content.ts
+  - get_issue.ts
+  - get_project.ts
+  - get_pr_files.ts
+  - get_release.ts
+  - get_tree.ts
+  - get_workflow.ts
+  - get_workflow_run.ts
+  - index.ts
+  - issue_comment.ts
+  - latest_commit.ts
+  - list_branches.ts
+  - list_issues.ts
+  - list_issue_comments.ts
+  - list_projects.ts
+  - list_prs.ts
+  - list_pr_comments.ts
+  - list_releases.ts
+  - list_workflows.ts
+  - list_workflow_runs.ts
+  - merge_pr.ts
+  - pr.ts
+  - remove_label.ts
+  - repo_info.ts
+  - request_reviewers.ts
+  - rerun_workflow.ts
+  - trigger_workflow.ts
+  - types.ts
+  - update_branch_protection.ts
+  - update_comment.ts
+  - update_file.ts
+  - update_issue.ts
+  - update_pr.ts
+  - update_project.ts
+  - update_release.ts
+
+U:/foldersim/sim\apps\sim\tools\gitlab (depth=4)
+  - cancel_pipeline.ts
+  - create_issue.ts
+  - create_issue_note.ts
+  - create_merge_request.ts
+  - create_merge_request_note.ts
+  - create_pipeline.ts
+  - delete_issue.ts
+  - get_issue.ts
+  - get_merge_request.ts
+  - get_pipeline.ts
+  - get_project.ts
+  - index.ts
+  - list_issues.ts
+  - list_merge_requests.ts
+  - list_pipelines.ts
+  - list_projects.ts
+  - merge_merge_request.ts
+  - retry_pipeline.ts
+  - types.ts
+  - update_issue.ts
+  - update_merge_request.ts
+
+U:/foldersim/sim\apps\sim\tools\gmail (depth=4)
+  - add_label.ts
+  - archive.ts
+  - delete.ts
+  - draft.ts
+  - index.ts
+  - mark_read.ts
+  - mark_unread.ts
+  - move.ts
+  - read.ts
+  - remove_label.ts
+  - search.ts
+  - send.ts
+  - types.ts
+  - unarchive.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\tools\google (depth=4)
+  - index.ts
+  - search.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\google_calendar (depth=4)
+  - create.ts
+  - get.ts
+  - index.ts
+  - invite.ts
+  - list.ts
+  - quick_add.ts
+  - types.ts
+  - update.ts
+
+U:/foldersim/sim\apps\sim\tools\google_docs (depth=4)
+  - create.ts
+  - index.ts
+  - read.ts
+  - types.ts
+  - utils.ts
+  - write.ts
+
+U:/foldersim/sim\apps\sim\tools\google_drive (depth=4)
+  - create_folder.ts
+  - download.ts
+  - get_content.ts
+  - index.ts
+  - list.ts
+  - types.ts
+  - upload.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\tools\google_form (depth=4)
+  - get_responses.ts
+  - index.ts
+  - types.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\tools\google_groups (depth=4)
+  - add_member.ts
+  - create_group.ts
+  - delete_group.ts
+  - get_group.ts
+  - get_member.ts
+  - has_member.ts
+  - index.ts
+  - list_groups.ts
+  - list_members.ts
+  - remove_member.ts
+  - types.ts
+  - update_group.ts
+  - update_member.ts
+
+U:/foldersim/sim\apps\sim\tools\google_sheets (depth=4)
+  - append.ts
+  - index.ts
+  - read.ts
+  - types.ts
+  - update.ts
+  - write.ts
+
+U:/foldersim/sim\apps\sim\tools\google_slides (depth=4)
+  - add_image.ts
+  - add_slide.ts
+  - create.ts
+  - get_thumbnail.ts
+  - index.ts
+  - read.ts
+  - replace_all_text.ts
+  - types.ts
+  - write.ts
+
+U:/foldersim/sim\apps\sim\tools\google_vault (depth=4)
+  - create_matters.ts
+  - create_matters_export.ts
+  - create_matters_holds.ts
+  - download_export_file.ts
+  - index.ts
+  - list_matters.ts
+  - list_matters_export.ts
+  - list_matters_holds.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\grafana (depth=4)
+  - create_alert_rule.ts
+  - create_annotation.ts
+  - create_dashboard.ts
+  - create_folder.ts
+  - delete_alert_rule.ts
+  - delete_annotation.ts
+  - delete_dashboard.ts
+  - get_alert_rule.ts
+  - get_dashboard.ts
+  - get_data_source.ts
+  - index.ts
+  - list_alert_rules.ts
+  - list_annotations.ts
+  - list_contact_points.ts
+  - list_dashboards.ts
+  - list_data_sources.ts
+  - list_folders.ts
+  - types.ts
+  - update_alert_rule.ts
+  - update_annotation.ts
+  - update_dashboard.ts
+
+U:/foldersim/sim\apps\sim\tools\guardrails (depth=4)
+  - index.ts
+  - validate.ts
+
+U:/foldersim/sim\apps\sim\tools\http (depth=4)
+  - index.ts
+  - request.test.ts
+  - request.ts
+  - types.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\tools\hubspot (depth=4)
+  - create_company.ts
+  - create_contact.ts
+  - get_company.ts
+  - get_contact.ts
+  - get_users.ts
+  - index.ts
+  - list_companies.ts
+  - list_contacts.ts
+  - list_deals.ts
+  - search_companies.ts
+  - search_contacts.ts
+  - types.ts
+  - update_company.ts
+  - update_contact.ts
+
+U:/foldersim/sim\apps\sim\tools\huggingface (depth=4)
+  - chat.ts
+  - index.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\hunter (depth=4)
+  - companies_find.ts
+  - discover.ts
+  - domain_search.ts
+  - email_count.ts
+  - email_finder.ts
+  - email_verifier.ts
+  - index.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\incidentio (depth=4)
+  - actions_list.ts
+  - actions_show.ts
+  - custom_fields_create.ts
+  - custom_fields_delete.ts
+  - custom_fields_list.ts
+  - custom_fields_show.ts
+  - custom_fields_update.ts
+  - escalations_create.ts
+  - escalations_list.ts
+  - escalations_show.ts
+  - escalation_paths_create.ts
+  - escalation_paths_delete.ts
+  - escalation_paths_show.ts
+  - escalation_paths_update.ts
+  - follow_ups_list.ts
+  - follow_ups_show.ts
+  - incidents_create.ts
+  - incidents_list.ts
+  - incidents_show.ts
+  - incidents_update.ts
+  - incident_roles_create.ts
+  - incident_roles_delete.ts
+  - incident_roles_list.ts
+  - incident_roles_show.ts
+  - incident_roles_update.ts
+  - incident_statuses_list.ts
+  - incident_timestamps_list.ts
+  - incident_timestamps_show.ts
+  - incident_types_list.ts
+  - incident_updates_list.ts
+  - index.ts
+  - schedules_create.ts
+  - schedules_delete.ts
+  - schedules_list.ts
+  - schedules_show.ts
+  - schedules_update.ts
+  - schedule_entries_list.ts
+  - schedule_overrides_create.ts
+  - severities_list.ts
+  - types.ts
+  - users_list.ts
+  - users_show.ts
+  - workflows_create.ts
+  - workflows_delete.ts
+  - workflows_list.ts
+  - workflows_show.ts
+  - workflows_update.ts
+
+U:/foldersim/sim\apps\sim\tools\intercom (depth=4)
+  - create_company.ts
+  - create_contact.ts
+  - create_message.ts
+  - create_ticket.ts
+  - delete_contact.ts
+  - get_company.ts
+  - get_contact.ts
+  - get_conversation.ts
+  - get_ticket.ts
+  - index.ts
+  - list_companies.ts
+  - list_contacts.ts
+  - list_conversations.ts
+  - reply_conversation.ts
+  - search_contacts.ts
+  - search_conversations.ts
+  - types.ts
+  - update_contact.ts
+
+U:/foldersim/sim\apps\sim\tools\jina (depth=4)
+  - index.ts
+  - read_url.ts
+  - search.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\jira (depth=4)
+  - add_comment.ts
+  - add_watcher.ts
+  - add_worklog.ts
+  - assign_issue.ts
+  - bulk_read.ts
+  - create_issue_link.ts
+  - delete_attachment.ts
+  - delete_comment.ts
+  - delete_issue.ts
+  - delete_issue_link.ts
+  - delete_worklog.ts
+  - get_attachments.ts
+  - get_comments.ts
+  - get_users.ts
+  - get_worklogs.ts
+  - index.ts
+  - remove_watcher.ts
+  - retrieve.ts
+  - search_issues.ts
+  - transition_issue.ts
+  - types.ts
+  - update.ts
+  - update_comment.ts
+  - update_worklog.ts
+  - utils.ts
+  - write.ts
+
+U:/foldersim/sim\apps\sim\tools\kalshi (depth=4)
+  - amend_order.ts
+  - cancel_order.ts
+  - create_order.ts
+  - get_balance.ts
+  - get_candlesticks.ts
+  - get_event.ts
+  - get_events.ts
+  - get_exchange_status.ts
+  - get_fills.ts
+  - get_market.ts
+  - get_markets.ts
+  - get_order.ts
+  - get_orderbook.ts
+  - get_orders.ts
+  - get_positions.ts
+  - get_series_by_ticker.ts
+  - get_trades.ts
+  - index.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\knowledge (depth=4)
+  - create_document.ts
+  - index.ts
+  - search.ts
+  - types.ts
+  - upload_chunk.ts
+
+U:/foldersim/sim\apps\sim\tools\linear (depth=4)
+  - add_label_to_issue.ts
+  - add_label_to_project.ts
+  - archive_issue.ts
+  - archive_label.ts
+  - archive_project.ts
+  - create_attachment.ts
+  - create_comment.ts
+  - create_customer.ts
+  - create_customer_request.ts
+  - create_customer_status.ts
+  - create_customer_tier.ts
+  - create_cycle.ts
+  - create_favorite.ts
+  - create_issue.ts
+  - create_issue_relation.ts
+  - create_label.ts
+  - create_project.ts
+  - create_project_label.ts
+  - create_project_link.ts
+  - create_project_milestone.ts
+  - create_project_status.ts
+  - create_project_update.ts
+  - create_workflow_state.ts
+  - delete_attachment.ts
+  - delete_comment.ts
+  - delete_customer.ts
+  - delete_customer_status.ts
+  - delete_customer_tier.ts
+  - delete_issue.ts
+  - delete_issue_relation.ts
+  - delete_project.ts
+  - delete_project_label.ts
+  - delete_project_milestone.ts
+  - delete_project_status.ts
+  - get_active_cycle.ts
+  - get_customer.ts
+  - get_cycle.ts
+  - get_issue.ts
+  - get_project.ts
+  - get_viewer.ts
+  - index.ts
+  - list_attachments.ts
+  - list_comments.ts
+  - list_customers.ts
+  - list_customer_requests.ts
+  - list_customer_statuses.ts
+  - list_customer_tiers.ts
+  - list_cycles.ts
+  - list_favorites.ts
+  - list_issue_relations.ts
+  - list_labels.ts
+  - list_notifications.ts
+  - list_projects.ts
+  - list_project_labels.ts
+  - list_project_milestones.ts
+  - list_project_statuses.ts
+  - list_project_updates.ts
+  - list_teams.ts
+  - list_users.ts
+  - list_workflow_states.ts
+  - merge_customers.ts
+  - read_issues.ts
+  - remove_label_from_issue.ts
+  - remove_label_from_project.ts
+  - search_issues.ts
+  - types.ts
+  - unarchive_issue.ts
+  - update_attachment.ts
+  - update_comment.ts
+  - update_customer.ts
+  - update_customer_request.ts
+  - update_customer_status.ts
+  - update_customer_tier.ts
+  - update_issue.ts
+  - update_label.ts
+  - update_notification.ts
+  - update_project.ts
+  - update_project_label.ts
+  - update_project_milestone.ts
+  - update_project_status.ts
+  - update_workflow_state.ts
+
+U:/foldersim/sim\apps\sim\tools\linkedin (depth=4)
+  - get_profile.ts
+  - index.ts
+  - share_post.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\linkup (depth=4)
+  - index.ts
+  - search.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\llm (depth=4)
+  - chat.ts
+  - index.ts
+
+U:/foldersim/sim\apps\sim\tools\mailchimp (depth=4)
+  - add_member.ts
+  - add_member_tags.ts
+  - add_or_update_member.ts
+  - add_segment_member.ts
+  - add_subscriber_to_automation.ts
+  - archive_member.ts
+  - create_audience.ts
+  - create_batch_operation.ts
+  - create_campaign.ts
+  - create_interest.ts
+  - create_interest_category.ts
+  - create_landing_page.ts
+  - create_merge_field.ts
+  - create_segment.ts
+  - create_template.ts
+  - delete_audience.ts
+  - delete_batch_operation.ts
+  - delete_campaign.ts
+  - delete_interest.ts
+  - delete_interest_category.ts
+  - delete_landing_page.ts
+  - delete_member.ts
+  - delete_merge_field.ts
+  - delete_segment.ts
+  - delete_template.ts
+  - get_audience.ts
+  - get_audiences.ts
+  - get_automation.ts
+  - get_automations.ts
+  - get_batch_operation.ts
+  - get_batch_operations.ts
+  - get_campaign.ts
+  - get_campaigns.ts
+  - get_campaign_content.ts
+  - get_campaign_report.ts
+  - get_campaign_reports.ts
+  - get_interest.ts
+  - get_interests.ts
+  - get_interest_categories.ts
+  - get_interest_category.ts
+  - get_landing_page.ts
+  - get_landing_pages.ts
+  - get_member.ts
+  - get_members.ts
+  - get_member_tags.ts
+  - get_merge_field.ts
+  - get_merge_fields.ts
+  - get_segment.ts
+  - get_segments.ts
+  - get_segment_members.ts
+  - get_template.ts
+  - get_templates.ts
+  - index.ts
+  - pause_automation.ts
+  - publish_landing_page.ts
+  - remove_member_tags.ts
+  - remove_segment_member.ts
+  - replicate_campaign.ts
+  - schedule_campaign.ts
+  - send_campaign.ts
+  - set_campaign_content.ts
+  - start_automation.ts
+  - types.ts
+  - unarchive_member.ts
+  - unpublish_landing_page.ts
+  - unschedule_campaign.ts
+  - update_audience.ts
+  - update_campaign.ts
+  - update_interest.ts
+  - update_interest_category.ts
+  - update_landing_page.ts
+  - update_member.ts
+  - update_merge_field.ts
+  - update_segment.ts
+  - update_template.ts
+
+U:/foldersim/sim\apps\sim\tools\mailgun (depth=4)
+  - add_list_member.ts
+  - create_mailing_list.ts
+  - get_domain.ts
+  - get_mailing_list.ts
+  - get_message.ts
+  - index.ts
+  - list_domains.ts
+  - list_messages.ts
+  - send_message.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\mem0 (depth=4)
+  - add_memories.ts
+  - get_memories.ts
+  - index.ts
+  - search_memories.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\memory (depth=4)
+  - add.ts
+  - delete.ts
+  - get.ts
+  - get_all.ts
+  - helpers.ts
+  - index.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\microsoft_excel (depth=4)
+  - index.ts
+  - read.ts
+  - table_add.ts
+  - types.ts
+  - utils.ts
+  - worksheet_add.ts
+  - write.ts
+
+U:/foldersim/sim\apps\sim\tools\microsoft_planner (depth=4)
+  - create_bucket.ts
+  - create_task.ts
+  - delete_bucket.ts
+  - delete_task.ts
+  - get_task_details.ts
+  - index.ts
+  - list_buckets.ts
+  - list_plans.ts
+  - read_bucket.ts
+  - read_plan.ts
+  - read_task.ts
+  - types.ts
+  - update_bucket.ts
+  - update_task.ts
+  - update_task_details.ts
+
+U:/foldersim/sim\apps\sim\tools\microsoft_teams (depth=4)
+  - delete_channel_message.ts
+  - delete_chat_message.ts
+  - get_message.ts
+  - index.ts
+  - list_channel_members.ts
+  - list_team_members.ts
+  - read_channel.ts
+  - read_chat.ts
+  - reply_to_message.ts
+  - set_reaction.ts
+  - types.ts
+  - unset_reaction.ts
+  - update_channel_message.ts
+  - update_chat_message.ts
+  - utils.ts
+  - write_channel.ts
+  - write_chat.ts
+
+U:/foldersim/sim\apps\sim\tools\mistral (depth=4)
+  - index.ts
+  - parser.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\mongodb (depth=4)
+  - delete.ts
+  - execute.ts
+  - index.ts
+  - insert.ts
+  - query.ts
+  - types.ts
+  - update.ts
+
+U:/foldersim/sim\apps\sim\tools\mysql (depth=4)
+  - delete.ts
+  - execute.ts
+  - index.ts
+  - insert.ts
+  - query.ts
+  - types.ts
+  - update.ts
+
+U:/foldersim/sim\apps\sim\tools\neo4j (depth=4)
+  - create.ts
+  - delete.ts
+  - execute.ts
+  - index.ts
+  - merge.ts
+  - query.ts
+  - types.ts
+  - update.ts
+
+U:/foldersim/sim\apps\sim\tools\notion (depth=4)
+  - create_database.ts
+  - create_page.ts
+  - index.ts
+  - query_database.ts
+  - read.ts
+  - read_database.ts
+  - search.ts
+  - types.ts
+  - update_page.ts
+  - utils.ts
+  - write.ts
+
+U:/foldersim/sim\apps\sim\tools\onedrive (depth=4)
+  - create_folder.ts
+  - delete.ts
+  - download.ts
+  - index.ts
+  - list.ts
+  - types.ts
+  - upload.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\tools\openai (depth=4)
+  - embeddings.ts
+  - image.ts
+  - index.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\outlook (depth=4)
+  - copy.ts
+  - delete.ts
+  - draft.ts
+  - forward.ts
+  - index.ts
+  - mark_read.ts
+  - mark_unread.ts
+  - move.ts
+  - read.ts
+  - send.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\parallel (depth=4)
+  - deep_research.ts
+  - extract.ts
+  - index.ts
+  - search.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\perplexity (depth=4)
+  - chat.ts
+  - index.ts
+  - search.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\pinecone (depth=4)
+  - fetch.ts
+  - generate_embeddings.ts
+  - index.ts
+  - search_text.ts
+  - search_vector.ts
+  - types.ts
+  - upsert_text.ts
+
+U:/foldersim/sim\apps\sim\tools\pipedrive (depth=4)
+  - create_activity.ts
+  - create_deal.ts
+  - create_lead.ts
+  - create_project.ts
+  - delete_lead.ts
+  - get_activities.ts
+  - get_all_deals.ts
+  - get_deal.ts
+  - get_files.ts
+  - get_leads.ts
+  - get_mail_messages.ts
+  - get_mail_thread.ts
+  - get_pipelines.ts
+  - get_pipeline_deals.ts
+  - get_projects.ts
+  - index.ts
+  - types.ts
+  - update_activity.ts
+  - update_deal.ts
+  - update_lead.ts
+
+U:/foldersim/sim\apps\sim\tools\polymarket (depth=4)
+  - get_event.ts
+  - get_events.ts
+  - get_last_trade_price.ts
+  - get_market.ts
+  - get_markets.ts
+  - get_midpoint.ts
+  - get_orderbook.ts
+  - get_positions.ts
+  - get_price.ts
+  - get_price_history.ts
+  - get_series.ts
+  - get_series_by_id.ts
+  - get_spread.ts
+  - get_tags.ts
+  - get_tick_size.ts
+  - get_trades.ts
+  - index.ts
+  - search.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\postgresql (depth=4)
+  - delete.ts
+  - execute.ts
+  - index.ts
+  - insert.ts
+  - query.ts
+  - types.ts
+  - update.ts
+
+U:/foldersim/sim\apps\sim\tools\posthog (depth=4)
+  - batch_events.ts
+  - capture_event.ts
+  - create_annotation.ts
+  - create_cohort.ts
+  - create_experiment.ts
+  - create_feature_flag.ts
+  - create_insight.ts
+  - create_survey.ts
+  - delete_feature_flag.ts
+  - delete_person.ts
+  - evaluate_flags.ts
+  - get_cohort.ts
+  - get_dashboard.ts
+  - get_event_definition.ts
+  - get_experiment.ts
+  - get_feature_flag.ts
+  - get_insight.ts
+  - get_organization.ts
+  - get_person.ts
+  - get_project.ts
+  - get_property_definition.ts
+  - get_session_recording.ts
+  - get_survey.ts
+  - index.ts
+  - list_actions.ts
+  - list_annotations.ts
+  - list_cohorts.ts
+  - list_dashboards.ts
+  - list_events.ts
+  - list_event_definitions.ts
+  - list_experiments.ts
+  - list_feature_flags.ts
+  - list_insights.ts
+  - list_organizations.ts
+  - list_persons.ts
+  - list_projects.ts
+  - list_property_definitions.ts
+  - list_recording_playlists.ts
+  - list_session_recordings.ts
+  - list_surveys.ts
+  - query.ts
+  - types.ts
+  - update_event_definition.ts
+  - update_feature_flag.ts
+  - update_property_definition.ts
+  - update_survey.ts
+
+U:/foldersim/sim\apps\sim\tools\qdrant (depth=4)
+  - fetch_points.ts
+  - index.ts
+  - search_vector.ts
+  - types.ts
+  - upsert_points.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\tools\rds (depth=4)
+  - delete.ts
+  - execute.ts
+  - index.ts
+  - insert.ts
+  - query.ts
+  - types.ts
+  - update.ts
+
+U:/foldersim/sim\apps\sim\tools\reddit (depth=4)
+  - delete.ts
+  - edit.ts
+  - get_comments.ts
+  - get_controversial.ts
+  - get_posts.ts
+  - hot_posts.ts
+  - index.ts
+  - reply.ts
+  - save.ts
+  - search.ts
+  - submit_post.ts
+  - subscribe.ts
+  - types.ts
+  - vote.ts
+
+U:/foldersim/sim\apps\sim\tools\resend (depth=4)
+  - index.ts
+  - send.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\s3 (depth=4)
+  - copy_object.ts
+  - delete_object.ts
+  - get_object.ts
+  - index.ts
+  - list_objects.ts
+  - put_object.ts
+  - types.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\tools\salesforce (depth=4)
+  - create_account.ts
+  - create_case.ts
+  - create_contact.ts
+  - create_lead.ts
+  - create_opportunity.ts
+  - create_task.ts
+  - delete_account.ts
+  - delete_case.ts
+  - delete_contact.ts
+  - delete_lead.ts
+  - delete_opportunity.ts
+  - delete_task.ts
+  - describe_object.ts
+  - get_accounts.ts
+  - get_cases.ts
+  - get_contacts.ts
+  - get_dashboard.ts
+  - get_leads.ts
+  - get_opportunities.ts
+  - get_report.ts
+  - get_tasks.ts
+  - index.ts
+  - list_dashboards.ts
+  - list_objects.ts
+  - list_reports.ts
+  - list_report_types.ts
+  - query.ts
+  - query_more.ts
+  - refresh_dashboard.ts
+  - run_report.ts
+  - types.ts
+  - update_account.ts
+  - update_case.ts
+  - update_contact.ts
+  - update_lead.ts
+  - update_opportunity.ts
+  - update_task.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\tools\search (depth=4)
+  - index.ts
+  - tool.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\sendgrid (depth=4)
+  - add_contact.ts
+  - add_contacts_to_list.ts
+  - create_list.ts
+  - create_template.ts
+  - create_template_version.ts
+  - delete_contacts.ts
+  - delete_list.ts
+  - delete_template.ts
+  - get_contact.ts
+  - get_list.ts
+  - get_template.ts
+  - index.ts
+  - list_all_lists.ts
+  - list_templates.ts
+  - remove_contacts_from_list.ts
+  - search_contacts.ts
+  - send_mail.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\sentry (depth=4)
+  - events_get.ts
+  - events_list.ts
+  - index.ts
+  - issues_get.ts
+  - issues_list.ts
+  - issues_update.ts
+  - projects_create.ts
+  - projects_get.ts
+  - projects_list.ts
+  - projects_update.ts
+  - releases_create.ts
+  - releases_deploy.ts
+  - releases_list.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\serper (depth=4)
+  - index.ts
+  - search.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\servicenow (depth=4)
+  - create_record.ts
+  - delete_record.ts
+  - index.ts
+  - read_record.ts
+  - types.ts
+  - update_record.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\tools\sftp (depth=4)
+  - delete.ts
+  - download.ts
+  - index.ts
+  - list.ts
+  - mkdir.ts
+  - types.ts
+  - upload.ts
+
+U:/foldersim/sim\apps\sim\tools\sharepoint (depth=4)
+  - add_list_items.ts
+  - create_list.ts
+  - create_page.ts
+  - get_list.ts
+  - index.ts
+  - list_sites.ts
+  - read_page.ts
+  - types.ts
+  - update_list.ts
+  - upload_file.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\tools\shopify (depth=4)
+  - adjust_inventory.ts
+  - cancel_order.ts
+  - create_customer.ts
+  - create_fulfillment.ts
+  - create_product.ts
+  - delete_customer.ts
+  - delete_product.ts
+  - get_collection.ts
+  - get_customer.ts
+  - get_inventory_level.ts
+  - get_order.ts
+  - get_product.ts
+  - index.ts
+  - list_collections.ts
+  - list_customers.ts
+  - list_inventory_items.ts
+  - list_locations.ts
+  - list_orders.ts
+  - list_products.ts
+  - types.ts
+  - update_customer.ts
+  - update_order.ts
+  - update_product.ts
+
+U:/foldersim/sim\apps\sim\tools\slack (depth=4)
+  - add_reaction.ts
+  - canvas.ts
+  - delete_message.ts
+  - download.ts
+  - get_user.ts
+  - index.ts
+  - list_channels.ts
+  - list_members.ts
+  - list_users.ts
+  - message.ts
+  - message_reader.ts
+  - types.ts
+  - update_message.ts
+
+U:/foldersim/sim\apps\sim\tools\sms (depth=4)
+  - index.ts
+  - send.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\smtp (depth=4)
+  - index.ts
+  - send_mail.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\spotify (depth=4)
+  - add_playlist_cover.ts
+  - add_to_queue.ts
+  - add_tracks_to_playlist.ts
+  - check_following.ts
+  - check_playlist_followers.ts
+  - check_saved_albums.ts
+  - check_saved_audiobooks.ts
+  - check_saved_episodes.ts
+  - check_saved_shows.ts
+  - check_saved_tracks.ts
+  - create_playlist.ts
+  - follow_artists.ts
+  - follow_playlist.ts
+  - get_album.ts
+  - get_albums.ts
+  - get_album_tracks.ts
+  - get_artist.ts
+  - get_artists.ts
+  - get_artist_albums.ts
+  - get_artist_top_tracks.ts
+  - get_audiobook.ts
+  - get_audiobooks.ts
+  - get_audiobook_chapters.ts
+  - get_categories.ts
+  - get_currently_playing.ts
+  - get_current_user.ts
+  - get_devices.ts
+  - get_episode.ts
+  - get_episodes.ts
+  - get_followed_artists.ts
+  - get_markets.ts
+  - get_new_releases.ts
+  - get_playback_state.ts
+  - get_playlist.ts
+  - get_playlist_cover.ts
+  - get_playlist_tracks.ts
+  - get_queue.ts
+  - get_recently_played.ts
+  - get_saved_albums.ts
+  - get_saved_audiobooks.ts
+  - get_saved_episodes.ts
+  - get_saved_shows.ts
+  - get_saved_tracks.ts
+  - get_show.ts
+  - get_shows.ts
+  - get_show_episodes.ts
+  - get_top_artists.ts
+  - get_top_tracks.ts
+  - get_track.ts
+  - get_tracks.ts
+  - get_user_playlists.ts
+  - get_user_profile.ts
+  - index.ts
+  - pause.ts
+  - play.ts
+  - remove_saved_albums.ts
+  - remove_saved_audiobooks.ts
+  - remove_saved_episodes.ts
+  - remove_saved_shows.ts
+  - remove_saved_tracks.ts
+  - remove_tracks_from_playlist.ts
+  - reorder_playlist_items.ts
+  - replace_playlist_items.ts
+  - save_albums.ts
+  - save_audiobooks.ts
+  - save_episodes.ts
+  - save_shows.ts
+  - save_tracks.ts
+  - search.ts
+  - seek.ts
+  - set_repeat.ts
+  - set_shuffle.ts
+  - set_volume.ts
+  - skip_next.ts
+  - skip_previous.ts
+  - transfer_playback.ts
+  - types.ts
+  - unfollow_artists.ts
+  - unfollow_playlist.ts
+  - update_playlist.ts
+
+U:/foldersim/sim\apps\sim\tools\sqs (depth=4)
+  - index.ts
+  - send.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\ssh (depth=4)
+  - check_command_exists.ts
+  - check_file_exists.ts
+  - create_directory.ts
+  - delete_file.ts
+  - download_file.ts
+  - execute_command.ts
+  - execute_script.ts
+  - get_system_info.ts
+  - index.ts
+  - list_directory.ts
+  - move_rename.ts
+  - read_file_content.ts
+  - types.ts
+  - upload_file.ts
+  - write_file_content.ts
+
+U:/foldersim/sim\apps\sim\tools\stagehand (depth=4)
+  - agent.ts
+  - extract.ts
+  - index.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\stripe (depth=4)
+  - cancel_payment_intent.ts
+  - cancel_subscription.ts
+  - capture_charge.ts
+  - capture_payment_intent.ts
+  - confirm_payment_intent.ts
+  - create_charge.ts
+  - create_customer.ts
+  - create_invoice.ts
+  - create_payment_intent.ts
+  - create_price.ts
+  - create_product.ts
+  - create_subscription.ts
+  - delete_customer.ts
+  - delete_invoice.ts
+  - delete_product.ts
+  - finalize_invoice.ts
+  - index.ts
+  - list_charges.ts
+  - list_customers.ts
+  - list_events.ts
+  - list_invoices.ts
+  - list_payment_intents.ts
+  - list_prices.ts
+  - list_products.ts
+  - list_subscriptions.ts
+  - pay_invoice.ts
+  - resume_subscription.ts
+  - retrieve_charge.ts
+  - retrieve_customer.ts
+  - retrieve_event.ts
+  - retrieve_invoice.ts
+  - retrieve_payment_intent.ts
+  - retrieve_price.ts
+  - retrieve_product.ts
+  - retrieve_subscription.ts
+  - search_charges.ts
+  - search_customers.ts
+  - search_invoices.ts
+  - search_payment_intents.ts
+  - search_prices.ts
+  - search_products.ts
+  - search_subscriptions.ts
+  - send_invoice.ts
+  - types.ts
+  - update_charge.ts
+  - update_customer.ts
+  - update_invoice.ts
+  - update_payment_intent.ts
+  - update_price.ts
+  - update_product.ts
+  - update_subscription.ts
+  - void_invoice.ts
+
+U:/foldersim/sim\apps\sim\tools\stt (depth=4)
+  - assemblyai.ts
+  - deepgram.ts
+  - elevenlabs.ts
+  - gemini.ts
+  - index.ts
+  - types.ts
+  - whisper.ts
+
+U:/foldersim/sim\apps\sim\tools\supabase (depth=4)
+  - count.ts
+  - delete.ts
+  - get_row.ts
+  - index.ts
+  - insert.ts
+  - query.ts
+  - rpc.ts
+  - storage_copy.ts
+  - storage_create_bucket.ts
+  - storage_create_signed_url.ts
+  - storage_delete.ts
+  - storage_delete_bucket.ts
+  - storage_download.ts
+  - storage_get_public_url.ts
+  - storage_list.ts
+  - storage_list_buckets.ts
+  - storage_move.ts
+  - storage_upload.ts
+  - text_search.ts
+  - types.ts
+  - update.ts
+  - upsert.ts
+  - vector_search.ts
+
+U:/foldersim/sim\apps\sim\tools\tavily (depth=4)
+  - crawl.ts
+  - extract.ts
+  - index.ts
+  - map.ts
+  - search.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\telegram (depth=4)
+  - delete_message.ts
+  - index.ts
+  - message.ts
+  - send_animation.ts
+  - send_audio.ts
+  - send_document.ts
+  - send_photo.ts
+  - send_video.ts
+  - types.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\tools\thinking (depth=4)
+  - index.ts
+  - tool.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\trello (depth=4)
+  - add_comment.ts
+  - create_card.ts
+  - get_actions.ts
+  - index.ts
+  - list_cards.ts
+  - list_lists.ts
+  - types.ts
+  - update_card.ts
+
+U:/foldersim/sim\apps\sim\tools\tts (depth=4)
+  - azure.ts
+  - cartesia.ts
+  - deepgram.ts
+  - elevenlabs.ts
+  - google.ts
+  - index.ts
+  - openai.ts
+  - playht.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\twilio (depth=4)
+  - index.ts
+  - send_sms.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\twilio_voice (depth=4)
+  - get_recording.ts
+  - index.ts
+  - list_calls.ts
+  - make_call.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\typeform (depth=4)
+  - create_form.ts
+  - delete_form.ts
+  - files.ts
+  - get_form.ts
+  - index.ts
+  - insights.ts
+  - list_forms.ts
+  - responses.ts
+  - types.ts
+  - update_form.ts
+
+U:/foldersim/sim\apps\sim\tools\video (depth=4)
+  - falai.ts
+  - index.ts
+  - luma.ts
+  - minimax.ts
+  - runway.ts
+  - types.ts
+  - veo.ts
+
+U:/foldersim/sim\apps\sim\tools\vision (depth=4)
+  - index.ts
+  - tool.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\wealthbox (depth=4)
+  - index.ts
+  - read_contact.ts
+  - read_note.ts
+  - read_task.ts
+  - types.ts
+  - utils.ts
+  - write_contact.ts
+  - write_note.ts
+  - write_task.ts
+
+U:/foldersim/sim\apps\sim\tools\webflow (depth=4)
+  - create_item.ts
+  - delete_item.ts
+  - get_item.ts
+  - index.ts
+  - list_items.ts
+  - types.ts
+  - update_item.ts
+
+U:/foldersim/sim\apps\sim\tools\whatsapp (depth=4)
+  - index.ts
+  - send_message.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\wikipedia (depth=4)
+  - content.ts
+  - index.ts
+  - random.ts
+  - search.ts
+  - summary.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\wordpress (depth=4)
+  - create_category.ts
+  - create_comment.ts
+  - create_page.ts
+  - create_post.ts
+  - create_tag.ts
+  - delete_comment.ts
+  - delete_media.ts
+  - delete_page.ts
+  - delete_post.ts
+  - get_current_user.ts
+  - get_media.ts
+  - get_page.ts
+  - get_post.ts
+  - get_user.ts
+  - index.ts
+  - list_categories.ts
+  - list_comments.ts
+  - list_media.ts
+  - list_pages.ts
+  - list_posts.ts
+  - list_tags.ts
+  - list_users.ts
+  - search_content.ts
+  - types.ts
+  - update_comment.ts
+  - update_page.ts
+  - update_post.ts
+  - upload_media.ts
+
+U:/foldersim/sim\apps\sim\tools\workflow (depth=4)
+  - executor.ts
+  - index.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\x (depth=4)
+  - index.ts
+  - read.ts
+  - search.ts
+  - types.ts
+  - user.ts
+  - write.ts
+
+U:/foldersim/sim\apps\sim\tools\youtube (depth=4)
+  - channel_info.ts
+  - channel_playlists.ts
+  - channel_videos.ts
+  - comments.ts
+  - index.ts
+  - playlist_items.ts
+  - search.ts
+  - types.ts
+  - video_details.ts
+
+U:/foldersim/sim\apps\sim\tools\zendesk (depth=4)
+  - autocomplete_organizations.ts
+  - create_organization.ts
+  - create_organizations_bulk.ts
+  - create_ticket.ts
+  - create_tickets_bulk.ts
+  - create_user.ts
+  - create_users_bulk.ts
+  - delete_organization.ts
+  - delete_ticket.ts
+  - delete_user.ts
+  - get_current_user.ts
+  - get_organization.ts
+  - get_organizations.ts
+  - get_ticket.ts
+  - get_tickets.ts
+  - get_user.ts
+  - get_users.ts
+  - index.ts
+  - merge_tickets.ts
+  - search.ts
+  - search_count.ts
+  - search_users.ts
+  - types.ts
+  - update_organization.ts
+  - update_ticket.ts
+  - update_tickets_bulk.ts
+  - update_user.ts
+  - update_users_bulk.ts
+
+U:/foldersim/sim\apps\sim\tools\zep (depth=4)
+  - add_messages.ts
+  - add_user.ts
+  - create_thread.ts
+  - delete_thread.ts
+  - get_context.ts
+  - get_messages.ts
+  - get_threads.ts
+  - get_user.ts
+  - get_user_threads.ts
+  - index.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\tools\zoom (depth=4)
+  - create_meeting.ts
+  - delete_meeting.ts
+  - delete_recording.ts
+  - get_meeting.ts
+  - get_meeting_invitation.ts
+  - get_meeting_recordings.ts
+  - index.ts
+  - list_meetings.ts
+  - list_past_participants.ts
+  - list_recordings.ts
+  - types.ts
+  - update_meeting.ts
+
+U:/foldersim/sim\apps\sim\tools\__test-utils__ (depth=4)
+  - mock-data.ts
+  - test-tools.ts
+
+U:/foldersim/sim\apps\sim\triggers\airtable (depth=4)
+  - index.ts
+  - webhook.ts
+
+U:/foldersim/sim\apps\sim\triggers\calendly (depth=4)
+  - index.ts
+  - invitee_canceled.ts
+  - invitee_created.ts
+  - routing_form_submitted.ts
+  - utils.ts
+  - webhook.ts
+
+U:/foldersim/sim\apps\sim\triggers\generic (depth=4)
+  - index.ts
+  - webhook.ts
+
+U:/foldersim/sim\apps\sim\triggers\github (depth=4)
+  - index.ts
+  - issue_closed.ts
+  - issue_comment.ts
+  - issue_opened.ts
+  - pr_closed.ts
+  - pr_comment.ts
+  - pr_merged.ts
+  - pr_opened.ts
+  - pr_reviewed.ts
+  - push.ts
+  - release_published.ts
+  - utils.ts
+  - webhook.ts
+  - workflow_run.ts
+
+U:/foldersim/sim\apps\sim\triggers\gmail (depth=4)
+  - index.ts
+  - poller.ts
+
+U:/foldersim/sim\apps\sim\triggers\googleforms (depth=4)
+  - index.ts
+  - webhook.ts
+
+U:/foldersim/sim\apps\sim\triggers\hubspot (depth=4)
+  - company_created.ts
+  - company_deleted.ts
+  - company_property_changed.ts
+  - contact_created.ts
+  - contact_deleted.ts
+  - contact_privacy_deleted.ts
+  - contact_property_changed.ts
+  - conversation_creation.ts
+  - conversation_deletion.ts
+  - conversation_new_message.ts
+  - conversation_privacy_deletion.ts
+  - conversation_property_changed.ts
+  - deal_created.ts
+  - deal_deleted.ts
+  - deal_property_changed.ts
+  - index.ts
+  - ticket_created.ts
+  - ticket_deleted.ts
+  - ticket_property_changed.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\triggers\jira (depth=4)
+  - index.ts
+  - issue_commented.ts
+  - issue_created.ts
+  - issue_deleted.ts
+  - issue_updated.ts
+  - utils.ts
+  - webhook.ts
+  - worklog_created.ts
+
+U:/foldersim/sim\apps\sim\triggers\linear (depth=4)
+  - comment_created.ts
+  - comment_updated.ts
+  - customer_request_created.ts
+  - customer_request_updated.ts
+  - cycle_created.ts
+  - cycle_updated.ts
+  - index.ts
+  - issue_created.ts
+  - issue_removed.ts
+  - issue_updated.ts
+  - label_created.ts
+  - label_updated.ts
+  - project_created.ts
+  - project_updated.ts
+  - project_update_created.ts
+  - utils.ts
+  - webhook.ts
+
+U:/foldersim/sim\apps\sim\triggers\microsoftteams (depth=4)
+  - chat_webhook.ts
+  - index.ts
+  - webhook.ts
+
+U:/foldersim/sim\apps\sim\triggers\outlook (depth=4)
+  - index.ts
+  - poller.ts
+
+U:/foldersim/sim\apps\sim\triggers\rss (depth=4)
+  - index.ts
+  - poller.ts
+
+U:/foldersim/sim\apps\sim\triggers\slack (depth=4)
+  - index.ts
+  - webhook.ts
+
+U:/foldersim/sim\apps\sim\triggers\stripe (depth=4)
+  - index.ts
+  - webhook.ts
+
+U:/foldersim/sim\apps\sim\triggers\telegram (depth=4)
+  - index.ts
+  - webhook.ts
+
+U:/foldersim/sim\apps\sim\triggers\twilio_voice (depth=4)
+  - index.ts
+  - webhook.ts
+
+U:/foldersim/sim\apps\sim\triggers\typeform (depth=4)
+  - index.ts
+  - webhook.ts
+
+U:/foldersim/sim\apps\sim\triggers\webflow (depth=4)
+  - collection_item_changed.ts
+  - collection_item_created.ts
+  - collection_item_deleted.ts
+  - form_submission.ts
+  - index.ts
+
+U:/foldersim/sim\apps\sim\triggers\whatsapp (depth=4)
+  - index.ts
+  - webhook.ts
+
+U:/foldersim/sim\apps\docs\app (depth=3)
+  - layout.config.tsx
+  - layout.tsx
+
+U:/foldersim/sim\apps\docs\components (depth=3)
+  - icons.tsx
+  - page-actions.tsx
+  - structured-data.tsx
+
+U:/foldersim/sim\apps\docs\lib (depth=3)
+  - cn.ts
+  - i18n.ts
+  - llms.ts
+  - source.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\app (depth=3)
+  - global-error.tsx
+  - layout.tsx
+  - manifest.ts
+  - not-found.tsx
+  - page.tsx
+  - sitemap.ts
+
+U:/foldersim/sim\apps\sim\background (depth=3)
+  - knowledge-processing.ts
+  - schedule-execution.ts
+  - webhook-execution.ts
+  - workflow-execution.ts
+  - workspace-notification-delivery.ts
+
+U:/foldersim/sim\apps\sim\blocks (depth=3)
+  - index.ts
+  - registry.ts
+  - types.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\components (depth=3)
+  - branded-layout.tsx
+  - icons.tsx
+
+U:/foldersim/sim\apps\sim\executor (depth=3)
+  - constants.ts
+  - index.ts
+  - types.ts
+  - utils.test.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\hooks (depth=3)
+  - use-collaborative-workflow.ts
+  - use-debounce.ts
+  - use-execution-stream.ts
+  - use-focus-on-block.ts
+  - use-forwarded-ref.ts
+  - use-knowledge-base-name.ts
+  - use-knowledge-base-tag-definitions.ts
+  - use-knowledge.ts
+  - use-mcp-server-test.ts
+  - use-mcp-tools.ts
+  - use-next-available-slot.ts
+  - use-oauth-scope-status.ts
+  - use-schedule-management.ts
+  - use-selector-display-name.ts
+  - use-slack-accounts.ts
+  - use-stream-cleanup.ts
+  - use-subscription-state.ts
+  - use-tag-definitions.ts
+  - use-tag-selection.ts
+  - use-trigger-config-aggregation.ts
+  - use-undo-redo.ts
+  - use-user-permissions.ts
+  - use-webhook-management.ts
+  - use-workspace-permissions.ts
+
+U:/foldersim/sim\apps\sim\providers (depth=3)
+  - index.ts
+  - models.ts
+  - types.ts
+  - utils.test.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\scripts (depth=3)
+  - export-workflow.ts
+  - process-docs.ts
+
+U:/foldersim/sim\apps\sim\serializer (depth=3)
+  - index.test.ts
+  - index.ts
+  - types.ts
+
+U:/foldersim/sim\apps\sim\socket-server (depth=3)
+  - index.test.ts
+  - index.ts
+
+U:/foldersim/sim\apps\sim\stores (depth=3)
+  - constants.ts
+  - index.ts
+
+U:/foldersim/sim\apps\sim\tools (depth=3)
+  - error-extractors.test.ts
+  - error-extractors.ts
+  - index.test.ts
+  - index.ts
+  - params.test.ts
+  - params.ts
+  - registry.ts
+  - types.ts
+  - utils.test.ts
+  - utils.ts
+
+U:/foldersim/sim\apps\sim\triggers (depth=3)
+  - constants.ts
+  - index.ts
+  - registry.ts
+  - types.ts
+
+U:/foldersim/sim\packages\db\scripts (depth=3)
+  - deregister-sso-provider.ts
+  - migrate-deployment-versions.ts
+  - register-sso-provider.ts
+
+U:/foldersim/sim\packages\python-sdk\examples (depth=3)
+  - basic_usage.py
+  - file_upload.py
+
+U:/foldersim/sim\packages\python-sdk\tests (depth=3)
+  - test_client.py
+  - __init__.py
+
+U:/foldersim/sim\packages\ts-sdk\src (depth=3)
+  - index.test.ts
+  - index.ts
+
+U:/foldersim/sim\apps\docs (depth=2)
+  - next.config.ts
+  - proxy.ts
+  - source.config.ts
+
+U:/foldersim/sim\apps\sim (depth=2)
+  - drizzle.config.ts
+  - instrumentation-client.ts
+  - instrumentation-edge.ts
+  - instrumentation-node.ts
+  - instrumentation.ts
+  - next.config.ts
+  - proxy.ts
+  - tailwind.config.ts
+  - telemetry.config.ts
+  - trigger.config.ts
+  - vitest.config.ts
+  - vitest.setup.ts
+
+U:/foldersim/sim\packages\db (depth=2)
+  - constants.ts
+  - drizzle.config.ts
+  - index.ts
+  - schema.ts
+
+U:/foldersim/sim\context (depth=1)
+  - json_generator.py
+  - new.py
+
+U:/foldersim/sim\scripts (depth=1)
+  - create-single-release.ts
+  - generate-docs.ts
