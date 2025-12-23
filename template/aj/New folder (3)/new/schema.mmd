@@ -1,0 +1,278 @@
+erDiagram
+user {
+  text id
+  text name
+  text email
+  boolean emailVerified
+  text image
+  timestamp createdAt
+  timestamp updatedAt
+  text stripeCustomerId
+  boolean isSuperUser
+}
+session {
+  text id
+  timestamp expiresAt
+  text token
+  timestamp createdAt
+  timestamp updatedAt
+  text ipAddress
+  text userAgent
+  text userId
+}
+account {
+  text id
+  text accountId
+  text providerId
+  text userId
+}
+verification {
+  text id
+  text identifier
+  text value
+  timestamp expiresAt
+  timestamp createdAt
+  timestamp updatedAt
+  index identifierIdx
+  index expiresAtIdx
+}
+workflow_folder {
+  text id
+  text name
+  text userId
+}
+workflow {
+  text id
+  text userId
+}
+workflow_blocks {
+  text id
+  text workflowId
+}
+workflow_edges {
+  text id
+  text workflowId
+}
+workflow_subflows {
+  text id
+  text workflowId
+}
+waitlist {
+  text id
+  text email
+  text status
+  timestamp createdAt
+  timestamp updatedAt
+}
+workflow_execution_snapshots {
+  text id
+  text workflowId
+}
+workflow_execution_logs {
+  text id
+  text workflowId
+}
+paused_executions {
+  text id
+  text workflowId
+}
+resume_queue {
+  text id
+  text pausedExecutionId
+}
+environment {
+  text id
+  text userId
+}
+workspace_environment {
+  text id
+  text workspaceId
+}
+settings {
+  text id
+  text userId
+}
+workflow_schedule {
+  text id
+  text workflowId
+}
+webhook {
+  text id
+  text workflowId
+}
+workspace_notification_subscription {
+  text id
+  text workspaceId
+}
+workspace_notification_delivery {
+  text id
+  text subscriptionId
+}
+api_key {
+  text id
+  text userId
+}
+user_stats {
+  text id
+  text userId
+}
+custom_tools {
+  text id
+  text workspaceId
+}
+subscription {
+  text id
+  text plan
+  text referenceId
+  text stripeCustomerId
+  text stripeSubscriptionId
+  text status
+  timestamp periodStart
+  timestamp periodEnd
+  boolean cancelAtPeriodEnd
+  integer seats
+  timestamp trialStart
+  timestamp trialEnd
+  json metadata
+  index referenceStatusIdx
+  check enterpriseMetadataCheck
+}
+rate_limit_bucket {
+  text key
+  decimal tokens
+  timestamp lastRefillAt
+  timestamp updatedAt
+}
+chat {
+  text id
+  text workflowId
+}
+organization {
+  text id
+  text name
+  text slug
+  text logo
+  json metadata
+  decimal orgUsageLimit
+}
+member {
+  text id
+  text userId
+}
+invitation {
+  text id
+  text email
+  text inviterId
+}
+workspace {
+  text id
+  text name
+  text ownerId
+}
+workspace_file {
+  text id
+  text workspaceId
+}
+workspace_files {
+  text id
+  text key
+  text userId
+}
+workspace_invitation {
+  text id
+  text workspaceId
+}
+permissions {
+  text id
+  text userId
+}
+memory {
+  text id
+  text workflowId
+}
+knowledge_base {
+  text id
+  text userId
+}
+document {
+  text id
+  text knowledgeBaseId
+}
+knowledge_base_tag_definitions {
+  text id
+  text knowledgeBaseId
+}
+embedding {
+  text id
+  text knowledgeBaseId
+}
+docs_embeddings {
+  uuid chunkId
+  text chunkText
+  text sourceDocument
+  text sourceLink
+  text headerText
+  integer headerLevel
+  integer tokenCount
+}
+copilot_chats {
+  uuid id
+  text userId
+}
+workflow_checkpoints {
+  uuid id
+  text userId
+}
+template_creators {
+  text id
+  templateCreatorTypeEnum referenceType
+  text referenceId
+  text name
+  text profileImageUrl
+  jsonb details
+  boolean verified
+  text createdBy
+}
+templates {
+  text id
+  text workflowId
+}
+template_stars {
+  text id
+  text userId
+}
+copilot_feedback {
+  uuid feedbackId
+  text userId
+}
+workflow_deployment_version {
+  text id
+  text workflowId
+}
+idempotency_key {
+  text key
+  text namespace
+  json result
+  timestamp createdAt
+  uniqueIndex keyNamespacePk
+  index createdAtIdx
+  index namespaceIdx
+}
+mcp_servers {
+  text id
+  text workspaceId
+}
+sso_provider {
+  text id
+  text issuer
+  text domain
+  text oidcConfig
+  text samlConfig
+  text userId
+}
+usage_log {
+  text id
+  text userId
+}
+workflowExecutionSnapshots ||--o{ usage_log : id
+workspace ||--o{ usage_log : deploymentVersionId

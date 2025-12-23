@@ -1,0 +1,1137 @@
+{
+  "U:/foldersim/sim/apps/sim/lib/blog/schema.ts": {
+    "tables": {},
+    "foreign_keys": []
+  },
+  "U:/foldersim/sim/packages/db/schema.ts": {
+    "tables": {
+      "user": {
+        "variable": "user",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "name",
+            "type": "text",
+            "raw": "'name'"
+          },
+          {
+            "name": "email",
+            "type": "text",
+            "raw": "'email'"
+          },
+          {
+            "name": "emailVerified",
+            "type": "boolean",
+            "raw": "'email_verified'"
+          },
+          {
+            "name": "image",
+            "type": "text",
+            "raw": "'image'"
+          },
+          {
+            "name": "createdAt",
+            "type": "timestamp",
+            "raw": "'created_at'"
+          },
+          {
+            "name": "updatedAt",
+            "type": "timestamp",
+            "raw": "'updated_at'"
+          },
+          {
+            "name": "stripeCustomerId",
+            "type": "text",
+            "raw": "'stripe_customer_id'"
+          },
+          {
+            "name": "isSuperUser",
+            "type": "boolean",
+            "raw": "'is_super_user'"
+          }
+        ]
+      },
+      "session": {
+        "variable": "session",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "expiresAt",
+            "type": "timestamp",
+            "raw": "'expires_at'"
+          },
+          {
+            "name": "token",
+            "type": "text",
+            "raw": "'token'"
+          },
+          {
+            "name": "createdAt",
+            "type": "timestamp",
+            "raw": "'created_at'"
+          },
+          {
+            "name": "updatedAt",
+            "type": "timestamp",
+            "raw": "'updated_at'"
+          },
+          {
+            "name": "ipAddress",
+            "type": "text",
+            "raw": "'ip_address'"
+          },
+          {
+            "name": "userAgent",
+            "type": "text",
+            "raw": "'user_agent'"
+          },
+          {
+            "name": "userId",
+            "type": "text",
+            "raw": "'user_id'"
+          }
+        ]
+      },
+      "account": {
+        "variable": "account",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "accountId",
+            "type": "text",
+            "raw": "'account_id'"
+          },
+          {
+            "name": "providerId",
+            "type": "text",
+            "raw": "'provider_id'"
+          },
+          {
+            "name": "userId",
+            "type": "text",
+            "raw": "'user_id'"
+          }
+        ]
+      },
+      "verification": {
+        "variable": "verification",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "identifier",
+            "type": "text",
+            "raw": "'identifier'"
+          },
+          {
+            "name": "value",
+            "type": "text",
+            "raw": "'value'"
+          },
+          {
+            "name": "expiresAt",
+            "type": "timestamp",
+            "raw": "'expires_at'"
+          },
+          {
+            "name": "createdAt",
+            "type": "timestamp",
+            "raw": "'created_at'"
+          },
+          {
+            "name": "updatedAt",
+            "type": "timestamp",
+            "raw": "'updated_at'"
+          },
+          {
+            "name": "identifierIdx",
+            "type": "index",
+            "raw": "'verification_identifier_idx'"
+          },
+          {
+            "name": "expiresAtIdx",
+            "type": "index",
+            "raw": "'verification_expires_at_idx'"
+          }
+        ]
+      },
+      "workflow_folder": {
+        "variable": "workflowFolder",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "name",
+            "type": "text",
+            "raw": "'name'"
+          },
+          {
+            "name": "userId",
+            "type": "text",
+            "raw": "'user_id'"
+          }
+        ]
+      },
+      "workflow": {
+        "variable": "workflow",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "userId",
+            "type": "text",
+            "raw": "'user_id'"
+          }
+        ]
+      },
+      "workflow_blocks": {
+        "variable": "workflowBlocks",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "workflowId",
+            "type": "text",
+            "raw": "'workflow_id'"
+          }
+        ]
+      },
+      "workflow_edges": {
+        "variable": "workflowEdges",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "workflowId",
+            "type": "text",
+            "raw": "'workflow_id'"
+          }
+        ]
+      },
+      "workflow_subflows": {
+        "variable": "workflowSubflows",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "workflowId",
+            "type": "text",
+            "raw": "'workflow_id'"
+          }
+        ]
+      },
+      "waitlist": {
+        "variable": "waitlist",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "email",
+            "type": "text",
+            "raw": "'email'"
+          },
+          {
+            "name": "status",
+            "type": "text",
+            "raw": "'status'"
+          },
+          {
+            "name": "createdAt",
+            "type": "timestamp",
+            "raw": "'created_at'"
+          },
+          {
+            "name": "updatedAt",
+            "type": "timestamp",
+            "raw": "'updated_at'"
+          }
+        ]
+      },
+      "workflow_execution_snapshots": {
+        "variable": "workflowExecutionSnapshots",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "workflowId",
+            "type": "text",
+            "raw": "'workflow_id'"
+          }
+        ]
+      },
+      "workflow_execution_logs": {
+        "variable": "workflowExecutionLogs",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "workflowId",
+            "type": "text",
+            "raw": "'workflow_id'"
+          }
+        ]
+      },
+      "paused_executions": {
+        "variable": "pausedExecutions",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "workflowId",
+            "type": "text",
+            "raw": "'workflow_id'"
+          }
+        ]
+      },
+      "resume_queue": {
+        "variable": "resumeQueue",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "pausedExecutionId",
+            "type": "text",
+            "raw": "'paused_execution_id'"
+          }
+        ]
+      },
+      "environment": {
+        "variable": "environment",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "userId",
+            "type": "text",
+            "raw": "'user_id'"
+          }
+        ]
+      },
+      "workspace_environment": {
+        "variable": "workspaceEnvironment",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "workspaceId",
+            "type": "text",
+            "raw": "'workspace_id'"
+          }
+        ]
+      },
+      "settings": {
+        "variable": "settings",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "userId",
+            "type": "text",
+            "raw": "'user_id'"
+          }
+        ]
+      },
+      "workflow_schedule": {
+        "variable": "workflowSchedule",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "workflowId",
+            "type": "text",
+            "raw": "'workflow_id'"
+          }
+        ]
+      },
+      "webhook": {
+        "variable": "webhook",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "workflowId",
+            "type": "text",
+            "raw": "'workflow_id'"
+          }
+        ]
+      },
+      "workspace_notification_subscription": {
+        "variable": "workspaceNotificationSubscription",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "workspaceId",
+            "type": "text",
+            "raw": "'workspace_id'"
+          }
+        ]
+      },
+      "workspace_notification_delivery": {
+        "variable": "workspaceNotificationDelivery",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "subscriptionId",
+            "type": "text",
+            "raw": "'subscription_id'"
+          }
+        ]
+      },
+      "api_key": {
+        "variable": "apiKey",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "userId",
+            "type": "text",
+            "raw": "'user_id'"
+          }
+        ]
+      },
+      "user_stats": {
+        "variable": "userStats",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "userId",
+            "type": "text",
+            "raw": "'user_id'"
+          }
+        ]
+      },
+      "custom_tools": {
+        "variable": "customTools",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "workspaceId",
+            "type": "text",
+            "raw": "'workspace_id'"
+          }
+        ]
+      },
+      "subscription": {
+        "variable": "subscription",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "plan",
+            "type": "text",
+            "raw": "'plan'"
+          },
+          {
+            "name": "referenceId",
+            "type": "text",
+            "raw": "'reference_id'"
+          },
+          {
+            "name": "stripeCustomerId",
+            "type": "text",
+            "raw": "'stripe_customer_id'"
+          },
+          {
+            "name": "stripeSubscriptionId",
+            "type": "text",
+            "raw": "'stripe_subscription_id'"
+          },
+          {
+            "name": "status",
+            "type": "text",
+            "raw": "'status'"
+          },
+          {
+            "name": "periodStart",
+            "type": "timestamp",
+            "raw": "'period_start'"
+          },
+          {
+            "name": "periodEnd",
+            "type": "timestamp",
+            "raw": "'period_end'"
+          },
+          {
+            "name": "cancelAtPeriodEnd",
+            "type": "boolean",
+            "raw": "'cancel_at_period_end'"
+          },
+          {
+            "name": "seats",
+            "type": "integer",
+            "raw": "'seats'"
+          },
+          {
+            "name": "trialStart",
+            "type": "timestamp",
+            "raw": "'trial_start'"
+          },
+          {
+            "name": "trialEnd",
+            "type": "timestamp",
+            "raw": "'trial_end'"
+          },
+          {
+            "name": "metadata",
+            "type": "json",
+            "raw": "'metadata'"
+          },
+          {
+            "name": "referenceStatusIdx",
+            "type": "index",
+            "raw": "'subscription_reference_status_idx'"
+          },
+          {
+            "name": "enterpriseMetadataCheck",
+            "type": "check",
+            "raw": "'check_enterprise_metadata',\n      sql`plan != 'enterprise' OR metadata IS NOT NULL`"
+          }
+        ]
+      },
+      "rate_limit_bucket": {
+        "variable": "rateLimitBucket",
+        "columns": [
+          {
+            "name": "key",
+            "type": "text",
+            "raw": "'key'"
+          },
+          {
+            "name": "tokens",
+            "type": "decimal",
+            "raw": "'tokens'"
+          },
+          {
+            "name": "lastRefillAt",
+            "type": "timestamp",
+            "raw": "'last_refill_at'"
+          },
+          {
+            "name": "updatedAt",
+            "type": "timestamp",
+            "raw": "'updated_at'"
+          }
+        ]
+      },
+      "chat": {
+        "variable": "chat",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "workflowId",
+            "type": "text",
+            "raw": "'workflow_id'"
+          }
+        ]
+      },
+      "organization": {
+        "variable": "organization",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "name",
+            "type": "text",
+            "raw": "'name'"
+          },
+          {
+            "name": "slug",
+            "type": "text",
+            "raw": "'slug'"
+          },
+          {
+            "name": "logo",
+            "type": "text",
+            "raw": "'logo'"
+          },
+          {
+            "name": "metadata",
+            "type": "json",
+            "raw": "'metadata'"
+          },
+          {
+            "name": "orgUsageLimit",
+            "type": "decimal",
+            "raw": "'org_usage_limit'"
+          }
+        ]
+      },
+      "member": {
+        "variable": "member",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "userId",
+            "type": "text",
+            "raw": "'user_id'"
+          }
+        ]
+      },
+      "invitation": {
+        "variable": "invitation",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "email",
+            "type": "text",
+            "raw": "'email'"
+          },
+          {
+            "name": "inviterId",
+            "type": "text",
+            "raw": "'inviter_id'"
+          }
+        ]
+      },
+      "workspace": {
+        "variable": "workspace",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "name",
+            "type": "text",
+            "raw": "'name'"
+          },
+          {
+            "name": "ownerId",
+            "type": "text",
+            "raw": "'owner_id'"
+          }
+        ]
+      },
+      "workspace_file": {
+        "variable": "workspaceFile",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "workspaceId",
+            "type": "text",
+            "raw": "'workspace_id'"
+          }
+        ]
+      },
+      "workspace_files": {
+        "variable": "workspaceFiles",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "key",
+            "type": "text",
+            "raw": "'key'"
+          },
+          {
+            "name": "userId",
+            "type": "text",
+            "raw": "'user_id'"
+          }
+        ]
+      },
+      "workspace_invitation": {
+        "variable": "workspaceInvitation",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "workspaceId",
+            "type": "text",
+            "raw": "'workspace_id'"
+          }
+        ]
+      },
+      "permissions": {
+        "variable": "permissions",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "userId",
+            "type": "text",
+            "raw": "'user_id'"
+          }
+        ]
+      },
+      "memory": {
+        "variable": "memory",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "workflowId",
+            "type": "text",
+            "raw": "'workflow_id'"
+          }
+        ]
+      },
+      "knowledge_base": {
+        "variable": "knowledgeBase",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "userId",
+            "type": "text",
+            "raw": "'user_id'"
+          }
+        ]
+      },
+      "document": {
+        "variable": "document",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "knowledgeBaseId",
+            "type": "text",
+            "raw": "'knowledge_base_id'"
+          }
+        ]
+      },
+      "knowledge_base_tag_definitions": {
+        "variable": "knowledgeBaseTagDefinitions",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "knowledgeBaseId",
+            "type": "text",
+            "raw": "'knowledge_base_id'"
+          }
+        ]
+      },
+      "embedding": {
+        "variable": "embedding",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "knowledgeBaseId",
+            "type": "text",
+            "raw": "'knowledge_base_id'"
+          }
+        ]
+      },
+      "docs_embeddings": {
+        "variable": "docsEmbeddings",
+        "columns": [
+          {
+            "name": "chunkId",
+            "type": "uuid",
+            "raw": "'chunk_id'"
+          },
+          {
+            "name": "chunkText",
+            "type": "text",
+            "raw": "'chunk_text'"
+          },
+          {
+            "name": "sourceDocument",
+            "type": "text",
+            "raw": "'source_document'"
+          },
+          {
+            "name": "sourceLink",
+            "type": "text",
+            "raw": "'source_link'"
+          },
+          {
+            "name": "headerText",
+            "type": "text",
+            "raw": "'header_text'"
+          },
+          {
+            "name": "headerLevel",
+            "type": "integer",
+            "raw": "'header_level'"
+          },
+          {
+            "name": "tokenCount",
+            "type": "integer",
+            "raw": "'token_count'"
+          }
+        ]
+      },
+      "copilot_chats": {
+        "variable": "copilotChats",
+        "columns": [
+          {
+            "name": "id",
+            "type": "uuid",
+            "raw": "'id'"
+          },
+          {
+            "name": "userId",
+            "type": "text",
+            "raw": "'user_id'"
+          }
+        ]
+      },
+      "workflow_checkpoints": {
+        "variable": "workflowCheckpoints",
+        "columns": [
+          {
+            "name": "id",
+            "type": "uuid",
+            "raw": "'id'"
+          },
+          {
+            "name": "userId",
+            "type": "text",
+            "raw": "'user_id'"
+          }
+        ]
+      },
+      "template_creators": {
+        "variable": "templateCreators",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "referenceType",
+            "type": "templateCreatorTypeEnum",
+            "raw": "'reference_type'"
+          },
+          {
+            "name": "referenceId",
+            "type": "text",
+            "raw": "'reference_id'"
+          },
+          {
+            "name": "name",
+            "type": "text",
+            "raw": "'name'"
+          },
+          {
+            "name": "profileImageUrl",
+            "type": "text",
+            "raw": "'profile_image_url'"
+          },
+          {
+            "name": "details",
+            "type": "jsonb",
+            "raw": "'details'"
+          },
+          {
+            "name": "verified",
+            "type": "boolean",
+            "raw": "'verified'"
+          },
+          {
+            "name": "createdBy",
+            "type": "text",
+            "raw": "'created_by'"
+          }
+        ]
+      },
+      "templates": {
+        "variable": "templates",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "workflowId",
+            "type": "text",
+            "raw": "'workflow_id'"
+          }
+        ]
+      },
+      "template_stars": {
+        "variable": "templateStars",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "userId",
+            "type": "text",
+            "raw": "'user_id'"
+          }
+        ]
+      },
+      "copilot_feedback": {
+        "variable": "copilotFeedback",
+        "columns": [
+          {
+            "name": "feedbackId",
+            "type": "uuid",
+            "raw": "'feedback_id'"
+          },
+          {
+            "name": "userId",
+            "type": "text",
+            "raw": "'user_id'"
+          }
+        ]
+      },
+      "workflow_deployment_version": {
+        "variable": "workflowDeploymentVersion",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "workflowId",
+            "type": "text",
+            "raw": "'workflow_id'"
+          }
+        ]
+      },
+      "idempotency_key": {
+        "variable": "idempotencyKey",
+        "columns": [
+          {
+            "name": "key",
+            "type": "text",
+            "raw": "'key'"
+          },
+          {
+            "name": "namespace",
+            "type": "text",
+            "raw": "'namespace'"
+          },
+          {
+            "name": "result",
+            "type": "json",
+            "raw": "'result'"
+          },
+          {
+            "name": "createdAt",
+            "type": "timestamp",
+            "raw": "'created_at'"
+          },
+          {
+            "name": "keyNamespacePk",
+            "type": "uniqueIndex",
+            "raw": "'idempotency_key_namespace_unique'"
+          },
+          {
+            "name": "createdAtIdx",
+            "type": "index",
+            "raw": "'idempotency_key_created_at_idx'"
+          },
+          {
+            "name": "namespaceIdx",
+            "type": "index",
+            "raw": "'idempotency_key_namespace_idx'"
+          }
+        ]
+      },
+      "mcp_servers": {
+        "variable": "mcpServers",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "workspaceId",
+            "type": "text",
+            "raw": "'workspace_id'"
+          }
+        ]
+      },
+      "sso_provider": {
+        "variable": "ssoProvider",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "issuer",
+            "type": "text",
+            "raw": "'issuer'"
+          },
+          {
+            "name": "domain",
+            "type": "text",
+            "raw": "'domain'"
+          },
+          {
+            "name": "oidcConfig",
+            "type": "text",
+            "raw": "'oidc_config'"
+          },
+          {
+            "name": "samlConfig",
+            "type": "text",
+            "raw": "'saml_config'"
+          },
+          {
+            "name": "userId",
+            "type": "text",
+            "raw": "'user_id'"
+          }
+        ]
+      },
+      "usage_log": {
+        "variable": "usageLog",
+        "columns": [
+          {
+            "name": "id",
+            "type": "text",
+            "raw": "'id'"
+          },
+          {
+            "name": "userId",
+            "type": "text",
+            "raw": "'user_id'"
+          }
+        ]
+      }
+    },
+    "foreign_keys": [
+      {
+        "column": "id",
+        "references_table": "workflowExecutionSnapshots",
+        "references_column": "id"
+      },
+      {
+        "column": "deploymentVersionId",
+        "references_table": "workspace",
+        "references_column": "id"
+      }
+    ]
+  }
+}

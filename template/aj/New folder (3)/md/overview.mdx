@@ -1,0 +1,89 @@
+This directory structure represents a comprehensive **AI Automation and Low-Code Workflow Platform** (likely named "SimStudio" or similar). It is structured as a **Monorepo** (multiple projects in one repository), primarily built using **TypeScript** and **Next.js**.
+
+Here is a detailed breakdown of the structure and what each folder does:
+
+---
+
+### 1. `apps/` (Applications)
+This folder contains the actual deployable applications.
+
+#### `apps/docs/` (Documentation Site)
+*   **Purpose:** The public-facing documentation website for the platform.
+*   **Key Folders:**
+    *   **`app/`**: Next.js App Router. Contains pages for documentation, API references, and guides (`llms.txt` suggests RAG-optimized docs for AI consumption).
+    *   **`components/`**: UI components specific to docs (Code blocks, Sidebar, TOC).
+    *   **`lib/`**: Utilities for parsing MDX/Markdown files.
+
+#### `apps/sim/` (The Core Platform)
+*   **Purpose:** The main SaaS application. It handles the frontend dashboard, the workflow editor, the backend API, and the execution engine.
+*   **Key Root Files:**
+    *   `drizzle.config.ts`: Configuration for Drizzle ORM (Database).
+    *   `trigger.config.ts`: Configuration for Trigger.dev (background jobs).
+    *   `instrumentation*.ts`: Setup for observability (OpenTelemetry/Sentry).
+
+    **`apps/sim/app/` (Frontend & Routing)**
+    *   **`(auth)`**: Login, Signup, SSO, and Password Reset screens.
+    *   **`(landing)`**: The marketing website (Hero, Pricing, Careers).
+    *   **`studio/`**: The main authenticated interface where users build workflows.
+    *   **`w/` & `workspace/`**: Runtime views for executing workflows, chatting with AI agents, and managing files/knowledge bases.
+    *   **`api/`**: The Backend API routes (Next.js API routes). This handles authentication, billing, file uploads, chat interactions, and serves the frontend data.
+
+    **`apps/sim/background/` (Async Jobs)**
+    *   Handles background tasks that shouldn't block the UI, such as processing large files for Knowledge Bases, executing scheduled workflows, or handling incoming webhooks.
+
+    **`apps/sim/blocks/` (Workflow Nodes Definition)**
+    *   Defines the **Schema and UI** for the "blocks" (nodes) available in the low-code editor.
+    *   Contains definitions for integrations like `openai.ts`, `slack.ts`, `gmail.ts`, defining what inputs/outputs they require.
+
+    **`apps/sim/executor/` (The Engine)**
+    *   **The heart of the system.** This code runs the workflows.
+    *   **`dag/`**: Logic for the Directed Acyclic Graph (calculating execution order of nodes).
+    *   **`handlers/`**: The logic that runs when a specific block is visited (e.g., "If node is Condition, do X").
+    *   **`orchestrators/`**: Manages complex flows like Loops and Parallel execution.
+
+    **`apps/sim/lib/` (Shared Core Logic)**
+    *   "Business Logic" layer.
+    *   **`auth/`, `billing/`**: User management and Stripe integration.
+    *   **`copilot/`**: Logic for the AI assistant that helps users build workflows.
+    *   **`knowledge/`**: RAG (Retrieval Augmented Generation) pipeline (chunking, embedding, storing documents).
+    *   **`mcp/`**: Support for **Model Context Protocol**, allowing standardized connections between AI and data.
+
+    **`apps/sim/tools/` (Integration Implementations)**
+    *   This contains the **actual functional code** for external API calls.
+    *   While `blocks/` defines the *UI*, `tools/` performs the *action* (e.g., `github/create_issue.ts`, `slack/send_message.ts`).
+    *   Includes a massive library of integrations (Airtable, Notion, Linear, HubSpot, etc.).
+
+    **`apps/sim/triggers/` (Event Listeners)**
+    *   Code that listens for external events to start a workflow (e.g., "When a new email arrives in Gmail" or "When a GitHub PR is opened").
+
+    **`apps/sim/stores/` (Frontend State)**
+    *   State management (likely Zustand) for the complex client-side interactions, specifically the **Workflow Editor** (`editor/`), **Chat** (`chat/`), and **Terminal** output.
+
+---
+
+### 2. `packages/` (Shared Libraries)
+Code shared across the repository or published as separate modules.
+
+*   **`cli/`**: A Command Line Interface tool for developers to interact with the platform (deploying workflows from local machine, etc.).
+*   **`db/`**: Database management.
+    *   Contains the Drizzle Schema (`schema.ts`) defining tables for Users, Workflows, Executions, etc.
+    *   Contains migration scripts.
+*   **`ts-sdk/`**: A TypeScript Software Development Kit. This allows third-party developers to run SimStudio workflows or interact with the API from their own codebases.
+
+---
+
+### 3. `scripts/` (DevOps & Maintenance)
+*   **`generate-docs.ts`**: Automates the creation of documentation, likely scraping the `blocks/` definitions to automatically generate API reference pages.
+*   **`create-single-release.ts`**: Script for bundling the application for deployment.
+
+---
+
+### Summary of Architecture
+This is a sophisticated **"AI-Native" Low-Code platform**.
+
+1.  **Frontend:** Next.js with a complex canvas-based editor (React Flow or similar logic inside `apps/sim/app/w`).
+2.  **Backend:** Next.js API Routes acting as the controller.
+3.  **Database:** Drizzle ORM (likely connecting to Postgres).
+4.  **Execution Engine:** A DAG-based executor (`executor/`) capable of running complex logic including Loops, If/Else, and Parallel branches.
+5.  **AI Integration:** Deeply integrated LLM capabilities (`lib/llm`, `lib/copilot`) for both executing AI tasks and assisting the user in building them.
+6.  **Extensibility:** Uses MCP (Model Context Protocol) and a modular `tools/` directory to easily add new integrations (Slack, GitHub, etc.).

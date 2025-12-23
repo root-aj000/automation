@@ -1,0 +1,285 @@
+
+SCHEMA FILE: U:/foldersim/sim/apps/sim/lib/blog/schema.ts
+================================================================================
+
+SCHEMA FILE: U:/foldersim/sim/packages/db/schema.ts
+================================================================================
+
+TABLE: user
+  - id (text)
+  - name (text)
+  - email (text)
+  - emailVerified (boolean)
+  - image (text)
+  - createdAt (timestamp)
+  - updatedAt (timestamp)
+  - stripeCustomerId (text)
+  - isSuperUser (boolean)
+
+TABLE: session
+  - id (text)
+  - expiresAt (timestamp)
+  - token (text)
+  - createdAt (timestamp)
+  - updatedAt (timestamp)
+  - ipAddress (text)
+  - userAgent (text)
+  - userId (text)
+
+TABLE: account
+  - id (text)
+  - accountId (text)
+  - providerId (text)
+  - userId (text)
+
+TABLE: verification
+  - id (text)
+  - identifier (text)
+  - value (text)
+  - expiresAt (timestamp)
+  - createdAt (timestamp)
+  - updatedAt (timestamp)
+  - identifierIdx (index)
+  - expiresAtIdx (index)
+
+TABLE: workflow_folder
+  - id (text)
+  - name (text)
+  - userId (text)
+
+TABLE: workflow
+  - id (text)
+  - userId (text)
+
+TABLE: workflow_blocks
+  - id (text)
+  - workflowId (text)
+
+TABLE: workflow_edges
+  - id (text)
+  - workflowId (text)
+
+TABLE: workflow_subflows
+  - id (text)
+  - workflowId (text)
+
+TABLE: waitlist
+  - id (text)
+  - email (text)
+  - status (text)
+  - createdAt (timestamp)
+  - updatedAt (timestamp)
+
+TABLE: workflow_execution_snapshots
+  - id (text)
+  - workflowId (text)
+
+TABLE: workflow_execution_logs
+  - id (text)
+  - workflowId (text)
+
+TABLE: paused_executions
+  - id (text)
+  - workflowId (text)
+
+TABLE: resume_queue
+  - id (text)
+  - pausedExecutionId (text)
+
+TABLE: environment
+  - id (text)
+  - userId (text)
+
+TABLE: workspace_environment
+  - id (text)
+  - workspaceId (text)
+
+TABLE: settings
+  - id (text)
+  - userId (text)
+
+TABLE: workflow_schedule
+  - id (text)
+  - workflowId (text)
+
+TABLE: webhook
+  - id (text)
+  - workflowId (text)
+
+TABLE: workspace_notification_subscription
+  - id (text)
+  - workspaceId (text)
+
+TABLE: workspace_notification_delivery
+  - id (text)
+  - subscriptionId (text)
+
+TABLE: api_key
+  - id (text)
+  - userId (text)
+
+TABLE: user_stats
+  - id (text)
+  - userId (text)
+
+TABLE: custom_tools
+  - id (text)
+  - workspaceId (text)
+
+TABLE: subscription
+  - id (text)
+  - plan (text)
+  - referenceId (text)
+  - stripeCustomerId (text)
+  - stripeSubscriptionId (text)
+  - status (text)
+  - periodStart (timestamp)
+  - periodEnd (timestamp)
+  - cancelAtPeriodEnd (boolean)
+  - seats (integer)
+  - trialStart (timestamp)
+  - trialEnd (timestamp)
+  - metadata (json)
+  - referenceStatusIdx (index)
+  - enterpriseMetadataCheck (check)
+
+TABLE: rate_limit_bucket
+  - key (text)
+  - tokens (decimal)
+  - lastRefillAt (timestamp)
+  - updatedAt (timestamp)
+
+TABLE: chat
+  - id (text)
+  - workflowId (text)
+
+TABLE: organization
+  - id (text)
+  - name (text)
+  - slug (text)
+  - logo (text)
+  - metadata (json)
+  - orgUsageLimit (decimal)
+
+TABLE: member
+  - id (text)
+  - userId (text)
+
+TABLE: invitation
+  - id (text)
+  - email (text)
+  - inviterId (text)
+
+TABLE: workspace
+  - id (text)
+  - name (text)
+  - ownerId (text)
+
+TABLE: workspace_file
+  - id (text)
+  - workspaceId (text)
+
+TABLE: workspace_files
+  - id (text)
+  - key (text)
+  - userId (text)
+
+TABLE: workspace_invitation
+  - id (text)
+  - workspaceId (text)
+
+TABLE: permissions
+  - id (text)
+  - userId (text)
+
+TABLE: memory
+  - id (text)
+  - workflowId (text)
+
+TABLE: knowledge_base
+  - id (text)
+  - userId (text)
+
+TABLE: document
+  - id (text)
+  - knowledgeBaseId (text)
+
+TABLE: knowledge_base_tag_definitions
+  - id (text)
+  - knowledgeBaseId (text)
+
+TABLE: embedding
+  - id (text)
+  - knowledgeBaseId (text)
+
+TABLE: docs_embeddings
+  - chunkId (uuid)
+  - chunkText (text)
+  - sourceDocument (text)
+  - sourceLink (text)
+  - headerText (text)
+  - headerLevel (integer)
+  - tokenCount (integer)
+
+TABLE: copilot_chats
+  - id (uuid)
+  - userId (text)
+
+TABLE: workflow_checkpoints
+  - id (uuid)
+  - userId (text)
+
+TABLE: template_creators
+  - id (text)
+  - referenceType (templateCreatorTypeEnum)
+  - referenceId (text)
+  - name (text)
+  - profileImageUrl (text)
+  - details (jsonb)
+  - verified (boolean)
+  - createdBy (text)
+
+TABLE: templates
+  - id (text)
+  - workflowId (text)
+
+TABLE: template_stars
+  - id (text)
+  - userId (text)
+
+TABLE: copilot_feedback
+  - feedbackId (uuid)
+  - userId (text)
+
+TABLE: workflow_deployment_version
+  - id (text)
+  - workflowId (text)
+
+TABLE: idempotency_key
+  - key (text)
+  - namespace (text)
+  - result (json)
+  - createdAt (timestamp)
+  - keyNamespacePk (uniqueIndex)
+  - createdAtIdx (index)
+  - namespaceIdx (index)
+
+TABLE: mcp_servers
+  - id (text)
+  - workspaceId (text)
+
+TABLE: sso_provider
+  - id (text)
+  - issuer (text)
+  - domain (text)
+  - oidcConfig (text)
+  - samlConfig (text)
+  - userId (text)
+
+TABLE: usage_log
+  - id (text)
+  - userId (text)
+
+RELATIONSHIPS:
+  id → workflowExecutionSnapshots.id
+  deploymentVersionId → workspace.id

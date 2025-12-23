@@ -1,0 +1,1222 @@
+[
+  {
+    "entry": "U:/foldersim/sim/sql_hits.txt",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/.cursor/rules/sim-components.mdc",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/docs/app/api/og/route.tsx",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/docs/components/page-actions.tsx",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/docs/content/docs/de/execution/api.mdx",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/docs/content/docs/de/sdks/python.mdx",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/docs/content/docs/de/sdks/typescript.mdx",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/docs/content/docs/en/execution/api.mdx",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/docs/content/docs/en/sdks/python.mdx",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/docs/content/docs/en/sdks/typescript.mdx",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/docs/content/docs/es/execution/api.mdx",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/docs/content/docs/es/sdks/python.mdx",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/docs/content/docs/es/sdks/typescript.mdx",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/docs/content/docs/fr/execution/api.mdx",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/docs/content/docs/fr/sdks/python.mdx",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/docs/content/docs/fr/sdks/typescript.mdx",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/docs/content/docs/ja/execution/api.mdx",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/docs/content/docs/ja/sdks/python.mdx",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/docs/content/docs/ja/sdks/typescript.mdx",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/docs/content/docs/zh/execution/api.mdx",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/docs/content/docs/zh/sdks/python.mdx",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/docs/content/docs/zh/sdks/typescript.mdx",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/proxy.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/(auth)/login/login-form.tsx",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/(auth)/reset-password/page.tsx",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/(auth)/signup/signup-form.tsx",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/(auth)/sso/sso-form.tsx",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/(auth)/verify/use-verification.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/auth/accounts/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/auth/oauth/credentials/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/auth/oauth/microsoft/file/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/auth/oauth/microsoft/files/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/auth/oauth/token/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/auth/oauth/wealthbox/item/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/auth/oauth/wealthbox/items/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/auth/oauth2/callback/shopify/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/auth/oauth2/shopify/store/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/auth/shopify/authorize/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/auth/trello/callback/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/billing/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/careers/submit/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/chat/utils.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/chat/validate/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/chat/[identifier]/route.test.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/chat/[identifier]/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/chat/[identifier]/otp/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/copilot/api-keys/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/copilot/auto-allowed-tools/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/copilot/chat/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/copilot/checkpoints/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/copilot/checkpoints/revert/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/creators/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/files/utils.test.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/files/delete/route.test.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/files/multipart/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/files/parse/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/files/presigned/route.test.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/files/presigned/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/files/presigned/batch/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/files/serve/[...path]/route.test.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/files/serve/[...path]/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/files/upload/route.test.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/files/upload/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/folders/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/help/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/knowledge/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/knowledge/search/utils.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/knowledge/[id]/documents/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/knowledge/[id]/documents/[documentId]/chunks/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/knowledge/[id]/documents/[documentId]/tag-definitions/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/knowledge/[id]/next-available-slot/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/logs/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/mcp/servers/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/mcp/tools/discover/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/mcp/tools/execute/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/mcp/tools/stored/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/memory/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/memory/[id]/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/organizations/[id]/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/organizations/[id]/invitations/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/organizations/[id]/members/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/organizations/[id]/members/[memberId]/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/organizations/[id]/workspaces/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/providers/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/proxy/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/proxy/image/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/proxy/stt/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/proxy/tts/stream/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/schedules/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/schedules/execute/route.test.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/templates/approved/sanitized/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/templates/[id]/use/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/tools/confluence/attachments/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/tools/confluence/comments/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/tools/confluence/labels/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/tools/confluence/space/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/tools/confluence/spaces/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/tools/custom/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/tools/drive/file/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/tools/drive/files/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/tools/gmail/label/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/tools/gmail/labels/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/tools/google_calendar/calendars/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/tools/jira/issues/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/tools/jira/projects/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/tools/microsoft_planner/tasks/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/tools/neo4j/create/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/tools/neo4j/execute/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/tools/neo4j/merge/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/tools/neo4j/query/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/tools/neo4j/update/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/tools/onedrive/files/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/tools/onedrive/folder/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/tools/onedrive/folders/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/tools/outlook/folders/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/tools/search/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/tools/sharepoint/site/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/tools/sharepoint/sites/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/tools/wealthbox/item/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/tools/wealthbox/items/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/usage/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/users/me/settings/unsubscribe/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/users/me/usage-logs/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/v1/auth.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/v1/admin/auth.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/v1/admin/types.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/v1/admin/organizations/[id]/members/[memberId]/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/v1/admin/subscriptions/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/v1/admin/subscriptions/[id]/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/v1/admin/workspaces/[id]/export/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/v1/admin/workspaces/[id]/import/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/webhooks/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/webhooks/test/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/webhooks/test/[id]/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/webhooks/trigger/[path]/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/workflows/middleware.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/workflows/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/workflows/yaml/export/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/workflows/[id]/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/workflows/[id]/deployed/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/workflows/[id]/execute/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/workflows/[id]/paused/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/workflows/[id]/variables/route.test.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/workspaces/invitations/[invitationId]/route.test.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/workspaces/invitations/[invitationId]/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/workspaces/[id]/route.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/workspaces/[id]/files/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/api/workspaces/[id]/metrics/executions/route.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/chat/[identifier]/chat.tsx",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/invite/[id]/invite.tsx",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/templates/[id]/template.tsx",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/unsubscribe/unsubscribe.tsx",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/workspace/page.tsx",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/workspace/providers/socket-provider.tsx",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/workspace/[workspaceId]/knowledge/hooks/use-knowledge-upload.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/document.tsx",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/workspace/[workspaceId]/logs/logs.tsx",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/workspace/[workspaceId]/logs/components/logs-toolbar/logs-toolbar.tsx",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/environment/environment.tsx",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/integrations/integrations.tsx",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/workspace/[workspaceId]/w/hooks/use-can-delete.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/workspace/[workspaceId]/w/hooks/use-import-workflow.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/workspace/[workspaceId]/w/hooks/use-import-workspace.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/workspace/[workspaceId]/w/[workflowId]/workflow.tsx",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/components/api/api.tsx",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/components/general/general.tsx",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/connection-blocks/connection-blocks.tsx",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/dropdown/dropdown.tsx",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/input-mapping/input-mapping.tsx",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/knowledge-base-selector/knowledge-base-selector.tsx",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/selector-combobox/selector-combobox.tsx",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/table/table.tsx",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tag-dropdown/tag-dropdown.tsx",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/hooks/use-block-connections.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/terminal/terminal.tsx",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/workflow-edge/workflow-edge.tsx",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/workspace/[workspaceId]/w/[workflowId]/hooks/use-block-visual.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/app/workspace/[workspaceId]/w/[workflowId]/hooks/use-workflow-execution.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/components/emails/workspace-invitation.tsx",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/executor/dag/builder.test.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/executor/dag/builder.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/executor/dag/construction/edges.test.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/executor/dag/construction/edges.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/executor/dag/construction/nodes.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/executor/dag/construction/paths.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/executor/execution/block-executor.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/executor/execution/edge-manager.test.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/executor/execution/edge-manager.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/executor/execution/engine.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/executor/execution/state.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/executor/handlers/agent/agent-handler.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/executor/handlers/condition/condition-handler.test.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/executor/handlers/condition/condition-handler.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/executor/handlers/router/router-handler.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/executor/handlers/trigger/trigger-handler.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/executor/human-in-the-loop/utils.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/executor/orchestrators/loop.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/executor/orchestrators/node.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/executor/orchestrators/parallel.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/executor/variables/resolvers/block.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/executor/variables/resolvers/loop.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/executor/variables/resolvers/parallel.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/executor/__test-utils__/executor-mocks.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/hooks/use-collaborative-workflow.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/hooks/use-selector-display-name.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/lib/api-key/service.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/lib/auth/hybrid.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/lib/auth/internal.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/lib/copilot/request-helpers.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/lib/copilot/utils.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/lib/copilot/tools/server/workflow/edit-workflow.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/lib/core/config/redis.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/lib/core/idempotency/service.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/lib/execution/isolated-vm-worker.cjs",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/lib/execution/isolated-vm.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/lib/guardrails/validate_pii.py",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/lib/knowledge/documents/service.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/lib/knowledge/tags/service.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/lib/logs/get-trigger-options.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/lib/logs/execution/trace-spans/trace-spans.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/lib/mcp/middleware.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/lib/mcp/service.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/lib/mcp/storage/memory-cache.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/lib/mcp/storage/redis-cache.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/lib/oauth/oauth.test.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/lib/tokenization/estimators.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/lib/tokenization/streaming.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/lib/uploads/utils/file-utils.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/lib/webhooks/processor.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/lib/webhooks/utils.server.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/lib/workflows/autolayout/core.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/lib/workflows/autolayout/targeted.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/lib/workflows/autolayout/utils.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/lib/workflows/blocks/block-path-calculator.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/lib/workflows/diff/diff-engine.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/lib/workflows/executor/human-in-the-loop-manager.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/lib/workflows/operations/import-export.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/lib/workflows/persistence/duplicate.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/lib/workflows/persistence/utils.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/lib/workflows/streaming/streaming.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/lib/workflows/triggers/trigger-utils.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/lib/workspaces/duplicate.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/socket-server/handlers/operations.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/socket-server/handlers/presence.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/socket-server/handlers/subblocks.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/socket-server/handlers/variables.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/socket-server/rooms/manager.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/stores/logs/filters/store.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/stores/operation-queue/store.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/stores/panel/copilot/store.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/stores/workflows/json/importer.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/stores/workflows/registry/store.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/stores/workflows/workflow/store.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/stores/workflows/workflow/utils.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/stores/workflows/yaml/importer.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/tools/error-extractors.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/tools/params.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/tools/clay/populate.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/tools/gitlab/list_issues.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/tools/gitlab/list_merge_requests.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/tools/gitlab/list_pipelines.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/tools/gitlab/list_projects.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/tools/google_drive/list.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/tools/google_drive/upload.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/tools/google_vault/download_export_file.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/tools/http/request.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/tools/jina/read_url.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/tools/jira/create_issue_link.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/tools/jira/delete_issue.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/tools/microsoft_teams/update_channel_message.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/tools/microsoft_teams/update_chat_message.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/tools/outlook/forward.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/tools/s3/get_object.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/tools/sendgrid/send_mail.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/tools/sentry/events_list.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/tools/sentry/issues_list.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/tools/sentry/projects_list.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/tools/sentry/releases_list.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/tools/sharepoint/get_list.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/tools/supabase/count.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/tools/supabase/storage_download.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/tools/typeform/files.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/tools/wikipedia/content.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/tools/wordpress/list_categories.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/tools/wordpress/list_comments.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/tools/wordpress/list_media.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/tools/wordpress/list_pages.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/tools/wordpress/list_posts.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/tools/wordpress/list_tags.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/tools/wordpress/list_users.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/tools/wordpress/search_content.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/apps/sim/tools/x/user.ts",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/context/drizzle_orm_usage.json",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/context/new.py",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/context/sim.json",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/context/sql_code_blocks.json",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/context/repo/drizzle_orm_usage.json",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/context/repo/sim.json",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/context/repo/sql_code_blocks.json",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/packages/python-sdk/README.md",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/packages/python-sdk/examples/basic_usage.py",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/packages/python-sdk/simstudio/__init__.py",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/packages/python-sdk/tests/test_client.py",
+    "db": false
+  },
+  {
+    "entry": "U:/foldersim/sim/packages/ts-sdk/src/index.ts",
+    "db": true
+  },
+  {
+    "entry": "U:/foldersim/sim/scripts/create-single-release.ts",
+    "db": false
+  }
+]
