@@ -1,0 +1,3514 @@
+{
+  "apps/docs/app/layout.config.tsx": {
+    "lines": 22,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/docs/app/layout.tsx": {
+    "lines": 101,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/docs/app/api/og/route.tsx": {
+    "lines": 186,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/docs/app/[lang]/layout.tsx": {
+    "lines": 138,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/docs/app/[lang]/not-found.tsx": {
+    "lines": 24,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/docs/app/[lang]/[[...slug]]/page.tsx": {
+    "lines": 337,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/docs/components/icons.tsx": {
+    "lines": 4291,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/docs/components/page-actions.tsx": {
+    "lines": 61,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/docs/components/structured-data.tsx": {
+    "lines": 175,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/docs/components/docs-layout/page-navigation-arrows.tsx": {
+    "lines": 43,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/docs/components/docs-layout/sidebar-components.tsx": {
+    "lines": 207,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/docs/components/docs-layout/toc-footer.tsx": {
+    "lines": 42,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/docs/components/navbar/navbar.tsx": {
+    "lines": 67,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/docs/components/ui/block-info-card.tsx": {
+    "lines": 41,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/docs/components/ui/button.tsx": {
+    "lines": 28,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/docs/components/ui/code-block.tsx": {
+    "lines": 51,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/docs/components/ui/heading.tsx": {
+    "lines": 59,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/docs/components/ui/image.tsx": {
+    "lines": 54,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/docs/components/ui/language-dropdown.tsx": {
+    "lines": 130,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/docs/components/ui/lightbox.tsx": {
+    "lines": 75,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/docs/components/ui/search-trigger.tsx": {
+    "lines": 39,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/docs/components/ui/theme-toggle.tsx": {
+    "lines": 33,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/docs/components/ui/video.tsx": {
+    "lines": 58,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/global-error.tsx": {
+    "lines": 18,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/layout.tsx": {
+    "lines": 205,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/not-found.tsx": {
+    "lines": 95,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/page.tsx": {
+    "lines": 89,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/(auth)/layout.tsx": {
+    "lines": 43,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/(auth)/components/auth-background-svg.tsx": {
+    "lines": 45,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/(auth)/components/auth-background.tsx": {
+    "lines": 17,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/(auth)/components/oauth-provider-checker.tsx": {
+    "lines": 13,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/(auth)/components/social-login-buttons.tsx": {
+    "lines": 120,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/(auth)/components/sso-login-button.tsx": {
+    "lines": 54,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/(auth)/login/login-form.tsx": {
+    "lines": 638,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/(auth)/login/page.tsx": {
+    "lines": 17,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/(auth)/reset-password/page.tsx": {
+    "lines": 118,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/(auth)/reset-password/reset-password-form.tsx": {
+    "lines": 320,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/(auth)/signup/page.tsx": {
+    "lines": 22,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/(auth)/signup/signup-form.tsx": {
+    "lines": 637,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/(auth)/sso/page.tsx": {
+    "lines": 14,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/(auth)/sso/sso-form.tsx": {
+    "lines": 300,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/(auth)/verify/page.tsx": {
+    "lines": 18,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/(auth)/verify/verify-content.tsx": {
+    "lines": 268,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/(landing)/landing.tsx": {
+    "lines": 79,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/(landing)/layout.tsx": {
+    "lines": 19,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/(landing)/careers/page.tsx": {
+    "lines": 541,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/(landing)/components/legal-layout.tsx": {
+    "lines": 37,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/(landing)/components/structured-data.tsx": {
+    "lines": 239,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/(landing)/components/background/background-svg.tsx": {
+    "lines": 137,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/(landing)/components/background/background.tsx": {
+    "lines": 23,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/(landing)/components/footer/footer.tsx": {
+    "lines": 280,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/(landing)/components/footer/components/compliance-badges.tsx": {
+    "lines": 27,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/(landing)/components/footer/components/logo.tsx": {
+    "lines": 18,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/(landing)/components/footer/components/social-links.tsx": {
+    "lines": 45,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/(landing)/components/footer/components/status-indicator.tsx": {
+    "lines": 70,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/(landing)/components/hero/hero.tsx": {
+    "lines": 490,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/(landing)/components/hero/components/icon-button.tsx": {
+    "lines": 39,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/(landing)/components/hero/components/landing-canvas/dot-pattern.tsx": {
+    "lines": 134,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/(landing)/components/hero/components/landing-canvas/landing-canvas.tsx": {
+    "lines": 153,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/(landing)/components/hero/components/landing-canvas/landing-flow.tsx": {
+    "lines": 152,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/(landing)/components/hero/components/landing-canvas/landing-block/landing-block.tsx": {
+    "lines": 72,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/(landing)/components/hero/components/landing-canvas/landing-block/landing-loop-node.tsx": {
+    "lines": 50,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/(landing)/components/hero/components/landing-canvas/landing-block/landing-node.tsx": {
+    "lines": 91,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/(landing)/components/hero/components/landing-canvas/landing-block/loop-block.tsx": {
+    "lines": 66,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/(landing)/components/hero/components/landing-canvas/landing-block/tag.tsx": {
+    "lines": 26,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/(landing)/components/hero/components/landing-canvas/landing-edge/landing-edge.tsx": {
+    "lines": 81,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/(landing)/components/integrations/integrations.tsx": {
+    "lines": 147,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/(landing)/components/landing-pricing/landing-pricing.tsx": {
+    "lines": 252,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/(landing)/components/landing-templates/landing-templates.tsx": {
+    "lines": 114,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/(landing)/components/landing-templates/components/landing-template-preview.tsx": {
+    "lines": 56,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/(landing)/components/nav/nav.tsx": {
+    "lines": 206,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/(landing)/components/testimonials/testimonials.tsx": {
+    "lines": 216,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/(landing)/privacy/page.tsx": {
+    "lines": 777,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/(landing)/studio/head.tsx": {
+    "lines": 14,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/(landing)/studio/layout.tsx": {
+    "lines": 41,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/(landing)/studio/page.tsx": {
+    "lines": 92,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/(landing)/studio/post-grid.tsx": {
+    "lines": 91,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/(landing)/studio/authors/[id]/page.tsx": {
+    "lines": 75,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/(landing)/studio/tags/page.tsx": {
+    "lines": 26,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/(landing)/studio/[slug]/page.tsx": {
+    "lines": 172,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/(landing)/terms/page.tsx": {
+    "lines": 375,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/changelog/layout.tsx": {
+    "lines": 11,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/changelog/page.tsx": {
+    "lines": 17,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/changelog/components/changelog-content.tsx": {
+    "lines": 106,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/changelog/components/timeline-list.tsx": {
+    "lines": 236,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/chat/components/auth/email/email-auth.tsx": {
+    "lines": 408,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/chat/components/auth/password/password-auth.tsx": {
+    "lines": 213,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/chat/components/auth/sso/sso-auth.tsx": {
+    "lines": 210,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/chat/components/components/markdown-renderer/markdown-renderer.tsx": {
+    "lines": 154,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/chat/components/error-state/error-state.tsx": {
+    "lines": 96,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/chat/components/header/header.tsx": {
+    "lines": 88,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/chat/components/input/input.tsx": {
+    "lines": 471,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/chat/components/input/voice-input.tsx": {
+    "lines": 134,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/chat/components/loading-state/loading-state.tsx": {
+    "lines": 31,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/chat/components/message/message.tsx": {
+    "lines": 255,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/chat/components/message/components/file-download.tsx": {
+    "lines": 183,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/chat/components/message/components/markdown-renderer.tsx": {
+    "lines": 218,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/chat/components/message-container/message-container.tsx": {
+    "lines": 104,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/chat/components/voice-interface/voice-interface.tsx": {
+    "lines": 540,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/chat/components/voice-interface/components/particles.tsx": {
+    "lines": 504,
+    "defines_functions": true,
+    "defines_classes": true,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/chat/[identifier]/chat.tsx": {
+    "lines": 588,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/chat/[identifier]/page.tsx": {
+    "lines": 7,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/invite/components/layout.tsx": {
+    "lines": 19,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/invite/components/status-card.tsx": {
+    "lines": 192,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/invite/[id]/invite.tsx": {
+    "lines": 385,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/invite/[id]/page.tsx": {
+    "lines": 4,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/playground/page.tsx": {
+    "lines": 567,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/resume/[workflowId]/[executionId]/page.tsx": {
+    "lines": 41,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/resume/[workflowId]/[executionId]/resume-page-client.tsx": {
+    "lines": 1464,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/resume/[workflowId]/[executionId]/[contextId]/page.tsx": {
+    "lines": 16,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/templates/layout-client.tsx": {
+    "lines": 13,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/templates/layout.tsx": {
+    "lines": 10,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/templates/page.tsx": {
+    "lines": 67,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/templates/templates.tsx": {
+    "lines": 215,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/templates/components/template-card.tsx": {
+    "lines": 308,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/templates/[id]/layout.tsx": {
+    "lines": 45,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/templates/[id]/page.tsx": {
+    "lines": 93,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/templates/[id]/template.tsx": {
+    "lines": 1112,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/unsubscribe/page.tsx": {
+    "lines": 4,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/unsubscribe/unsubscribe.tsx": {
+    "lines": 407,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/layout.tsx": {
+    "lines": 23,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/page.tsx": {
+    "lines": 132,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/providers/socket-provider.tsx": {
+    "lines": 811,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/error.tsx": {
+    "lines": 6,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/global-error.tsx": {
+    "lines": 6,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/layout.tsx": {
+    "lines": 30,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/page.tsx": {
+    "lines": 11,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/files/[fileId]/view/file-viewer.tsx": {
+    "lines": 28,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/files/[fileId]/view/page.tsx": {
+    "lines": 38,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/knowledge/knowledge.tsx": {
+    "lines": 254,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/knowledge/layout.tsx": {
+    "lines": 7,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/knowledge/page.tsx": {
+    "lines": 2,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/knowledge/components/base-card/base-card.tsx": {
+    "lines": 161,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/knowledge/components/create-base-modal/create-base-modal.tsx": {
+    "lines": 574,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/knowledge/components/icons/document-icons.tsx": {
+    "lines": 278,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/knowledge/components/knowledge-header/knowledge-header.tsx": {
+    "lines": 269,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/base.tsx": {
+    "lines": 1425,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/page.tsx": {
+    "lines": 18,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/components/action-bar/action-bar.tsx": {
+    "lines": 106,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/components/add-documents-modal/add-documents-modal.tsx": {
+    "lines": 375,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/components/base-tags-modal/base-tags-modal.tsx": {
+    "lines": 546,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/document.tsx": {
+    "lines": 1261,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/page.tsx": {
+    "lines": 27,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/components/create-chunk-modal/create-chunk-modal.tsx": {
+    "lines": 210,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/components/delete-chunk-modal/delete-chunk-modal.tsx": {
+    "lines": 94,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/components/document-tags-modal/document-tags-modal.tsx": {
+    "lines": 783,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/components/edit-chunk-modal/edit-chunk-modal.tsx": {
+    "lines": 335,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/logs/layout.tsx": {
+    "lines": 7,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/logs/logs.tsx": {
+    "lines": 632,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/logs/page.tsx": {
+    "lines": 4,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/logs/components/dashboard/dashboard.tsx": {
+    "lines": 903,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/logs/components/dashboard/components/line-chart/line-chart.tsx": {
+    "lines": 686,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/logs/components/dashboard/components/status-bar/status-bar.tsx": {
+    "lines": 131,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/logs/components/dashboard/components/workflows-list/workflows-list.tsx": {
+    "lines": 116,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/logs/components/log-details/log-details.tsx": {
+    "lines": 378,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/logs/components/log-details/components/file-download/file-download.tsx": {
+    "lines": 265,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/logs/components/log-details/components/frozen-canvas/frozen-canvas.tsx": {
+    "lines": 659,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/logs/components/log-details/components/trace-spans/trace-spans.tsx": {
+    "lines": 831,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/logs/components/logs-toolbar/logs-toolbar.tsx": {
+    "lines": 485,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/logs/components/logs-toolbar/components/controls/controls.tsx": {
+    "lines": 264,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/logs/components/logs-toolbar/components/notifications/notifications.tsx": {
+    "lines": 1402,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/logs/components/logs-toolbar/components/notifications/components/slack-channel-selector/slack-channel-selector.tsx": {
+    "lines": 121,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/logs/components/logs-toolbar/components/notifications/components/workflow-selector/workflow-selector.tsx": {
+    "lines": 150,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/logs/components/logs-toolbar/components/search/search.tsx": {
+    "lines": 364,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/providers/global-commands-provider.tsx": {
+    "lines": 219,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/providers/provider-models-loader.tsx": {
+    "lines": 57,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/providers/settings-loader.tsx": {
+    "lines": 31,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/providers/workspace-permissions-provider.tsx": {
+    "lines": 195,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/templates/layout.tsx": {
+    "lines": 7,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/templates/page.tsx": {
+    "lines": 194,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/templates/templates.tsx": {
+    "lines": 264,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/templates/components/navigation-tabs.tsx": {
+    "lines": 34,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/templates/components/template-card.tsx": {
+    "lines": 318,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/templates/[id]/page.tsx": {
+    "lines": 116,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/page.tsx": {
+    "lines": 69,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/sidebar.tsx": {
+    "lines": 678,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/help-modal/help-modal.tsx": {
+    "lines": 554,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/search-modal/search-modal.tsx": {
+    "lines": 638,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/settings-modal.tsx": {
+    "lines": 468,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/api-keys/api-keys.tsx": {
+    "lines": 658,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/copilot/copilot.tsx": {
+    "lines": 352,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/custom-tools/custom-tools.tsx": {
+    "lines": 240,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/environment/environment.tsx": {
+    "lines": 872,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/files/files.tsx": {
+    "lines": 464,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/general/general.tsx": {
+    "lines": 599,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/integrations/integrations.tsx": {
+    "lines": 415,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/mcp/mcp.tsx": {
+    "lines": 809,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/mcp/components/form-field/form-field.tsx": {
+    "lines": 18,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/mcp/components/formatted-input/formatted-input.tsx": {
+    "lines": 67,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/mcp/components/header-row/header-row.tsx": {
+    "lines": 82,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/mcp/components/mcp-server-skeleton/mcp-server-skeleton.tsx": {
+    "lines": 24,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/mcp/components/server-list-item/server-list-item.tsx": {
+    "lines": 81,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/shared/usage-header.tsx": {
+    "lines": 192,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/sso/sso.tsx": {
+    "lines": 994,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/subscription/subscription.tsx": {
+    "lines": 641,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/subscription/components/cancel-subscription/cancel-subscription.tsx": {
+    "lines": 295,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/subscription/components/cost-breakdown/cost-breakdown.tsx": {
+    "lines": 52,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/subscription/components/credit-balance/credit-balance.tsx": {
+    "lines": 182,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/subscription/components/plan-card/plan-card.tsx": {
+    "lines": 123,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/subscription/components/usage-limit/usage-limit.tsx": {
+    "lines": 243,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/team-management/team-management.tsx": {
+    "lines": 555,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/team-management/components/member-invitation-card/member-invitation-card.tsx": {
+    "lines": 311,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/team-management/components/no-organization-view/no-organization-view.tsx": {
+    "lines": 238,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/team-management/components/remove-member-dialog/remove-member-dialog.tsx": {
+    "lines": 83,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/team-management/components/team-members/team-members.tsx": {
+    "lines": 259,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/team-management/components/team-seats/team-seats.tsx": {
+    "lines": 153,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/team-management/components/team-seats-overview/team-seats-overview.tsx": {
+    "lines": 147,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/team-management/components/team-usage/team-usage.tsx": {
+    "lines": 138,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/template-profile/template-profile.tsx": {
+    "lines": 517,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/usage-indicator/usage-indicator.tsx": {
+    "lines": 385,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/workflow-list/workflow-list.tsx": {
+    "lines": 366,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/workflow-list/components/context-menu/context-menu.tsx": {
+    "lines": 234,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/workflow-list/components/delete-modal/delete-modal.tsx": {
+    "lines": 130,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/workflow-list/components/folder-item/folder-item.tsx": {
+    "lines": 341,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/workflow-list/components/workflow-item/workflow-item.tsx": {
+    "lines": 345,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/workflow-list/components/workflow-item/avatars/avatars.tsx": {
+    "lines": 161,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/workspace-header/workspace-header.tsx": {
+    "lines": 492,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/workspace-header/components/invite-modal/invite-modal.tsx": {
+    "lines": 909,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/workspace-header/components/invite-modal/components/email-tag.tsx": {
+    "lines": 45,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/workspace-header/components/invite-modal/components/permission-selector.tsx": {
+    "lines": 57,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/workspace-header/components/invite-modal/components/permissions-table-skeleton.tsx": {
+    "lines": 24,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/workspace-header/components/invite-modal/components/permissions-table.tsx": {
+    "lines": 298,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/workflow-preview/workflow-preview-block.tsx": {
+    "lines": 135,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/workflow-preview/workflow-preview-subflow.tsx": {
+    "lines": 100,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/components/workflow-preview/workflow-preview.tsx": {
+    "lines": 410,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/layout.tsx": {
+    "lines": 10,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/page.tsx": {
+    "lines": 4,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/workflow.tsx": {
+    "lines": 2383,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/chat/chat.tsx": {
+    "lines": 1060,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/chat/components/chat-message/chat-message.tsx": {
+    "lines": 178,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/chat/components/output-select/output-select.tsx": {
+    "lines": 478,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/command-list/command-list.tsx": {
+    "lines": 241,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/cursors/cursors.tsx": {
+    "lines": 81,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/diff-controls/diff-controls.tsx": {
+    "lines": 362,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/error/index.tsx": {
+    "lines": 134,
+    "defines_functions": true,
+    "defines_classes": true,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/note-block/note-block.tsx": {
+    "lines": 233,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/notifications/notifications.tsx": {
+    "lines": 161,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/panel.tsx": {
+    "lines": 568,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/copilot.tsx": {
+    "lines": 618,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/copilot-message/copilot-message.tsx": {
+    "lines": 666,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/copilot-message/components/file-display.tsx": {
+    "lines": 136,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/copilot-message/components/markdown-renderer.tsx": {
+    "lines": 400,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/copilot-message/components/smooth-streaming.tsx": {
+    "lines": 130,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/copilot-message/components/thinking-block.tsx": {
+    "lines": 212,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/copilot-message/components/usage-limit-actions.tsx": {
+    "lines": 100,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/plan-mode-section/plan-mode-section.tsx": {
+    "lines": 285,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/todo-list/todo-list.tsx": {
+    "lines": 158,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/tool-call/tool-call.tsx": {
+    "lines": 1148,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/user-input/user-input.tsx": {
+    "lines": 824,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/user-input/components/attached-files-display/attached-files-display.tsx": {
+    "lines": 123,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/user-input/components/context-pills/context-pills.tsx": {
+    "lines": 52,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/user-input/components/context-usage-indicator/context-usage-indicator.tsx": {
+    "lines": 77,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/user-input/components/mention-menu/mention-menu.tsx": {
+    "lines": 799,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/user-input/components/mode-selector/mode-selector.tsx": {
+    "lines": 144,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/user-input/components/model-selector/model-selector.tsx": {
+    "lines": 154,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/welcome/welcome.tsx": {
+    "lines": 81,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/deploy.tsx": {
+    "lines": 147,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/deploy-modal.tsx": {
+    "lines": 858,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/components/api/api.tsx": {
+    "lines": 665,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/components/chat/chat.tsx": {
+    "lines": 876,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/components/general/general.tsx": {
+    "lines": 314,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/components/general/components/versions.tsx": {
+    "lines": 334,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/components/template/template.tsx": {
+    "lines": 550,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/editor.tsx": {
+    "lines": 427,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/connection-blocks/connection-blocks.tsx": {
+    "lines": 369,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/connection-blocks/components/field-item/field-item.tsx": {
+    "lines": 120,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/sub-block.tsx": {
+    "lines": 846,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/env-var-dropdown.tsx": {
+    "lines": 362,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/formatted-text.tsx": {
+    "lines": 98,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/sub-block-dropdowns.tsx": {
+    "lines": 116,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/sub-block-input-controller.tsx": {
+    "lines": 152,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/checkbox-list/checkbox-list.tsx": {
+    "lines": 84,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/code/code.tsx": {
+    "lines": 828,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/combobox/combobox.tsx": {
+    "lines": 301,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/condition-input/condition-input.tsx": {
+    "lines": 988,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/credential-selector/credential-selector.tsx": {
+    "lines": 316,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/credential-selector/components/oauth-required-modal.tsx": {
+    "lines": 439,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/document-selector/document-selector.tsx": {
+    "lines": 79,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/document-tag-entry/document-tag-entry.tsx": {
+    "lines": 390,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/dropdown/dropdown.tsx": {
+    "lines": 392,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/eval-input/eval-input.tsx": {
+    "lines": 291,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/file-selector/file-selector-input.tsx": {
+    "lines": 158,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/file-upload/file-upload.tsx": {
+    "lines": 585,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/folder-selector/components/folder-selector-input.tsx": {
+    "lines": 122,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/grouped-checkbox-list/grouped-checkbox-list.tsx": {
+    "lines": 199,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/input-mapping/input-mapping.tsx": {
+    "lines": 457,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/knowledge-base-selector/knowledge-base-selector.tsx": {
+    "lines": 203,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/knowledge-tag-filters/knowledge-tag-filters.tsx": {
+    "lines": 479,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/long-input/long-input.tsx": {
+    "lines": 388,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/mcp-dynamic-args/mcp-dynamic-args.tsx": {
+    "lines": 591,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/mcp-server-modal/mcp-server-selector.tsx": {
+    "lines": 85,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/mcp-server-modal/mcp-tool-selector.tsx": {
+    "lines": 122,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/messages-input/messages-input.tsx": {
+    "lines": 555,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/project-selector/project-selector-input.tsx": {
+    "lines": 128,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/response/response-format.tsx": {
+    "lines": 31,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/schedule-save/schedule-save.tsx": {
+    "lines": 500,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/selector-combobox/selector-combobox.tsx": {
+    "lines": 146,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/short-input/short-input.tsx": {
+    "lines": 429,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/slack-selector/slack-selector-input.tsx": {
+    "lines": 148,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/slider-input/slider-input.tsx": {
+    "lines": 84,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/starter/input-format.tsx": {
+    "lines": 479,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/switch/switch.tsx": {
+    "lines": 53,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/table/table.tsx": {
+    "lines": 332,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tag-dropdown/tag-dropdown.tsx": {
+    "lines": 1600,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tag-dropdown/components/keyboard-navigation-handler.tsx": {
+    "lines": 246,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/text/text.tsx": {
+    "lines": 49,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/time-input/time-input.tsx": {
+    "lines": 169,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/tool-input.tsx": {
+    "lines": 2593,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/components/mcp-tools-list.tsx": {
+    "lines": 115,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/components/tool-credential-selector.tsx": {
+    "lines": 295,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/components/code-editor/code-editor.tsx": {
+    "lines": 233,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/components/custom-tool-modal/custom-tool-modal.tsx": {
+    "lines": 1222,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/components/tool-command/tool-command.tsx": {
+    "lines": 262,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/trigger-save/trigger-save.tsx": {
+    "lines": 482,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/variables-input/variables-input.tsx": {
+    "lines": 474,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/subflow-editor/subflow-editor.tsx": {
+    "lines": 213,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/sub-block/components/file-selector/file-selector-input.tsx": {
+    "lines": 158,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/toolbar/toolbar.tsx": {
+    "lines": 691,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/workflow-controls/workflow-controls.tsx": {
+    "lines": 68,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/skeleton-loading/skeleton-loading.tsx": {
+    "lines": 184,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/subflows/subflow-node.tsx": {
+    "lines": 272,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/terminal/terminal.tsx": {
+    "lines": 1776,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/terminal/components/prettier-output.tsx": {
+    "lines": 227,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/training-modal/training-modal.tsx": {
+    "lines": 812,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/variables/variables.tsx": {
+    "lines": 503,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/wand-prompt-bar/wand-prompt-bar.tsx": {
+    "lines": 191,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/workflow-block/workflow-block.tsx": {
+    "lines": 1224,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/workflow-block/components/action-bar/action-bar.tsx": {
+    "lines": 214,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/workflow-block/components/connections/connections.tsx": {
+    "lines": 24,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/workflow-edge/workflow-edge.tsx": {
+    "lines": 154,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/_shell/hydration-error-handler.tsx": {
+    "lines": 49,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/_shell/zoom-prevention.tsx": {
+    "lines": 34,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/_shell/providers/posthog-provider.tsx": {
+    "lines": 45,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/app/_shell/providers/query-provider.tsx": {
+    "lines": 27,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/app/_shell/providers/session-provider.tsx": {
+    "lines": 82,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/app/_shell/providers/theme-provider.tsx": {
+    "lines": 40,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/branded-layout.tsx": {
+    "lines": 44,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/icons.tsx": {
+    "lines": 4291,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/components/analytics/onedollarstats.tsx": {
+    "lines": 24,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/components/emails/batch-invitation-email.tsx": {
+    "lines": 169,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/emails/footer.tsx": {
+    "lines": 152,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": true
+  },
+  "apps/sim/components/emails/help-confirmation-email.tsx": {
+    "lines": 135,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/emails/invitation-email.tsx": {
+    "lines": 126,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/components/emails/otp-verification-email.tsx": {
+    "lines": 115,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/emails/reset-password-email.tsx": {
+    "lines": 102,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/emails/workspace-invitation.tsx": {
+    "lines": 115,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/components/emails/billing/credit-purchase-email.tsx": {
+    "lines": 126,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/emails/billing/enterprise-subscription-email.tsx": {
+    "lines": 122,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/emails/billing/free-tier-upgrade-email.tsx": {
+    "lines": 143,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/emails/billing/payment-failed-email.tsx": {
+    "lines": 168,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/emails/billing/plan-welcome-email.tsx": {
+    "lines": 114,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/components/emails/billing/usage-threshold-email.tsx": {
+    "lines": 124,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/emails/careers/careers-confirmation-email.tsx": {
+    "lines": 119,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/components/emails/careers/careers-submission-email.tsx": {
+    "lines": 314,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/emcn/components/badge/badge.tsx": {
+    "lines": 31,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/components/emcn/components/breadcrumb/breadcrumb.tsx": {
+    "lines": 59,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/emcn/components/button/button.tsx": {
+    "lines": 42,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/components/emcn/components/code/code.tsx": {
+    "lines": 853,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/components/emcn/components/combobox/combobox.tsx": {
+    "lines": 629,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/components/emcn/components/date-picker/date-picker.tsx": {
+    "lines": 410,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/components/emcn/components/input/input.tsx": {
+    "lines": 70,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/components/emcn/components/label/label.tsx": {
+    "lines": 32,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/emcn/components/modal/modal.tsx": {
+    "lines": 407,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/emcn/components/popover/popover.tsx": {
+    "lines": 764,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/emcn/components/s-modal/s-modal.tsx": {
+    "lines": 268,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/emcn/components/slider/slider.tsx": {
+    "lines": 40,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/emcn/components/switch/switch.tsx": {
+    "lines": 38,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/emcn/components/textarea/textarea.tsx": {
+    "lines": 38,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/components/emcn/components/tooltip/tooltip.tsx": {
+    "lines": 66,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/emcn/icons/bubble-chat-preview.tsx": {
+    "lines": 30,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/components/emcn/icons/card.tsx": {
+    "lines": 26,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/components/emcn/icons/chevron-down.tsx": {
+    "lines": 26,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/components/emcn/icons/connections.tsx": {
+    "lines": 26,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/components/emcn/icons/copy.tsx": {
+    "lines": 53,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/components/emcn/icons/document-attachment.tsx": {
+    "lines": 36,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/components/emcn/icons/duplicate.tsx": {
+    "lines": 24,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/components/emcn/icons/eye.tsx": {
+    "lines": 28,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/components/emcn/icons/folder-code.tsx": {
+    "lines": 40,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/components/emcn/icons/folder-plus.tsx": {
+    "lines": 41,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/components/emcn/icons/hex-simple.tsx": {
+    "lines": 28,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/components/emcn/icons/key.tsx": {
+    "lines": 24,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/components/emcn/icons/layout.tsx": {
+    "lines": 84,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/components/emcn/icons/library.tsx": {
+    "lines": 28,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/components/emcn/icons/more-horizontal.tsx": {
+    "lines": 32,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/components/emcn/icons/no-wrap.tsx": {
+    "lines": 29,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/components/emcn/icons/panel-left.tsx": {
+    "lines": 24,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/components/emcn/icons/play.tsx": {
+    "lines": 24,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/components/emcn/icons/redo.tsx": {
+    "lines": 34,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/components/emcn/icons/rocket.tsx": {
+    "lines": 24,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/components/emcn/icons/trash.tsx": {
+    "lines": 24,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/components/emcn/icons/trash2.tsx": {
+    "lines": 24,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/components/emcn/icons/undo.tsx": {
+    "lines": 34,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/components/emcn/icons/wrap.tsx": {
+    "lines": 28,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/components/emcn/icons/zoom-in.tsx": {
+    "lines": 50,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/components/emcn/icons/zoom-out.tsx": {
+    "lines": 43,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/components/icons/document-icons.tsx": {
+    "lines": 193,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/components/ui/alert-dialog.tsx": {
+    "lines": 198,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/ui/alert.tsx": {
+    "lines": 49,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/components/ui/avatar.tsx": {
+    "lines": 89,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/components/ui/badge.tsx": {
+    "lines": 33,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/components/ui/breadcrumb.tsx": {
+    "lines": 101,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/ui/button.tsx": {
+    "lines": 49,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/components/ui/card.tsx": {
+    "lines": 55,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/ui/checkbox.tsx": {
+    "lines": 28,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/ui/code-block.tsx": {
+    "lines": 20,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/ui/collapsible.tsx": {
+    "lines": 12,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/ui/color-picker.tsx": {
+    "lines": 67,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/ui/command.tsx": {
+    "lines": 245,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/ui/copy-button.tsx": {
+    "lines": 48,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/ui/dialog.tsx": {
+    "lines": 142,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/ui/dropdown-menu.tsx": {
+    "lines": 187,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/ui/form.tsx": {
+    "lines": 169,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/ui/input-otp-form.tsx": {
+    "lines": 70,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/ui/input-otp.tsx": {
+    "lines": 71,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/ui/input.tsx": {
+    "lines": 26,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/ui/label.tsx": {
+    "lines": 21,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/components/ui/notice.tsx": {
+    "lines": 65,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/ui/popover.tsx": {
+    "lines": 31,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/ui/progress.tsx": {
+    "lines": 31,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/ui/radio-group.tsx": {
+    "lines": 38,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/ui/scroll-area.tsx": {
+    "lines": 53,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/ui/search-highlight.tsx": {
+    "lines": 49,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": true,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/ui/select.tsx": {
+    "lines": 159,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/ui/separator.tsx": {
+    "lines": 26,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/ui/sheet.tsx": {
+    "lines": 122,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/components/ui/skeleton.tsx": {
+    "lines": 8,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/ui/slider.tsx": {
+    "lines": 25,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/ui/switch.tsx": {
+    "lines": 29,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/ui/table.tsx": {
+    "lines": 91,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/ui/tabs.tsx": {
+    "lines": 55,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/ui/tag-input.tsx": {
+    "lines": 113,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/ui/textarea.tsx": {
+    "lines": 21,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/ui/toggle.tsx": {
+    "lines": 44,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": true
+  },
+  "apps/sim/components/ui/tool-call.tsx": {
+    "lines": 442,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/components/ui/verified-badge.tsx": {
+    "lines": 40,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": true,
+    "auth_related": false
+  },
+  "apps/sim/components/user-avatar/user-avatar.tsx": {
+    "lines": 67,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/lib/blog/code.tsx": {
+    "lines": 46,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/lib/blog/faq.tsx": {
+    "lines": 17,
+    "defines_functions": true,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  },
+  "apps/sim/lib/blog/mdx.tsx": {
+    "lines": 142,
+    "defines_functions": false,
+    "defines_classes": false,
+    "db_related": false,
+    "http_related": false,
+    "auth_related": false
+  }
+}

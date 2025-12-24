@@ -1,0 +1,722 @@
+{
+  "apps/docs/app/api/og/route.tsx": [
+    {
+      "call": "loadGoogleFont",
+      "target_file": "apps/docs/app/api/og/route.tsx"
+    },
+    {
+      "call": "getTitleFontSize",
+      "target_file": "apps/docs/app/api/og/route.tsx"
+    }
+  ],
+  "apps/docs/components/docs-layout/sidebar-components.tsx": [
+    {
+      "call": "stripLangPrefix",
+      "target_file": "apps/docs/components/docs-layout/sidebar-components.tsx"
+    },
+    {
+      "call": "stripLangPrefix",
+      "target_file": "apps/docs/components/docs-layout/sidebar-components.tsx"
+    },
+    {
+      "call": "isActive",
+      "target_file": "apps/docs/components/docs-layout/sidebar-components.tsx"
+    },
+    {
+      "call": "isActive",
+      "target_file": "apps/docs/components/docs-layout/sidebar-components.tsx"
+    },
+    {
+      "call": "isActive",
+      "target_file": "apps/docs/components/docs-layout/sidebar-components.tsx"
+    },
+    {
+      "call": "isActive",
+      "target_file": "apps/docs/components/docs-layout/sidebar-components.tsx"
+    }
+  ],
+  "apps/sim/app/(auth)/layout.tsx": [
+    {
+      "call": "isColorDark",
+      "target_file": "apps/sim/app/(auth)/layout.tsx"
+    }
+  ],
+  "apps/sim/app/(auth)/login/page.tsx": [
+    {
+      "call": "getOAuthProviderStatus",
+      "target_file": "apps/sim/app/(auth)/components/oauth-provider-checker.tsx"
+    }
+  ],
+  "apps/sim/app/(auth)/reset-password/reset-password-form.tsx": [
+    {
+      "call": "onSubmit",
+      "target_file": "apps/sim/app/(landing)/careers/page.tsx"
+    },
+    {
+      "call": "onSubmit",
+      "target_file": "apps/sim/app/(landing)/careers/page.tsx"
+    }
+  ],
+  "apps/sim/app/(auth)/signup/page.tsx": [
+    {
+      "call": "getOAuthProviderStatus",
+      "target_file": "apps/sim/app/(auth)/components/oauth-provider-checker.tsx"
+    }
+  ],
+  "apps/sim/app/changelog/components/changelog-content.tsx": [
+    {
+      "call": "extractMentions",
+      "target_file": "apps/sim/app/changelog/components/timeline-list.tsx"
+    }
+  ],
+  "apps/sim/app/changelog/components/timeline-list.tsx": [
+    {
+      "call": "sanitizeContent",
+      "target_file": "apps/sim/app/changelog/components/timeline-list.tsx"
+    },
+    {
+      "call": "stripContributors",
+      "target_file": "apps/sim/app/changelog/components/timeline-list.tsx"
+    },
+    {
+      "call": "stripPrReferences",
+      "target_file": "apps/sim/app/changelog/components/timeline-list.tsx"
+    },
+    {
+      "call": "sanitizeContent",
+      "target_file": "apps/sim/app/changelog/components/timeline-list.tsx"
+    },
+    {
+      "call": "extractMentions",
+      "target_file": "apps/sim/app/changelog/components/timeline-list.tsx"
+    },
+    {
+      "call": "isContributorsLabel",
+      "target_file": "apps/sim/app/changelog/components/timeline-list.tsx"
+    }
+  ],
+  "apps/sim/app/chat/components/input/input.tsx": [
+    {
+      "call": "onSubmit",
+      "target_file": "apps/sim/app/(landing)/careers/page.tsx"
+    }
+  ],
+  "apps/sim/app/chat/components/message/components/file-download.tsx": [
+    {
+      "call": "getFileUrl",
+      "target_file": "apps/sim/app/chat/components/message/components/file-download.tsx"
+    },
+    {
+      "call": "triggerDownload",
+      "target_file": "apps/sim/app/chat/components/message/components/file-download.tsx"
+    },
+    {
+      "call": "isAudioFile",
+      "target_file": "apps/sim/app/chat/components/message/components/file-download.tsx"
+    },
+    {
+      "call": "isImageFile",
+      "target_file": "apps/sim/app/chat/components/message/components/file-download.tsx"
+    },
+    {
+      "call": "getDocumentIcon",
+      "target_file": "apps/sim/components/icons/document-icons.tsx"
+    },
+    {
+      "call": "getFileUrl",
+      "target_file": "apps/sim/app/chat/components/message/components/file-download.tsx"
+    },
+    {
+      "call": "triggerDownload",
+      "target_file": "apps/sim/app/chat/components/message/components/file-download.tsx"
+    }
+  ],
+  "apps/sim/app/chat/[identifier]/chat.tsx": [
+    {
+      "call": "throttle",
+      "target_file": "apps/sim/app/chat/[identifier]/chat.tsx"
+    },
+    {
+      "call": "fileToBase64",
+      "target_file": "apps/sim/app/chat/[identifier]/chat.tsx"
+    },
+    {
+      "call": "createAudioStreamHandler",
+      "target_file": "apps/sim/app/chat/[identifier]/chat.tsx"
+    }
+  ],
+  "apps/sim/app/invite/[id]/invite.tsx": [
+    {
+      "call": "getErrorMessage",
+      "target_file": "apps/sim/app/invite/[id]/invite.tsx"
+    },
+    {
+      "call": "fetchInvitationDetails",
+      "target_file": "apps/sim/app/invite/[id]/invite.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/knowledge/knowledge.tsx": [
+    {
+      "call": "useUserPermissionsContext",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/providers/workspace-permissions-provider.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/base.tsx": [
+    {
+      "call": "getDocumentIcon",
+      "target_file": "apps/sim/components/icons/document-icons.tsx"
+    },
+    {
+      "call": "useUserPermissionsContext",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/providers/workspace-permissions-provider.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/components/action-bar/action-bar.tsx": [
+    {
+      "call": "useUserPermissionsContext",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/providers/workspace-permissions-provider.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/components/base-tags-modal/base-tags-modal.tsx": [
+    {
+      "call": "getDocumentIcon",
+      "target_file": "apps/sim/components/icons/document-icons.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/document.tsx": [
+    {
+      "call": "useUserPermissionsContext",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/providers/workspace-permissions-provider.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/components/document-tags-modal/document-tags-modal.tsx": [
+    {
+      "call": "getValueForFieldType",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/components/document-tags-modal/document-tags-modal.tsx"
+    },
+    {
+      "call": "getValueForFieldType",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/components/document-tags-modal/document-tags-modal.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/components/edit-chunk-modal/edit-chunk-modal.tsx": [
+    {
+      "call": "useUserPermissionsContext",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/providers/workspace-permissions-provider.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/logs/logs.tsx": [
+    {
+      "call": "useUserPermissionsContext",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/providers/workspace-permissions-provider.tsx"
+    },
+    {
+      "call": "formatDate",
+      "target_file": "apps/sim/app/resume/[workflowId]/[executionId]/resume-page-client.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/logs/components/log-details/log-details.tsx": [
+    {
+      "call": "formatDate",
+      "target_file": "apps/sim/app/resume/[workflowId]/[executionId]/resume-page-client.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/logs/components/log-details/components/trace-spans/trace-spans.tsx": [
+    {
+      "call": "getSpanKey",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/logs/components/log-details/components/trace-spans/trace-spans.tsx"
+    },
+    {
+      "call": "mergeTraceSpanChildren",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/logs/components/log-details/components/trace-spans/trace-spans.tsx"
+    },
+    {
+      "call": "normalizeAndSortSpans",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/logs/components/log-details/components/trace-spans/trace-spans.tsx"
+    },
+    {
+      "call": "parseTime",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/logs/components/log-details/components/trace-spans/trace-spans.tsx"
+    },
+    {
+      "call": "parseTime",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/logs/components/log-details/components/trace-spans/trace-spans.tsx"
+    },
+    {
+      "call": "parseTime",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/logs/components/log-details/components/trace-spans/trace-spans.tsx"
+    },
+    {
+      "call": "parseTime",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/logs/components/log-details/components/trace-spans/trace-spans.tsx"
+    },
+    {
+      "call": "getBlockIconAndColor",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/logs/components/log-details/components/trace-spans/trace-spans.tsx"
+    },
+    {
+      "call": "useSetToggle",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/logs/components/log-details/components/trace-spans/trace-spans.tsx"
+    },
+    {
+      "call": "getBlockIconAndColor",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/logs/components/log-details/components/trace-spans/trace-spans.tsx"
+    },
+    {
+      "call": "isIterationType",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/logs/components/log-details/components/trace-spans/trace-spans.tsx"
+    },
+    {
+      "call": "getBlockIconAndColor",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/logs/components/log-details/components/trace-spans/trace-spans.tsx"
+    },
+    {
+      "call": "isIterationType",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/logs/components/log-details/components/trace-spans/trace-spans.tsx"
+    },
+    {
+      "call": "parseTime",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/logs/components/log-details/components/trace-spans/trace-spans.tsx"
+    },
+    {
+      "call": "parseTime",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/logs/components/log-details/components/trace-spans/trace-spans.tsx"
+    },
+    {
+      "call": "normalizeAndSortSpans",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/logs/components/log-details/components/trace-spans/trace-spans.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/providers/global-commands-provider.tsx": [
+    {
+      "call": "isMacPlatform",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/providers/global-commands-provider.tsx"
+    },
+    {
+      "call": "isMacPlatform",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/providers/global-commands-provider.tsx"
+    },
+    {
+      "call": "parseShortcut",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/providers/global-commands-provider.tsx"
+    },
+    {
+      "call": "matchesShortcut",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/providers/global-commands-provider.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/providers/provider-models-loader.tsx": [
+    {
+      "call": "useSyncProvider",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/providers/provider-models-loader.tsx"
+    },
+    {
+      "call": "useSyncProvider",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/providers/provider-models-loader.tsx"
+    },
+    {
+      "call": "useSyncProvider",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/providers/provider-models-loader.tsx"
+    },
+    {
+      "call": "useSyncProvider",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/providers/provider-models-loader.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/providers/workspace-permissions-provider.tsx": [
+    {
+      "call": "useWorkspacePermissionsContext",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/providers/workspace-permissions-provider.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/sidebar.tsx": [
+    {
+      "call": "useUserPermissionsContext",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/providers/workspace-permissions-provider.tsx"
+    },
+    {
+      "call": "useRegisterGlobalCommands",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/providers/global-commands-provider.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/api-keys/api-keys.tsx": [
+    {
+      "call": "useUserPermissionsContext",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/providers/workspace-permissions-provider.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/files/files.tsx": [
+    {
+      "call": "getDocumentIcon",
+      "target_file": "apps/sim/components/icons/document-icons.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/mcp/mcp.tsx": [
+    {
+      "call": "getTestButtonLabel",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/mcp/mcp.tsx"
+    },
+    {
+      "call": "formatTransportLabel",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/mcp/components/server-list-item/server-list-item.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/mcp/components/server-list-item/server-list-item.tsx": [
+    {
+      "call": "formatTransportLabel",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/mcp/components/server-list-item/server-list-item.tsx"
+    },
+    {
+      "call": "formatToolsLabel",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/mcp/components/server-list-item/server-list-item.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/subscription/subscription.tsx": [
+    {
+      "call": "useUserPermissionsContext",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/providers/workspace-permissions-provider.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/subscription/components/cancel-subscription/cancel-subscription.tsx": [
+    {
+      "call": "formatDate",
+      "target_file": "apps/sim/app/resume/[workflowId]/[executionId]/resume-page-client.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/template-profile/template-profile.tsx": [
+    {
+      "call": "stripProtocol",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/template-profile/template-profile.tsx"
+    },
+    {
+      "call": "stripProtocol",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/template-profile/template-profile.tsx"
+    },
+    {
+      "call": "stripProtocol",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/template-profile/template-profile.tsx"
+    },
+    {
+      "call": "normalizeUrl",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/template-profile/template-profile.tsx"
+    },
+    {
+      "call": "normalizeUrl",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/template-profile/template-profile.tsx"
+    },
+    {
+      "call": "normalizeUrl",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/template-profile/template-profile.tsx"
+    },
+    {
+      "call": "normalizeUrl",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/template-profile/template-profile.tsx"
+    },
+    {
+      "call": "stripProtocol",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/template-profile/template-profile.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/workflow-list/components/folder-item/folder-item.tsx": [
+    {
+      "call": "useUserPermissionsContext",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/providers/workspace-permissions-provider.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/workflow-list/components/workflow-item/workflow-item.tsx": [
+    {
+      "call": "useUserPermissionsContext",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/providers/workspace-permissions-provider.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/workspace-header/workspace-header.tsx": [
+    {
+      "call": "useUserPermissionsContext",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/providers/workspace-permissions-provider.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/workspace-header/components/invite-modal/invite-modal.tsx": [
+    {
+      "call": "useWorkspacePermissionsContext",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/providers/workspace-permissions-provider.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/workspace-header/components/invite-modal/components/permissions-table.tsx": [
+    {
+      "call": "useUserPermissionsContext",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/providers/workspace-permissions-provider.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/workflow.tsx": [
+    {
+      "call": "useWorkspacePermissionsContext",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/providers/workspace-permissions-provider.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/note-block/note-block.tsx": [
+    {
+      "call": "extractFieldValue",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/note-block/note-block.tsx"
+    },
+    {
+      "call": "extractFieldValue",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/note-block/note-block.tsx"
+    },
+    {
+      "call": "extractFieldValue",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/note-block/note-block.tsx"
+    },
+    {
+      "call": "extractFieldValue",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/note-block/note-block.tsx"
+    },
+    {
+      "call": "useUserPermissionsContext",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/providers/workspace-permissions-provider.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/notifications/notifications.tsx": [
+    {
+      "call": "useRegisterGlobalCommands",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/providers/global-commands-provider.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/panel.tsx": [
+    {
+      "call": "useUserPermissionsContext",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/providers/workspace-permissions-provider.tsx"
+    },
+    {
+      "call": "useRegisterGlobalCommands",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/providers/global-commands-provider.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/copilot-message/copilot-message.tsx": [
+    {
+      "call": "id",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/workflow.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/copilot-message/components/file-display.tsx": [
+    {
+      "call": "getFileUrl",
+      "target_file": "apps/sim/app/chat/components/message/components/file-download.tsx"
+    },
+    {
+      "call": "formatFileSize",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/logs/components/log-details/components/file-download/file-download.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/copilot-message/components/usage-limit-actions.tsx": [
+    {
+      "call": "roundUpToNearest50",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/copilot-message/components/usage-limit-actions.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/tool-call/tool-call.tsx": [
+    {
+      "call": "splitActionVerb",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/tool-call/tool-call.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/user-input/user-input.tsx": [
+    {
+      "call": "onSubmit",
+      "target_file": "apps/sim/app/(landing)/careers/page.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/deploy-modal.tsx": [
+    {
+      "call": "fetchDeploymentInfo",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/deploy-modal.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/editor.tsx": [
+    {
+      "call": "useUserPermissionsContext",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/providers/workspace-permissions-provider.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/code/code.tsx": [
+    {
+      "call": "calculateGutterWidth",
+      "target_file": "apps/sim/components/emcn/components/code/code.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/condition-input/condition-input.tsx": [
+    {
+      "call": "calculateGutterWidth",
+      "target_file": "apps/sim/components/emcn/components/code/code.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/input-mapping/input-mapping.tsx": [
+    {
+      "call": "isInputTriggerBlock",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/input-mapping/input-mapping.tsx"
+    },
+    {
+      "call": "isInputTriggerBlock",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/input-mapping/input-mapping.tsx"
+    },
+    {
+      "call": "isStarterBlock",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/input-mapping/input-mapping.tsx"
+    },
+    {
+      "call": "isStarterBlock",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/input-mapping/input-mapping.tsx"
+    },
+    {
+      "call": "extractInputFormatFields",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/input-mapping/input-mapping.tsx"
+    },
+    {
+      "call": "fetchChildSchema",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/input-mapping/input-mapping.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/starter/input-format.tsx": [
+    {
+      "call": "calculateGutterWidth",
+      "target_file": "apps/sim/components/emcn/components/code/code.tsx"
+    },
+    {
+      "call": "getCodeEditorProps",
+      "target_file": "apps/sim/components/emcn/components/code/code.tsx"
+    },
+    {
+      "call": "calculateGutterWidth",
+      "target_file": "apps/sim/components/emcn/components/code/code.tsx"
+    },
+    {
+      "call": "getCodeEditorProps",
+      "target_file": "apps/sim/components/emcn/components/code/code.tsx"
+    },
+    {
+      "call": "calculateGutterWidth",
+      "target_file": "apps/sim/components/emcn/components/code/code.tsx"
+    },
+    {
+      "call": "getCodeEditorProps",
+      "target_file": "apps/sim/components/emcn/components/code/code.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/tool-input.tsx": [
+    {
+      "call": "resolveCustomToolFromReference",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/tool-input.tsx"
+    },
+    {
+      "call": "resolveCustomToolFromReference",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/tool-input.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/components/code-editor/code-editor.tsx": [
+    {
+      "call": "calculateGutterWidth",
+      "target_file": "apps/sim/components/emcn/components/code/code.tsx"
+    },
+    {
+      "call": "getCodeEditorProps",
+      "target_file": "apps/sim/components/emcn/components/code/code.tsx"
+    },
+    {
+      "call": "getCodeEditorProps",
+      "target_file": "apps/sim/components/emcn/components/code/code.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/subflow-editor/subflow-editor.tsx": [
+    {
+      "call": "getCodeEditorProps",
+      "target_file": "apps/sim/components/emcn/components/code/code.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/toolbar/toolbar.tsx": [
+    {
+      "call": "getTriggers",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/toolbar/toolbar.tsx"
+    },
+    {
+      "call": "getBlocks",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/toolbar/toolbar.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/terminal/terminal.tsx": [
+    {
+      "call": "useRegisterGlobalCommands",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/providers/global-commands-provider.tsx"
+    },
+    {
+      "call": "formatDuration",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/logs/components/log-details/components/trace-spans/trace-spans.tsx"
+    },
+    {
+      "call": "formatTimestamp",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/user-input/components/mention-menu/mention-menu.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/variables/variables.tsx": [
+    {
+      "call": "calculateGutterWidth",
+      "target_file": "apps/sim/components/emcn/components/code/code.tsx"
+    },
+    {
+      "call": "getCodeEditorProps",
+      "target_file": "apps/sim/components/emcn/components/code/code.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/wand-prompt-bar/wand-prompt-bar.tsx": [
+    {
+      "call": "onSubmit",
+      "target_file": "apps/sim/app/(landing)/careers/page.tsx"
+    }
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/workflow-block/components/action-bar/action-bar.tsx": [
+    {
+      "call": "useUserPermissionsContext",
+      "target_file": "apps/sim/app/workspace/[workspaceId]/providers/workspace-permissions-provider.tsx"
+    }
+  ],
+  "apps/sim/components/emcn/components/code/code.tsx": [
+    {
+      "call": "calculateGutterWidth",
+      "target_file": "apps/sim/components/emcn/components/code/code.tsx"
+    },
+    {
+      "call": "calculateGutterWidth",
+      "target_file": "apps/sim/components/emcn/components/code/code.tsx"
+    },
+    {
+      "call": "calculateGutterWidth",
+      "target_file": "apps/sim/components/emcn/components/code/code.tsx"
+    }
+  ],
+  "apps/sim/components/emcn/components/date-picker/date-picker.tsx": [
+    {
+      "call": "parseDate",
+      "target_file": "apps/sim/components/emcn/components/date-picker/date-picker.tsx"
+    },
+    {
+      "call": "formatDateAsString",
+      "target_file": "apps/sim/components/emcn/components/date-picker/date-picker.tsx"
+    },
+    {
+      "call": "formatDateAsString",
+      "target_file": "apps/sim/components/emcn/components/date-picker/date-picker.tsx"
+    },
+    {
+      "call": "getDaysInMonth",
+      "target_file": "apps/sim/components/emcn/components/date-picker/date-picker.tsx"
+    },
+    {
+      "call": "getFirstDayOfMonth",
+      "target_file": "apps/sim/components/emcn/components/date-picker/date-picker.tsx"
+    }
+  ],
+  "apps/sim/components/ui/input-otp-form.tsx": [
+    {
+      "call": "onSubmit",
+      "target_file": "apps/sim/app/(landing)/careers/page.tsx"
+    }
+  ]
+}

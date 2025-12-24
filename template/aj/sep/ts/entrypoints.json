@@ -1,0 +1,587 @@
+{
+  "apps/sim/proxy.ts": [
+    "handleRootPathRedirects",
+    "handleInvitationRedirects",
+    "handleWorkspaceInvitationAPI",
+    "handleSecurityFiltering"
+  ],
+  "apps/sim/app/(auth)/verify/use-verification.ts": [
+    "handleOtpChange"
+  ],
+  "apps/sim/app/api/chat/utils.ts": [
+    "checkWorkflowAccessForChatCreation"
+  ],
+  "apps/sim/app/api/files/parse/route.ts": [
+    "handleExternalUrl",
+    "handleCloudFile",
+    "handleLocalFile",
+    "handlePdfBuffer",
+    "handleCsvBuffer",
+    "handleGenericTextBuffer",
+    "handleGenericBuffer"
+  ],
+  "apps/sim/app/api/files/serve/[...path]/route.ts": [
+    "handleLocalFile",
+    "handleCloudProxy",
+    "handleCloudProxyPublic",
+    "handleLocalFilePublic"
+  ],
+  "apps/sim/app/api/folders/[id]/route.ts": [
+    "countWorkflowsInFolderRecursively"
+  ],
+  "apps/sim/app/api/folders/[id]/duplicate/route.ts": [
+    "duplicateWorkflowsInFolderTree"
+  ],
+  "apps/sim/app/api/function/execute/route.ts": [
+    "resolveWorkflowVariables"
+  ],
+  "apps/sim/app/api/guardrails/validate/route.ts": [
+    "executeValidation"
+  ],
+  "apps/sim/app/api/knowledge/search/utils.ts": [
+    "executeTagFilterQuery",
+    "executeVectorSearchOnIds",
+    "handleTagOnlySearch",
+    "handleVectorOnlySearch",
+    "handleTagAndVectorSearch"
+  ],
+  "apps/sim/app/api/proxy/video/route.ts": [
+    "generateWithRunway"
+  ],
+  "apps/sim/app/api/templates/route.ts": [
+    "sanitizeWorkflowState"
+  ],
+  "apps/sim/app/api/tools/mysql/utils.ts": [
+    "executeQuery"
+  ],
+  "apps/sim/app/api/tools/postgresql/utils.ts": [
+    "executeQuery",
+    "executeInsert",
+    "executeUpdate",
+    "executeDelete"
+  ],
+  "apps/sim/app/api/tools/rds/utils.ts": [
+    "executeStatement",
+    "executeInsert",
+    "executeUpdate",
+    "executeDelete"
+  ],
+  "apps/sim/app/api/tools/ssh/utils.ts": [
+    "executeSSHCommand"
+  ],
+  "apps/sim/app/api/tools/stagehand/agent/route.ts": [
+    "processVariables"
+  ],
+  "apps/sim/app/api/v1/admin/types.ts": [
+    "toAdminWorkflow",
+    "parseWorkflowVariables",
+    "extractWorkflowMetadata"
+  ],
+  "apps/sim/app/api/v1/admin/workspaces/[id]/import/route.ts": [
+    "importSingleWorkflow"
+  ],
+  "apps/sim/app/api/workflows/middleware.ts": [
+    "validateWorkflowAccess"
+  ],
+  "apps/sim/app/api/workflows/[id]/execute/route.ts": [
+    "executeWorkflow",
+    "handleAsyncExecution"
+  ],
+  "apps/sim/app/api/workflows/[id]/state/route.ts": [
+    "syncWorkflowWebhooks",
+    "syncWorkflowSchedules"
+  ],
+  "apps/sim/app/api/workspaces/route.ts": [
+    "migrateExistingWorkflows",
+    "ensureWorkflowsHaveWorkspace"
+  ],
+  "apps/sim/app/api/__test-utils__/utils.ts": [
+    "mockTriggerDevSdk",
+    "mockWorkflowAccessValidation",
+    "mockScheduleExecuteDb",
+    "mockWorkflowUtils"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/hooks/use-workflow-operations.ts": [
+    "useWorkflowOperations"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/hooks/use-workflow-selection.ts": [
+    "useWorkflowSelection"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/hooks/use-delete-workflow.ts": [
+    "useDeleteWorkflow"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/hooks/use-duplicate-workflow.ts": [
+    "useDuplicateWorkflow"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/hooks/use-export-workflow.ts": [
+    "useExportWorkflow"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/hooks/use-import-workflow.ts": [
+    "useImportWorkflow"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/user-input/hooks/use-mention-insert-handlers.ts": [
+    "useMentionInsertHandlers"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/toolbar/hooks/use-toolbar-resize.ts": [
+    "calculateTriggerHeights"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/workflow-block/hooks/use-child-workflow.ts": [
+    "useChildWorkflow"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/hooks/use-current-workflow.ts": [
+    "useCurrentWorkflow"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/hooks/use-workflow-execution.ts": [
+    "useWorkflowExecution"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/utils/workflow-execution-utils.ts": [
+    "executeWorkflowWithFullLogging"
+  ],
+  "apps/sim/background/schedule-execution.ts": [
+    "calculateNextRunFromDeployment",
+    "determineNextRunAfterError",
+    "runWorkflowExecution",
+    "calculateNextRunTime",
+    "executeScheduleJob"
+  ],
+  "apps/sim/background/webhook-execution.ts": [
+    "processTriggerFileOutputs",
+    "executeWebhookJob",
+    "executeWebhookJobInternal"
+  ],
+  "apps/sim/background/workflow-execution.ts": [
+    "executeWorkflowJob"
+  ],
+  "apps/sim/executor/constants.ts": [
+    "ortsHandles(blo"
+  ],
+  "apps/sim/executor/dag/construction/edges.test.ts": [
+    "createMockWorkflow"
+  ],
+  "apps/sim/executor/handlers/registry.ts": [
+    "createBlockHandlers"
+  ],
+  "apps/sim/executor/human-in-the-loop/utils.ts": [
+    "buildTriggerBlockId"
+  ],
+  "apps/sim/executor/utils/reference-validation.ts": [
+    "createWorkflowVariablePattern"
+  ],
+  "apps/sim/executor/utils/start-block.ts": [
+    "getFilesFromWorkflowInput",
+    "buildManualTriggerOutput",
+    "buildIntegrationTriggerOutput"
+  ],
+  "apps/sim/hooks/use-collaborative-workflow.ts": [
+    "useCollaborativeWorkflow"
+  ],
+  "apps/sim/hooks/use-trigger-config-aggregation.ts": [
+    "useTriggerConfigAggregation",
+    "populateTriggerFieldsFromConfig"
+  ],
+  "apps/sim/hooks/use-webhook-management.ts": [
+    "resolveEffectiveTriggerId"
+  ],
+  "apps/sim/hooks/queries/folders.ts": [
+    "createFolderMutationHandlers"
+  ],
+  "apps/sim/hooks/queries/logs.ts": [
+    "useWorkflowDashboardLogs"
+  ],
+  "apps/sim/hooks/queries/templates.ts": [
+    "fetchTemplateByWorkflow",
+    "useTemplateByWorkflow"
+  ],
+  "apps/sim/hooks/queries/workflows.ts": [
+    "mapWorkflow",
+    "fetchWorkflows",
+    "useWorkflows",
+    "createWorkflowMutationHandlers",
+    "useCreateWorkflow",
+    "useDuplicateWorkflowMutation"
+  ],
+  "apps/sim/hooks/queries/utils/optimistic-mutation.ts": [
+    "createOptimisticMutationHandlers"
+  ],
+  "apps/sim/lib/billing/core/usage-log.ts": [
+    "logWorkflowUsageBatch",
+    "getUserIdFromWorkflow"
+  ],
+  "apps/sim/lib/billing/webhooks/disputes.ts": [
+    "handleChargeDispute",
+    "handleDisputeClosed"
+  ],
+  "apps/sim/lib/billing/webhooks/enterprise.ts": [
+    "handleManualEnterpriseSubscription"
+  ],
+  "apps/sim/lib/billing/webhooks/invoices.ts": [
+    "handleCreditPurchaseSuccess",
+    "handleInvoicePaymentSucceeded",
+    "handleInvoicePaymentFailed"
+  ],
+  "apps/sim/lib/billing/webhooks/subscription.ts": [
+    "handleSubscriptionCreated",
+    "handleSubscriptionDeleted"
+  ],
+  "apps/sim/lib/copilot/api.ts": [
+    "handleApiError"
+  ],
+  "apps/sim/lib/copilot/process-contents.ts": [
+    "processContexts",
+    "processContextsServer",
+    "processPastChatFromDb",
+    "processWorkflowFromDb",
+    "processPastChat",
+    "processPastChatViaApi",
+    "processKnowledgeFromDb",
+    "processBlockMetadata",
+    "processTemplateFromDb",
+    "processWorkflowBlockFromDb",
+    "processExecutionLogFromDb"
+  ],
+  "apps/sim/lib/copilot/auth/permissions.ts": [
+    "verifyWorkflowAccess"
+  ],
+  "apps/sim/lib/copilot/tools/server/blocks/get-blocks-metadata-tool.ts": [
+    "processSubBlock"
+  ],
+  "apps/sim/lib/copilot/tools/server/workflow/edit-workflow.ts": [
+    "validateSourceHandleForBlock",
+    "validateConditionHandle",
+    "validateTargetHandle",
+    "applyTriggerConfigToBlockSubblocks",
+    "applyOperationsToWorkflowState",
+    "validateWorkflowSelectorIds",
+    "getCurrentWorkflowStateFromDb"
+  ],
+  "apps/sim/lib/copilot/tools/server/workflow/get-workflow-console.ts": [
+    "processSpan"
+  ],
+  "apps/sim/lib/core/telemetry.ts": [
+    "createOTelSpansForWorkflowExecution"
+  ],
+  "apps/sim/lib/core/config/redis.ts": [
+    "hasProcessedMessage",
+    "markMessageAsProcessed"
+  ],
+  "apps/sim/lib/core/security/csp.ts": [
+    "generateRuntimeCSP",
+    "getWorkflowExecutionCSPPolicy"
+  ],
+  "apps/sim/lib/core/utils/display-filters.ts": [
+    "truncateString"
+  ],
+  "apps/sim/lib/execution/e2b.ts": [
+    "executeInE2B"
+  ],
+  "apps/sim/lib/execution/files.ts": [
+    "processExecutionFile",
+    "processExecutionFiles",
+    "processInputFileFields"
+  ],
+  "apps/sim/lib/execution/isolated-vm.ts": [
+    "handleWorkerMessage",
+    "executeInIsolatedVM"
+  ],
+  "apps/sim/lib/execution/preprocessing.ts": [
+    "preprocessExecution",
+    "logPreprocessingError"
+  ],
+  "apps/sim/lib/guardrails/validate_pii.ts": [
+    "executePythonPIIDetection"
+  ],
+  "apps/sim/lib/knowledge/documents/document-processor.ts": [
+    "processDocument",
+    "handleFileForOCR",
+    "processOCRContent"
+  ],
+  "apps/sim/lib/knowledge/documents/service.ts": [
+    "getProcessingConfig",
+    "processDocumentTags",
+    "processDocumentsWithQueue",
+    "processDocumentAsync",
+    "isTriggerAvailable",
+    "processDocumentsWithTrigger",
+    "retryDocumentProcessing"
+  ],
+  "apps/sim/lib/logs/events.ts": [
+    "emitWorkflowExecutionCompleted"
+  ],
+  "apps/sim/lib/logs/get-trigger-options.ts": [
+    "resetTriggerOptionsCache",
+    "getTriggerOptions",
+    "initializeTriggerMetadataMap"
+  ],
+  "apps/sim/lib/logs/execution/logging-factory.ts": [
+    "createTriggerObject",
+    "loadWorkflowStateForExecution"
+  ],
+  "apps/sim/lib/logs/execution/trace-spans/trace-spans.ts": [
+    "isSyntheticWorkflowWrapper",
+    "flattenWorkflowChildren",
+    "ensureNestedWorkflowsProcessed"
+  ],
+  "apps/sim/lib/messaging/email/mailer.ts": [
+    "processEmailData"
+  ],
+  "apps/sim/lib/notifications/alert-rules.ts": [
+    "shouldTriggerAlert"
+  ],
+  "apps/sim/lib/notifications/inactivity-polling.ts": [
+    "deploymentHasTriggerType",
+    "getWorkflowsWithTriggerTypes",
+    "checkWorkflowInactivity"
+  ],
+  "apps/sim/lib/og/capture-preview.ts": [
+    "captureWorkflowPreview"
+  ],
+  "apps/sim/lib/tokenization/estimators.ts": [
+    "truncateToTokenLimit"
+  ],
+  "apps/sim/lib/tokenization/streaming.ts": [
+    "processStreamingBlockLog",
+    "processStreamingBlockLogs"
+  ],
+  "apps/sim/lib/uploads/contexts/chat/chat-file-manager.ts": [
+    "processChatFiles"
+  ],
+  "apps/sim/lib/uploads/contexts/copilot/copilot-file-manager.ts": [
+    "processCopilotAttachments"
+  ],
+  "apps/sim/lib/uploads/utils/file-utils.ts": [
+    "processSingleFileToUserFile",
+    "processFilesToUserFiles"
+  ],
+  "apps/sim/lib/webhooks/gmail-polling-service.ts": [
+    "processEmails"
+  ],
+  "apps/sim/lib/webhooks/outlook-polling-service.ts": [
+    "processOutlookEmails"
+  ],
+  "apps/sim/lib/webhooks/processor.ts": [
+    "handleProviderChallenges",
+    "findWebhookAndWorkflow",
+    "checkWebhookPreprocessing"
+  ],
+  "apps/sim/lib/webhooks/rss-polling-service.ts": [
+    "processRssItems"
+  ],
+  "apps/sim/lib/webhooks/utils.server.ts": [
+    "handleWhatsAppVerification",
+    "handleSlackChallenge",
+    "chAndProcessAirtablePayloads(\n "
+  ],
+  "apps/sim/lib/workflows/defaults.ts": [
+    "buildDefaultWorkflowArtifacts"
+  ],
+  "apps/sim/lib/workflows/state-builder.ts": [
+    "buildWorkflowStateForTemplate"
+  ],
+  "apps/sim/lib/workflows/utils.ts": [
+    "getWorkflowById",
+    "getWorkflowAccessContext",
+    "updateWorkflowRunCounts",
+    "hasWorkflowChanged",
+    "validateWorkflowPermissions"
+  ],
+  "apps/sim/lib/workflows/autolayout/core.ts": [
+    "getSourceHandleYOffset",
+    "getTargetHandleYOffset"
+  ],
+  "apps/sim/lib/workflows/blocks/block-outputs.ts": [
+    "getTriggerId"
+  ],
+  "apps/sim/lib/workflows/credentials/credential-extractor.ts": [
+    "sanitizeWorkflowForSharing"
+  ],
+  "apps/sim/lib/workflows/credentials/credential-resolver.ts": [
+    "resolveCredentialsForWorkflow"
+  ],
+  "apps/sim/lib/workflows/diff/diff-engine.ts": [
+    "stripWorkflowDiffMarkers"
+  ],
+  "apps/sim/lib/workflows/executor/execution-core.ts": [
+    "executeWorkflowCore"
+  ],
+  "apps/sim/lib/workflows/operations/import-export.ts": [
+    "extractWorkflowsFromZip",
+    "extractWorkflowsFromFiles",
+    "extractWorkflowName"
+  ],
+  "apps/sim/lib/workflows/operations/socket-operations.ts": [
+    "enqueueWorkflowOperation",
+    "enqueueReplaceWorkflowState"
+  ],
+  "apps/sim/lib/workflows/persistence/custom-tools-persistence.ts": [
+    "extractCustomToolsFromWorkflowState"
+  ],
+  "apps/sim/lib/workflows/persistence/duplicate.ts": [
+    "duplicateWorkflow"
+  ],
+  "apps/sim/lib/workflows/persistence/utils.ts": [
+    "loadDeployedWorkflowState",
+    "loadWorkflowFromNormalizedTables",
+    "saveWorkflowToNormalizedTables",
+    "workflowExistsInNormalizedTables",
+    "deployWorkflow",
+    "regenerateWorkflowStateIds"
+  ],
+  "apps/sim/lib/workflows/sanitization/validation.ts": [
+    "validateWorkflowState"
+  ],
+  "apps/sim/lib/workflows/schedules/utils.ts": [
+    "calculateNextRunTime"
+  ],
+  "apps/sim/lib/workflows/triggers/trigger-utils.ts": [
+    "processOutputField",
+    "getAllTriggerBlocks",
+    "hasTriggerCapability",
+    "getTriggersForSidebar",
+    "getTriggerDisplayName",
+    "groupTriggersByPath",
+    "selectBestTrigger",
+    "triggerNeedsMockPayload",
+    "extractTriggerMockPayload"
+  ],
+  "apps/sim/providers/index.ts": [
+    "executeProviderRequest"
+  ],
+  "apps/sim/scripts/export-workflow.ts": [
+    "exportWorkflow"
+  ],
+  "apps/sim/scripts/process-docs.ts": [
+    "processDocs"
+  ],
+  "apps/sim/serializer/__test-utils__/test-workflows.ts": [
+    "createMinimalWorkflowState",
+    "createConditionalWorkflowState",
+    "createLoopWorkflowState",
+    "createComplexWorkflowState",
+    "createAgentWithToolsWorkflowState",
+    "createInvalidWorkflowState",
+    "createInvalidSerializedWorkflow",
+    "createMissingMetadataWorkflow"
+  ],
+  "apps/sim/socket-server/database/operations.ts": [
+    "getWorkflowState",
+    "persistWorkflowOperation"
+  ],
+  "apps/sim/socket-server/handlers/connection.ts": [
+    "setupConnectionHandlers"
+  ],
+  "apps/sim/socket-server/handlers/index.ts": [
+    "setupAllHandlers"
+  ],
+  "apps/sim/socket-server/handlers/operations.ts": [
+    "setupOperationsHandlers"
+  ],
+  "apps/sim/socket-server/handlers/presence.ts": [
+    "setupPresenceHandlers"
+  ],
+  "apps/sim/socket-server/handlers/subblocks.ts": [
+    "setupSubblocksHandlers"
+  ],
+  "apps/sim/socket-server/handlers/variables.ts": [
+    "setupVariablesHandlers"
+  ],
+  "apps/sim/socket-server/handlers/workflow.ts": [
+    "setupWorkflowHandlers"
+  ],
+  "apps/sim/socket-server/middleware/permissions.ts": [
+    "verifyWorkflowAccess"
+  ],
+  "apps/sim/socket-server/routes/http.ts": [
+    "createHttpHandler"
+  ],
+  "apps/sim/stores/index.ts": [
+    "handleBeforeUnload"
+  ],
+  "apps/sim/stores/copilot-training/store.ts": [
+    "captureWorkflowSnapshot"
+  ],
+  "apps/sim/stores/undo-redo/store.ts": [
+    "runWithUndoRedoRecordingSuspended"
+  ],
+  "apps/sim/stores/workflow-diff/store.ts": [
+    "cloneWorkflowState",
+    "applyWorkflowStateToStores",
+    "persistWorkflowStateToServer",
+    "findLatestEditWorkflowToolCallId"
+  ],
+  "apps/sim/stores/workflows/index.ts": [
+    "getWorkflowWithValues",
+    "getAllWorkflowsWithValues"
+  ],
+  "apps/sim/stores/workflows/json/importer.ts": [
+    "parseWorkflowJson"
+  ],
+  "apps/sim/stores/workflows/registry/store.ts": [
+    "resetWorkflowStores",
+    "workflow"
+  ],
+  "apps/sim/stores/workflows/registry/utils.ts": [
+    "getNextWorkflowColor",
+    "generateCreativeWorkflowName"
+  ],
+  "apps/sim/stores/workflows/yaml/importer.ts": [
+    "parseWorkflowYaml",
+    "processBlock",
+    "convertYamlToWorkflow"
+  ],
+  "apps/sim/stores/workflows/yaml/parsing-utils.ts": [
+    "createConditionHandle"
+  ],
+  "apps/sim/tools/index.ts": [
+    "handleBodySizeLimitError",
+    "processFileOutputs",
+    "executeTool",
+    "handleInternalRequest",
+    "handleProxyRequest",
+    "executeMcpTool"
+  ],
+  "apps/sim/tools/params.ts": [
+    "applyDynamicSchemaForWorkflow",
+    "fetchWorkflowInputFields"
+  ],
+  "apps/sim/tools/utils.ts": [
+    "executeRequest"
+  ],
+  "apps/sim/tools/gmail/utils.ts": [
+    "processMessage",
+    "processMessageForSummary",
+    "processPayloadPart"
+  ],
+  "apps/sim/tools/google_drive/utils.ts": [
+    "handleSheetsFormat"
+  ],
+  "apps/sim/tools/intercom/types.ts": [
+    "handleIntercomError"
+  ],
+  "apps/sim/tools/kalshi/types.ts": [
+    "handleKalshiError"
+  ],
+  "apps/sim/tools/mailchimp/types.ts": [
+    "handleMailchimpError"
+  ],
+  "apps/sim/tools/polymarket/types.ts": [
+    "handlePolymarketError"
+  ],
+  "apps/sim/tools/zendesk/types.ts": [
+    "handleZendeskError"
+  ],
+  "apps/sim/triggers/index.ts": [
+    "getTrigger",
+    "getTriggersByProvider",
+    "getAllTriggers",
+    "getTriggerIds",
+    "isTriggerValid"
+  ],
+  "packages/cli/src/index.ts": [
+    "isDockerRunning",
+    "runCommand"
+  ],
+  "packages/db/scripts/migrate-deployment-versions.ts": [
+    "loadWorkflowFromNormalizedTables",
+    "migrateWorkflows"
+  ]
+}

@@ -1,0 +1,102 @@
+graph TD
+apps_docs_app_llms_txt_route_ts[route.ts]
+apps_docs_app_robots_txt_route_ts[route.ts]
+apps_docs_app_sitemap_xml_route_ts[route.ts]
+apps_sim_instrumentation-client_ts[instrumentation-client.ts]
+apps_sim_instrumentation-node_ts[instrumentation-node.ts]
+apps_sim_app_(landing)_actions_github_ts[github.ts]
+apps_sim_app_(landing)_studio_sitemap-images_xml_route_ts[route.ts]
+apps_sim_app_api_copilot_training_examples_route_ts[route.ts]
+apps_sim_app_api_files_utils_test_ts[utils.test.ts]
+apps_sim_app_api_files_delete_route_test_ts[route.test.ts]
+apps_sim_app_api_function_execute_route_test_ts[route.test.ts]
+apps_sim_app_api_providers_ollama_models_route_ts[route.ts]
+apps_sim_app_api_providers_openrouter_models_route_ts[route.ts]
+apps_sim_app_api_workflows_yaml_convert_route_ts[route.ts]
+apps_sim_app_chat_hooks_use-audio-streaming_ts[use-audio-streaming.ts]
+apps_sim_app_llms_txt_route_ts[route.ts]
+apps_sim_app_workspace_[workspaceId]_knowledge_hooks_use-knowledge-upload_ts[use-knowledge-upload.ts]
+apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_settings-modal_hooks_use-profile-picture-upload_ts[use-profile-picture-upload.ts]
+apps_sim_app_workspace_[workspaceId]_w_hooks_use-duplicate-workspace_ts[use-duplicate-workspace.ts]
+apps_sim_app_workspace_[workspaceId]_w_hooks_use-export-workflow_ts[use-export-workflow.ts]
+apps_sim_app_workspace_[workspaceId]_w_hooks_use-export-workspace_ts[use-export-workspace.ts]
+apps_sim_app_workspace_[workspaceId]_w_hooks_use-import-workspace_ts[use-import-workspace.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_copilot_components_user-input_hooks_use-file-attachments_ts[use-file-attachments.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_deploy_components_deploy-modal_components_chat_hooks_use-identifier-validation_ts[use-identifier-validation.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_deploy_hooks_use-change-detection_ts[use-change-detection.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_deploy_hooks_use-deployed-state_ts[use-deployed-state.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_deploy_hooks_use-deployment_ts[use-deployment.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_workflow-block_hooks_use-child-deployment_ts[use-child-deployment.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_workflow-block_hooks_use-webhook-info_ts[use-webhook-info.ts]
+apps_sim_blocks_blocks_condition_ts[condition.ts]
+apps_sim_blocks_blocks_guardrails_ts[guardrails.ts]
+apps_sim_blocks_blocks_human_in_the_loop_ts[human_in_the_loop.ts]
+apps_sim_blocks_blocks_mailgun_ts[mailgun.ts]
+apps_sim_blocks_blocks_mcp_ts[mcp.ts]
+apps_sim_blocks_blocks_memory_ts[memory.ts]
+apps_sim_blocks_blocks_resend_ts[resend.ts]
+apps_sim_blocks_blocks_response_ts[response.ts]
+apps_sim_blocks_blocks_schedule_ts[schedule.ts]
+apps_sim_blocks_blocks_sqs_ts[sqs.ts]
+apps_sim_blocks_blocks_thinking_ts[thinking.ts]
+apps_sim_blocks_blocks_wait_ts[wait.ts]
+apps_sim_executor_handlers_api_api-handler_test_ts[api-handler.test.ts]
+apps_sim_executor_handlers_human-in-the-loop_human-in-the-loop-handler_ts[human-in-the-loop-handler.ts]
+apps_sim_executor_handlers_response_response-handler_ts[response-handler.ts]
+apps_sim_executor_utils_errors_ts[errors.ts]
+apps_sim_executor_utils_file-tool-processor_ts[file-tool-processor.ts]
+apps_sim_executor_utils_start-block_test_ts[start-block.test.ts]
+apps_sim_executor___test-utils___mock-dependencies_ts[mock-dependencies.ts]
+apps_sim_hooks_use-mcp-server-test_ts[use-mcp-server-test.ts]
+apps_sim_hooks_use-next-available-slot_ts[use-next-available-slot.ts]
+api_grp[API Layer Chunk 1]
+api_grp --> apps_docs_app_llms_txt_route_ts
+api_grp --> apps_docs_app_robots_txt_route_ts
+api_grp --> apps_docs_app_sitemap_xml_route_ts
+api_grp --> apps_sim_instrumentation-client_ts
+api_grp --> apps_sim_instrumentation-node_ts
+api_grp --> apps_sim_app_(landing)_actions_github_ts
+api_grp --> apps_sim_app_(landing)_studio_sitemap-images_xml_route_ts
+api_grp --> apps_sim_app_api_copilot_training_examples_route_ts
+api_grp --> apps_sim_app_api_files_utils_test_ts
+api_grp --> apps_sim_app_api_files_delete_route_test_ts
+api_grp --> apps_sim_app_api_function_execute_route_test_ts
+api_grp --> apps_sim_app_api_providers_ollama_models_route_ts
+api_grp --> apps_sim_app_api_providers_openrouter_models_route_ts
+api_grp --> apps_sim_app_api_workflows_yaml_convert_route_ts
+api_grp --> apps_sim_app_chat_hooks_use-audio-streaming_ts
+api_grp --> apps_sim_app_llms_txt_route_ts
+api_grp --> apps_sim_app_workspace_[workspaceId]_knowledge_hooks_use-knowledge-upload_ts
+api_grp --> apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_settings-modal_hooks_use-profile-picture-upload_ts
+api_grp --> apps_sim_app_workspace_[workspaceId]_w_hooks_use-duplicate-workspace_ts
+api_grp --> apps_sim_app_workspace_[workspaceId]_w_hooks_use-export-workflow_ts
+api_grp --> apps_sim_app_workspace_[workspaceId]_w_hooks_use-export-workspace_ts
+api_grp --> apps_sim_app_workspace_[workspaceId]_w_hooks_use-import-workspace_ts
+api_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_copilot_components_user-input_hooks_use-file-attachments_ts
+api_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_deploy_components_deploy-modal_components_chat_hooks_use-identifier-validation_ts
+api_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_deploy_hooks_use-change-detection_ts
+api_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_deploy_hooks_use-deployed-state_ts
+api_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_deploy_hooks_use-deployment_ts
+api_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_workflow-block_hooks_use-child-deployment_ts
+api_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_workflow-block_hooks_use-webhook-info_ts
+api_grp --> apps_sim_blocks_blocks_condition_ts
+api_grp --> apps_sim_blocks_blocks_guardrails_ts
+api_grp --> apps_sim_blocks_blocks_human_in_the_loop_ts
+api_grp --> apps_sim_blocks_blocks_mailgun_ts
+api_grp --> apps_sim_blocks_blocks_mcp_ts
+api_grp --> apps_sim_blocks_blocks_memory_ts
+api_grp --> apps_sim_blocks_blocks_resend_ts
+api_grp --> apps_sim_blocks_blocks_response_ts
+api_grp --> apps_sim_blocks_blocks_schedule_ts
+api_grp --> apps_sim_blocks_blocks_sqs_ts
+api_grp --> apps_sim_blocks_blocks_thinking_ts
+api_grp --> apps_sim_blocks_blocks_wait_ts
+api_grp --> apps_sim_executor_handlers_api_api-handler_test_ts
+api_grp --> apps_sim_executor_handlers_human-in-the-loop_human-in-the-loop-handler_ts
+api_grp --> apps_sim_executor_handlers_response_response-handler_ts
+api_grp --> apps_sim_executor_utils_errors_ts
+api_grp --> apps_sim_executor_utils_file-tool-processor_ts
+api_grp --> apps_sim_executor_utils_start-block_test_ts
+api_grp --> apps_sim_executor___test-utils___mock-dependencies_ts
+api_grp --> apps_sim_hooks_use-mcp-server-test_ts
+api_grp --> apps_sim_hooks_use-next-available-slot_ts

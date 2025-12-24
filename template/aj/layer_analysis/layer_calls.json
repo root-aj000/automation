@@ -1,0 +1,63 @@
+{
+  "application": {
+    "application": 493,
+    "middleware": 133,
+    "utils": 61,
+    "ui": 3,
+    "database": 45,
+    "workflow": 6,
+    "api": 8
+  },
+  "api": {
+    "application": 90,
+    "api": 577,
+    "database": 48,
+    "middleware": 152,
+    "utils": 93,
+    "workflow": 11,
+    "ui": 2
+  },
+  "utils": {
+    "utils": 455,
+    "application": 18,
+    "database": 4,
+    "middleware": 64,
+    "workflow": 7,
+    "api": 2
+  },
+  "middleware": {
+    "database": 700,
+    "middleware": 6566,
+    "api": 505,
+    "application": 1435,
+    "utils": 782,
+    "workflow": 37,
+    "ui": 25
+  },
+  "database": {
+    "database": 1539,
+    "api": 26,
+    "middleware": 338,
+    "application": 268,
+    "utils": 294,
+    "workflow": 60,
+    "ui": 40
+  },
+  "workflow": {
+    "application": 31,
+    "middleware": 30,
+    "workflow": 185,
+    "database": 27,
+    "ui": 3,
+    "utils": 16
+  },
+  "ui": {
+    "ui": 232,
+    "database": 65,
+    "application": 45,
+    "workflow": 37,
+    "middleware": 66,
+    "api": 13,
+    "utils": 178
+  }
+}

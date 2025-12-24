@@ -1,0 +1,42 @@
+{
+  "apps/docs/components/icons.tsx": [
+    "WorkflowIcon"
+  ],
+  "apps/sim/app/chat/components/message/components/file-download.tsx": [
+    "triggerDownload"
+  ],
+  "apps/sim/app/chat/[identifier]/chat.tsx": [
+    "createAudioStreamHandler"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/document.tsx": [
+    "truncateContent"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/logs/components/logs-toolbar/components/search/search.tsx": [
+    "truncateFilterValue"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/page.tsx": [
+    "WorkflowsPage"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/workflow-list/components/workflow-item/workflow-item.tsx": [
+    "WorkflowItem",
+    "workflowIdsToDelete"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/layout.tsx": [
+    "WorkflowLayout"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/input-mapping/input-mapping.tsx": [
+    "isInputTriggerBlock"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/toolbar/toolbar.tsx": [
+    "getTriggers"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/workflow-controls/workflow-controls.tsx": [
+    "WorkflowControls"
+  ],
+  "apps/sim/app/_shell/hydration-error-handler.tsx": [
+    "HydrationErrorHandler"
+  ],
+  "apps/sim/components/icons.tsx": [
+    "WorkflowIcon"
+  ]
+}

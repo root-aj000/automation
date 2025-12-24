@@ -1,0 +1,304 @@
+graph TD
+apps_docs_app_llms_txt_route_ts[route.ts]
+apps_docs_app_robots_txt_route_ts[route.ts]
+apps_docs_app_sitemap_xml_route_ts[route.ts]
+apps_sim_instrumentation-client_ts[instrumentation-client.ts]
+apps_sim_instrumentation-node_ts[instrumentation-node.ts]
+apps_sim_app_(landing)_actions_github_ts[github.ts]
+apps_sim_app_(landing)_studio_sitemap-images_xml_route_ts[route.ts]
+apps_sim_app_api_copilot_training_examples_route_ts[route.ts]
+apps_sim_app_api_files_utils_test_ts[utils.test.ts]
+apps_sim_app_api_files_delete_route_test_ts[route.test.ts]
+apps_sim_app_api_function_execute_route_test_ts[route.test.ts]
+apps_sim_app_api_providers_ollama_models_route_ts[route.ts]
+apps_sim_app_api_providers_openrouter_models_route_ts[route.ts]
+apps_sim_app_api_workflows_yaml_convert_route_ts[route.ts]
+apps_sim_app_chat_hooks_use-audio-streaming_ts[use-audio-streaming.ts]
+apps_sim_app_llms_txt_route_ts[route.ts]
+apps_sim_app_workspace_[workspaceId]_knowledge_hooks_use-knowledge-upload_ts[use-knowledge-upload.ts]
+apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_settings-modal_hooks_use-profile-picture-upload_ts[use-profile-picture-upload.ts]
+apps_sim_app_workspace_[workspaceId]_w_hooks_use-duplicate-workspace_ts[use-duplicate-workspace.ts]
+apps_sim_app_workspace_[workspaceId]_w_hooks_use-export-workflow_ts[use-export-workflow.ts]
+apps_sim_app_workspace_[workspaceId]_w_hooks_use-export-workspace_ts[use-export-workspace.ts]
+apps_sim_app_workspace_[workspaceId]_w_hooks_use-import-workspace_ts[use-import-workspace.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_copilot_components_user-input_hooks_use-file-attachments_ts[use-file-attachments.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_deploy_components_deploy-modal_components_chat_hooks_use-identifier-validation_ts[use-identifier-validation.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_deploy_hooks_use-change-detection_ts[use-change-detection.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_deploy_hooks_use-deployed-state_ts[use-deployed-state.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_deploy_hooks_use-deployment_ts[use-deployment.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_workflow-block_hooks_use-child-deployment_ts[use-child-deployment.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_workflow-block_hooks_use-webhook-info_ts[use-webhook-info.ts]
+apps_sim_blocks_blocks_condition_ts[condition.ts]
+apps_sim_blocks_blocks_guardrails_ts[guardrails.ts]
+apps_sim_blocks_blocks_human_in_the_loop_ts[human_in_the_loop.ts]
+apps_sim_blocks_blocks_mailgun_ts[mailgun.ts]
+apps_sim_blocks_blocks_mcp_ts[mcp.ts]
+apps_sim_blocks_blocks_memory_ts[memory.ts]
+apps_sim_blocks_blocks_resend_ts[resend.ts]
+apps_sim_blocks_blocks_response_ts[response.ts]
+apps_sim_blocks_blocks_schedule_ts[schedule.ts]
+apps_sim_blocks_blocks_sqs_ts[sqs.ts]
+apps_sim_blocks_blocks_thinking_ts[thinking.ts]
+apps_sim_blocks_blocks_wait_ts[wait.ts]
+apps_sim_executor_handlers_api_api-handler_test_ts[api-handler.test.ts]
+apps_sim_executor_handlers_human-in-the-loop_human-in-the-loop-handler_ts[human-in-the-loop-handler.ts]
+apps_sim_executor_handlers_response_response-handler_ts[response-handler.ts]
+apps_sim_executor_utils_errors_ts[errors.ts]
+apps_sim_executor_utils_file-tool-processor_ts[file-tool-processor.ts]
+apps_sim_executor_utils_start-block_test_ts[start-block.test.ts]
+apps_sim_executor___test-utils___mock-dependencies_ts[mock-dependencies.ts]
+apps_sim_hooks_use-mcp-server-test_ts[use-mcp-server-test.ts]
+apps_sim_hooks_use-next-available-slot_ts[use-next-available-slot.ts]
+api_grp[API Layer Chunk 1]
+api_grp --> apps_docs_app_llms_txt_route_ts
+api_grp --> apps_docs_app_robots_txt_route_ts
+api_grp --> apps_docs_app_sitemap_xml_route_ts
+api_grp --> apps_sim_instrumentation-client_ts
+api_grp --> apps_sim_instrumentation-node_ts
+api_grp --> apps_sim_app_(landing)_actions_github_ts
+api_grp --> apps_sim_app_(landing)_studio_sitemap-images_xml_route_ts
+api_grp --> apps_sim_app_api_copilot_training_examples_route_ts
+api_grp --> apps_sim_app_api_files_utils_test_ts
+api_grp --> apps_sim_app_api_files_delete_route_test_ts
+api_grp --> apps_sim_app_api_function_execute_route_test_ts
+api_grp --> apps_sim_app_api_providers_ollama_models_route_ts
+api_grp --> apps_sim_app_api_providers_openrouter_models_route_ts
+api_grp --> apps_sim_app_api_workflows_yaml_convert_route_ts
+api_grp --> apps_sim_app_chat_hooks_use-audio-streaming_ts
+api_grp --> apps_sim_app_llms_txt_route_ts
+api_grp --> apps_sim_app_workspace_[workspaceId]_knowledge_hooks_use-knowledge-upload_ts
+api_grp --> apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_settings-modal_hooks_use-profile-picture-upload_ts
+api_grp --> apps_sim_app_workspace_[workspaceId]_w_hooks_use-duplicate-workspace_ts
+api_grp --> apps_sim_app_workspace_[workspaceId]_w_hooks_use-export-workflow_ts
+api_grp --> apps_sim_app_workspace_[workspaceId]_w_hooks_use-export-workspace_ts
+api_grp --> apps_sim_app_workspace_[workspaceId]_w_hooks_use-import-workspace_ts
+api_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_copilot_components_user-input_hooks_use-file-attachments_ts
+api_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_deploy_components_deploy-modal_components_chat_hooks_use-identifier-validation_ts
+api_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_deploy_hooks_use-change-detection_ts
+api_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_deploy_hooks_use-deployed-state_ts
+api_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_deploy_hooks_use-deployment_ts
+api_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_workflow-block_hooks_use-child-deployment_ts
+api_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_workflow-block_hooks_use-webhook-info_ts
+api_grp --> apps_sim_blocks_blocks_condition_ts
+api_grp --> apps_sim_blocks_blocks_guardrails_ts
+api_grp --> apps_sim_blocks_blocks_human_in_the_loop_ts
+api_grp --> apps_sim_blocks_blocks_mailgun_ts
+api_grp --> apps_sim_blocks_blocks_mcp_ts
+api_grp --> apps_sim_blocks_blocks_memory_ts
+api_grp --> apps_sim_blocks_blocks_resend_ts
+api_grp --> apps_sim_blocks_blocks_response_ts
+api_grp --> apps_sim_blocks_blocks_schedule_ts
+api_grp --> apps_sim_blocks_blocks_sqs_ts
+api_grp --> apps_sim_blocks_blocks_thinking_ts
+api_grp --> apps_sim_blocks_blocks_wait_ts
+api_grp --> apps_sim_executor_handlers_api_api-handler_test_ts
+api_grp --> apps_sim_executor_handlers_human-in-the-loop_human-in-the-loop-handler_ts
+api_grp --> apps_sim_executor_handlers_response_response-handler_ts
+api_grp --> apps_sim_executor_utils_errors_ts
+api_grp --> apps_sim_executor_utils_file-tool-processor_ts
+api_grp --> apps_sim_executor_utils_start-block_test_ts
+api_grp --> apps_sim_executor___test-utils___mock-dependencies_ts
+api_grp --> apps_sim_hooks_use-mcp-server-test_ts
+api_grp --> apps_sim_hooks_use-next-available-slot_ts
+apps_sim_hooks_use-schedule-management_ts[use-schedule-management.ts]
+apps_sim_lib_copilot_client_ts[client.ts]
+apps_sim_lib_copilot_constants_ts[constants.ts]
+apps_sim_lib_copilot_tools_client_base-tool_ts[base-tool.ts]
+apps_sim_lib_copilot_tools_client_blocks_get-blocks-and-tools_ts[get-blocks-and-tools.ts]
+apps_sim_lib_copilot_tools_client_blocks_get-blocks-metadata_ts[get-blocks-metadata.ts]
+apps_sim_lib_copilot_tools_client_blocks_get-trigger-blocks_ts[get-trigger-blocks.ts]
+apps_sim_lib_copilot_tools_client_user_get-credentials_ts[get-credentials.ts]
+apps_sim_lib_copilot_tools_client_workflow_check-deployment-status_ts[check-deployment-status.ts]
+apps_sim_lib_copilot_tools_client_workflow_get-workflow-console_ts[get-workflow-console.ts]
+apps_sim_lib_copilot_tools_client_workflow_get-workflow-data_ts[get-workflow-data.ts]
+apps_sim_lib_copilot_tools_client_workflow_get-workflow-from-name_ts[get-workflow-from-name.ts]
+apps_sim_lib_copilot_tools_client_workflow_list-user-workflows_ts[list-user-workflows.ts]
+apps_sim_lib_copilot_tools_server_router_ts[router.ts]
+apps_sim_lib_core_security_csp_ts[csp.ts]
+apps_sim_lib_core_security_input-validation_ts[input-validation.ts]
+apps_sim_lib_core_utils_urls_ts[urls.ts]
+apps_sim_lib_environment_api_ts[api.ts]
+apps_sim_lib_execution_isolated-vm_ts[isolated-vm.ts]
+apps_sim_lib_knowledge_documents_utils_ts[utils.ts]
+apps_sim_lib_mcp_url-validator_ts[url-validator.ts]
+apps_sim_lib_og_capture-preview_ts[capture-preview.ts]
+apps_sim_lib_uploads_contexts_execution_utils_ts[utils.ts]
+apps_sim_lib_uploads_core_storage-client_ts[storage-client.ts]
+apps_sim_lib_uploads_providers_s3_client_test_ts[client.test.ts]
+apps_sim_lib_uploads_providers_s3_client_ts[client.ts]
+apps_sim_lib_uploads_utils_file-utils_server_ts[file-utils.server.ts]
+apps_sim_lib_workspaces_naming_ts[naming.ts]
+apps_sim_socket-server_tests_socket-server_test_ts[socket-server.test.ts]
+apps_sim_tools_utils_test_ts[utils.test.ts]
+apps_sim_tools_ahrefs_types_ts[types.ts]
+apps_sim_tools_apollo_account_bulk_create_ts[account_bulk_create.ts]
+apps_sim_tools_apollo_account_create_ts[account_create.ts]
+apps_sim_tools_apollo_account_search_ts[account_search.ts]
+apps_sim_tools_apollo_contact_bulk_create_ts[contact_bulk_create.ts]
+apps_sim_tools_apollo_contact_create_ts[contact_create.ts]
+apps_sim_tools_apollo_contact_search_ts[contact_search.ts]
+apps_sim_tools_apollo_email_accounts_ts[email_accounts.ts]
+apps_sim_tools_apollo_opportunity_create_ts[opportunity_create.ts]
+apps_sim_tools_apollo_opportunity_get_ts[opportunity_get.ts]
+apps_sim_tools_apollo_opportunity_search_ts[opportunity_search.ts]
+apps_sim_tools_apollo_organization_bulk_enrich_ts[organization_bulk_enrich.ts]
+apps_sim_tools_apollo_organization_enrich_ts[organization_enrich.ts]
+apps_sim_tools_apollo_organization_search_ts[organization_search.ts]
+apps_sim_tools_apollo_people_bulk_enrich_ts[people_bulk_enrich.ts]
+apps_sim_tools_apollo_people_enrich_ts[people_enrich.ts]
+apps_sim_tools_apollo_people_search_ts[people_search.ts]
+apps_sim_tools_apollo_sequence_add_contacts_ts[sequence_add_contacts.ts]
+apps_sim_tools_apollo_sequence_search_ts[sequence_search.ts]
+apps_sim_tools_apollo_task_create_ts[task_create.ts]
+api_grp[API Layer Chunk 2]
+api_grp --> apps_sim_hooks_use-schedule-management_ts
+api_grp --> apps_sim_lib_copilot_client_ts
+api_grp --> apps_sim_lib_copilot_constants_ts
+api_grp --> apps_sim_lib_copilot_tools_client_base-tool_ts
+api_grp --> apps_sim_lib_copilot_tools_client_blocks_get-blocks-and-tools_ts
+api_grp --> apps_sim_lib_copilot_tools_client_blocks_get-blocks-metadata_ts
+api_grp --> apps_sim_lib_copilot_tools_client_blocks_get-trigger-blocks_ts
+api_grp --> apps_sim_lib_copilot_tools_client_user_get-credentials_ts
+api_grp --> apps_sim_lib_copilot_tools_client_workflow_check-deployment-status_ts
+api_grp --> apps_sim_lib_copilot_tools_client_workflow_get-workflow-console_ts
+api_grp --> apps_sim_lib_copilot_tools_client_workflow_get-workflow-data_ts
+api_grp --> apps_sim_lib_copilot_tools_client_workflow_get-workflow-from-name_ts
+api_grp --> apps_sim_lib_copilot_tools_client_workflow_list-user-workflows_ts
+api_grp --> apps_sim_lib_copilot_tools_server_router_ts
+api_grp --> apps_sim_lib_core_security_csp_ts
+api_grp --> apps_sim_lib_core_security_input-validation_ts
+api_grp --> apps_sim_lib_core_utils_urls_ts
+api_grp --> apps_sim_lib_environment_api_ts
+api_grp --> apps_sim_lib_execution_isolated-vm_ts
+api_grp --> apps_sim_lib_knowledge_documents_utils_ts
+api_grp --> apps_sim_lib_mcp_url-validator_ts
+api_grp --> apps_sim_lib_og_capture-preview_ts
+api_grp --> apps_sim_lib_uploads_contexts_execution_utils_ts
+api_grp --> apps_sim_lib_uploads_core_storage-client_ts
+api_grp --> apps_sim_lib_uploads_providers_s3_client_test_ts
+api_grp --> apps_sim_lib_uploads_providers_s3_client_ts
+api_grp --> apps_sim_lib_uploads_utils_file-utils_server_ts
+api_grp --> apps_sim_lib_workspaces_naming_ts
+api_grp --> apps_sim_socket-server_tests_socket-server_test_ts
+api_grp --> apps_sim_tools_utils_test_ts
+api_grp --> apps_sim_tools_ahrefs_types_ts
+api_grp --> apps_sim_tools_apollo_account_bulk_create_ts
+api_grp --> apps_sim_tools_apollo_account_create_ts
+api_grp --> apps_sim_tools_apollo_account_search_ts
+api_grp --> apps_sim_tools_apollo_contact_bulk_create_ts
+api_grp --> apps_sim_tools_apollo_contact_create_ts
+api_grp --> apps_sim_tools_apollo_contact_search_ts
+api_grp --> apps_sim_tools_apollo_email_accounts_ts
+api_grp --> apps_sim_tools_apollo_opportunity_create_ts
+api_grp --> apps_sim_tools_apollo_opportunity_get_ts
+api_grp --> apps_sim_tools_apollo_opportunity_search_ts
+api_grp --> apps_sim_tools_apollo_organization_bulk_enrich_ts
+api_grp --> apps_sim_tools_apollo_organization_enrich_ts
+api_grp --> apps_sim_tools_apollo_organization_search_ts
+api_grp --> apps_sim_tools_apollo_people_bulk_enrich_ts
+api_grp --> apps_sim_tools_apollo_people_enrich_ts
+api_grp --> apps_sim_tools_apollo_people_search_ts
+api_grp --> apps_sim_tools_apollo_sequence_add_contacts_ts
+api_grp --> apps_sim_tools_apollo_sequence_search_ts
+api_grp --> apps_sim_tools_apollo_task_create_ts
+apps_sim_tools_apollo_task_search_ts[task_search.ts]
+apps_sim_tools_datadog_cancel_downtime_ts[cancel_downtime.ts]
+apps_sim_tools_datadog_create_downtime_ts[create_downtime.ts]
+apps_sim_tools_datadog_mute_monitor_ts[mute_monitor.ts]
+apps_sim_tools_datadog_send_logs_ts[send_logs.ts]
+apps_sim_tools_datadog_submit_metrics_ts[submit_metrics.ts]
+apps_sim_tools_exa_find_similar_links_ts[find_similar_links.ts]
+apps_sim_tools_function_execute_ts[execute.ts]
+apps_sim_tools_google_form_utils_ts[utils.ts]
+apps_sim_tools_http_index_ts[index.ts]
+apps_sim_tools_http_types_ts[types.ts]
+apps_sim_tools_hunter_companies_find_ts[companies_find.ts]
+apps_sim_tools_hunter_domain_search_ts[domain_search.ts]
+apps_sim_tools_hunter_email_count_ts[email_count.ts]
+apps_sim_tools_hunter_email_finder_ts[email_finder.ts]
+apps_sim_tools_hunter_email_verifier_ts[email_verifier.ts]
+apps_sim_tools_parallel_extract_ts[extract.ts]
+apps_sim_tools_parallel_search_ts[search.ts]
+apps_sim_tools_pinecone_generate_embeddings_ts[generate_embeddings.ts]
+apps_sim_tools_qdrant_utils_ts[utils.ts]
+apps_sim_tools_stagehand_agent_ts[agent.ts]
+apps_sim_tools_wikipedia_content_ts[content.ts]
+apps_sim_tools_wikipedia_random_ts[random.ts]
+apps_sim_tools_wikipedia_summary_ts[summary.ts]
+apps_sim_tools_youtube_channel_info_ts[channel_info.ts]
+apps_sim_tools_youtube_video_details_ts[video_details.ts]
+packages_ts-sdk_examples_basic-usage_ts[basic-usage.ts]
+apps_docs_app_layout_config_tsx[layout.config.tsx]
+apps_docs_app_api_og_route_tsx[route.tsx]
+apps_docs_components_icons_tsx[icons.tsx]
+apps_docs_components_page-actions_tsx[page-actions.tsx]
+apps_docs_components_docs-layout_toc-footer_tsx[toc-footer.tsx]
+apps_docs_components_navbar_navbar_tsx[navbar.tsx]
+apps_sim_app_(landing)_layout_tsx[layout.tsx]
+apps_sim_app_(landing)_careers_page_tsx[page.tsx]
+apps_sim_app_(landing)_components_background_background-svg_tsx[background-svg.tsx]
+apps_sim_app_(landing)_components_footer_footer_tsx[footer.tsx]
+apps_sim_app_(landing)_components_footer_components_compliance-badges_tsx[compliance-badges.tsx]
+apps_sim_app_(landing)_components_footer_components_social-links_tsx[social-links.tsx]
+apps_sim_app_(landing)_components_footer_components_status-indicator_tsx[status-indicator.tsx]
+apps_sim_app_(landing)_components_landing-pricing_landing-pricing_tsx[landing-pricing.tsx]
+apps_sim_app_(landing)_components_testimonials_testimonials_tsx[testimonials.tsx]
+apps_sim_app_(landing)_studio_head_tsx[head.tsx]
+apps_sim_app_(landing)_studio_page_tsx[page.tsx]
+apps_sim_app_changelog_components_changelog-content_tsx[changelog-content.tsx]
+apps_sim_app_changelog_components_timeline-list_tsx[timeline-list.tsx]
+apps_sim_app_chat_components_header_header_tsx[header.tsx]
+apps_sim_app_chat_components_message_components_file-download_tsx[file-download.tsx]
+apps_sim_app_workspace_[workspaceId]_knowledge_components_create-base-modal_create-base-modal_tsx[create-base-modal.tsx]
+apps_sim_app_workspace_[workspaceId]_knowledge_components_icons_document-icons_tsx[document-icons.tsx]
+api_grp[API Layer Chunk 3]
+api_grp --> apps_sim_tools_apollo_task_search_ts
+api_grp --> apps_sim_tools_datadog_cancel_downtime_ts
+api_grp --> apps_sim_tools_datadog_create_downtime_ts
+api_grp --> apps_sim_tools_datadog_mute_monitor_ts
+api_grp --> apps_sim_tools_datadog_send_logs_ts
+api_grp --> apps_sim_tools_datadog_submit_metrics_ts
+api_grp --> apps_sim_tools_exa_find_similar_links_ts
+api_grp --> apps_sim_tools_function_execute_ts
+api_grp --> apps_sim_tools_google_form_utils_ts
+api_grp --> apps_sim_tools_http_index_ts
+api_grp --> apps_sim_tools_http_types_ts
+api_grp --> apps_sim_tools_hunter_companies_find_ts
+api_grp --> apps_sim_tools_hunter_domain_search_ts
+api_grp --> apps_sim_tools_hunter_email_count_ts
+api_grp --> apps_sim_tools_hunter_email_finder_ts
+api_grp --> apps_sim_tools_hunter_email_verifier_ts
+api_grp --> apps_sim_tools_parallel_extract_ts
+api_grp --> apps_sim_tools_parallel_search_ts
+api_grp --> apps_sim_tools_pinecone_generate_embeddings_ts
+api_grp --> apps_sim_tools_qdrant_utils_ts
+api_grp --> apps_sim_tools_stagehand_agent_ts
+api_grp --> apps_sim_tools_wikipedia_content_ts
+api_grp --> apps_sim_tools_wikipedia_random_ts
+api_grp --> apps_sim_tools_wikipedia_summary_ts
+api_grp --> apps_sim_tools_youtube_channel_info_ts
+api_grp --> apps_sim_tools_youtube_video_details_ts
+api_grp --> packages_ts-sdk_examples_basic-usage_ts
+api_grp --> apps_docs_app_layout_config_tsx
+api_grp --> apps_docs_app_api_og_route_tsx
+api_grp --> apps_docs_components_icons_tsx
+api_grp --> apps_docs_components_page-actions_tsx
+api_grp --> apps_docs_components_docs-layout_toc-footer_tsx
+api_grp --> apps_docs_components_navbar_navbar_tsx
+api_grp --> apps_sim_app_(landing)_layout_tsx
+api_grp --> apps_sim_app_(landing)_careers_page_tsx
+api_grp --> apps_sim_app_(landing)_components_background_background-svg_tsx
+api_grp --> apps_sim_app_(landing)_components_footer_footer_tsx
+api_grp --> apps_sim_app_(landing)_components_footer_components_compliance-badges_tsx
+api_grp --> apps_sim_app_(landing)_components_footer_components_social-links_tsx
+api_grp --> apps_sim_app_(landing)_components_footer_components_status-indicator_tsx
+api_grp --> apps_sim_app_(landing)_components_landing-pricing_landing-pricing_tsx
+api_grp --> apps_sim_app_(landing)_components_testimonials_testimonials_tsx
+api_grp --> apps_sim_app_(landing)_studio_head_tsx
+api_grp --> apps_sim_app_(landing)_studio_page_tsx
+api_grp --> apps_sim_app_changelog_components_changelog-content_tsx
+api_grp --> apps_sim_app_changelog_components_timeline-list_tsx
+api_grp --> apps_sim_app_chat_components_header_header_tsx
+api_grp --> apps_sim_app_chat_components_message_components_file-download_tsx
+api_grp --> apps_sim_app_workspace_[workspaceId]_knowledge_components_create-base-modal_create-base-modal_tsx
+api_grp --> apps_sim_app_workspace_[workspaceId]_knowledge_components_icons_document-icons_tsx

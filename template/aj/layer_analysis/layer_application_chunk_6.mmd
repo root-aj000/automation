@@ -1,0 +1,607 @@
+graph TD
+apps_docs_next_config_ts[next.config.ts]
+apps_docs_proxy_ts[proxy.ts]
+apps_docs_source_config_ts[source.config.ts]
+apps_docs_app_api_search_route_ts[route.ts]
+apps_docs_app_llms-full_txt_route_ts[route.ts]
+apps_docs_app_llms_mdx_[[___slug]]_route_ts[route.ts]
+apps_docs_lib_cn_ts[cn.ts]
+apps_docs_lib_i18n_ts[i18n.ts]
+apps_docs_lib_llms_ts[llms.ts]
+apps_docs_lib_source_ts[source.ts]
+apps_sim_instrumentation-edge_ts[instrumentation-edge.ts]
+apps_sim_instrumentation_ts[instrumentation.ts]
+apps_sim_tailwind_config_ts[tailwind.config.ts]
+apps_sim_trigger_config_ts[trigger.config.ts]
+apps_sim_vitest_config_ts[vitest.config.ts]
+apps_sim_app_manifest_ts[manifest.ts]
+apps_sim_app_(landing)_components_index_ts[index.ts]
+apps_sim_app_(landing)_components_footer_consts_ts[consts.ts]
+apps_sim_app_(landing)_components_footer_components_index_ts[index.ts]
+apps_sim_app_(landing)_components_hero_components_index_ts[index.ts]
+apps_sim_app_api_careers_submit_route_ts[route.ts]
+apps_sim_app_api_copilot_methods_route_test_ts[route.test.ts]
+apps_sim_app_api_providers_base_models_route_ts[route.ts]
+apps_sim_app_api_tools_postgresql_delete_route_ts[route.ts]
+apps_sim_app_api_tools_rds_delete_route_ts[route.ts]
+apps_sim_app_api_tools_sqs_send_route_ts[route.ts]
+apps_sim_app_api_tools_ssh_check-command-exists_route_ts[route.ts]
+apps_sim_app_api_tools_ssh_move-rename_route_ts[route.ts]
+apps_sim_app_api_tools_ssh_read-file-content_route_ts[route.ts]
+apps_sim_app_api_tools_ssh_upload-file_route_ts[route.ts]
+apps_sim_app_api_tools_stagehand_agent_route_ts[route.ts]
+apps_sim_app_api_tools_stagehand_extract_route_ts[route.ts]
+apps_sim_app_api_tools_thinking_route_ts[route.ts]
+apps_sim_app_api_v1_logs_meta_ts[meta.ts]
+apps_sim_app_api_workspaces_[id]_notifications_constants_ts[constants.ts]
+apps_sim_app_api_yaml_autolayout_route_ts[route.ts]
+apps_sim_app_chat_hooks_index_ts[index.ts]
+apps_sim_app_invite_components_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_knowledge_components_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_knowledge_[id]_components_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_knowledge_[id]_[documentId]_components_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_logs_types_ts[types.ts]
+apps_sim_app_workspace_[workspaceId]_logs_components_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_logs_components_dashboard_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_logs_components_dashboard_components_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_logs_components_dashboard_components_line-chart_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_logs_components_dashboard_components_status-bar_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_logs_components_dashboard_components_workflows-list_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_logs_components_log-details_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_logs_components_log-details_components_file-download_index_ts[index.ts]
+application_grp[APPLICATION Layer Chunk 1]
+application_grp --> apps_docs_next_config_ts
+application_grp --> apps_docs_proxy_ts
+application_grp --> apps_docs_source_config_ts
+application_grp --> apps_docs_app_api_search_route_ts
+application_grp --> apps_docs_app_llms-full_txt_route_ts
+application_grp --> apps_docs_app_llms_mdx_[[___slug]]_route_ts
+application_grp --> apps_docs_lib_cn_ts
+application_grp --> apps_docs_lib_i18n_ts
+application_grp --> apps_docs_lib_llms_ts
+application_grp --> apps_docs_lib_source_ts
+application_grp --> apps_sim_instrumentation-edge_ts
+application_grp --> apps_sim_instrumentation_ts
+application_grp --> apps_sim_tailwind_config_ts
+application_grp --> apps_sim_trigger_config_ts
+application_grp --> apps_sim_vitest_config_ts
+application_grp --> apps_sim_app_manifest_ts
+application_grp --> apps_sim_app_(landing)_components_index_ts
+application_grp --> apps_sim_app_(landing)_components_footer_consts_ts
+application_grp --> apps_sim_app_(landing)_components_footer_components_index_ts
+application_grp --> apps_sim_app_(landing)_components_hero_components_index_ts
+application_grp --> apps_sim_app_api_careers_submit_route_ts
+application_grp --> apps_sim_app_api_copilot_methods_route_test_ts
+application_grp --> apps_sim_app_api_providers_base_models_route_ts
+application_grp --> apps_sim_app_api_tools_postgresql_delete_route_ts
+application_grp --> apps_sim_app_api_tools_rds_delete_route_ts
+application_grp --> apps_sim_app_api_tools_sqs_send_route_ts
+application_grp --> apps_sim_app_api_tools_ssh_check-command-exists_route_ts
+application_grp --> apps_sim_app_api_tools_ssh_move-rename_route_ts
+application_grp --> apps_sim_app_api_tools_ssh_read-file-content_route_ts
+application_grp --> apps_sim_app_api_tools_ssh_upload-file_route_ts
+application_grp --> apps_sim_app_api_tools_stagehand_agent_route_ts
+application_grp --> apps_sim_app_api_tools_stagehand_extract_route_ts
+application_grp --> apps_sim_app_api_tools_thinking_route_ts
+application_grp --> apps_sim_app_api_v1_logs_meta_ts
+application_grp --> apps_sim_app_api_workspaces_[id]_notifications_constants_ts
+application_grp --> apps_sim_app_api_yaml_autolayout_route_ts
+application_grp --> apps_sim_app_chat_hooks_index_ts
+application_grp --> apps_sim_app_invite_components_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_knowledge_components_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_knowledge_[id]_components_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_knowledge_[id]_[documentId]_components_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_logs_types_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_logs_components_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_logs_components_dashboard_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_logs_components_dashboard_components_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_logs_components_dashboard_components_line-chart_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_logs_components_dashboard_components_status-bar_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_logs_components_dashboard_components_workflows-list_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_logs_components_log-details_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_logs_components_log-details_components_file-download_index_ts
+apps_sim_app_workspace_[workspaceId]_logs_components_log-details_components_frozen-canvas_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_logs_components_log-details_components_trace-spans_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_logs_components_logs-toolbar_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_logs_components_logs-toolbar_components_controls_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_logs_components_logs-toolbar_components_notifications_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_logs_components_logs-toolbar_components_notifications_components_slack-channel-selector_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_logs_components_logs-toolbar_components_notifications_components_workflow-selector_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_logs_components_logs-toolbar_components_search_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_logs_hooks_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_logs_hooks_use-log-details-resize_ts[use-log-details-resize.ts]
+apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_settings-modal_components_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_settings-modal_components_mcp_components_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_settings-modal_components_mcp_components_types_ts[types.ts]
+apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_settings-modal_components_subscription_plan-configs_ts[plan-configs.ts]
+apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_settings-modal_components_subscription_subscription-permissions_ts[subscription-permissions.ts]
+apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_settings-modal_components_subscription_components_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_settings-modal_components_subscription_components_cancel-subscription_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_settings-modal_components_subscription_components_cost-breakdown_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_settings-modal_components_subscription_components_credit-balance_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_settings-modal_components_subscription_components_plan-card_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_settings-modal_components_subscription_components_usage-limit_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_settings-modal_components_team-management_components_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_workflow-list_components_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_workspace-header_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_workspace-header_components_invite-modal_components_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_workspace-header_components_invite-modal_components_types_ts[types.ts]
+apps_sim_app_workspace_[workspaceId]_w_components_sidebar_hooks_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_components_sidebar_hooks_use-folder-expand_ts[use-folder-expand.ts]
+apps_sim_app_workspace_[workspaceId]_w_components_sidebar_hooks_use-item-drag_ts[use-item-drag.ts]
+apps_sim_app_workspace_[workspaceId]_w_components_sidebar_hooks_use-workflow-selection_ts[use-workflow-selection.ts]
+apps_sim_app_workspace_[workspaceId]_w_hooks_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_hooks_use-can-delete_ts[use-can-delete.ts]
+apps_sim_app_workspace_[workspaceId]_w_hooks_use-delete-folder_ts[use-delete-folder.ts]
+apps_sim_app_workspace_[workspaceId]_w_hooks_use-duplicate-folder_ts[use-duplicate-folder.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_chat_components_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_chat_hooks_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_copilot_components_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_copilot_components_copilot-message_components_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_copilot_components_copilot-message_hooks_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_copilot_components_user-input_constants_ts[constants.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_copilot_components_user-input_components_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_copilot_hooks_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_deploy_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_deploy_components_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_deploy_components_deploy-modal_components_general_components_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_deploy_hooks_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_editor_components_index_ts[index.ts]
+application_grp[APPLICATION Layer Chunk 2]
+application_grp --> apps_sim_app_workspace_[workspaceId]_logs_components_log-details_components_frozen-canvas_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_logs_components_log-details_components_trace-spans_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_logs_components_logs-toolbar_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_logs_components_logs-toolbar_components_controls_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_logs_components_logs-toolbar_components_notifications_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_logs_components_logs-toolbar_components_notifications_components_slack-channel-selector_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_logs_components_logs-toolbar_components_notifications_components_workflow-selector_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_logs_components_logs-toolbar_components_search_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_logs_hooks_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_logs_hooks_use-log-details-resize_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_settings-modal_components_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_settings-modal_components_mcp_components_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_settings-modal_components_mcp_components_types_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_settings-modal_components_subscription_plan-configs_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_settings-modal_components_subscription_subscription-permissions_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_settings-modal_components_subscription_components_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_settings-modal_components_subscription_components_cancel-subscription_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_settings-modal_components_subscription_components_cost-breakdown_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_settings-modal_components_subscription_components_credit-balance_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_settings-modal_components_subscription_components_plan-card_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_settings-modal_components_subscription_components_usage-limit_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_settings-modal_components_team-management_components_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_workflow-list_components_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_workspace-header_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_workspace-header_components_invite-modal_components_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_workspace-header_components_invite-modal_components_types_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_components_sidebar_hooks_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_components_sidebar_hooks_use-folder-expand_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_components_sidebar_hooks_use-item-drag_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_components_sidebar_hooks_use-workflow-selection_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_hooks_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_hooks_use-can-delete_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_hooks_use-delete-folder_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_hooks_use-duplicate-folder_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_chat_components_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_chat_hooks_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_copilot_components_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_copilot_components_copilot-message_components_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_copilot_components_copilot-message_hooks_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_copilot_components_user-input_constants_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_copilot_components_user-input_components_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_copilot_hooks_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_deploy_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_deploy_components_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_deploy_components_deploy-modal_components_general_components_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_deploy_hooks_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_editor_components_index_ts
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_editor_components_connection-blocks_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_editor_components_connection-blocks_components_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_editor_components_sub-block_components_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_editor_components_sub-block_components_tag-dropdown_components_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_editor_hooks_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_editor_hooks_use-editor-block-properties_ts[use-editor-block-properties.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_toolbar_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_toolbar_components_drag-preview_ts[drag-preview.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_toolbar_components_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_toolbar_hooks_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_hooks_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_subflows_loop_loop-config_ts[loop-config.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_subflows_parallel_parallel-config_ts[parallel-config.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_terminal_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_terminal_components_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_terminal_hooks_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_workflow-block_components_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_workflow-block_hooks_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_workflow-block_hooks_use-block-state_ts[use-block-state.ts]
+apps_sim_app__styles_fonts_inter_inter_ts[inter.ts]
+apps_sim_app__styles_fonts_season_season_ts[season.ts]
+apps_sim_app__styles_fonts_soehne_soehne_ts[soehne.ts]
+apps_sim_app__types_creator-profile_ts[creator-profile.ts]
+apps_sim_background_knowledge-processing_ts[knowledge-processing.ts]
+apps_sim_blocks_index_ts[index.ts]
+apps_sim_blocks_blocks_agent_test_ts[agent.test.ts]
+apps_sim_blocks_blocks_chat_trigger_ts[chat_trigger.ts]
+apps_sim_blocks_blocks_input_trigger_ts[input_trigger.ts]
+apps_sim_blocks_blocks_manual_trigger_ts[manual_trigger.ts]
+apps_sim_blocks_blocks_note_ts[note.ts]
+apps_sim_blocks_blocks_rss_ts[rss.ts]
+apps_sim_blocks_blocks_starter_ts[starter.ts]
+apps_sim_blocks_blocks_start_trigger_ts[start_trigger.ts]
+apps_sim_components_emails_base-styles_ts[base-styles.ts]
+apps_sim_components_emails_index_ts[index.ts]
+apps_sim_components_emcn_index_ts[index.ts]
+apps_sim_components_emcn_components_index_ts[index.ts]
+apps_sim_components_emcn_icons_index_ts[index.ts]
+apps_sim_components_ui_index_ts[index.ts]
+apps_sim_executor_index_ts[index.ts]
+apps_sim_executor_dag_builder_test_ts[builder.test.ts]
+apps_sim_executor_dag_types_ts[types.ts]
+apps_sim_executor_dag_construction_edges_test_ts[edges.test.ts]
+apps_sim_executor_dag_construction_edges_ts[edges.ts]
+apps_sim_executor_dag_construction_loops_ts[loops.ts]
+apps_sim_executor_dag_construction_paths_ts[paths.ts]
+apps_sim_executor_execution_engine_ts[engine.ts]
+apps_sim_executor_execution_executor_ts[executor.ts]
+apps_sim_executor_execution_state_ts[state.ts]
+apps_sim_executor_execution_types_ts[types.ts]
+application_grp[APPLICATION Layer Chunk 3]
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_editor_components_connection-blocks_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_editor_components_connection-blocks_components_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_editor_components_sub-block_components_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_editor_components_sub-block_components_tag-dropdown_components_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_editor_hooks_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_editor_hooks_use-editor-block-properties_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_toolbar_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_toolbar_components_drag-preview_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_toolbar_components_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_toolbar_hooks_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_hooks_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_subflows_loop_loop-config_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_subflows_parallel_parallel-config_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_terminal_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_terminal_components_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_terminal_hooks_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_workflow-block_components_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_workflow-block_hooks_index_ts
+application_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_workflow-block_hooks_use-block-state_ts
+application_grp --> apps_sim_app__styles_fonts_inter_inter_ts
+application_grp --> apps_sim_app__styles_fonts_season_season_ts
+application_grp --> apps_sim_app__styles_fonts_soehne_soehne_ts
+application_grp --> apps_sim_app__types_creator-profile_ts
+application_grp --> apps_sim_background_knowledge-processing_ts
+application_grp --> apps_sim_blocks_index_ts
+application_grp --> apps_sim_blocks_blocks_agent_test_ts
+application_grp --> apps_sim_blocks_blocks_chat_trigger_ts
+application_grp --> apps_sim_blocks_blocks_input_trigger_ts
+application_grp --> apps_sim_blocks_blocks_manual_trigger_ts
+application_grp --> apps_sim_blocks_blocks_note_ts
+application_grp --> apps_sim_blocks_blocks_rss_ts
+application_grp --> apps_sim_blocks_blocks_starter_ts
+application_grp --> apps_sim_blocks_blocks_start_trigger_ts
+application_grp --> apps_sim_components_emails_base-styles_ts
+application_grp --> apps_sim_components_emails_index_ts
+application_grp --> apps_sim_components_emcn_index_ts
+application_grp --> apps_sim_components_emcn_components_index_ts
+application_grp --> apps_sim_components_emcn_icons_index_ts
+application_grp --> apps_sim_components_ui_index_ts
+application_grp --> apps_sim_executor_index_ts
+application_grp --> apps_sim_executor_dag_builder_test_ts
+application_grp --> apps_sim_executor_dag_types_ts
+application_grp --> apps_sim_executor_dag_construction_edges_test_ts
+application_grp --> apps_sim_executor_dag_construction_edges_ts
+application_grp --> apps_sim_executor_dag_construction_loops_ts
+application_grp --> apps_sim_executor_dag_construction_paths_ts
+application_grp --> apps_sim_executor_execution_engine_ts
+application_grp --> apps_sim_executor_execution_executor_ts
+application_grp --> apps_sim_executor_execution_state_ts
+application_grp --> apps_sim_executor_execution_types_ts
+apps_sim_executor_handlers_index_ts[index.ts]
+apps_sim_executor_handlers_registry_ts[registry.ts]
+apps_sim_executor_handlers_condition_condition-handler_test_ts[condition-handler.test.ts]
+apps_sim_executor_handlers_condition_condition-handler_ts[condition-handler.ts]
+apps_sim_executor_handlers_function_function-handler_test_ts[function-handler.test.ts]
+apps_sim_executor_handlers_function_function-handler_ts[function-handler.ts]
+apps_sim_executor_handlers_trigger_trigger-handler_ts[trigger-handler.ts]
+apps_sim_executor_handlers_variables_variables-handler_ts[variables-handler.ts]
+apps_sim_executor_handlers_wait_wait-handler_ts[wait-handler.ts]
+apps_sim_executor_orchestrators_loop_ts[loop.ts]
+apps_sim_executor_types_loop_ts[loop.ts]
+apps_sim_executor_types_parallel_ts[parallel.ts]
+apps_sim_executor_variables_resolver_ts[resolver.ts]
+apps_sim_executor_variables_resolvers_block_ts[block.ts]
+apps_sim_executor_variables_resolvers_env_ts[env.ts]
+apps_sim_executor_variables_resolvers_loop_ts[loop.ts]
+apps_sim_executor_variables_resolvers_parallel_ts[parallel.ts]
+apps_sim_executor_variables_resolvers_reference_ts[reference.ts]
+apps_sim_hooks_use-focus-on-block_ts[use-focus-on-block.ts]
+apps_sim_hooks_use-forwarded-ref_ts[use-forwarded-ref.ts]
+apps_sim_hooks_use-knowledge-base-name_ts[use-knowledge-base-name.ts]
+apps_sim_hooks_use-stream-cleanup_ts[use-stream-cleanup.ts]
+apps_sim_hooks_use-tag-selection_ts[use-tag-selection.ts]
+apps_sim_hooks_use-trigger-config-aggregation_ts[use-trigger-config-aggregation.ts]
+apps_sim_hooks_selectors_resolution_ts[resolution.ts]
+apps_sim_lib_audio_extractor_ts[extractor.ts]
+apps_sim_lib_audio_types_ts[types.ts]
+apps_sim_lib_billing_constants_ts[constants.ts]
+apps_sim_lib_billing_stripe-client_ts[stripe-client.ts]
+apps_sim_lib_billing_client_index_ts[index.ts]
+apps_sim_lib_billing_client_usage-visualization_ts[usage-visualization.ts]
+apps_sim_lib_billing_storage_index_ts[index.ts]
+apps_sim_lib_branding_branding_ts[branding.ts]
+apps_sim_lib_branding_inject-theme_ts[inject-theme.ts]
+apps_sim_lib_chunkers_index_ts[index.ts]
+apps_sim_lib_copilot_prompts_ts[prompts.ts]
+apps_sim_lib_copilot_types_ts[types.ts]
+apps_sim_lib_copilot_tools_client_manager_ts[manager.ts]
+apps_sim_lib_copilot_tools_client_registry_ts[registry.ts]
+apps_sim_lib_copilot_tools_client_types_ts[types.ts]
+apps_sim_lib_copilot_tools_client_examples_get-trigger-examples_ts[get-trigger-examples.ts]
+apps_sim_lib_copilot_tools_client_examples_summarize_ts[summarize.ts]
+apps_sim_lib_copilot_tools_client_other_remember-debug_ts[remember-debug.ts]
+apps_sim_lib_copilot_tools_client_other_sleep_ts[sleep.ts]
+apps_sim_lib_copilot_tools_server_base-tool_ts[base-tool.ts]
+apps_sim_lib_copilot_tools_server_blocks_get-blocks-and-tools_ts[get-blocks-and-tools.ts]
+apps_sim_lib_copilot_tools_server_blocks_get-trigger-blocks_ts[get-trigger-blocks.ts]
+apps_sim_lib_core_config_api-keys_ts[api-keys.ts]
+apps_sim_lib_core_config_redis_ts[redis.ts]
+apps_sim_lib_core_idempotency_index_ts[index.ts]
+application_grp[APPLICATION Layer Chunk 4]
+application_grp --> apps_sim_executor_handlers_index_ts
+application_grp --> apps_sim_executor_handlers_registry_ts
+application_grp --> apps_sim_executor_handlers_condition_condition-handler_test_ts
+application_grp --> apps_sim_executor_handlers_condition_condition-handler_ts
+application_grp --> apps_sim_executor_handlers_function_function-handler_test_ts
+application_grp --> apps_sim_executor_handlers_function_function-handler_ts
+application_grp --> apps_sim_executor_handlers_trigger_trigger-handler_ts
+application_grp --> apps_sim_executor_handlers_variables_variables-handler_ts
+application_grp --> apps_sim_executor_handlers_wait_wait-handler_ts
+application_grp --> apps_sim_executor_orchestrators_loop_ts
+application_grp --> apps_sim_executor_types_loop_ts
+application_grp --> apps_sim_executor_types_parallel_ts
+application_grp --> apps_sim_executor_variables_resolver_ts
+application_grp --> apps_sim_executor_variables_resolvers_block_ts
+application_grp --> apps_sim_executor_variables_resolvers_env_ts
+application_grp --> apps_sim_executor_variables_resolvers_loop_ts
+application_grp --> apps_sim_executor_variables_resolvers_parallel_ts
+application_grp --> apps_sim_executor_variables_resolvers_reference_ts
+application_grp --> apps_sim_hooks_use-focus-on-block_ts
+application_grp --> apps_sim_hooks_use-forwarded-ref_ts
+application_grp --> apps_sim_hooks_use-knowledge-base-name_ts
+application_grp --> apps_sim_hooks_use-stream-cleanup_ts
+application_grp --> apps_sim_hooks_use-tag-selection_ts
+application_grp --> apps_sim_hooks_use-trigger-config-aggregation_ts
+application_grp --> apps_sim_hooks_selectors_resolution_ts
+application_grp --> apps_sim_lib_audio_extractor_ts
+application_grp --> apps_sim_lib_audio_types_ts
+application_grp --> apps_sim_lib_billing_constants_ts
+application_grp --> apps_sim_lib_billing_stripe-client_ts
+application_grp --> apps_sim_lib_billing_client_index_ts
+application_grp --> apps_sim_lib_billing_client_usage-visualization_ts
+application_grp --> apps_sim_lib_billing_storage_index_ts
+application_grp --> apps_sim_lib_branding_branding_ts
+application_grp --> apps_sim_lib_branding_inject-theme_ts
+application_grp --> apps_sim_lib_chunkers_index_ts
+application_grp --> apps_sim_lib_copilot_prompts_ts
+application_grp --> apps_sim_lib_copilot_types_ts
+application_grp --> apps_sim_lib_copilot_tools_client_manager_ts
+application_grp --> apps_sim_lib_copilot_tools_client_registry_ts
+application_grp --> apps_sim_lib_copilot_tools_client_types_ts
+application_grp --> apps_sim_lib_copilot_tools_client_examples_get-trigger-examples_ts
+application_grp --> apps_sim_lib_copilot_tools_client_examples_summarize_ts
+application_grp --> apps_sim_lib_copilot_tools_client_other_remember-debug_ts
+application_grp --> apps_sim_lib_copilot_tools_client_other_sleep_ts
+application_grp --> apps_sim_lib_copilot_tools_server_base-tool_ts
+application_grp --> apps_sim_lib_copilot_tools_server_blocks_get-blocks-and-tools_ts
+application_grp --> apps_sim_lib_copilot_tools_server_blocks_get-trigger-blocks_ts
+application_grp --> apps_sim_lib_core_config_api-keys_ts
+application_grp --> apps_sim_lib_core_config_redis_ts
+application_grp --> apps_sim_lib_core_idempotency_index_ts
+apps_sim_lib_core_storage_index_ts[index.ts]
+apps_sim_lib_core_storage_storage_ts[storage.ts]
+apps_sim_lib_execution_constants_ts[constants.ts]
+apps_sim_lib_execution_e2b_ts[e2b.ts]
+apps_sim_lib_execution_files_ts[files.ts]
+apps_sim_lib_execution_languages_ts[languages.ts]
+apps_sim_lib_file-parsers_csv-parser_ts[csv-parser.ts]
+apps_sim_lib_file-parsers_doc-parser_ts[doc-parser.ts]
+apps_sim_lib_file-parsers_docx-parser_ts[docx-parser.ts]
+apps_sim_lib_file-parsers_index_ts[index.ts]
+apps_sim_lib_file-parsers_json-parser_ts[json-parser.ts]
+apps_sim_lib_file-parsers_pdf-parser_ts[pdf-parser.ts]
+apps_sim_lib_file-parsers_pptx-parser_ts[pptx-parser.ts]
+apps_sim_lib_file-parsers_types_ts[types.ts]
+apps_sim_lib_file-parsers_xlsx-parser_ts[xlsx-parser.ts]
+apps_sim_lib_file-parsers_yaml-parser_ts[yaml-parser.ts]
+apps_sim_lib_knowledge_constants_ts[constants.ts]
+apps_sim_lib_knowledge_documents_queue_ts[queue.ts]
+apps_sim_lib_logs_get-trigger-options_ts[get-trigger-options.ts]
+apps_sim_lib_logs_console_logger_ts[logger.ts]
+apps_sim_lib_logs_execution_logger_test_ts[logger.test.ts]
+apps_sim_lib_logs_execution_snapshot_service_test_ts[service.test.ts]
+apps_sim_lib_mcp_tool-validation_ts[tool-validation.ts]
+apps_sim_lib_mcp_storage_adapter_ts[adapter.ts]
+apps_sim_lib_mcp_storage_factory_ts[factory.ts]
+apps_sim_lib_mcp_storage_index_ts[index.ts]
+apps_sim_lib_mcp_storage_redis-cache_ts[redis-cache.ts]
+apps_sim_lib_messaging_email_validation_test_ts[validation.test.ts]
+apps_sim_lib_messaging_email_validation_ts[validation.ts]
+apps_sim_lib_og_index_ts[index.ts]
+apps_sim_lib_uploads_config_ts[config.ts]
+apps_sim_lib_uploads_index_ts[index.ts]
+apps_sim_lib_uploads_contexts_chat_chat-file-manager_ts[chat-file-manager.ts]
+apps_sim_lib_uploads_contexts_chat_index_ts[index.ts]
+apps_sim_lib_uploads_contexts_copilot_index_ts[index.ts]
+apps_sim_lib_uploads_contexts_execution_execution-file-manager_ts[execution-file-manager.ts]
+apps_sim_lib_uploads_contexts_execution_index_ts[index.ts]
+apps_sim_lib_uploads_contexts_workspace_index_ts[index.ts]
+apps_sim_lib_uploads_providers_blob_index_ts[index.ts]
+apps_sim_lib_uploads_providers_blob_types_ts[types.ts]
+apps_sim_lib_uploads_providers_s3_index_ts[index.ts]
+apps_sim_lib_uploads_providers_s3_types_ts[types.ts]
+apps_sim_lib_uploads_shared_types_ts[types.ts]
+apps_sim_lib_webhooks_attachment-processor_ts[attachment-processor.ts]
+apps_sim_lib_webhooks_env-resolver_ts[env-resolver.ts]
+apps_sim_lib_workflows_state-builder_ts[state-builder.ts]
+apps_sim_lib_workspaces_presence-colors_ts[presence-colors.ts]
+apps_sim_lib_workspaces_organization_index_ts[index.ts]
+apps_sim_providers_ollama_types_ts[types.ts]
+apps_sim_serializer_index_ts[index.ts]
+application_grp[APPLICATION Layer Chunk 5]
+application_grp --> apps_sim_lib_core_storage_index_ts
+application_grp --> apps_sim_lib_core_storage_storage_ts
+application_grp --> apps_sim_lib_execution_constants_ts
+application_grp --> apps_sim_lib_execution_e2b_ts
+application_grp --> apps_sim_lib_execution_files_ts
+application_grp --> apps_sim_lib_execution_languages_ts
+application_grp --> apps_sim_lib_file-parsers_csv-parser_ts
+application_grp --> apps_sim_lib_file-parsers_doc-parser_ts
+application_grp --> apps_sim_lib_file-parsers_docx-parser_ts
+application_grp --> apps_sim_lib_file-parsers_index_ts
+application_grp --> apps_sim_lib_file-parsers_json-parser_ts
+application_grp --> apps_sim_lib_file-parsers_pdf-parser_ts
+application_grp --> apps_sim_lib_file-parsers_pptx-parser_ts
+application_grp --> apps_sim_lib_file-parsers_types_ts
+application_grp --> apps_sim_lib_file-parsers_xlsx-parser_ts
+application_grp --> apps_sim_lib_file-parsers_yaml-parser_ts
+application_grp --> apps_sim_lib_knowledge_constants_ts
+application_grp --> apps_sim_lib_knowledge_documents_queue_ts
+application_grp --> apps_sim_lib_logs_get-trigger-options_ts
+application_grp --> apps_sim_lib_logs_console_logger_ts
+application_grp --> apps_sim_lib_logs_execution_logger_test_ts
+application_grp --> apps_sim_lib_logs_execution_snapshot_service_test_ts
+application_grp --> apps_sim_lib_mcp_tool-validation_ts
+application_grp --> apps_sim_lib_mcp_storage_adapter_ts
+application_grp --> apps_sim_lib_mcp_storage_factory_ts
+application_grp --> apps_sim_lib_mcp_storage_index_ts
+application_grp --> apps_sim_lib_mcp_storage_redis-cache_ts
+application_grp --> apps_sim_lib_messaging_email_validation_test_ts
+application_grp --> apps_sim_lib_messaging_email_validation_ts
+application_grp --> apps_sim_lib_og_index_ts
+application_grp --> apps_sim_lib_uploads_config_ts
+application_grp --> apps_sim_lib_uploads_index_ts
+application_grp --> apps_sim_lib_uploads_contexts_chat_chat-file-manager_ts
+application_grp --> apps_sim_lib_uploads_contexts_chat_index_ts
+application_grp --> apps_sim_lib_uploads_contexts_copilot_index_ts
+application_grp --> apps_sim_lib_uploads_contexts_execution_execution-file-manager_ts
+application_grp --> apps_sim_lib_uploads_contexts_execution_index_ts
+application_grp --> apps_sim_lib_uploads_contexts_workspace_index_ts
+application_grp --> apps_sim_lib_uploads_providers_blob_index_ts
+application_grp --> apps_sim_lib_uploads_providers_blob_types_ts
+application_grp --> apps_sim_lib_uploads_providers_s3_index_ts
+application_grp --> apps_sim_lib_uploads_providers_s3_types_ts
+application_grp --> apps_sim_lib_uploads_shared_types_ts
+application_grp --> apps_sim_lib_webhooks_attachment-processor_ts
+application_grp --> apps_sim_lib_webhooks_env-resolver_ts
+application_grp --> apps_sim_lib_workflows_state-builder_ts
+application_grp --> apps_sim_lib_workspaces_presence-colors_ts
+application_grp --> apps_sim_lib_workspaces_organization_index_ts
+application_grp --> apps_sim_providers_ollama_types_ts
+application_grp --> apps_sim_serializer_index_ts
+apps_sim_serializer_types_ts[types.ts]
+apps_sim_stores_custom-tools_store_ts[store.ts]
+apps_sim_stores_execution_store_ts[store.ts]
+apps_sim_stores_execution_types_ts[types.ts]
+apps_sim_stores_notifications_index_ts[index.ts]
+apps_sim_stores_notifications_store_ts[store.ts]
+apps_sim_stores_panel_types_ts[types.ts]
+apps_sim_stores_panel_copilot_constants_ts[constants.ts]
+apps_sim_stores_panel_copilot_index_ts[index.ts]
+apps_sim_stores_panel_copilot_tools_ts[tools.ts]
+apps_sim_stores_providers_types_ts[types.ts]
+apps_sim_stores_search-modal_store_ts[store.ts]
+apps_sim_stores_settings_environment_store_ts[store.ts]
+apps_sim_stores_settings_environment_types_ts[types.ts]
+apps_sim_stores_settings_general_store_ts[store.ts]
+apps_sim_stores_settings_general_types_ts[types.ts]
+apps_sim_stores_settings-modal_store_ts[store.ts]
+apps_sim_stores_undo-redo_index_ts[index.ts]
+apps_sim_tools_ahrefs_index_ts[index.ts]
+apps_sim_tools_apify_index_ts[index.ts]
+apps_sim_tools_apify_types_ts[types.ts]
+apps_sim_tools_browser_use_index_ts[index.ts]
+apps_sim_tools_browser_use_types_ts[types.ts]
+apps_sim_tools_calendly_index_ts[index.ts]
+apps_sim_tools_clay_index_ts[index.ts]
+apps_sim_tools_cursor_index_ts[index.ts]
+apps_sim_tools_cursor_types_ts[types.ts]
+apps_sim_tools_dropbox_index_ts[index.ts]
+apps_sim_tools_duckduckgo_index_ts[index.ts]
+apps_sim_tools_elevenlabs_index_ts[index.ts]
+apps_sim_tools_elevenlabs_tts_ts[tts.ts]
+apps_sim_tools_elevenlabs_types_ts[types.ts]
+apps_sim_tools_exa_index_ts[index.ts]
+apps_sim_tools_file_index_ts[index.ts]
+apps_sim_tools_file_parser_ts[parser.ts]
+apps_sim_tools_file_types_ts[types.ts]
+apps_sim_tools_firecrawl_index_ts[index.ts]
+apps_sim_tools_function_index_ts[index.ts]
+apps_sim_tools_function_types_ts[types.ts]
+apps_sim_tools_gmail_index_ts[index.ts]
+apps_sim_tools_google_index_ts[index.ts]
+apps_sim_tools_google_calendar_index_ts[index.ts]
+apps_sim_tools_google_docs_index_ts[index.ts]
+apps_sim_tools_google_drive_index_ts[index.ts]
+apps_sim_tools_google_form_index_ts[index.ts]
+apps_sim_tools_google_slides_index_ts[index.ts]
+apps_sim_tools_google_vault_index_ts[index.ts]
+apps_sim_tools_huggingface_index_ts[index.ts]
+apps_sim_tools_hunter_index_ts[index.ts]
+apps_sim_tools_jina_index_ts[index.ts]
+application_grp[APPLICATION Layer Chunk 6]
+application_grp --> apps_sim_serializer_types_ts
+application_grp --> apps_sim_stores_custom-tools_store_ts
+application_grp --> apps_sim_stores_execution_store_ts
+application_grp --> apps_sim_stores_execution_types_ts
+application_grp --> apps_sim_stores_notifications_index_ts
+application_grp --> apps_sim_stores_notifications_store_ts
+application_grp --> apps_sim_stores_panel_types_ts
+application_grp --> apps_sim_stores_panel_copilot_constants_ts
+application_grp --> apps_sim_stores_panel_copilot_index_ts
+application_grp --> apps_sim_stores_panel_copilot_tools_ts
+application_grp --> apps_sim_stores_providers_types_ts
+application_grp --> apps_sim_stores_search-modal_store_ts
+application_grp --> apps_sim_stores_settings_environment_store_ts
+application_grp --> apps_sim_stores_settings_environment_types_ts
+application_grp --> apps_sim_stores_settings_general_store_ts
+application_grp --> apps_sim_stores_settings_general_types_ts
+application_grp --> apps_sim_stores_settings-modal_store_ts
+application_grp --> apps_sim_stores_undo-redo_index_ts
+application_grp --> apps_sim_tools_ahrefs_index_ts
+application_grp --> apps_sim_tools_apify_index_ts
+application_grp --> apps_sim_tools_apify_types_ts
+application_grp --> apps_sim_tools_browser_use_index_ts
+application_grp --> apps_sim_tools_browser_use_types_ts
+application_grp --> apps_sim_tools_calendly_index_ts
+application_grp --> apps_sim_tools_clay_index_ts
+application_grp --> apps_sim_tools_cursor_index_ts
+application_grp --> apps_sim_tools_cursor_types_ts
+application_grp --> apps_sim_tools_dropbox_index_ts
+application_grp --> apps_sim_tools_duckduckgo_index_ts
+application_grp --> apps_sim_tools_elevenlabs_index_ts
+application_grp --> apps_sim_tools_elevenlabs_tts_ts
+application_grp --> apps_sim_tools_elevenlabs_types_ts
+application_grp --> apps_sim_tools_exa_index_ts
+application_grp --> apps_sim_tools_file_index_ts
+application_grp --> apps_sim_tools_file_parser_ts
+application_grp --> apps_sim_tools_file_types_ts
+application_grp --> apps_sim_tools_firecrawl_index_ts
+application_grp --> apps_sim_tools_function_index_ts
+application_grp --> apps_sim_tools_function_types_ts
+application_grp --> apps_sim_tools_gmail_index_ts
+application_grp --> apps_sim_tools_google_index_ts
+application_grp --> apps_sim_tools_google_calendar_index_ts
+application_grp --> apps_sim_tools_google_docs_index_ts
+application_grp --> apps_sim_tools_google_drive_index_ts
+application_grp --> apps_sim_tools_google_form_index_ts
+application_grp --> apps_sim_tools_google_slides_index_ts
+application_grp --> apps_sim_tools_google_vault_index_ts
+application_grp --> apps_sim_tools_huggingface_index_ts
+application_grp --> apps_sim_tools_hunter_index_ts
+application_grp --> apps_sim_tools_jina_index_ts

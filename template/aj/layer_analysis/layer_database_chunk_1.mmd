@@ -1,0 +1,102 @@
+graph TD
+apps_sim_drizzle_config_ts[drizzle.config.ts]
+apps_sim_app_sitemap_ts[sitemap.ts]
+apps_sim_app_api_chat_validate_route_ts[route.ts]
+apps_sim_app_api_knowledge_search_utils_ts[utils.ts]
+apps_sim_app_api_status_route_ts[route.ts]
+apps_sim_app_api_status_types_ts[types.ts]
+apps_sim_app_api_tools_dynamodb_utils_ts[utils.ts]
+apps_sim_app_api_tools_dynamodb_delete_route_ts[route.ts]
+apps_sim_app_api_tools_dynamodb_get_route_ts[route.ts]
+apps_sim_app_api_tools_dynamodb_put_route_ts[route.ts]
+apps_sim_app_api_tools_dynamodb_query_route_ts[route.ts]
+apps_sim_app_api_tools_dynamodb_scan_route_ts[route.ts]
+apps_sim_app_api_tools_dynamodb_update_route_ts[route.ts]
+apps_sim_app_api_tools_mysql_delete_route_ts[route.ts]
+apps_sim_app_api_tools_mysql_execute_route_ts[route.ts]
+apps_sim_app_api_tools_mysql_insert_route_ts[route.ts]
+apps_sim_app_api_tools_mysql_query_route_ts[route.ts]
+apps_sim_app_api_tools_mysql_update_route_ts[route.ts]
+apps_sim_app_api_tools_postgresql_utils_ts[utils.ts]
+apps_sim_app_api_tools_postgresql_execute_route_ts[route.ts]
+apps_sim_app_api_tools_postgresql_insert_route_ts[route.ts]
+apps_sim_app_api_tools_postgresql_query_route_ts[route.ts]
+apps_sim_app_api_tools_postgresql_update_route_ts[route.ts]
+apps_sim_app_api_tools_rds_utils_ts[utils.ts]
+apps_sim_app_api_tools_rds_execute_route_ts[route.ts]
+apps_sim_app_api_tools_rds_insert_route_ts[route.ts]
+apps_sim_app_api_tools_rds_query_route_ts[route.ts]
+apps_sim_app_api_tools_rds_update_route_ts[route.ts]
+apps_sim_app_api_tools_stagehand_utils_ts[utils.ts]
+apps_sim_app_api_v1_logs_filters_ts[filters.ts]
+apps_sim_app_api_v1_logs_route_ts[route.ts]
+apps_sim_app_api_v1_logs_executions_[executionId]_route_ts[route.ts]
+apps_sim_app_api_v1_logs_[id]_route_ts[route.ts]
+apps_sim_app_api_workflows_[id]_chat_status_route_ts[route.ts]
+apps_sim_app_api_workflows_[id]_deployments_route_ts[route.ts]
+apps_sim_app_api_workflows_[id]_deployments_[version]_route_ts[route.ts]
+apps_sim_app_api_workflows_[id]_deployments_[version]_activate_route_ts[route.ts]
+apps_sim_app_api_workflows_[id]_deployments_[version]_revert_route_ts[route.ts]
+apps_sim_app_api_workflows_[id]_paused_route_ts[route.ts]
+apps_sim_app_api_workflows_[id]_status_route_ts[route.ts]
+apps_sim_app_changelog_xml_route_ts[route.ts]
+apps_sim_app_chat_hooks_use-chat-streaming_ts[use-chat-streaming.ts]
+apps_sim_app_workspace_[workspaceId]_knowledge_components_constants_ts[constants.ts]
+apps_sim_app_workspace_[workspaceId]_knowledge_utils_sort_ts[sort.ts]
+apps_sim_app_workspace_[workspaceId]_logs_hooks_use-search-state_ts[use-search-state.ts]
+apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_search-modal_search-utils_ts[search-utils.ts]
+apps_sim_app_workspace_[workspaceId]_w_components_sidebar_hooks_use-auto-scroll_ts[use-auto-scroll.ts]
+apps_sim_app_workspace_[workspaceId]_w_components_sidebar_hooks_use-drag-drop_ts[use-drag-drop.ts]
+apps_sim_app_workspace_[workspaceId]_w_components_sidebar_hooks_use-folder-operations_ts[use-folder-operations.ts]
+apps_sim_app_workspace_[workspaceId]_w_components_sidebar_hooks_use-item-rename_ts[use-item-rename.ts]
+database_grp[DATABASE Layer Chunk 1]
+database_grp --> apps_sim_drizzle_config_ts
+database_grp --> apps_sim_app_sitemap_ts
+database_grp --> apps_sim_app_api_chat_validate_route_ts
+database_grp --> apps_sim_app_api_knowledge_search_utils_ts
+database_grp --> apps_sim_app_api_status_route_ts
+database_grp --> apps_sim_app_api_status_types_ts
+database_grp --> apps_sim_app_api_tools_dynamodb_utils_ts
+database_grp --> apps_sim_app_api_tools_dynamodb_delete_route_ts
+database_grp --> apps_sim_app_api_tools_dynamodb_get_route_ts
+database_grp --> apps_sim_app_api_tools_dynamodb_put_route_ts
+database_grp --> apps_sim_app_api_tools_dynamodb_query_route_ts
+database_grp --> apps_sim_app_api_tools_dynamodb_scan_route_ts
+database_grp --> apps_sim_app_api_tools_dynamodb_update_route_ts
+database_grp --> apps_sim_app_api_tools_mysql_delete_route_ts
+database_grp --> apps_sim_app_api_tools_mysql_execute_route_ts
+database_grp --> apps_sim_app_api_tools_mysql_insert_route_ts
+database_grp --> apps_sim_app_api_tools_mysql_query_route_ts
+database_grp --> apps_sim_app_api_tools_mysql_update_route_ts
+database_grp --> apps_sim_app_api_tools_postgresql_utils_ts
+database_grp --> apps_sim_app_api_tools_postgresql_execute_route_ts
+database_grp --> apps_sim_app_api_tools_postgresql_insert_route_ts
+database_grp --> apps_sim_app_api_tools_postgresql_query_route_ts
+database_grp --> apps_sim_app_api_tools_postgresql_update_route_ts
+database_grp --> apps_sim_app_api_tools_rds_utils_ts
+database_grp --> apps_sim_app_api_tools_rds_execute_route_ts
+database_grp --> apps_sim_app_api_tools_rds_insert_route_ts
+database_grp --> apps_sim_app_api_tools_rds_query_route_ts
+database_grp --> apps_sim_app_api_tools_rds_update_route_ts
+database_grp --> apps_sim_app_api_tools_stagehand_utils_ts
+database_grp --> apps_sim_app_api_v1_logs_filters_ts
+database_grp --> apps_sim_app_api_v1_logs_route_ts
+database_grp --> apps_sim_app_api_v1_logs_executions_[executionId]_route_ts
+database_grp --> apps_sim_app_api_v1_logs_[id]_route_ts
+database_grp --> apps_sim_app_api_workflows_[id]_chat_status_route_ts
+database_grp --> apps_sim_app_api_workflows_[id]_deployments_route_ts
+database_grp --> apps_sim_app_api_workflows_[id]_deployments_[version]_route_ts
+database_grp --> apps_sim_app_api_workflows_[id]_deployments_[version]_activate_route_ts
+database_grp --> apps_sim_app_api_workflows_[id]_deployments_[version]_revert_route_ts
+database_grp --> apps_sim_app_api_workflows_[id]_paused_route_ts
+database_grp --> apps_sim_app_api_workflows_[id]_status_route_ts
+database_grp --> apps_sim_app_changelog_xml_route_ts
+database_grp --> apps_sim_app_chat_hooks_use-chat-streaming_ts
+database_grp --> apps_sim_app_workspace_[workspaceId]_knowledge_components_constants_ts
+database_grp --> apps_sim_app_workspace_[workspaceId]_knowledge_utils_sort_ts
+database_grp --> apps_sim_app_workspace_[workspaceId]_logs_hooks_use-search-state_ts
+database_grp --> apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_search-modal_search-utils_ts
+database_grp --> apps_sim_app_workspace_[workspaceId]_w_components_sidebar_hooks_use-auto-scroll_ts
+database_grp --> apps_sim_app_workspace_[workspaceId]_w_components_sidebar_hooks_use-drag-drop_ts
+database_grp --> apps_sim_app_workspace_[workspaceId]_w_components_sidebar_hooks_use-folder-operations_ts
+database_grp --> apps_sim_app_workspace_[workspaceId]_w_components_sidebar_hooks_use-item-rename_ts

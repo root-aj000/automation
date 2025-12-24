@@ -1,0 +1,506 @@
+graph TD
+apps_sim_next_config_ts[next.config.ts]
+apps_sim_proxy_ts[proxy.ts]
+apps_sim_telemetry_config_ts[telemetry.config.ts]
+apps_sim_vitest_setup_ts[vitest.setup.ts]
+apps_sim_app_(auth)_verify_use-verification_ts[use-verification.ts]
+apps_sim_app_(landing)_studio_rss_xml_route_ts[route.ts]
+apps_sim_app_api_auth_accounts_route_ts[route.ts]
+apps_sim_app_api_auth_forget-password_route_test_ts[route.test.ts]
+apps_sim_app_api_auth_forget-password_route_ts[route.ts]
+apps_sim_app_api_auth_oauth_utils_test_ts[utils.test.ts]
+apps_sim_app_api_auth_oauth_utils_ts[utils.ts]
+apps_sim_app_api_auth_oauth_connections_route_test_ts[route.test.ts]
+apps_sim_app_api_auth_oauth_connections_route_ts[route.ts]
+apps_sim_app_api_auth_oauth_credentials_route_test_ts[route.test.ts]
+apps_sim_app_api_auth_oauth_credentials_route_ts[route.ts]
+apps_sim_app_api_auth_oauth_disconnect_route_test_ts[route.test.ts]
+apps_sim_app_api_auth_oauth_disconnect_route_ts[route.ts]
+apps_sim_app_api_auth_oauth_microsoft_file_route_ts[route.ts]
+apps_sim_app_api_auth_oauth_microsoft_files_route_ts[route.ts]
+apps_sim_app_api_auth_oauth_token_route_test_ts[route.test.ts]
+apps_sim_app_api_auth_oauth_token_route_ts[route.ts]
+apps_sim_app_api_auth_oauth_wealthbox_item_route_ts[route.ts]
+apps_sim_app_api_auth_oauth_wealthbox_items_route_ts[route.ts]
+apps_sim_app_api_auth_oauth2_callback_shopify_route_ts[route.ts]
+apps_sim_app_api_auth_oauth2_shopify_store_route_ts[route.ts]
+apps_sim_app_api_auth_reset-password_route_test_ts[route.test.ts]
+apps_sim_app_api_auth_reset-password_route_ts[route.ts]
+apps_sim_app_api_auth_shopify_authorize_route_ts[route.ts]
+apps_sim_app_api_auth_socket-token_route_ts[route.ts]
+apps_sim_app_api_auth_sso_providers_route_ts[route.ts]
+apps_sim_app_api_auth_sso_register_route_ts[route.ts]
+apps_sim_app_api_auth_trello_authorize_route_ts[route.ts]
+apps_sim_app_api_auth_trello_callback_route_ts[route.ts]
+apps_sim_app_api_auth_trello_store_route_ts[route.ts]
+apps_sim_app_api_auth_webhook_stripe_route_ts[route.ts]
+apps_sim_app_api_auth_[___all]_route_ts[route.ts]
+apps_sim_app_api_billing_route_ts[route.ts]
+apps_sim_app_api_billing_credits_route_ts[route.ts]
+apps_sim_app_api_billing_portal_route_ts[route.ts]
+apps_sim_app_api_billing_update-cost_route_ts[route.ts]
+apps_sim_app_api_chat_route_test_ts[route.test.ts]
+apps_sim_app_api_chat_route_ts[route.ts]
+apps_sim_app_api_chat_utils_test_ts[utils.test.ts]
+apps_sim_app_api_chat_utils_ts[utils.ts]
+apps_sim_app_api_chat_manage_[id]_route_test_ts[route.test.ts]
+apps_sim_app_api_chat_manage_[id]_route_ts[route.ts]
+apps_sim_app_api_chat_[identifier]_route_test_ts[route.test.ts]
+apps_sim_app_api_chat_[identifier]_route_ts[route.ts]
+apps_sim_app_api_chat_[identifier]_otp_route_ts[route.ts]
+apps_sim_app_api_copilot_api-keys_route_ts[route.ts]
+middleware_grp[MIDDLEWARE Layer Chunk 1]
+middleware_grp --> apps_sim_next_config_ts
+middleware_grp --> apps_sim_proxy_ts
+middleware_grp --> apps_sim_telemetry_config_ts
+middleware_grp --> apps_sim_vitest_setup_ts
+middleware_grp --> apps_sim_app_(auth)_verify_use-verification_ts
+middleware_grp --> apps_sim_app_(landing)_studio_rss_xml_route_ts
+middleware_grp --> apps_sim_app_api_auth_accounts_route_ts
+middleware_grp --> apps_sim_app_api_auth_forget-password_route_test_ts
+middleware_grp --> apps_sim_app_api_auth_forget-password_route_ts
+middleware_grp --> apps_sim_app_api_auth_oauth_utils_test_ts
+middleware_grp --> apps_sim_app_api_auth_oauth_utils_ts
+middleware_grp --> apps_sim_app_api_auth_oauth_connections_route_test_ts
+middleware_grp --> apps_sim_app_api_auth_oauth_connections_route_ts
+middleware_grp --> apps_sim_app_api_auth_oauth_credentials_route_test_ts
+middleware_grp --> apps_sim_app_api_auth_oauth_credentials_route_ts
+middleware_grp --> apps_sim_app_api_auth_oauth_disconnect_route_test_ts
+middleware_grp --> apps_sim_app_api_auth_oauth_disconnect_route_ts
+middleware_grp --> apps_sim_app_api_auth_oauth_microsoft_file_route_ts
+middleware_grp --> apps_sim_app_api_auth_oauth_microsoft_files_route_ts
+middleware_grp --> apps_sim_app_api_auth_oauth_token_route_test_ts
+middleware_grp --> apps_sim_app_api_auth_oauth_token_route_ts
+middleware_grp --> apps_sim_app_api_auth_oauth_wealthbox_item_route_ts
+middleware_grp --> apps_sim_app_api_auth_oauth_wealthbox_items_route_ts
+middleware_grp --> apps_sim_app_api_auth_oauth2_callback_shopify_route_ts
+middleware_grp --> apps_sim_app_api_auth_oauth2_shopify_store_route_ts
+middleware_grp --> apps_sim_app_api_auth_reset-password_route_test_ts
+middleware_grp --> apps_sim_app_api_auth_reset-password_route_ts
+middleware_grp --> apps_sim_app_api_auth_shopify_authorize_route_ts
+middleware_grp --> apps_sim_app_api_auth_socket-token_route_ts
+middleware_grp --> apps_sim_app_api_auth_sso_providers_route_ts
+middleware_grp --> apps_sim_app_api_auth_sso_register_route_ts
+middleware_grp --> apps_sim_app_api_auth_trello_authorize_route_ts
+middleware_grp --> apps_sim_app_api_auth_trello_callback_route_ts
+middleware_grp --> apps_sim_app_api_auth_trello_store_route_ts
+middleware_grp --> apps_sim_app_api_auth_webhook_stripe_route_ts
+middleware_grp --> apps_sim_app_api_auth_[___all]_route_ts
+middleware_grp --> apps_sim_app_api_billing_route_ts
+middleware_grp --> apps_sim_app_api_billing_credits_route_ts
+middleware_grp --> apps_sim_app_api_billing_portal_route_ts
+middleware_grp --> apps_sim_app_api_billing_update-cost_route_ts
+middleware_grp --> apps_sim_app_api_chat_route_test_ts
+middleware_grp --> apps_sim_app_api_chat_route_ts
+middleware_grp --> apps_sim_app_api_chat_utils_test_ts
+middleware_grp --> apps_sim_app_api_chat_utils_ts
+middleware_grp --> apps_sim_app_api_chat_manage_[id]_route_test_ts
+middleware_grp --> apps_sim_app_api_chat_manage_[id]_route_ts
+middleware_grp --> apps_sim_app_api_chat_[identifier]_route_test_ts
+middleware_grp --> apps_sim_app_api_chat_[identifier]_route_ts
+middleware_grp --> apps_sim_app_api_chat_[identifier]_otp_route_ts
+middleware_grp --> apps_sim_app_api_copilot_api-keys_route_ts
+apps_sim_app_api_copilot_api-keys_generate_route_ts[route.ts]
+apps_sim_app_api_copilot_api-keys_validate_route_ts[route.ts]
+apps_sim_app_api_copilot_auto-allowed-tools_route_ts[route.ts]
+apps_sim_app_api_copilot_chat_route_ts[route.ts]
+apps_sim_app_api_copilot_chat_delete_route_ts[route.ts]
+apps_sim_app_api_copilot_chat_update-messages_route_test_ts[route.test.ts]
+apps_sim_app_api_copilot_chat_update-messages_route_ts[route.ts]
+apps_sim_app_api_copilot_chat_update-title_route_ts[route.ts]
+apps_sim_app_api_copilot_chats_route_ts[route.ts]
+apps_sim_app_api_copilot_checkpoints_route_test_ts[route.test.ts]
+apps_sim_app_api_copilot_checkpoints_route_ts[route.ts]
+apps_sim_app_api_copilot_checkpoints_revert_route_test_ts[route.test.ts]
+apps_sim_app_api_copilot_checkpoints_revert_route_ts[route.ts]
+apps_sim_app_api_copilot_confirm_route_test_ts[route.test.ts]
+apps_sim_app_api_copilot_confirm_route_ts[route.ts]
+apps_sim_app_api_copilot_context-usage_route_ts[route.ts]
+apps_sim_app_api_copilot_execute-copilot-server-tool_route_ts[route.ts]
+apps_sim_app_api_copilot_execute-tool_route_ts[route.ts]
+apps_sim_app_api_copilot_feedback_route_ts[route.ts]
+apps_sim_app_api_copilot_stats_route_ts[route.ts]
+apps_sim_app_api_copilot_tools_mark-complete_route_ts[route.ts]
+apps_sim_app_api_copilot_training_route_ts[route.ts]
+apps_sim_app_api_copilot_user-models_route_ts[route.ts]
+apps_sim_app_api_creators_route_ts[route.ts]
+apps_sim_app_api_creators_[id]_route_ts[route.ts]
+apps_sim_app_api_creators_[id]_verify_route_ts[route.ts]
+apps_sim_app_api_cron_renew-subscriptions_route_ts[route.ts]
+apps_sim_app_api_environment_route_ts[route.ts]
+apps_sim_app_api_files_authorization_ts[authorization.ts]
+apps_sim_app_api_files_delete_route_ts[route.ts]
+apps_sim_app_api_files_download_route_ts[route.ts]
+apps_sim_app_api_files_multipart_route_ts[route.ts]
+apps_sim_app_api_files_parse_route_test_ts[route.test.ts]
+apps_sim_app_api_files_parse_route_ts[route.ts]
+apps_sim_app_api_files_presigned_route_test_ts[route.test.ts]
+apps_sim_app_api_files_presigned_route_ts[route.ts]
+apps_sim_app_api_files_presigned_batch_route_ts[route.ts]
+apps_sim_app_api_files_serve_[___path]_route_test_ts[route.test.ts]
+apps_sim_app_api_files_serve_[___path]_route_ts[route.ts]
+apps_sim_app_api_files_upload_route_test_ts[route.test.ts]
+apps_sim_app_api_files_upload_route_ts[route.ts]
+apps_sim_app_api_folders_route_test_ts[route.test.ts]
+apps_sim_app_api_folders_route_ts[route.ts]
+apps_sim_app_api_folders_[id]_route_test_ts[route.test.ts]
+apps_sim_app_api_folders_[id]_route_ts[route.ts]
+apps_sim_app_api_folders_[id]_duplicate_route_ts[route.ts]
+apps_sim_app_api_function_execute_route_ts[route.ts]
+apps_sim_app_api_guardrails_validate_route_ts[route.ts]
+apps_sim_app_api_help_route_ts[route.ts]
+apps_sim_app_api_jobs_[jobId]_route_ts[route.ts]
+middleware_grp[MIDDLEWARE Layer Chunk 2]
+middleware_grp --> apps_sim_app_api_copilot_api-keys_generate_route_ts
+middleware_grp --> apps_sim_app_api_copilot_api-keys_validate_route_ts
+middleware_grp --> apps_sim_app_api_copilot_auto-allowed-tools_route_ts
+middleware_grp --> apps_sim_app_api_copilot_chat_route_ts
+middleware_grp --> apps_sim_app_api_copilot_chat_delete_route_ts
+middleware_grp --> apps_sim_app_api_copilot_chat_update-messages_route_test_ts
+middleware_grp --> apps_sim_app_api_copilot_chat_update-messages_route_ts
+middleware_grp --> apps_sim_app_api_copilot_chat_update-title_route_ts
+middleware_grp --> apps_sim_app_api_copilot_chats_route_ts
+middleware_grp --> apps_sim_app_api_copilot_checkpoints_route_test_ts
+middleware_grp --> apps_sim_app_api_copilot_checkpoints_route_ts
+middleware_grp --> apps_sim_app_api_copilot_checkpoints_revert_route_test_ts
+middleware_grp --> apps_sim_app_api_copilot_checkpoints_revert_route_ts
+middleware_grp --> apps_sim_app_api_copilot_confirm_route_test_ts
+middleware_grp --> apps_sim_app_api_copilot_confirm_route_ts
+middleware_grp --> apps_sim_app_api_copilot_context-usage_route_ts
+middleware_grp --> apps_sim_app_api_copilot_execute-copilot-server-tool_route_ts
+middleware_grp --> apps_sim_app_api_copilot_execute-tool_route_ts
+middleware_grp --> apps_sim_app_api_copilot_feedback_route_ts
+middleware_grp --> apps_sim_app_api_copilot_stats_route_ts
+middleware_grp --> apps_sim_app_api_copilot_tools_mark-complete_route_ts
+middleware_grp --> apps_sim_app_api_copilot_training_route_ts
+middleware_grp --> apps_sim_app_api_copilot_user-models_route_ts
+middleware_grp --> apps_sim_app_api_creators_route_ts
+middleware_grp --> apps_sim_app_api_creators_[id]_route_ts
+middleware_grp --> apps_sim_app_api_creators_[id]_verify_route_ts
+middleware_grp --> apps_sim_app_api_cron_renew-subscriptions_route_ts
+middleware_grp --> apps_sim_app_api_environment_route_ts
+middleware_grp --> apps_sim_app_api_files_authorization_ts
+middleware_grp --> apps_sim_app_api_files_delete_route_ts
+middleware_grp --> apps_sim_app_api_files_download_route_ts
+middleware_grp --> apps_sim_app_api_files_multipart_route_ts
+middleware_grp --> apps_sim_app_api_files_parse_route_test_ts
+middleware_grp --> apps_sim_app_api_files_parse_route_ts
+middleware_grp --> apps_sim_app_api_files_presigned_route_test_ts
+middleware_grp --> apps_sim_app_api_files_presigned_route_ts
+middleware_grp --> apps_sim_app_api_files_presigned_batch_route_ts
+middleware_grp --> apps_sim_app_api_files_serve_[___path]_route_test_ts
+middleware_grp --> apps_sim_app_api_files_serve_[___path]_route_ts
+middleware_grp --> apps_sim_app_api_files_upload_route_test_ts
+middleware_grp --> apps_sim_app_api_files_upload_route_ts
+middleware_grp --> apps_sim_app_api_folders_route_test_ts
+middleware_grp --> apps_sim_app_api_folders_route_ts
+middleware_grp --> apps_sim_app_api_folders_[id]_route_test_ts
+middleware_grp --> apps_sim_app_api_folders_[id]_route_ts
+middleware_grp --> apps_sim_app_api_folders_[id]_duplicate_route_ts
+middleware_grp --> apps_sim_app_api_function_execute_route_ts
+middleware_grp --> apps_sim_app_api_guardrails_validate_route_ts
+middleware_grp --> apps_sim_app_api_help_route_ts
+middleware_grp --> apps_sim_app_api_jobs_[jobId]_route_ts
+apps_sim_app_api_knowledge_route_test_ts[route.test.ts]
+apps_sim_app_api_knowledge_route_ts[route.ts]
+apps_sim_app_api_knowledge_utils_test_ts[utils.test.ts]
+apps_sim_app_api_knowledge_utils_ts[utils.ts]
+apps_sim_app_api_knowledge_search_route_test_ts[route.test.ts]
+apps_sim_app_api_knowledge_search_route_ts[route.ts]
+apps_sim_app_api_knowledge_search_utils_test_ts[utils.test.ts]
+apps_sim_app_api_knowledge_[id]_route_test_ts[route.test.ts]
+apps_sim_app_api_knowledge_[id]_route_ts[route.ts]
+apps_sim_app_api_knowledge_[id]_documents_route_test_ts[route.test.ts]
+apps_sim_app_api_knowledge_[id]_documents_route_ts[route.ts]
+apps_sim_app_api_knowledge_[id]_documents_[documentId]_route_test_ts[route.test.ts]
+apps_sim_app_api_knowledge_[id]_documents_[documentId]_route_ts[route.ts]
+apps_sim_app_api_knowledge_[id]_documents_[documentId]_chunks_route_ts[route.ts]
+apps_sim_app_api_knowledge_[id]_documents_[documentId]_chunks_[chunkId]_route_ts[route.ts]
+apps_sim_app_api_knowledge_[id]_documents_[documentId]_tag-definitions_route_ts[route.ts]
+apps_sim_app_api_knowledge_[id]_next-available-slot_route_ts[route.ts]
+apps_sim_app_api_knowledge_[id]_tag-definitions_route_ts[route.ts]
+apps_sim_app_api_knowledge_[id]_tag-definitions_[tagId]_route_ts[route.ts]
+apps_sim_app_api_knowledge_[id]_tag-usage_route_ts[route.ts]
+apps_sim_app_api_logs_route_ts[route.ts]
+apps_sim_app_api_logs_cleanup_route_ts[route.ts]
+apps_sim_app_api_logs_execution_[executionId]_route_ts[route.ts]
+apps_sim_app_api_logs_export_route_ts[route.ts]
+apps_sim_app_api_logs_triggers_route_ts[route.ts]
+apps_sim_app_api_logs_[id]_route_ts[route.ts]
+apps_sim_app_api_mcp_servers_route_ts[route.ts]
+apps_sim_app_api_mcp_servers_test-connection_route_ts[route.ts]
+apps_sim_app_api_mcp_servers_[id]_route_ts[route.ts]
+apps_sim_app_api_mcp_servers_[id]_refresh_route_ts[route.ts]
+apps_sim_app_api_mcp_tools_discover_route_ts[route.ts]
+apps_sim_app_api_mcp_tools_execute_route_ts[route.ts]
+apps_sim_app_api_mcp_tools_stored_route_ts[route.ts]
+apps_sim_app_api_memory_route_ts[route.ts]
+apps_sim_app_api_memory_[id]_route_ts[route.ts]
+apps_sim_app_api_notifications_poll_route_ts[route.ts]
+apps_sim_app_api_organizations_route_ts[route.ts]
+apps_sim_app_api_organizations_[id]_route_ts[route.ts]
+apps_sim_app_api_organizations_[id]_invitations_route_ts[route.ts]
+apps_sim_app_api_organizations_[id]_invitations_[invitationId]_route_ts[route.ts]
+apps_sim_app_api_organizations_[id]_members_route_ts[route.ts]
+apps_sim_app_api_organizations_[id]_members_[memberId]_route_ts[route.ts]
+apps_sim_app_api_organizations_[id]_seats_route_ts[route.ts]
+apps_sim_app_api_organizations_[id]_workspaces_route_ts[route.ts]
+apps_sim_app_api_providers_route_ts[route.ts]
+apps_sim_app_api_providers_vllm_models_route_ts[route.ts]
+apps_sim_app_api_proxy_route_ts[route.ts]
+apps_sim_app_api_proxy_image_route_ts[route.ts]
+apps_sim_app_api_proxy_stt_route_ts[route.ts]
+apps_sim_app_api_proxy_tts_route_ts[route.ts]
+middleware_grp[MIDDLEWARE Layer Chunk 3]
+middleware_grp --> apps_sim_app_api_knowledge_route_test_ts
+middleware_grp --> apps_sim_app_api_knowledge_route_ts
+middleware_grp --> apps_sim_app_api_knowledge_utils_test_ts
+middleware_grp --> apps_sim_app_api_knowledge_utils_ts
+middleware_grp --> apps_sim_app_api_knowledge_search_route_test_ts
+middleware_grp --> apps_sim_app_api_knowledge_search_route_ts
+middleware_grp --> apps_sim_app_api_knowledge_search_utils_test_ts
+middleware_grp --> apps_sim_app_api_knowledge_[id]_route_test_ts
+middleware_grp --> apps_sim_app_api_knowledge_[id]_route_ts
+middleware_grp --> apps_sim_app_api_knowledge_[id]_documents_route_test_ts
+middleware_grp --> apps_sim_app_api_knowledge_[id]_documents_route_ts
+middleware_grp --> apps_sim_app_api_knowledge_[id]_documents_[documentId]_route_test_ts
+middleware_grp --> apps_sim_app_api_knowledge_[id]_documents_[documentId]_route_ts
+middleware_grp --> apps_sim_app_api_knowledge_[id]_documents_[documentId]_chunks_route_ts
+middleware_grp --> apps_sim_app_api_knowledge_[id]_documents_[documentId]_chunks_[chunkId]_route_ts
+middleware_grp --> apps_sim_app_api_knowledge_[id]_documents_[documentId]_tag-definitions_route_ts
+middleware_grp --> apps_sim_app_api_knowledge_[id]_next-available-slot_route_ts
+middleware_grp --> apps_sim_app_api_knowledge_[id]_tag-definitions_route_ts
+middleware_grp --> apps_sim_app_api_knowledge_[id]_tag-definitions_[tagId]_route_ts
+middleware_grp --> apps_sim_app_api_knowledge_[id]_tag-usage_route_ts
+middleware_grp --> apps_sim_app_api_logs_route_ts
+middleware_grp --> apps_sim_app_api_logs_cleanup_route_ts
+middleware_grp --> apps_sim_app_api_logs_execution_[executionId]_route_ts
+middleware_grp --> apps_sim_app_api_logs_export_route_ts
+middleware_grp --> apps_sim_app_api_logs_triggers_route_ts
+middleware_grp --> apps_sim_app_api_logs_[id]_route_ts
+middleware_grp --> apps_sim_app_api_mcp_servers_route_ts
+middleware_grp --> apps_sim_app_api_mcp_servers_test-connection_route_ts
+middleware_grp --> apps_sim_app_api_mcp_servers_[id]_route_ts
+middleware_grp --> apps_sim_app_api_mcp_servers_[id]_refresh_route_ts
+middleware_grp --> apps_sim_app_api_mcp_tools_discover_route_ts
+middleware_grp --> apps_sim_app_api_mcp_tools_execute_route_ts
+middleware_grp --> apps_sim_app_api_mcp_tools_stored_route_ts
+middleware_grp --> apps_sim_app_api_memory_route_ts
+middleware_grp --> apps_sim_app_api_memory_[id]_route_ts
+middleware_grp --> apps_sim_app_api_notifications_poll_route_ts
+middleware_grp --> apps_sim_app_api_organizations_route_ts
+middleware_grp --> apps_sim_app_api_organizations_[id]_route_ts
+middleware_grp --> apps_sim_app_api_organizations_[id]_invitations_route_ts
+middleware_grp --> apps_sim_app_api_organizations_[id]_invitations_[invitationId]_route_ts
+middleware_grp --> apps_sim_app_api_organizations_[id]_members_route_ts
+middleware_grp --> apps_sim_app_api_organizations_[id]_members_[memberId]_route_ts
+middleware_grp --> apps_sim_app_api_organizations_[id]_seats_route_ts
+middleware_grp --> apps_sim_app_api_organizations_[id]_workspaces_route_ts
+middleware_grp --> apps_sim_app_api_providers_route_ts
+middleware_grp --> apps_sim_app_api_providers_vllm_models_route_ts
+middleware_grp --> apps_sim_app_api_proxy_route_ts
+middleware_grp --> apps_sim_app_api_proxy_image_route_ts
+middleware_grp --> apps_sim_app_api_proxy_stt_route_ts
+middleware_grp --> apps_sim_app_api_proxy_tts_route_ts
+apps_sim_app_api_proxy_tts_stream_route_ts[route.ts]
+apps_sim_app_api_proxy_tts_unified_route_ts[route.ts]
+apps_sim_app_api_proxy_video_route_ts[route.ts]
+apps_sim_app_api_resume_[workflowId]_[executionId]_[contextId]_route_ts[route.ts]
+apps_sim_app_api_schedules_route_test_ts[route.test.ts]
+apps_sim_app_api_schedules_route_ts[route.ts]
+apps_sim_app_api_schedules_execute_route_test_ts[route.test.ts]
+apps_sim_app_api_schedules_execute_route_ts[route.ts]
+apps_sim_app_api_schedules_[id]_route_ts[route.ts]
+apps_sim_app_api_schedules_[id]_status_route_test_ts[route.test.ts]
+apps_sim_app_api_schedules_[id]_status_route_ts[route.ts]
+apps_sim_app_api_stars_route_ts[route.ts]
+apps_sim_app_api_telemetry_route_ts[route.ts]
+apps_sim_app_api_templates_route_ts[route.ts]
+apps_sim_app_api_templates_approved_sanitized_route_ts[route.ts]
+apps_sim_app_api_templates_[id]_route_ts[route.ts]
+apps_sim_app_api_templates_[id]_approve_route_ts[route.ts]
+apps_sim_app_api_templates_[id]_og-image_route_ts[route.ts]
+apps_sim_app_api_templates_[id]_reject_route_ts[route.ts]
+apps_sim_app_api_templates_[id]_star_route_ts[route.ts]
+apps_sim_app_api_templates_[id]_use_route_ts[route.ts]
+apps_sim_app_api_tools_asana_add-comment_route_ts[route.ts]
+apps_sim_app_api_tools_asana_create-task_route_ts[route.ts]
+apps_sim_app_api_tools_asana_get-projects_route_ts[route.ts]
+apps_sim_app_api_tools_asana_get-task_route_ts[route.ts]
+apps_sim_app_api_tools_asana_search-tasks_route_ts[route.ts]
+apps_sim_app_api_tools_asana_update-task_route_ts[route.ts]
+apps_sim_app_api_tools_confluence_attachment_route_ts[route.ts]
+apps_sim_app_api_tools_confluence_attachments_route_ts[route.ts]
+apps_sim_app_api_tools_confluence_comment_route_ts[route.ts]
+apps_sim_app_api_tools_confluence_comments_route_ts[route.ts]
+apps_sim_app_api_tools_confluence_create-page_route_ts[route.ts]
+apps_sim_app_api_tools_confluence_labels_route_ts[route.ts]
+apps_sim_app_api_tools_confluence_page_route_ts[route.ts]
+apps_sim_app_api_tools_confluence_pages_route_ts[route.ts]
+apps_sim_app_api_tools_confluence_search_route_ts[route.ts]
+apps_sim_app_api_tools_confluence_space_route_ts[route.ts]
+apps_sim_app_api_tools_confluence_spaces_route_ts[route.ts]
+apps_sim_app_api_tools_confluence_upload-attachment_route_ts[route.ts]
+apps_sim_app_api_tools_custom_route_test_ts[route.test.ts]
+apps_sim_app_api_tools_custom_route_ts[route.ts]
+apps_sim_app_api_tools_discord_channels_route_ts[route.ts]
+apps_sim_app_api_tools_discord_send-message_route_ts[route.ts]
+apps_sim_app_api_tools_discord_servers_route_ts[route.ts]
+apps_sim_app_api_tools_drive_file_route_ts[route.ts]
+apps_sim_app_api_tools_drive_files_route_ts[route.ts]
+apps_sim_app_api_tools_gmail_add-label_route_ts[route.ts]
+apps_sim_app_api_tools_gmail_archive_route_ts[route.ts]
+apps_sim_app_api_tools_gmail_delete_route_ts[route.ts]
+apps_sim_app_api_tools_gmail_draft_route_ts[route.ts]
+middleware_grp[MIDDLEWARE Layer Chunk 4]
+middleware_grp --> apps_sim_app_api_proxy_tts_stream_route_ts
+middleware_grp --> apps_sim_app_api_proxy_tts_unified_route_ts
+middleware_grp --> apps_sim_app_api_proxy_video_route_ts
+middleware_grp --> apps_sim_app_api_resume_[workflowId]_[executionId]_[contextId]_route_ts
+middleware_grp --> apps_sim_app_api_schedules_route_test_ts
+middleware_grp --> apps_sim_app_api_schedules_route_ts
+middleware_grp --> apps_sim_app_api_schedules_execute_route_test_ts
+middleware_grp --> apps_sim_app_api_schedules_execute_route_ts
+middleware_grp --> apps_sim_app_api_schedules_[id]_route_ts
+middleware_grp --> apps_sim_app_api_schedules_[id]_status_route_test_ts
+middleware_grp --> apps_sim_app_api_schedules_[id]_status_route_ts
+middleware_grp --> apps_sim_app_api_stars_route_ts
+middleware_grp --> apps_sim_app_api_telemetry_route_ts
+middleware_grp --> apps_sim_app_api_templates_route_ts
+middleware_grp --> apps_sim_app_api_templates_approved_sanitized_route_ts
+middleware_grp --> apps_sim_app_api_templates_[id]_route_ts
+middleware_grp --> apps_sim_app_api_templates_[id]_approve_route_ts
+middleware_grp --> apps_sim_app_api_templates_[id]_og-image_route_ts
+middleware_grp --> apps_sim_app_api_templates_[id]_reject_route_ts
+middleware_grp --> apps_sim_app_api_templates_[id]_star_route_ts
+middleware_grp --> apps_sim_app_api_templates_[id]_use_route_ts
+middleware_grp --> apps_sim_app_api_tools_asana_add-comment_route_ts
+middleware_grp --> apps_sim_app_api_tools_asana_create-task_route_ts
+middleware_grp --> apps_sim_app_api_tools_asana_get-projects_route_ts
+middleware_grp --> apps_sim_app_api_tools_asana_get-task_route_ts
+middleware_grp --> apps_sim_app_api_tools_asana_search-tasks_route_ts
+middleware_grp --> apps_sim_app_api_tools_asana_update-task_route_ts
+middleware_grp --> apps_sim_app_api_tools_confluence_attachment_route_ts
+middleware_grp --> apps_sim_app_api_tools_confluence_attachments_route_ts
+middleware_grp --> apps_sim_app_api_tools_confluence_comment_route_ts
+middleware_grp --> apps_sim_app_api_tools_confluence_comments_route_ts
+middleware_grp --> apps_sim_app_api_tools_confluence_create-page_route_ts
+middleware_grp --> apps_sim_app_api_tools_confluence_labels_route_ts
+middleware_grp --> apps_sim_app_api_tools_confluence_page_route_ts
+middleware_grp --> apps_sim_app_api_tools_confluence_pages_route_ts
+middleware_grp --> apps_sim_app_api_tools_confluence_search_route_ts
+middleware_grp --> apps_sim_app_api_tools_confluence_space_route_ts
+middleware_grp --> apps_sim_app_api_tools_confluence_spaces_route_ts
+middleware_grp --> apps_sim_app_api_tools_confluence_upload-attachment_route_ts
+middleware_grp --> apps_sim_app_api_tools_custom_route_test_ts
+middleware_grp --> apps_sim_app_api_tools_custom_route_ts
+middleware_grp --> apps_sim_app_api_tools_discord_channels_route_ts
+middleware_grp --> apps_sim_app_api_tools_discord_send-message_route_ts
+middleware_grp --> apps_sim_app_api_tools_discord_servers_route_ts
+middleware_grp --> apps_sim_app_api_tools_drive_file_route_ts
+middleware_grp --> apps_sim_app_api_tools_drive_files_route_ts
+middleware_grp --> apps_sim_app_api_tools_gmail_add-label_route_ts
+middleware_grp --> apps_sim_app_api_tools_gmail_archive_route_ts
+middleware_grp --> apps_sim_app_api_tools_gmail_delete_route_ts
+middleware_grp --> apps_sim_app_api_tools_gmail_draft_route_ts
+apps_sim_app_api_tools_gmail_label_route_ts[route.ts]
+apps_sim_app_api_tools_gmail_labels_route_ts[route.ts]
+apps_sim_app_api_tools_gmail_mark-read_route_ts[route.ts]
+apps_sim_app_api_tools_gmail_mark-unread_route_ts[route.ts]
+apps_sim_app_api_tools_gmail_move_route_ts[route.ts]
+apps_sim_app_api_tools_gmail_remove-label_route_ts[route.ts]
+apps_sim_app_api_tools_gmail_send_route_ts[route.ts]
+apps_sim_app_api_tools_gmail_unarchive_route_ts[route.ts]
+apps_sim_app_api_tools_google_calendar_calendars_route_ts[route.ts]
+apps_sim_app_api_tools_google_drive_upload_route_ts[route.ts]
+apps_sim_app_api_tools_jira_issue_route_ts[route.ts]
+apps_sim_app_api_tools_jira_issues_route_ts[route.ts]
+apps_sim_app_api_tools_jira_projects_route_ts[route.ts]
+apps_sim_app_api_tools_jira_update_route_ts[route.ts]
+apps_sim_app_api_tools_jira_write_route_ts[route.ts]
+apps_sim_app_api_tools_linear_projects_route_ts[route.ts]
+apps_sim_app_api_tools_linear_teams_route_ts[route.ts]
+apps_sim_app_api_tools_mail_send_route_ts[route.ts]
+apps_sim_app_api_tools_microsoft-teams_channels_route_ts[route.ts]
+apps_sim_app_api_tools_microsoft-teams_chats_route_ts[route.ts]
+apps_sim_app_api_tools_microsoft-teams_teams_route_ts[route.ts]
+apps_sim_app_api_tools_microsoft_planner_tasks_route_ts[route.ts]
+apps_sim_app_api_tools_microsoft_teams_delete_chat_message_route_ts[route.ts]
+apps_sim_app_api_tools_microsoft_teams_write_channel_route_ts[route.ts]
+apps_sim_app_api_tools_microsoft_teams_write_chat_route_ts[route.ts]
+apps_sim_app_api_tools_mistral_parse_route_ts[route.ts]
+apps_sim_app_api_tools_mongodb_utils_ts[utils.ts]
+apps_sim_app_api_tools_mongodb_delete_route_ts[route.ts]
+apps_sim_app_api_tools_mongodb_execute_route_ts[route.ts]
+apps_sim_app_api_tools_mongodb_insert_route_ts[route.ts]
+apps_sim_app_api_tools_mongodb_query_route_ts[route.ts]
+apps_sim_app_api_tools_mongodb_update_route_ts[route.ts]
+apps_sim_app_api_tools_mysql_utils_ts[utils.ts]
+apps_sim_app_api_tools_neo4j_utils_ts[utils.ts]
+apps_sim_app_api_tools_neo4j_create_route_ts[route.ts]
+apps_sim_app_api_tools_neo4j_delete_route_ts[route.ts]
+apps_sim_app_api_tools_neo4j_execute_route_ts[route.ts]
+apps_sim_app_api_tools_neo4j_merge_route_ts[route.ts]
+apps_sim_app_api_tools_neo4j_query_route_ts[route.ts]
+apps_sim_app_api_tools_neo4j_update_route_ts[route.ts]
+apps_sim_app_api_tools_onedrive_files_route_ts[route.ts]
+apps_sim_app_api_tools_onedrive_folder_route_ts[route.ts]
+apps_sim_app_api_tools_onedrive_folders_route_ts[route.ts]
+apps_sim_app_api_tools_onedrive_upload_route_ts[route.ts]
+apps_sim_app_api_tools_outlook_copy_route_ts[route.ts]
+apps_sim_app_api_tools_outlook_delete_route_ts[route.ts]
+apps_sim_app_api_tools_outlook_draft_route_ts[route.ts]
+apps_sim_app_api_tools_outlook_folders_route_ts[route.ts]
+apps_sim_app_api_tools_outlook_mark-read_route_ts[route.ts]
+apps_sim_app_api_tools_outlook_mark-unread_route_ts[route.ts]
+middleware_grp[MIDDLEWARE Layer Chunk 5]
+middleware_grp --> apps_sim_app_api_tools_gmail_label_route_ts
+middleware_grp --> apps_sim_app_api_tools_gmail_labels_route_ts
+middleware_grp --> apps_sim_app_api_tools_gmail_mark-read_route_ts
+middleware_grp --> apps_sim_app_api_tools_gmail_mark-unread_route_ts
+middleware_grp --> apps_sim_app_api_tools_gmail_move_route_ts
+middleware_grp --> apps_sim_app_api_tools_gmail_remove-label_route_ts
+middleware_grp --> apps_sim_app_api_tools_gmail_send_route_ts
+middleware_grp --> apps_sim_app_api_tools_gmail_unarchive_route_ts
+middleware_grp --> apps_sim_app_api_tools_google_calendar_calendars_route_ts
+middleware_grp --> apps_sim_app_api_tools_google_drive_upload_route_ts
+middleware_grp --> apps_sim_app_api_tools_jira_issue_route_ts
+middleware_grp --> apps_sim_app_api_tools_jira_issues_route_ts
+middleware_grp --> apps_sim_app_api_tools_jira_projects_route_ts
+middleware_grp --> apps_sim_app_api_tools_jira_update_route_ts
+middleware_grp --> apps_sim_app_api_tools_jira_write_route_ts
+middleware_grp --> apps_sim_app_api_tools_linear_projects_route_ts
+middleware_grp --> apps_sim_app_api_tools_linear_teams_route_ts
+middleware_grp --> apps_sim_app_api_tools_mail_send_route_ts
+middleware_grp --> apps_sim_app_api_tools_microsoft-teams_channels_route_ts
+middleware_grp --> apps_sim_app_api_tools_microsoft-teams_chats_route_ts
+middleware_grp --> apps_sim_app_api_tools_microsoft-teams_teams_route_ts
+middleware_grp --> apps_sim_app_api_tools_microsoft_planner_tasks_route_ts
+middleware_grp --> apps_sim_app_api_tools_microsoft_teams_delete_chat_message_route_ts
+middleware_grp --> apps_sim_app_api_tools_microsoft_teams_write_channel_route_ts
+middleware_grp --> apps_sim_app_api_tools_microsoft_teams_write_chat_route_ts
+middleware_grp --> apps_sim_app_api_tools_mistral_parse_route_ts
+middleware_grp --> apps_sim_app_api_tools_mongodb_utils_ts
+middleware_grp --> apps_sim_app_api_tools_mongodb_delete_route_ts
+middleware_grp --> apps_sim_app_api_tools_mongodb_execute_route_ts
+middleware_grp --> apps_sim_app_api_tools_mongodb_insert_route_ts
+middleware_grp --> apps_sim_app_api_tools_mongodb_query_route_ts
+middleware_grp --> apps_sim_app_api_tools_mongodb_update_route_ts
+middleware_grp --> apps_sim_app_api_tools_mysql_utils_ts
+middleware_grp --> apps_sim_app_api_tools_neo4j_utils_ts
+middleware_grp --> apps_sim_app_api_tools_neo4j_create_route_ts
+middleware_grp --> apps_sim_app_api_tools_neo4j_delete_route_ts
+middleware_grp --> apps_sim_app_api_tools_neo4j_execute_route_ts
+middleware_grp --> apps_sim_app_api_tools_neo4j_merge_route_ts
+middleware_grp --> apps_sim_app_api_tools_neo4j_query_route_ts
+middleware_grp --> apps_sim_app_api_tools_neo4j_update_route_ts
+middleware_grp --> apps_sim_app_api_tools_onedrive_files_route_ts
+middleware_grp --> apps_sim_app_api_tools_onedrive_folder_route_ts
+middleware_grp --> apps_sim_app_api_tools_onedrive_folders_route_ts
+middleware_grp --> apps_sim_app_api_tools_onedrive_upload_route_ts
+middleware_grp --> apps_sim_app_api_tools_outlook_copy_route_ts
+middleware_grp --> apps_sim_app_api_tools_outlook_delete_route_ts
+middleware_grp --> apps_sim_app_api_tools_outlook_draft_route_ts
+middleware_grp --> apps_sim_app_api_tools_outlook_folders_route_ts
+middleware_grp --> apps_sim_app_api_tools_outlook_mark-read_route_ts
+middleware_grp --> apps_sim_app_api_tools_outlook_mark-unread_route_ts

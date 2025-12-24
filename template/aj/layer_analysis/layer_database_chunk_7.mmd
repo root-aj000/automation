@@ -1,0 +1,708 @@
+graph TD
+apps_sim_drizzle_config_ts[drizzle.config.ts]
+apps_sim_app_sitemap_ts[sitemap.ts]
+apps_sim_app_api_chat_validate_route_ts[route.ts]
+apps_sim_app_api_knowledge_search_utils_ts[utils.ts]
+apps_sim_app_api_status_route_ts[route.ts]
+apps_sim_app_api_status_types_ts[types.ts]
+apps_sim_app_api_tools_dynamodb_utils_ts[utils.ts]
+apps_sim_app_api_tools_dynamodb_delete_route_ts[route.ts]
+apps_sim_app_api_tools_dynamodb_get_route_ts[route.ts]
+apps_sim_app_api_tools_dynamodb_put_route_ts[route.ts]
+apps_sim_app_api_tools_dynamodb_query_route_ts[route.ts]
+apps_sim_app_api_tools_dynamodb_scan_route_ts[route.ts]
+apps_sim_app_api_tools_dynamodb_update_route_ts[route.ts]
+apps_sim_app_api_tools_mysql_delete_route_ts[route.ts]
+apps_sim_app_api_tools_mysql_execute_route_ts[route.ts]
+apps_sim_app_api_tools_mysql_insert_route_ts[route.ts]
+apps_sim_app_api_tools_mysql_query_route_ts[route.ts]
+apps_sim_app_api_tools_mysql_update_route_ts[route.ts]
+apps_sim_app_api_tools_postgresql_utils_ts[utils.ts]
+apps_sim_app_api_tools_postgresql_execute_route_ts[route.ts]
+apps_sim_app_api_tools_postgresql_insert_route_ts[route.ts]
+apps_sim_app_api_tools_postgresql_query_route_ts[route.ts]
+apps_sim_app_api_tools_postgresql_update_route_ts[route.ts]
+apps_sim_app_api_tools_rds_utils_ts[utils.ts]
+apps_sim_app_api_tools_rds_execute_route_ts[route.ts]
+apps_sim_app_api_tools_rds_insert_route_ts[route.ts]
+apps_sim_app_api_tools_rds_query_route_ts[route.ts]
+apps_sim_app_api_tools_rds_update_route_ts[route.ts]
+apps_sim_app_api_tools_stagehand_utils_ts[utils.ts]
+apps_sim_app_api_v1_logs_filters_ts[filters.ts]
+apps_sim_app_api_v1_logs_route_ts[route.ts]
+apps_sim_app_api_v1_logs_executions_[executionId]_route_ts[route.ts]
+apps_sim_app_api_v1_logs_[id]_route_ts[route.ts]
+apps_sim_app_api_workflows_[id]_chat_status_route_ts[route.ts]
+apps_sim_app_api_workflows_[id]_deployments_route_ts[route.ts]
+apps_sim_app_api_workflows_[id]_deployments_[version]_route_ts[route.ts]
+apps_sim_app_api_workflows_[id]_deployments_[version]_activate_route_ts[route.ts]
+apps_sim_app_api_workflows_[id]_deployments_[version]_revert_route_ts[route.ts]
+apps_sim_app_api_workflows_[id]_paused_route_ts[route.ts]
+apps_sim_app_api_workflows_[id]_status_route_ts[route.ts]
+apps_sim_app_changelog_xml_route_ts[route.ts]
+apps_sim_app_chat_hooks_use-chat-streaming_ts[use-chat-streaming.ts]
+apps_sim_app_workspace_[workspaceId]_knowledge_components_constants_ts[constants.ts]
+apps_sim_app_workspace_[workspaceId]_knowledge_utils_sort_ts[sort.ts]
+apps_sim_app_workspace_[workspaceId]_logs_hooks_use-search-state_ts[use-search-state.ts]
+apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_search-modal_search-utils_ts[search-utils.ts]
+apps_sim_app_workspace_[workspaceId]_w_components_sidebar_hooks_use-auto-scroll_ts[use-auto-scroll.ts]
+apps_sim_app_workspace_[workspaceId]_w_components_sidebar_hooks_use-drag-drop_ts[use-drag-drop.ts]
+apps_sim_app_workspace_[workspaceId]_w_components_sidebar_hooks_use-folder-operations_ts[use-folder-operations.ts]
+apps_sim_app_workspace_[workspaceId]_w_components_sidebar_hooks_use-item-rename_ts[use-item-rename.ts]
+database_grp[DATABASE Layer Chunk 1]
+database_grp --> apps_sim_drizzle_config_ts
+database_grp --> apps_sim_app_sitemap_ts
+database_grp --> apps_sim_app_api_chat_validate_route_ts
+database_grp --> apps_sim_app_api_knowledge_search_utils_ts
+database_grp --> apps_sim_app_api_status_route_ts
+database_grp --> apps_sim_app_api_status_types_ts
+database_grp --> apps_sim_app_api_tools_dynamodb_utils_ts
+database_grp --> apps_sim_app_api_tools_dynamodb_delete_route_ts
+database_grp --> apps_sim_app_api_tools_dynamodb_get_route_ts
+database_grp --> apps_sim_app_api_tools_dynamodb_put_route_ts
+database_grp --> apps_sim_app_api_tools_dynamodb_query_route_ts
+database_grp --> apps_sim_app_api_tools_dynamodb_scan_route_ts
+database_grp --> apps_sim_app_api_tools_dynamodb_update_route_ts
+database_grp --> apps_sim_app_api_tools_mysql_delete_route_ts
+database_grp --> apps_sim_app_api_tools_mysql_execute_route_ts
+database_grp --> apps_sim_app_api_tools_mysql_insert_route_ts
+database_grp --> apps_sim_app_api_tools_mysql_query_route_ts
+database_grp --> apps_sim_app_api_tools_mysql_update_route_ts
+database_grp --> apps_sim_app_api_tools_postgresql_utils_ts
+database_grp --> apps_sim_app_api_tools_postgresql_execute_route_ts
+database_grp --> apps_sim_app_api_tools_postgresql_insert_route_ts
+database_grp --> apps_sim_app_api_tools_postgresql_query_route_ts
+database_grp --> apps_sim_app_api_tools_postgresql_update_route_ts
+database_grp --> apps_sim_app_api_tools_rds_utils_ts
+database_grp --> apps_sim_app_api_tools_rds_execute_route_ts
+database_grp --> apps_sim_app_api_tools_rds_insert_route_ts
+database_grp --> apps_sim_app_api_tools_rds_query_route_ts
+database_grp --> apps_sim_app_api_tools_rds_update_route_ts
+database_grp --> apps_sim_app_api_tools_stagehand_utils_ts
+database_grp --> apps_sim_app_api_v1_logs_filters_ts
+database_grp --> apps_sim_app_api_v1_logs_route_ts
+database_grp --> apps_sim_app_api_v1_logs_executions_[executionId]_route_ts
+database_grp --> apps_sim_app_api_v1_logs_[id]_route_ts
+database_grp --> apps_sim_app_api_workflows_[id]_chat_status_route_ts
+database_grp --> apps_sim_app_api_workflows_[id]_deployments_route_ts
+database_grp --> apps_sim_app_api_workflows_[id]_deployments_[version]_route_ts
+database_grp --> apps_sim_app_api_workflows_[id]_deployments_[version]_activate_route_ts
+database_grp --> apps_sim_app_api_workflows_[id]_deployments_[version]_revert_route_ts
+database_grp --> apps_sim_app_api_workflows_[id]_paused_route_ts
+database_grp --> apps_sim_app_api_workflows_[id]_status_route_ts
+database_grp --> apps_sim_app_changelog_xml_route_ts
+database_grp --> apps_sim_app_chat_hooks_use-chat-streaming_ts
+database_grp --> apps_sim_app_workspace_[workspaceId]_knowledge_components_constants_ts
+database_grp --> apps_sim_app_workspace_[workspaceId]_knowledge_utils_sort_ts
+database_grp --> apps_sim_app_workspace_[workspaceId]_logs_hooks_use-search-state_ts
+database_grp --> apps_sim_app_workspace_[workspaceId]_w_components_sidebar_components_search-modal_search-utils_ts
+database_grp --> apps_sim_app_workspace_[workspaceId]_w_components_sidebar_hooks_use-auto-scroll_ts
+database_grp --> apps_sim_app_workspace_[workspaceId]_w_components_sidebar_hooks_use-drag-drop_ts
+database_grp --> apps_sim_app_workspace_[workspaceId]_w_components_sidebar_hooks_use-folder-operations_ts
+database_grp --> apps_sim_app_workspace_[workspaceId]_w_components_sidebar_hooks_use-item-rename_ts
+apps_sim_app_workspace_[workspaceId]_w_components_sidebar_hooks_use-workflow-operations_ts[use-workflow-operations.ts]
+apps_sim_app_workspace_[workspaceId]_w_hooks_use-duplicate-workflow_ts[use-duplicate-workflow.ts]
+apps_sim_app_workspace_[workspaceId]_w_hooks_use-import-workflow_ts[use-import-workflow.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_copilot_components_copilot-message_hooks_use-checkpoint-management_ts[use-checkpoint-management.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_copilot_components_copilot-message_hooks_use-message-editing_ts[use-message-editing.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_copilot_components_copilot-message_hooks_use-message-feedback_ts[use-message-feedback.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_copilot_components_user-input_hooks_use-mention-data_ts[use-mention-data.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_copilot_components_user-input_hooks_use-mention-keyboard_ts[use-mention-keyboard.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_copilot_hooks_use-chat-history_ts[use-chat-history.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_editor_components_sub-block_hooks_use-sub-block-dropdowns_ts[use-sub-block-dropdowns.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_editor_components_sub-block_hooks_use-sub-block-input_ts[use-sub-block-input.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_editor_components_sub-block_hooks_use-sub-block-value_ts[use-sub-block-value.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_editor_hooks_use-subflow-editor_ts[use-subflow-editor.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_hooks_use-usage-limits_ts[use-usage-limits.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_workflow-block_hooks_use-schedule-info_ts[use-schedule-info.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_hooks_use-auto-layout_ts[use-auto-layout.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_hooks_use-block-dimensions_ts[use-block-dimensions.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_hooks_use-current-workflow_ts[use-current-workflow.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_hooks_use-node-utilities_ts[use-node-utilities.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_hooks_use-wand_ts[use-wand.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_hooks_use-float_use-float-boundary-sync_ts[use-float-boundary-sync.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_hooks_use-float_use-float-drag_ts[use-float-drag.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_hooks_use-float_use-float-resize_ts[use-float-resize.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_utils_auto-layout-utils_ts[auto-layout-utils.ts]
+apps_sim_blocks_blocks_duckduckgo_ts[duckduckgo.ts]
+apps_sim_blocks_blocks_dynamodb_ts[dynamodb.ts]
+apps_sim_blocks_blocks_file_ts[file.ts]
+apps_sim_blocks_blocks_knowledge_ts[knowledge.ts]
+apps_sim_blocks_blocks_mysql_ts[mysql.ts]
+apps_sim_blocks_blocks_neo4j_ts[neo4j.ts]
+apps_sim_blocks_blocks_postgresql_ts[postgresql.ts]
+apps_sim_blocks_blocks_rds_ts[rds.ts]
+apps_sim_blocks_blocks_search_ts[search.ts]
+apps_sim_blocks_blocks_sendgrid_ts[sendgrid.ts]
+apps_sim_blocks_blocks_servicenow_ts[servicenow.ts]
+apps_sim_blocks_blocks_variables_ts[variables.ts]
+apps_sim_blocks_blocks_wikipedia_ts[wikipedia.ts]
+apps_sim_components_emails_render-email_ts[render-email.ts]
+apps_sim_executor_execution_edge-manager_ts[edge-manager.ts]
+apps_sim_executor_orchestrators_parallel_ts[parallel.ts]
+apps_sim_executor_utils_lazy-cleanup_ts[lazy-cleanup.ts]
+apps_sim_executor___test-utils___executor-mocks_ts[executor-mocks.ts]
+apps_sim_hooks_use-debounce_ts[use-debounce.ts]
+apps_sim_hooks_use-knowledge-base-tag-definitions_ts[use-knowledge-base-tag-definitions.ts]
+apps_sim_hooks_use-knowledge_ts[use-knowledge.ts]
+apps_sim_hooks_use-mcp-tools_ts[use-mcp-tools.ts]
+apps_sim_hooks_use-selector-display-name_ts[use-selector-display-name.ts]
+apps_sim_hooks_use-subscription-state_ts[use-subscription-state.ts]
+apps_sim_hooks_use-tag-definitions_ts[use-tag-definitions.ts]
+apps_sim_hooks_use-webhook-management_ts[use-webhook-management.ts]
+database_grp[DATABASE Layer Chunk 2]
+database_grp --> apps_sim_app_workspace_[workspaceId]_w_components_sidebar_hooks_use-workflow-operations_ts
+database_grp --> apps_sim_app_workspace_[workspaceId]_w_hooks_use-duplicate-workflow_ts
+database_grp --> apps_sim_app_workspace_[workspaceId]_w_hooks_use-import-workflow_ts
+database_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_copilot_components_copilot-message_hooks_use-checkpoint-management_ts
+database_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_copilot_components_copilot-message_hooks_use-message-editing_ts
+database_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_copilot_components_copilot-message_hooks_use-message-feedback_ts
+database_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_copilot_components_user-input_hooks_use-mention-data_ts
+database_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_copilot_components_user-input_hooks_use-mention-keyboard_ts
+database_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_copilot_hooks_use-chat-history_ts
+database_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_editor_components_sub-block_hooks_use-sub-block-dropdowns_ts
+database_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_editor_components_sub-block_hooks_use-sub-block-input_ts
+database_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_editor_components_sub-block_hooks_use-sub-block-value_ts
+database_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_components_editor_hooks_use-subflow-editor_ts
+database_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_panel_hooks_use-usage-limits_ts
+database_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_components_workflow-block_hooks_use-schedule-info_ts
+database_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_hooks_use-auto-layout_ts
+database_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_hooks_use-block-dimensions_ts
+database_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_hooks_use-current-workflow_ts
+database_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_hooks_use-node-utilities_ts
+database_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_hooks_use-wand_ts
+database_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_hooks_use-float_use-float-boundary-sync_ts
+database_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_hooks_use-float_use-float-drag_ts
+database_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_hooks_use-float_use-float-resize_ts
+database_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_utils_auto-layout-utils_ts
+database_grp --> apps_sim_blocks_blocks_duckduckgo_ts
+database_grp --> apps_sim_blocks_blocks_dynamodb_ts
+database_grp --> apps_sim_blocks_blocks_file_ts
+database_grp --> apps_sim_blocks_blocks_knowledge_ts
+database_grp --> apps_sim_blocks_blocks_mysql_ts
+database_grp --> apps_sim_blocks_blocks_neo4j_ts
+database_grp --> apps_sim_blocks_blocks_postgresql_ts
+database_grp --> apps_sim_blocks_blocks_rds_ts
+database_grp --> apps_sim_blocks_blocks_search_ts
+database_grp --> apps_sim_blocks_blocks_sendgrid_ts
+database_grp --> apps_sim_blocks_blocks_servicenow_ts
+database_grp --> apps_sim_blocks_blocks_variables_ts
+database_grp --> apps_sim_blocks_blocks_wikipedia_ts
+database_grp --> apps_sim_components_emails_render-email_ts
+database_grp --> apps_sim_executor_execution_edge-manager_ts
+database_grp --> apps_sim_executor_orchestrators_parallel_ts
+database_grp --> apps_sim_executor_utils_lazy-cleanup_ts
+database_grp --> apps_sim_executor___test-utils___executor-mocks_ts
+database_grp --> apps_sim_hooks_use-debounce_ts
+database_grp --> apps_sim_hooks_use-knowledge-base-tag-definitions_ts
+database_grp --> apps_sim_hooks_use-knowledge_ts
+database_grp --> apps_sim_hooks_use-mcp-tools_ts
+database_grp --> apps_sim_hooks_use-selector-display-name_ts
+database_grp --> apps_sim_hooks_use-subscription-state_ts
+database_grp --> apps_sim_hooks_use-tag-definitions_ts
+database_grp --> apps_sim_hooks_use-webhook-management_ts
+apps_sim_hooks_queries_api-keys_ts[api-keys.ts]
+apps_sim_hooks_queries_copilot-keys_ts[copilot-keys.ts]
+apps_sim_hooks_queries_creator-profile_ts[creator-profile.ts]
+apps_sim_hooks_queries_custom-tools_ts[custom-tools.ts]
+apps_sim_hooks_queries_environment_ts[environment.ts]
+apps_sim_hooks_queries_folders_ts[folders.ts]
+apps_sim_hooks_queries_general-settings_ts[general-settings.ts]
+apps_sim_hooks_queries_knowledge_ts[knowledge.ts]
+apps_sim_hooks_queries_logs_ts[logs.ts]
+apps_sim_hooks_queries_mcp_ts[mcp.ts]
+apps_sim_hooks_queries_notifications_ts[notifications.ts]
+apps_sim_hooks_queries_providers_ts[providers.ts]
+apps_sim_hooks_queries_status_ts[status.ts]
+apps_sim_hooks_queries_subscription_ts[subscription.ts]
+apps_sim_hooks_queries_templates_ts[templates.ts]
+apps_sim_hooks_queries_user-profile_ts[user-profile.ts]
+apps_sim_hooks_queries_workflows_ts[workflows.ts]
+apps_sim_hooks_queries_workspace-files_ts[workspace-files.ts]
+apps_sim_hooks_queries_workspace_ts[workspace.ts]
+apps_sim_hooks_queries_utils_optimistic-mutation_ts[optimistic-mutation.ts]
+apps_sim_hooks_selectors_types_ts[types.ts]
+apps_sim_hooks_selectors_use-selector-query_ts[use-selector-query.ts]
+apps_sim_lib_billing_index_ts[index.ts]
+apps_sim_lib_billing_organization_ts[organization.ts]
+apps_sim_lib_billing_threshold-billing_ts[threshold-billing.ts]
+apps_sim_lib_billing_calculations_usage-monitor_ts[usage-monitor.ts]
+apps_sim_lib_billing_client_types_ts[types.ts]
+apps_sim_lib_billing_core_billing_ts[billing.ts]
+apps_sim_lib_billing_core_organization_ts[organization.ts]
+apps_sim_lib_billing_core_subscription_ts[subscription.ts]
+apps_sim_lib_billing_core_usage_ts[usage.ts]
+apps_sim_lib_billing_credits_balance_ts[balance.ts]
+apps_sim_lib_billing_credits_purchase_ts[purchase.ts]
+apps_sim_lib_billing_organizations_membership_ts[membership.ts]
+apps_sim_lib_billing_storage_limits_ts[limits.ts]
+apps_sim_lib_billing_storage_tracking_ts[tracking.ts]
+apps_sim_lib_billing_types_index_ts[index.ts]
+apps_sim_lib_billing_validation_seat-management_ts[seat-management.ts]
+apps_sim_lib_billing_webhooks_disputes_ts[disputes.ts]
+apps_sim_lib_billing_webhooks_enterprise_ts[enterprise.ts]
+apps_sim_lib_copilot_tools_client_examples_get-examples-rag_ts[get-examples-rag.ts]
+apps_sim_lib_copilot_tools_client_examples_get-operations-examples_ts[get-operations-examples.ts]
+apps_sim_lib_copilot_tools_client_knowledge_knowledge-base_ts[knowledge-base.ts]
+apps_sim_lib_copilot_tools_client_other_checkoff-todo_ts[checkoff-todo.ts]
+apps_sim_lib_copilot_tools_client_other_make-api-request_ts[make-api-request.ts]
+apps_sim_lib_copilot_tools_client_other_mark-todo-in-progress_ts[mark-todo-in-progress.ts]
+apps_sim_lib_copilot_tools_client_other_plan_ts[plan.ts]
+apps_sim_lib_copilot_tools_client_other_search-documentation_ts[search-documentation.ts]
+apps_sim_lib_copilot_tools_client_other_search-errors_ts[search-errors.ts]
+apps_sim_lib_copilot_tools_client_other_search-online_ts[search-online.ts]
+database_grp[DATABASE Layer Chunk 3]
+database_grp --> apps_sim_hooks_queries_api-keys_ts
+database_grp --> apps_sim_hooks_queries_copilot-keys_ts
+database_grp --> apps_sim_hooks_queries_creator-profile_ts
+database_grp --> apps_sim_hooks_queries_custom-tools_ts
+database_grp --> apps_sim_hooks_queries_environment_ts
+database_grp --> apps_sim_hooks_queries_folders_ts
+database_grp --> apps_sim_hooks_queries_general-settings_ts
+database_grp --> apps_sim_hooks_queries_knowledge_ts
+database_grp --> apps_sim_hooks_queries_logs_ts
+database_grp --> apps_sim_hooks_queries_mcp_ts
+database_grp --> apps_sim_hooks_queries_notifications_ts
+database_grp --> apps_sim_hooks_queries_providers_ts
+database_grp --> apps_sim_hooks_queries_status_ts
+database_grp --> apps_sim_hooks_queries_subscription_ts
+database_grp --> apps_sim_hooks_queries_templates_ts
+database_grp --> apps_sim_hooks_queries_user-profile_ts
+database_grp --> apps_sim_hooks_queries_workflows_ts
+database_grp --> apps_sim_hooks_queries_workspace-files_ts
+database_grp --> apps_sim_hooks_queries_workspace_ts
+database_grp --> apps_sim_hooks_queries_utils_optimistic-mutation_ts
+database_grp --> apps_sim_hooks_selectors_types_ts
+database_grp --> apps_sim_hooks_selectors_use-selector-query_ts
+database_grp --> apps_sim_lib_billing_index_ts
+database_grp --> apps_sim_lib_billing_organization_ts
+database_grp --> apps_sim_lib_billing_threshold-billing_ts
+database_grp --> apps_sim_lib_billing_calculations_usage-monitor_ts
+database_grp --> apps_sim_lib_billing_client_types_ts
+database_grp --> apps_sim_lib_billing_core_billing_ts
+database_grp --> apps_sim_lib_billing_core_organization_ts
+database_grp --> apps_sim_lib_billing_core_subscription_ts
+database_grp --> apps_sim_lib_billing_core_usage_ts
+database_grp --> apps_sim_lib_billing_credits_balance_ts
+database_grp --> apps_sim_lib_billing_credits_purchase_ts
+database_grp --> apps_sim_lib_billing_organizations_membership_ts
+database_grp --> apps_sim_lib_billing_storage_limits_ts
+database_grp --> apps_sim_lib_billing_storage_tracking_ts
+database_grp --> apps_sim_lib_billing_types_index_ts
+database_grp --> apps_sim_lib_billing_validation_seat-management_ts
+database_grp --> apps_sim_lib_billing_webhooks_disputes_ts
+database_grp --> apps_sim_lib_billing_webhooks_enterprise_ts
+database_grp --> apps_sim_lib_copilot_tools_client_examples_get-examples-rag_ts
+database_grp --> apps_sim_lib_copilot_tools_client_examples_get-operations-examples_ts
+database_grp --> apps_sim_lib_copilot_tools_client_knowledge_knowledge-base_ts
+database_grp --> apps_sim_lib_copilot_tools_client_other_checkoff-todo_ts
+database_grp --> apps_sim_lib_copilot_tools_client_other_make-api-request_ts
+database_grp --> apps_sim_lib_copilot_tools_client_other_mark-todo-in-progress_ts
+database_grp --> apps_sim_lib_copilot_tools_client_other_plan_ts
+database_grp --> apps_sim_lib_copilot_tools_client_other_search-documentation_ts
+database_grp --> apps_sim_lib_copilot_tools_client_other_search-errors_ts
+database_grp --> apps_sim_lib_copilot_tools_client_other_search-online_ts
+apps_sim_lib_copilot_tools_client_other_search-patterns_ts[search-patterns.ts]
+apps_sim_lib_copilot_tools_client_user_set-environment-variables_ts[set-environment-variables.ts]
+apps_sim_lib_copilot_tools_client_workflow_deploy-workflow_ts[deploy-workflow.ts]
+apps_sim_lib_copilot_tools_client_workflow_edit-workflow_ts[edit-workflow.ts]
+apps_sim_lib_copilot_tools_client_workflow_manage-custom-tool_ts[manage-custom-tool.ts]
+apps_sim_lib_copilot_tools_client_workflow_manage-mcp-tool_ts[manage-mcp-tool.ts]
+apps_sim_lib_copilot_tools_client_workflow_set-global-workflow-variables_ts[set-global-workflow-variables.ts]
+apps_sim_lib_copilot_tools_server_docs_search-documentation_ts[search-documentation.ts]
+apps_sim_lib_copilot_tools_server_other_make-api-request_ts[make-api-request.ts]
+apps_sim_lib_copilot_tools_server_other_search-online_ts[search-online.ts]
+apps_sim_lib_copilot_tools_shared_schemas_ts[schemas.ts]
+apps_sim_lib_core_idempotency_cleanup_ts[cleanup.ts]
+apps_sim_lib_core_idempotency_service_ts[service.ts]
+apps_sim_lib_core_utils_optimistic-update_ts[optimistic-update.ts]
+apps_sim_lib_core_utils_theme_ts[theme.ts]
+apps_sim_lib_environment_utils_ts[utils.ts]
+apps_sim_lib_guardrails_validate_hallucination_ts[validate_hallucination.ts]
+apps_sim_lib_knowledge_filters_index_ts[index.ts]
+apps_sim_lib_knowledge_filters_query-builder_ts[query-builder.ts]
+apps_sim_lib_knowledge_filters_types_ts[types.ts]
+apps_sim_lib_knowledge_tags_service_ts[service.ts]
+apps_sim_lib_knowledge_tags_types_ts[types.ts]
+apps_sim_lib_logs_events_ts[events.ts]
+apps_sim_lib_logs_search-suggestions_ts[search-suggestions.ts]
+apps_sim_lib_logs_execution_snapshot_service_ts[service.ts]
+apps_sim_lib_mcp_types_ts[types.ts]
+apps_sim_lib_mcp_storage_memory-cache_ts[memory-cache.ts]
+apps_sim_lib_notifications_alert-rules_ts[alert-rules.ts]
+apps_sim_lib_notifications_inactivity-polling_ts[inactivity-polling.ts]
+apps_sim_lib_uploads_providers_blob_client_test_ts[client.test.ts]
+apps_sim_lib_uploads_server_metadata_ts[metadata.ts]
+apps_sim_lib_uploads_utils_file-utils_ts[file-utils.ts]
+apps_sim_lib_workflows_autolayout_containers_ts[containers.ts]
+apps_sim_lib_workflows_autolayout_core_ts[core.ts]
+apps_sim_lib_workflows_autolayout_targeted_ts[targeted.ts]
+apps_sim_lib_workflows_autolayout_utils_ts[utils.ts]
+apps_sim_lib_workflows_blocks_block-path-calculator_ts[block-path-calculator.ts]
+apps_sim_lib_workflows_custom-tools_operations_ts[operations.ts]
+apps_sim_lib_workflows_diff_diff-engine_ts[diff-engine.ts]
+apps_sim_lib_workflows_persistence_custom-tools-persistence_ts[custom-tools-persistence.ts]
+apps_sim_lib_workflows_persistence_duplicate_ts[duplicate.ts]
+apps_sim_lib_workflows_persistence_utils_test_ts[utils.test.ts]
+apps_sim_lib_workflows_persistence_utils_ts[utils.ts]
+apps_sim_lib_workflows_training_compute-edit-sequence_ts[compute-edit-sequence.ts]
+apps_sim_lib_workspaces_duplicate_ts[duplicate.ts]
+apps_sim_lib_workspaces_utils_ts[utils.ts]
+apps_sim_lib_workspaces_organization_types_ts[types.ts]
+apps_sim_lib_workspaces_permissions_utils_test_ts[utils.test.ts]
+apps_sim_lib_workspaces_permissions_utils_ts[utils.ts]
+apps_sim_providers_azure-openai_utils_ts[utils.ts]
+database_grp[DATABASE Layer Chunk 4]
+database_grp --> apps_sim_lib_copilot_tools_client_other_search-patterns_ts
+database_grp --> apps_sim_lib_copilot_tools_client_user_set-environment-variables_ts
+database_grp --> apps_sim_lib_copilot_tools_client_workflow_deploy-workflow_ts
+database_grp --> apps_sim_lib_copilot_tools_client_workflow_edit-workflow_ts
+database_grp --> apps_sim_lib_copilot_tools_client_workflow_manage-custom-tool_ts
+database_grp --> apps_sim_lib_copilot_tools_client_workflow_manage-mcp-tool_ts
+database_grp --> apps_sim_lib_copilot_tools_client_workflow_set-global-workflow-variables_ts
+database_grp --> apps_sim_lib_copilot_tools_server_docs_search-documentation_ts
+database_grp --> apps_sim_lib_copilot_tools_server_other_make-api-request_ts
+database_grp --> apps_sim_lib_copilot_tools_server_other_search-online_ts
+database_grp --> apps_sim_lib_copilot_tools_shared_schemas_ts
+database_grp --> apps_sim_lib_core_idempotency_cleanup_ts
+database_grp --> apps_sim_lib_core_idempotency_service_ts
+database_grp --> apps_sim_lib_core_utils_optimistic-update_ts
+database_grp --> apps_sim_lib_core_utils_theme_ts
+database_grp --> apps_sim_lib_environment_utils_ts
+database_grp --> apps_sim_lib_guardrails_validate_hallucination_ts
+database_grp --> apps_sim_lib_knowledge_filters_index_ts
+database_grp --> apps_sim_lib_knowledge_filters_query-builder_ts
+database_grp --> apps_sim_lib_knowledge_filters_types_ts
+database_grp --> apps_sim_lib_knowledge_tags_service_ts
+database_grp --> apps_sim_lib_knowledge_tags_types_ts
+database_grp --> apps_sim_lib_logs_events_ts
+database_grp --> apps_sim_lib_logs_search-suggestions_ts
+database_grp --> apps_sim_lib_logs_execution_snapshot_service_ts
+database_grp --> apps_sim_lib_mcp_types_ts
+database_grp --> apps_sim_lib_mcp_storage_memory-cache_ts
+database_grp --> apps_sim_lib_notifications_alert-rules_ts
+database_grp --> apps_sim_lib_notifications_inactivity-polling_ts
+database_grp --> apps_sim_lib_uploads_providers_blob_client_test_ts
+database_grp --> apps_sim_lib_uploads_server_metadata_ts
+database_grp --> apps_sim_lib_uploads_utils_file-utils_ts
+database_grp --> apps_sim_lib_workflows_autolayout_containers_ts
+database_grp --> apps_sim_lib_workflows_autolayout_core_ts
+database_grp --> apps_sim_lib_workflows_autolayout_targeted_ts
+database_grp --> apps_sim_lib_workflows_autolayout_utils_ts
+database_grp --> apps_sim_lib_workflows_blocks_block-path-calculator_ts
+database_grp --> apps_sim_lib_workflows_custom-tools_operations_ts
+database_grp --> apps_sim_lib_workflows_diff_diff-engine_ts
+database_grp --> apps_sim_lib_workflows_persistence_custom-tools-persistence_ts
+database_grp --> apps_sim_lib_workflows_persistence_duplicate_ts
+database_grp --> apps_sim_lib_workflows_persistence_utils_test_ts
+database_grp --> apps_sim_lib_workflows_persistence_utils_ts
+database_grp --> apps_sim_lib_workflows_training_compute-edit-sequence_ts
+database_grp --> apps_sim_lib_workspaces_duplicate_ts
+database_grp --> apps_sim_lib_workspaces_utils_ts
+database_grp --> apps_sim_lib_workspaces_organization_types_ts
+database_grp --> apps_sim_lib_workspaces_permissions_utils_test_ts
+database_grp --> apps_sim_lib_workspaces_permissions_utils_ts
+database_grp --> apps_sim_providers_azure-openai_utils_ts
+apps_sim_providers_openrouter_utils_ts[utils.ts]
+apps_sim_providers_xai_utils_ts[utils.ts]
+apps_sim_scripts_export-workflow_ts[export-workflow.ts]
+apps_sim_socket-server_database_operations_ts[operations.ts]
+apps_sim_socket-server_middleware_permissions_ts[permissions.ts]
+apps_sim_socket-server_routes_http_ts[http.ts]
+apps_sim_socket-server_validation_schemas_ts[schemas.ts]
+apps_sim_stores_constants_ts[constants.ts]
+apps_sim_stores_chat_store_ts[store.ts]
+apps_sim_stores_custom-tools_types_ts[types.ts]
+apps_sim_stores_folders_store_ts[store.ts]
+apps_sim_stores_logs_filters_store_ts[store.ts]
+apps_sim_stores_operation-queue_store_ts[store.ts]
+apps_sim_stores_panel_store_ts[store.ts]
+apps_sim_stores_panel_editor_store_ts[store.ts]
+apps_sim_stores_panel_toolbar_store_ts[store.ts]
+apps_sim_stores_panel_variables_store_ts[store.ts]
+apps_sim_stores_panel_variables_types_ts[types.ts]
+apps_sim_stores_providers_store_ts[store.ts]
+apps_sim_stores_sidebar_store_ts[store.ts]
+apps_sim_stores_terminal_index_ts[index.ts]
+apps_sim_stores_terminal_console_index_ts[index.ts]
+apps_sim_stores_terminal_console_store_ts[store.ts]
+apps_sim_stores_terminal_console_types_ts[types.ts]
+apps_sim_stores_undo-redo_store_ts[store.ts]
+apps_sim_stores_undo-redo_types_ts[types.ts]
+apps_sim_stores_undo-redo_utils_ts[utils.ts]
+apps_sim_stores_variables_store_ts[store.ts]
+apps_sim_stores_variables_types_ts[types.ts]
+apps_sim_stores_workflow-diff_store_ts[store.ts]
+apps_sim_stores_workflows_server-utils_ts[server-utils.ts]
+apps_sim_stores_workflows_utils_ts[utils.ts]
+apps_sim_stores_workflows_json_importer_ts[importer.ts]
+apps_sim_stores_workflows_registry_store_ts[store.ts]
+apps_sim_stores_workflows_registry_types_ts[types.ts]
+apps_sim_stores_workflows_workflow_store_test_ts[store.test.ts]
+apps_sim_stores_workflows_workflow_store_ts[store.ts]
+apps_sim_stores_workflows_workflow_types_ts[types.ts]
+apps_sim_stores_workflows_yaml_store_ts[store.ts]
+apps_sim_tools_airtable_index_ts[index.ts]
+apps_sim_tools_apollo_account_bulk_update_ts[account_bulk_update.ts]
+apps_sim_tools_apollo_account_update_ts[account_update.ts]
+apps_sim_tools_apollo_contact_bulk_update_ts[contact_bulk_update.ts]
+apps_sim_tools_apollo_contact_update_ts[contact_update.ts]
+apps_sim_tools_apollo_index_ts[index.ts]
+apps_sim_tools_apollo_opportunity_update_ts[opportunity_update.ts]
+apps_sim_tools_apollo_types_ts[types.ts]
+apps_sim_tools_asana_index_ts[index.ts]
+apps_sim_tools_confluence_index_ts[index.ts]
+apps_sim_tools_datadog_create_event_ts[create_event.ts]
+database_grp[DATABASE Layer Chunk 5]
+database_grp --> apps_sim_providers_openrouter_utils_ts
+database_grp --> apps_sim_providers_xai_utils_ts
+database_grp --> apps_sim_scripts_export-workflow_ts
+database_grp --> apps_sim_socket-server_database_operations_ts
+database_grp --> apps_sim_socket-server_middleware_permissions_ts
+database_grp --> apps_sim_socket-server_routes_http_ts
+database_grp --> apps_sim_socket-server_validation_schemas_ts
+database_grp --> apps_sim_stores_constants_ts
+database_grp --> apps_sim_stores_chat_store_ts
+database_grp --> apps_sim_stores_custom-tools_types_ts
+database_grp --> apps_sim_stores_folders_store_ts
+database_grp --> apps_sim_stores_logs_filters_store_ts
+database_grp --> apps_sim_stores_operation-queue_store_ts
+database_grp --> apps_sim_stores_panel_store_ts
+database_grp --> apps_sim_stores_panel_editor_store_ts
+database_grp --> apps_sim_stores_panel_toolbar_store_ts
+database_grp --> apps_sim_stores_panel_variables_store_ts
+database_grp --> apps_sim_stores_panel_variables_types_ts
+database_grp --> apps_sim_stores_providers_store_ts
+database_grp --> apps_sim_stores_sidebar_store_ts
+database_grp --> apps_sim_stores_terminal_index_ts
+database_grp --> apps_sim_stores_terminal_console_index_ts
+database_grp --> apps_sim_stores_terminal_console_store_ts
+database_grp --> apps_sim_stores_terminal_console_types_ts
+database_grp --> apps_sim_stores_undo-redo_store_ts
+database_grp --> apps_sim_stores_undo-redo_types_ts
+database_grp --> apps_sim_stores_undo-redo_utils_ts
+database_grp --> apps_sim_stores_variables_store_ts
+database_grp --> apps_sim_stores_variables_types_ts
+database_grp --> apps_sim_stores_workflow-diff_store_ts
+database_grp --> apps_sim_stores_workflows_server-utils_ts
+database_grp --> apps_sim_stores_workflows_utils_ts
+database_grp --> apps_sim_stores_workflows_json_importer_ts
+database_grp --> apps_sim_stores_workflows_registry_store_ts
+database_grp --> apps_sim_stores_workflows_registry_types_ts
+database_grp --> apps_sim_stores_workflows_workflow_store_test_ts
+database_grp --> apps_sim_stores_workflows_workflow_store_ts
+database_grp --> apps_sim_stores_workflows_workflow_types_ts
+database_grp --> apps_sim_stores_workflows_yaml_store_ts
+database_grp --> apps_sim_tools_airtable_index_ts
+database_grp --> apps_sim_tools_apollo_account_bulk_update_ts
+database_grp --> apps_sim_tools_apollo_account_update_ts
+database_grp --> apps_sim_tools_apollo_contact_bulk_update_ts
+database_grp --> apps_sim_tools_apollo_contact_update_ts
+database_grp --> apps_sim_tools_apollo_index_ts
+database_grp --> apps_sim_tools_apollo_opportunity_update_ts
+database_grp --> apps_sim_tools_apollo_types_ts
+database_grp --> apps_sim_tools_asana_index_ts
+database_grp --> apps_sim_tools_confluence_index_ts
+database_grp --> apps_sim_tools_datadog_create_event_ts
+apps_sim_tools_datadog_create_monitor_ts[create_monitor.ts]
+apps_sim_tools_datadog_get_monitor_ts[get_monitor.ts]
+apps_sim_tools_datadog_index_ts[index.ts]
+apps_sim_tools_datadog_list_downtimes_ts[list_downtimes.ts]
+apps_sim_tools_datadog_list_monitors_ts[list_monitors.ts]
+apps_sim_tools_datadog_query_logs_ts[query_logs.ts]
+apps_sim_tools_datadog_query_timeseries_ts[query_timeseries.ts]
+apps_sim_tools_discord_index_ts[index.ts]
+apps_sim_tools_duckduckgo_search_ts[search.ts]
+apps_sim_tools_duckduckgo_types_ts[types.ts]
+apps_sim_tools_dynamodb_delete_ts[delete.ts]
+apps_sim_tools_dynamodb_get_ts[get.ts]
+apps_sim_tools_dynamodb_index_ts[index.ts]
+apps_sim_tools_dynamodb_put_ts[put.ts]
+apps_sim_tools_dynamodb_query_ts[query.ts]
+apps_sim_tools_dynamodb_scan_ts[scan.ts]
+apps_sim_tools_dynamodb_types_ts[types.ts]
+apps_sim_tools_dynamodb_update_ts[update.ts]
+apps_sim_tools_elasticsearch_index_ts[index.ts]
+apps_sim_tools_exa_answer_ts[answer.ts]
+apps_sim_tools_exa_get_contents_ts[get_contents.ts]
+apps_sim_tools_firecrawl_types_ts[types.ts]
+apps_sim_tools_github_index_ts[index.ts]
+apps_sim_tools_gitlab_index_ts[index.ts]
+apps_sim_tools_google_search_ts[search.ts]
+apps_sim_tools_google_types_ts[types.ts]
+apps_sim_tools_google_groups_index_ts[index.ts]
+apps_sim_tools_google_sheets_index_ts[index.ts]
+apps_sim_tools_grafana_index_ts[index.ts]
+apps_sim_tools_http_request_ts[request.ts]
+apps_sim_tools_http_utils_ts[utils.ts]
+apps_sim_tools_hubspot_index_ts[index.ts]
+apps_sim_tools_hunter_discover_ts[discover.ts]
+apps_sim_tools_hunter_types_ts[types.ts]
+apps_sim_tools_incidentio_index_ts[index.ts]
+apps_sim_tools_incidentio_types_ts[types.ts]
+apps_sim_tools_intercom_index_ts[index.ts]
+apps_sim_tools_jira_index_ts[index.ts]
+apps_sim_tools_kalshi_get_candlesticks_ts[get_candlesticks.ts]
+apps_sim_tools_kalshi_get_event_ts[get_event.ts]
+apps_sim_tools_kalshi_get_events_ts[get_events.ts]
+apps_sim_tools_kalshi_get_markets_ts[get_markets.ts]
+apps_sim_tools_kalshi_get_trades_ts[get_trades.ts]
+apps_sim_tools_knowledge_create_document_ts[create_document.ts]
+apps_sim_tools_knowledge_search_ts[search.ts]
+apps_sim_tools_linear_index_ts[index.ts]
+apps_sim_tools_mailchimp_index_ts[index.ts]
+apps_sim_tools_memory_types_ts[types.ts]
+apps_sim_tools_microsoft_planner_index_ts[index.ts]
+apps_sim_tools_microsoft_teams_index_ts[index.ts]
+database_grp[DATABASE Layer Chunk 6]
+database_grp --> apps_sim_tools_datadog_create_monitor_ts
+database_grp --> apps_sim_tools_datadog_get_monitor_ts
+database_grp --> apps_sim_tools_datadog_index_ts
+database_grp --> apps_sim_tools_datadog_list_downtimes_ts
+database_grp --> apps_sim_tools_datadog_list_monitors_ts
+database_grp --> apps_sim_tools_datadog_query_logs_ts
+database_grp --> apps_sim_tools_datadog_query_timeseries_ts
+database_grp --> apps_sim_tools_discord_index_ts
+database_grp --> apps_sim_tools_duckduckgo_search_ts
+database_grp --> apps_sim_tools_duckduckgo_types_ts
+database_grp --> apps_sim_tools_dynamodb_delete_ts
+database_grp --> apps_sim_tools_dynamodb_get_ts
+database_grp --> apps_sim_tools_dynamodb_index_ts
+database_grp --> apps_sim_tools_dynamodb_put_ts
+database_grp --> apps_sim_tools_dynamodb_query_ts
+database_grp --> apps_sim_tools_dynamodb_scan_ts
+database_grp --> apps_sim_tools_dynamodb_types_ts
+database_grp --> apps_sim_tools_dynamodb_update_ts
+database_grp --> apps_sim_tools_elasticsearch_index_ts
+database_grp --> apps_sim_tools_exa_answer_ts
+database_grp --> apps_sim_tools_exa_get_contents_ts
+database_grp --> apps_sim_tools_firecrawl_types_ts
+database_grp --> apps_sim_tools_github_index_ts
+database_grp --> apps_sim_tools_gitlab_index_ts
+database_grp --> apps_sim_tools_google_search_ts
+database_grp --> apps_sim_tools_google_types_ts
+database_grp --> apps_sim_tools_google_groups_index_ts
+database_grp --> apps_sim_tools_google_sheets_index_ts
+database_grp --> apps_sim_tools_grafana_index_ts
+database_grp --> apps_sim_tools_http_request_ts
+database_grp --> apps_sim_tools_http_utils_ts
+database_grp --> apps_sim_tools_hubspot_index_ts
+database_grp --> apps_sim_tools_hunter_discover_ts
+database_grp --> apps_sim_tools_hunter_types_ts
+database_grp --> apps_sim_tools_incidentio_index_ts
+database_grp --> apps_sim_tools_incidentio_types_ts
+database_grp --> apps_sim_tools_intercom_index_ts
+database_grp --> apps_sim_tools_jira_index_ts
+database_grp --> apps_sim_tools_kalshi_get_candlesticks_ts
+database_grp --> apps_sim_tools_kalshi_get_event_ts
+database_grp --> apps_sim_tools_kalshi_get_events_ts
+database_grp --> apps_sim_tools_kalshi_get_markets_ts
+database_grp --> apps_sim_tools_kalshi_get_trades_ts
+database_grp --> apps_sim_tools_knowledge_create_document_ts
+database_grp --> apps_sim_tools_knowledge_search_ts
+database_grp --> apps_sim_tools_linear_index_ts
+database_grp --> apps_sim_tools_mailchimp_index_ts
+database_grp --> apps_sim_tools_memory_types_ts
+database_grp --> apps_sim_tools_microsoft_planner_index_ts
+database_grp --> apps_sim_tools_microsoft_teams_index_ts
+apps_sim_tools_mongodb_index_ts[index.ts]
+apps_sim_tools_mysql_execute_ts[execute.ts]
+apps_sim_tools_mysql_index_ts[index.ts]
+apps_sim_tools_mysql_insert_ts[insert.ts]
+apps_sim_tools_mysql_query_ts[query.ts]
+apps_sim_tools_mysql_types_ts[types.ts]
+apps_sim_tools_mysql_update_ts[update.ts]
+apps_sim_tools_neo4j_create_ts[create.ts]
+apps_sim_tools_neo4j_delete_ts[delete.ts]
+apps_sim_tools_neo4j_execute_ts[execute.ts]
+apps_sim_tools_neo4j_index_ts[index.ts]
+apps_sim_tools_neo4j_merge_ts[merge.ts]
+apps_sim_tools_neo4j_query_ts[query.ts]
+apps_sim_tools_neo4j_types_ts[types.ts]
+apps_sim_tools_neo4j_update_ts[update.ts]
+apps_sim_tools_notion_index_ts[index.ts]
+apps_sim_tools_parallel_deep_research_ts[deep_research.ts]
+apps_sim_tools_pinecone_search_vector_ts[search_vector.ts]
+apps_sim_tools_pinecone_upsert_text_ts[upsert_text.ts]
+apps_sim_tools_pipedrive_index_ts[index.ts]
+apps_sim_tools_polymarket_get_events_ts[get_events.ts]
+apps_sim_tools_polymarket_get_markets_ts[get_markets.ts]
+apps_sim_tools_polymarket_get_positions_ts[get_positions.ts]
+apps_sim_tools_polymarket_get_series_ts[get_series.ts]
+apps_sim_tools_polymarket_get_tags_ts[get_tags.ts]
+apps_sim_tools_polymarket_get_trades_ts[get_trades.ts]
+apps_sim_tools_polymarket_search_ts[search.ts]
+apps_sim_tools_postgresql_execute_ts[execute.ts]
+apps_sim_tools_postgresql_index_ts[index.ts]
+apps_sim_tools_postgresql_insert_ts[insert.ts]
+apps_sim_tools_postgresql_query_ts[query.ts]
+apps_sim_tools_postgresql_types_ts[types.ts]
+apps_sim_tools_postgresql_update_ts[update.ts]
+apps_sim_tools_qdrant_search_vector_ts[search_vector.ts]
+apps_sim_tools_qdrant_upsert_points_ts[upsert_points.ts]
+apps_sim_tools_rds_execute_ts[execute.ts]
+apps_sim_tools_rds_index_ts[index.ts]
+apps_sim_tools_rds_insert_ts[insert.ts]
+apps_sim_tools_rds_query_ts[query.ts]
+apps_sim_tools_rds_types_ts[types.ts]
+apps_sim_tools_rds_update_ts[update.ts]
+apps_sim_tools_s3_utils_ts[utils.ts]
+apps_sim_tools_salesforce_index_ts[index.ts]
+apps_sim_tools_search_tool_ts[tool.ts]
+apps_sim_tools_sendgrid_types_ts[types.ts]
+apps_sim_tools_sentry_index_ts[index.ts]
+apps_sim_tools_serper_search_ts[search.ts]
+apps_sim_tools_serper_types_ts[types.ts]
+apps_sim_tools_servicenow_index_ts[index.ts]
+apps_sim_tools_servicenow_types_ts[types.ts]
+database_grp[DATABASE Layer Chunk 7]
+database_grp --> apps_sim_tools_mongodb_index_ts
+database_grp --> apps_sim_tools_mysql_execute_ts
+database_grp --> apps_sim_tools_mysql_index_ts
+database_grp --> apps_sim_tools_mysql_insert_ts
+database_grp --> apps_sim_tools_mysql_query_ts
+database_grp --> apps_sim_tools_mysql_types_ts
+database_grp --> apps_sim_tools_mysql_update_ts
+database_grp --> apps_sim_tools_neo4j_create_ts
+database_grp --> apps_sim_tools_neo4j_delete_ts
+database_grp --> apps_sim_tools_neo4j_execute_ts
+database_grp --> apps_sim_tools_neo4j_index_ts
+database_grp --> apps_sim_tools_neo4j_merge_ts
+database_grp --> apps_sim_tools_neo4j_query_ts
+database_grp --> apps_sim_tools_neo4j_types_ts
+database_grp --> apps_sim_tools_neo4j_update_ts
+database_grp --> apps_sim_tools_notion_index_ts
+database_grp --> apps_sim_tools_parallel_deep_research_ts
+database_grp --> apps_sim_tools_pinecone_search_vector_ts
+database_grp --> apps_sim_tools_pinecone_upsert_text_ts
+database_grp --> apps_sim_tools_pipedrive_index_ts
+database_grp --> apps_sim_tools_polymarket_get_events_ts
+database_grp --> apps_sim_tools_polymarket_get_markets_ts
+database_grp --> apps_sim_tools_polymarket_get_positions_ts
+database_grp --> apps_sim_tools_polymarket_get_series_ts
+database_grp --> apps_sim_tools_polymarket_get_tags_ts
+database_grp --> apps_sim_tools_polymarket_get_trades_ts
+database_grp --> apps_sim_tools_polymarket_search_ts
+database_grp --> apps_sim_tools_postgresql_execute_ts
+database_grp --> apps_sim_tools_postgresql_index_ts
+database_grp --> apps_sim_tools_postgresql_insert_ts
+database_grp --> apps_sim_tools_postgresql_query_ts
+database_grp --> apps_sim_tools_postgresql_types_ts
+database_grp --> apps_sim_tools_postgresql_update_ts
+database_grp --> apps_sim_tools_qdrant_search_vector_ts
+database_grp --> apps_sim_tools_qdrant_upsert_points_ts
+database_grp --> apps_sim_tools_rds_execute_ts
+database_grp --> apps_sim_tools_rds_index_ts
+database_grp --> apps_sim_tools_rds_insert_ts
+database_grp --> apps_sim_tools_rds_query_ts
+database_grp --> apps_sim_tools_rds_types_ts
+database_grp --> apps_sim_tools_rds_update_ts
+database_grp --> apps_sim_tools_s3_utils_ts
+database_grp --> apps_sim_tools_salesforce_index_ts
+database_grp --> apps_sim_tools_search_tool_ts
+database_grp --> apps_sim_tools_sendgrid_types_ts
+database_grp --> apps_sim_tools_sentry_index_ts
+database_grp --> apps_sim_tools_serper_search_ts
+database_grp --> apps_sim_tools_serper_types_ts
+database_grp --> apps_sim_tools_servicenow_index_ts
+database_grp --> apps_sim_tools_servicenow_types_ts

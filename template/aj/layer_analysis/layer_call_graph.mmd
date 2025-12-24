@@ -1,0 +1,55 @@
+graph TD
+application[APPLICATION Layer]
+api[API Layer]
+ui[UI Layer]
+utils[UTILS Layer]
+database[DATABASE Layer]
+middleware[MIDDLEWARE Layer]
+workflow[WORKFLOW Layer]
+application -->|493 calls| application
+application -->|133 calls| middleware
+application -->|61 calls| utils
+application -->|3 calls| ui
+application -->|45 calls| database
+application -->|6 calls| workflow
+application -->|8 calls| api
+api -->|90 calls| application
+api -->|577 calls| api
+api -->|48 calls| database
+api -->|152 calls| middleware
+api -->|93 calls| utils
+api -->|11 calls| workflow
+api -->|2 calls| ui
+utils -->|455 calls| utils
+utils -->|18 calls| application
+utils -->|4 calls| database
+utils -->|64 calls| middleware
+utils -->|7 calls| workflow
+utils -->|2 calls| api
+middleware -->|700 calls| database
+middleware -->|6566 calls| middleware
+middleware -->|505 calls| api
+middleware -->|1435 calls| application
+middleware -->|782 calls| utils
+middleware -->|37 calls| workflow
+middleware -->|25 calls| ui
+database -->|1539 calls| database
+database -->|26 calls| api
+database -->|338 calls| middleware
+database -->|268 calls| application
+database -->|294 calls| utils
+database -->|60 calls| workflow
+database -->|40 calls| ui
+workflow -->|31 calls| application
+workflow -->|30 calls| middleware
+workflow -->|185 calls| workflow
+workflow -->|27 calls| database
+workflow -->|3 calls| ui
+workflow -->|16 calls| utils
+ui -->|232 calls| ui
+ui -->|65 calls| database
+ui -->|45 calls| application
+ui -->|37 calls| workflow
+ui -->|66 calls| middleware
+ui -->|13 calls| api
+ui -->|178 calls| utils

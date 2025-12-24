@@ -1,0 +1,96 @@
+graph TD
+apps_sim_app_api_resume_[workflowId]_[executionId]_route_ts[route.ts]
+apps_sim_app_api_workflows_[id]_paused_[executionId]_route_ts[route.ts]
+apps_sim_app_workspace_[workspaceId]_w_hooks_use-delete-workflow_ts[use-delete-workflow.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_hooks_index_ts[index.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_hooks_use-accessible-reference-prefixes_ts[use-accessible-reference-prefixes.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_hooks_use-block-connections_ts[use-block-connections.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_hooks_use-block-output-fields_ts[use-block-output-fields.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_hooks_use-block-visual_ts[use-block-visual.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_hooks_use-scroll-management_ts[use-scroll-management.ts]
+apps_sim_app_workspace_[workspaceId]_w_[workflowId]_hooks_use-float_index_ts[index.ts]
+apps_sim_blocks_blocks_workflow_ts[workflow.ts]
+apps_sim_blocks_blocks_workflow_input_ts[workflow_input.ts]
+apps_sim_executor_dag_construction_nodes_ts[nodes.ts]
+apps_sim_executor_orchestrators_node_ts[node.ts]
+apps_sim_executor_variables_resolvers_workflow_test_ts[workflow.test.ts]
+apps_sim_executor_variables_resolvers_workflow_ts[workflow.ts]
+apps_sim_lib_copilot_tools_client_workflow_get-user-workflow_ts[get-user-workflow.ts]
+apps_sim_lib_copilot_tools_client_workflow_run-workflow_ts[run-workflow.ts]
+apps_sim_lib_workflows_defaults_ts[defaults.ts]
+apps_sim_lib_workflows_types_ts[types.ts]
+apps_sim_lib_workflows_autolayout_constants_ts[constants.ts]
+apps_sim_lib_workflows_autolayout_index_ts[index.ts]
+apps_sim_lib_workflows_autolayout_types_ts[types.ts]
+apps_sim_lib_workflows_blocks_block-dimensions_ts[block-dimensions.ts]
+apps_sim_lib_workflows_blocks_block-outputs_ts[block-outputs.ts]
+apps_sim_lib_workflows_diff_index_ts[index.ts]
+apps_sim_lib_workflows_diff_types_ts[types.ts]
+apps_sim_lib_workflows_executor_execution-events_ts[execution-events.ts]
+apps_sim_lib_workflows_operations_import-export_ts[import-export.ts]
+apps_sim_lib_workflows_sanitization_json-sanitizer_ts[json-sanitizer.ts]
+apps_sim_lib_workflows_sanitization_key-validation_ts[key-validation.ts]
+apps_sim_lib_workflows_sanitization_references_test_ts[references.test.ts]
+apps_sim_lib_workflows_sanitization_references_ts[references.ts]
+apps_sim_lib_workflows_sanitization_validation_ts[validation.ts]
+apps_sim_lib_workflows_triggers_execution-events_ts[execution-events.ts]
+apps_sim_lib_workflows_triggers_triggers_ts[triggers.ts]
+apps_sim_lib_workflows_variables_variable-manager_test_ts[variable-manager.test.ts]
+apps_sim_lib_workflows_variables_variable-manager_ts[variable-manager.ts]
+apps_sim_stores_workflow-diff_index_ts[index.ts]
+apps_sim_stores_workflows_index_ts[index.ts]
+apps_sim_stores_workflows_json_store_ts[store.ts]
+apps_sim_stores_workflows_subblock_store_ts[store.ts]
+apps_sim_stores_workflows_subblock_types_ts[types.ts]
+apps_sim_stores_workflows_yaml_importer_ts[importer.ts]
+apps_sim_tools_workflow_executor_ts[executor.ts]
+apps_sim_tools_workflow_index_ts[index.ts]
+apps_sim_tools_workflow_types_ts[types.ts]
+workflow_grp[WORKFLOW Layer Chunk 1]
+workflow_grp --> apps_sim_app_api_resume_[workflowId]_[executionId]_route_ts
+workflow_grp --> apps_sim_app_api_workflows_[id]_paused_[executionId]_route_ts
+workflow_grp --> apps_sim_app_workspace_[workspaceId]_w_hooks_use-delete-workflow_ts
+workflow_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_hooks_index_ts
+workflow_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_hooks_use-accessible-reference-prefixes_ts
+workflow_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_hooks_use-block-connections_ts
+workflow_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_hooks_use-block-output-fields_ts
+workflow_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_hooks_use-block-visual_ts
+workflow_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_hooks_use-scroll-management_ts
+workflow_grp --> apps_sim_app_workspace_[workspaceId]_w_[workflowId]_hooks_use-float_index_ts
+workflow_grp --> apps_sim_blocks_blocks_workflow_ts
+workflow_grp --> apps_sim_blocks_blocks_workflow_input_ts
+workflow_grp --> apps_sim_executor_dag_construction_nodes_ts
+workflow_grp --> apps_sim_executor_orchestrators_node_ts
+workflow_grp --> apps_sim_executor_variables_resolvers_workflow_test_ts
+workflow_grp --> apps_sim_executor_variables_resolvers_workflow_ts
+workflow_grp --> apps_sim_lib_copilot_tools_client_workflow_get-user-workflow_ts
+workflow_grp --> apps_sim_lib_copilot_tools_client_workflow_run-workflow_ts
+workflow_grp --> apps_sim_lib_workflows_defaults_ts
+workflow_grp --> apps_sim_lib_workflows_types_ts
+workflow_grp --> apps_sim_lib_workflows_autolayout_constants_ts
+workflow_grp --> apps_sim_lib_workflows_autolayout_index_ts
+workflow_grp --> apps_sim_lib_workflows_autolayout_types_ts
+workflow_grp --> apps_sim_lib_workflows_blocks_block-dimensions_ts
+workflow_grp --> apps_sim_lib_workflows_blocks_block-outputs_ts
+workflow_grp --> apps_sim_lib_workflows_diff_index_ts
+workflow_grp --> apps_sim_lib_workflows_diff_types_ts
+workflow_grp --> apps_sim_lib_workflows_executor_execution-events_ts
+workflow_grp --> apps_sim_lib_workflows_operations_import-export_ts
+workflow_grp --> apps_sim_lib_workflows_sanitization_json-sanitizer_ts
+workflow_grp --> apps_sim_lib_workflows_sanitization_key-validation_ts
+workflow_grp --> apps_sim_lib_workflows_sanitization_references_test_ts
+workflow_grp --> apps_sim_lib_workflows_sanitization_references_ts
+workflow_grp --> apps_sim_lib_workflows_sanitization_validation_ts
+workflow_grp --> apps_sim_lib_workflows_triggers_execution-events_ts
+workflow_grp --> apps_sim_lib_workflows_triggers_triggers_ts
+workflow_grp --> apps_sim_lib_workflows_variables_variable-manager_test_ts
+workflow_grp --> apps_sim_lib_workflows_variables_variable-manager_ts
+workflow_grp --> apps_sim_stores_workflow-diff_index_ts
+workflow_grp --> apps_sim_stores_workflows_index_ts
+workflow_grp --> apps_sim_stores_workflows_json_store_ts
+workflow_grp --> apps_sim_stores_workflows_subblock_store_ts
+workflow_grp --> apps_sim_stores_workflows_subblock_types_ts
+workflow_grp --> apps_sim_stores_workflows_yaml_importer_ts
+workflow_grp --> apps_sim_tools_workflow_executor_ts
+workflow_grp --> apps_sim_tools_workflow_index_ts
+workflow_grp --> apps_sim_tools_workflow_types_ts
