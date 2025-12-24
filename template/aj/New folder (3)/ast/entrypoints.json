@@ -1,781 +1,1812 @@
 {
-  "apps/docs/components/ui/code-block.tsx": [
-    "handleCopy"
+  "apps/docs/app/llms-full.txt/route.ts": [
+    "GET"
   ],
-  "apps/docs/components/ui/image.tsx": [
-    "handleImageClick"
+  "apps/docs/app/llms.mdx/[[...slug]]/route.ts": [
+    "GET",
+    "generateStaticParams"
   ],
-  "apps/docs/components/ui/lightbox.tsx": [
-    "handleKeyDown",
-    "handleClickOutside"
+  "apps/docs/app/llms.txt/route.ts": [
+    "GET"
   ],
-  "apps/docs/components/ui/search-trigger.tsx": [
-    "handleClick"
+  "apps/docs/app/robots.txt/route.ts": [
+    "GET"
   ],
-  "apps/docs/components/ui/video.tsx": [
-    "handleVideoClick"
+  "apps/docs/app/sitemap.xml/route.ts": [
+    "GET",
+    "generateAlternateLinks"
   ],
-  "apps/sim/instrumentation-node.ts": [
-    "shutdownHandler"
+  "apps/docs/components/icons.tsx": [
+    "WorkflowIcon"
   ],
-  "apps/sim/app/(auth)/components/sso-login-button.tsx": [
-    "handleSSOClick"
-  ],
-  "apps/sim/app/(auth)/login/login-form.tsx": [
-    "handleKeyDown",
-    "handleEmailChange",
-    "handlePasswordChange",
-    "handleForgotPassword"
-  ],
-  "apps/sim/app/(auth)/reset-password/page.tsx": [
-    "handleResetPassword"
-  ],
-  "apps/sim/app/(auth)/reset-password/reset-password-form.tsx": [
-    "handleSubmit",
-    "handleSubmit"
-  ],
-  "apps/sim/app/(auth)/signup/signup-form.tsx": [
-    "handlePasswordChange",
-    "handleNameChange",
-    "handleEmailChange"
-  ],
-  "apps/sim/app/(auth)/sso/sso-form.tsx": [
-    "handleEmailChange"
+  "apps/sim/proxy.ts": [
+    "handleRootPathRedirects",
+    "handleInvitationRedirects",
+    "handleWorkspaceInvitationAPI",
+    "handleSecurityFiltering"
   ],
   "apps/sim/app/(auth)/verify/use-verification.ts": [
-    "handleRedirect"
+    "handleOtpChange"
   ],
-  "apps/sim/app/(auth)/verify/verify-content.tsx": [
-    "handleResend"
+  "apps/sim/app/(landing)/studio/rss.xml/route.ts": [
+    "GET"
   ],
-  "apps/sim/app/(landing)/careers/page.tsx": [
-    "handleFileChange"
+  "apps/sim/app/(landing)/studio/sitemap-images.xml/route.ts": [
+    "GET"
   ],
-  "apps/sim/app/(landing)/components/hero/hero.tsx": [
-    "handleServiceClick",
-    "handleIconContainerMouseEnter",
-    "handleIconContainerMouseLeave",
-    "handleSubmit",
-    "handleKeyDown"
+  "apps/sim/app/api/auth/accounts/route.ts": [
+    "GET"
   ],
-  "apps/sim/app/(landing)/components/landing-pricing/landing-pricing.tsx": [
-    "handleCtaClick"
+  "apps/sim/app/api/auth/forget-password/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/auth/oauth/connections/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/auth/oauth/credentials/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/auth/oauth/disconnect/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/auth/oauth/microsoft/file/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/auth/oauth/microsoft/files/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/auth/oauth/token/route.ts": [
+    "POST",
+    "GET"
+  ],
+  "apps/sim/app/api/auth/oauth/wealthbox/item/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/auth/oauth/wealthbox/items/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/auth/oauth2/callback/shopify/route.ts": [
+    "validateHmac",
+    "GET"
+  ],
+  "apps/sim/app/api/auth/oauth2/shopify/store/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/auth/reset-password/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/auth/shopify/authorize/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/auth/socket-token/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/auth/sso/providers/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/auth/sso/register/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/auth/trello/authorize/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/auth/trello/callback/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/auth/trello/store/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/auth/[...all]/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/billing/route.ts": [
+    "getEffectiveBillingStatus",
+    "GET"
+  ],
+  "apps/sim/app/api/billing/credits/route.ts": [
+    "GET",
+    "POST"
+  ],
+  "apps/sim/app/api/billing/portal/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/billing/update-cost/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/careers/submit/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/chat/route.ts": [
+    "GET",
+    "POST"
+  ],
+  "apps/sim/app/api/chat/utils.ts": [
+    "checkWorkflowAccessForChatCreation"
+  ],
+  "apps/sim/app/api/chat/manage/[id]/route.ts": [
+    "GET",
+    "PATCH",
+    "DELETE"
+  ],
+  "apps/sim/app/api/chat/validate/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/chat/[identifier]/route.ts": [
+    "POST",
+    "GET"
+  ],
+  "apps/sim/app/api/chat/[identifier]/otp/route.ts": [
+    "generateOTP",
+    "cleanupExpiredOTPs",
+    "storeOTP",
+    "getOTP",
+    "deleteOTP",
+    "POST",
+    "PUT"
+  ],
+  "apps/sim/app/api/copilot/api-keys/route.ts": [
+    "GET",
+    "uest: "
+  ],
+  "apps/sim/app/api/copilot/api-keys/generate/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/copilot/api-keys/validate/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/copilot/auto-allowed-tools/route.ts": [
+    "GET",
+    "POST",
+    "DELETE"
+  ],
+  "apps/sim/app/api/copilot/chat/route.ts": [
+    "POST",
+    "GET"
+  ],
+  "apps/sim/app/api/copilot/chat/delete/route.ts": [
+    "DELETE"
+  ],
+  "apps/sim/app/api/copilot/chat/update-messages/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/copilot/chat/update-title/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/copilot/chats/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/copilot/checkpoints/route.ts": [
+    "POST",
+    "GET"
+  ],
+  "apps/sim/app/api/copilot/checkpoints/revert/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/copilot/confirm/route.ts": [
+    "updateToolCallStatus",
+    "POST"
+  ],
+  "apps/sim/app/api/copilot/context-usage/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/copilot/execute-copilot-server-tool/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/copilot/execute-tool/route.ts": [
+    "resolveEnvVarReferences",
+    "POST"
+  ],
+  "apps/sim/app/api/copilot/feedback/route.ts": [
+    "POST",
+    "GET"
+  ],
+  "apps/sim/app/api/copilot/stats/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/copilot/tools/mark-complete/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/copilot/training/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/copilot/training/examples/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/copilot/user-models/route.ts": [
+    "GET",
+    "PUT"
+  ],
+  "apps/sim/app/api/creators/route.ts": [
+    "GET",
+    "POST"
+  ],
+  "apps/sim/app/api/creators/[id]/route.ts": [
+    "hasPermission",
+    "GET",
+    "PUT",
+    "DELETE"
+  ],
+  "apps/sim/app/api/creators/[id]/verify/route.ts": [
+    "POST",
+    "DELETE"
+  ],
+  "apps/sim/app/api/cron/renew-subscriptions/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/environment/route.ts": [
+    "POST",
+    "GET"
+  ],
+  "apps/sim/app/api/files/delete/route.ts": [
+    "POST",
+    "extractStorageKeyFromPath",
+    "OPTIONS"
+  ],
+  "apps/sim/app/api/files/download/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/files/multipart/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/files/parse/route.ts": [
+    "POST",
+    "parseFileSingle",
+    "validateFilePath",
+    "handleExternalUrl",
+    "handleCloudFile",
+    "handleLocalFile",
+    "handlePdfBuffer",
+    "handleCsvBuffer",
+    "handleGenericTextBuffer",
+    "handleGenericBuffer",
+    "parseBufferAsPdf",
+    "prettySize",
+    "createPdfFallbackMessage",
+    "createPdfFailureMessage"
+  ],
+  "apps/sim/app/api/files/presigned/route.ts": [
+    "POST",
+    "OPTIONS"
+  ],
+  "apps/sim/app/api/files/presigned/batch/route.ts": [
+    "POST",
+    "OPTIONS"
+  ],
+  "apps/sim/app/api/files/serve/[...path]/route.ts": [
+    "GET",
+    "handleLocalFile",
+    "handleCloudProxy",
+    "handleCloudProxyPublic",
+    "handleLocalFilePublic"
+  ],
+  "apps/sim/app/api/files/upload/route.ts": [
+    "validateFileExtension",
+    "POST",
+    "OPTIONS"
+  ],
+  "apps/sim/app/api/folders/route.ts": [
+    "GET",
+    "POST"
+  ],
+  "apps/sim/app/api/folders/[id]/route.ts": [
+    "PUT",
+    "DELETE",
+    "deleteFolderRecursively",
+    "countWorkflowsInFolderRecursively",
+    "checkForCircularReference"
+  ],
+  "apps/sim/app/api/folders/[id]/duplicate/route.ts": [
+    "POST",
+    "duplicateFolderStructure",
+    "duplicateWorkflowsInFolderTree"
+  ],
+  "apps/sim/app/api/function/execute/route.ts": [
+    "loadTypeScriptModule",
+    "extractJavaScriptImports",
+    "extractEnhancedError",
+    "formatE2BError",
+    "createUserFriendlyErrorMessage",
+    "resolveWorkflowVariables",
+    "resolveEnvironmentVariables",
+    "resolveTagVariables",
+    "resolveCodeVariables",
+    "getNestedValue",
+    "escapeRegExp",
+    "cleanStdout",
+    "POST"
+  ],
+  "apps/sim/app/api/guardrails/validate/route.ts": [
+    "POST",
+    "convertInputToString",
+    "executeValidation"
+  ],
+  "apps/sim/app/api/help/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/jobs/[jobId]/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/knowledge/route.ts": [
+    "GET",
+    "POST"
+  ],
+  "apps/sim/app/api/knowledge/search/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/knowledge/search/utils.ts": [
+    "executeTagFilterQuery",
+    "executeVectorSearchOnIds",
+    "handleTagOnlySearch",
+    "handleVectorOnlySearch",
+    "handleTagAndVectorSearch"
+  ],
+  "apps/sim/app/api/knowledge/[id]/route.ts": [
+    "GET",
+    "PUT",
+    "DELETE"
+  ],
+  "apps/sim/app/api/knowledge/[id]/documents/route.ts": [
+    "GET",
+    "POST",
+    "PATCH"
+  ],
+  "apps/sim/app/api/knowledge/[id]/documents/[documentId]/route.ts": [
+    "GET",
+    "PUT",
+    "DELETE"
+  ],
+  "apps/sim/app/api/knowledge/[id]/documents/[documentId]/chunks/route.ts": [
+    "GET",
+    "POST",
+    "PATCH"
+  ],
+  "apps/sim/app/api/knowledge/[id]/documents/[documentId]/chunks/[chunkId]/route.ts": [
+    "GET",
+    "PUT",
+    "DELETE"
+  ],
+  "apps/sim/app/api/knowledge/[id]/documents/[documentId]/tag-definitions/route.ts": [
+    "GET",
+    "POST",
+    "DELETE"
+  ],
+  "apps/sim/app/api/knowledge/[id]/next-available-slot/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/knowledge/[id]/tag-definitions/route.ts": [
+    "GET",
+    "POST"
+  ],
+  "apps/sim/app/api/knowledge/[id]/tag-definitions/[tagId]/route.ts": [
+    "DELETE"
+  ],
+  "apps/sim/app/api/knowledge/[id]/tag-usage/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/logs/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/logs/cleanup/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/logs/execution/[executionId]/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/logs/export/route.ts": [
+    "escapeCsv",
+    "GET"
+  ],
+  "apps/sim/app/api/logs/triggers/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/logs/[id]/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/mcp/servers/route.ts": [
+    "isUrlBasedTransport"
+  ],
+  "apps/sim/app/api/mcp/servers/test-connection/route.ts": [
+    "isUrlBasedTransport",
+    "resolveEnvVars"
+  ],
+  "apps/sim/app/api/mcp/tools/execute/route.ts": [
+    "hasType",
+    "item",
+    "validateToolArguments",
+    "transformToolResult"
+  ],
+  "apps/sim/app/api/memory/route.ts": [
+    "parseMemoryKey",
+    "GET",
+    "POST",
+    "DELETE"
+  ],
+  "apps/sim/app/api/memory/[id]/route.ts": [
+    "parseMemoryKey",
+    "getBlockName",
+    "validateMemoryAccess",
+    "GET",
+    "DELETE",
+    "PUT"
+  ],
+  "apps/sim/app/api/notifications/poll/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/organizations/route.ts": [
+    "GET",
+    "POST"
+  ],
+  "apps/sim/app/api/organizations/[id]/route.ts": [
+    "GET",
+    "PUT"
+  ],
+  "apps/sim/app/api/organizations/[id]/invitations/route.ts": [
+    "GET",
+    "POST",
+    "DELETE"
+  ],
+  "apps/sim/app/api/organizations/[id]/invitations/[invitationId]/route.ts": [
+    "GET",
+    "PUT"
+  ],
+  "apps/sim/app/api/organizations/[id]/members/route.ts": [
+    "GET",
+    "POST"
+  ],
+  "apps/sim/app/api/organizations/[id]/members/[memberId]/route.ts": [
+    "GET",
+    "PUT",
+    "DELETE"
+  ],
+  "apps/sim/app/api/organizations/[id]/seats/route.ts": [
+    "PUT"
+  ],
+  "apps/sim/app/api/organizations/[id]/workspaces/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/providers/route.ts": [
+    "POST",
+    "sanitizeToolCalls",
+    "sanitizeToolCall",
+    "sanitizeObject"
+  ],
+  "apps/sim/app/api/providers/base/models/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/providers/ollama/models/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/providers/openrouter/models/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/providers/vllm/models/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/proxy/route.ts": [
+    "GET",
+    "POST",
+    "OPTIONS"
+  ],
+  "apps/sim/app/api/proxy/image/route.ts": [
+    "GET",
+    "OPTIONS"
+  ],
+  "apps/sim/app/api/proxy/stt/route.ts": [
+    "POST",
+    "transcribeWithWhisper",
+    "transcribeWithDeepgram",
+    "transcribeWithElevenLabs",
+    "transcribeWithAssemblyAI",
+    "transcribeWithGemini"
+  ],
+  "apps/sim/app/api/proxy/tts/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/proxy/tts/stream/route.ts": [
+    "validateChatAuth",
+    "POST"
+  ],
+  "apps/sim/app/api/proxy/tts/unified/route.ts": [
+    "POST",
+    "synthesizeWithOpenAi",
+    "synthesizeWithDeepgram",
+    "synthesizeWithElevenLabs",
+    "synthesizeWithCartesia",
+    "synthesizeWithGoogle",
+    "synthesizeWithAzure",
+    "synthesizeWithPlayHT"
+  ],
+  "apps/sim/app/api/proxy/video/route.ts": [
+    "POST",
+    "generateWithRunway",
+    "generateWithVeo",
+    "generateWithLuma",
+    "generateWithMiniMax",
+    "getBaseModelId",
+    "formatDuration",
+    "generateWithFalAI",
+    "getVideoDimensions",
+    "sleep"
+  ],
+  "apps/sim/app/api/resume/[workflowId]/[executionId]/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/resume/[workflowId]/[executionId]/[contextId]/route.ts": [
+    "POST",
+    "GET"
+  ],
+  "apps/sim/app/api/schedules/route.ts": [
+    "hasValidScheduleConfig",
+    "GET",
+    "POST"
+  ],
+  "apps/sim/app/api/schedules/execute/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/schedules/[id]/route.ts": [
+    "DELETE",
+    "PUT"
+  ],
+  "apps/sim/app/api/schedules/[id]/status/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/stars/route.ts": [
+    "formatStarCount",
+    "GET"
+  ],
+  "apps/sim/app/api/status/route.ts": [
+    "determineStatus",
+    "GET"
+  ],
+  "apps/sim/app/api/telemetry/route.ts": [
+    "validateTelemetryData",
+    "safeStringValue",
+    "createSafeAttributes",
+    "forwardToCollector",
+    "POST"
+  ],
+  "apps/sim/app/api/templates/route.ts": [
+    "sanitizeWorkflowState",
+    "GET",
+    "POST"
+  ],
+  "apps/sim/app/api/templates/approved/sanitized/route.ts": [
+    "GET",
+    "OPTIONS"
+  ],
+  "apps/sim/app/api/templates/[id]/route.ts": [
+    "GET",
+    "PUT",
+    "DELETE"
+  ],
+  "apps/sim/app/api/templates/[id]/approve/route.ts": [
+    "POST",
+    "DELETE"
+  ],
+  "apps/sim/app/api/templates/[id]/og-image/route.ts": [
+    "PUT",
+    "DELETE"
+  ],
+  "apps/sim/app/api/templates/[id]/reject/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/templates/[id]/star/route.ts": [
+    "GET",
+    "POST",
+    "DELETE"
+  ],
+  "apps/sim/app/api/templates/[id]/use/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/asana/add-comment/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/asana/create-task/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/asana/get-projects/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/asana/get-task/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/asana/search-tasks/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/asana/update-task/route.ts": [
+    "PUT"
+  ],
+  "apps/sim/app/api/tools/confluence/attachment/route.ts": [
+    "DELETE"
+  ],
+  "apps/sim/app/api/tools/confluence/attachments/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/tools/confluence/comment/route.ts": [
+    "PUT",
+    "DELETE"
+  ],
+  "apps/sim/app/api/tools/confluence/comments/route.ts": [
+    "POST",
+    "GET"
+  ],
+  "apps/sim/app/api/tools/confluence/create-page/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/confluence/labels/route.ts": [
+    "POST",
+    "GET"
+  ],
+  "apps/sim/app/api/tools/confluence/page/route.ts": [
+    "POST",
+    "PUT",
+    "DELETE"
+  ],
+  "apps/sim/app/api/tools/confluence/pages/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/confluence/search/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/confluence/space/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/tools/confluence/spaces/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/tools/confluence/upload-attachment/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/custom/route.ts": [
+    "GET",
+    "POST",
+    "DELETE"
+  ],
+  "apps/sim/app/api/tools/discord/channels/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/discord/send-message/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/discord/servers/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/drive/file/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/tools/drive/files/route.ts": [
+    "escapeForDriveQuery",
+    "fetchSharedDrives",
+    "GET"
+  ],
+  "apps/sim/app/api/tools/dynamodb/delete/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/dynamodb/get/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/dynamodb/put/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/dynamodb/query/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/dynamodb/scan/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/dynamodb/update/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/gmail/add-label/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/gmail/archive/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/gmail/delete/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/gmail/draft/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/gmail/label/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/tools/gmail/labels/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/tools/gmail/mark-read/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/gmail/mark-unread/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/gmail/move/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/gmail/remove-label/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/gmail/send/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/gmail/unarchive/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/google_calendar/calendars/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/tools/google_drive/upload/route.ts": [
+    "buildMultipartBody",
+    "POST"
+  ],
+  "apps/sim/app/api/tools/jira/issue/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/jira/issues/route.ts": [
+    "POST",
+    "GET"
+  ],
+  "apps/sim/app/api/tools/jira/projects/route.ts": [
+    "GET",
+    "POST"
+  ],
+  "apps/sim/app/api/tools/jira/update/route.ts": [
+    "PUT"
+  ],
+  "apps/sim/app/api/tools/jira/write/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/linear/projects/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/linear/teams/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/mail/send/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/microsoft-teams/channels/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/microsoft-teams/chats/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/microsoft-teams/teams/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/microsoft_planner/tasks/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/tools/microsoft_teams/delete_chat_message/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/microsoft_teams/write_channel/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/microsoft_teams/write_chat/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/mistral/parse/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/mongodb/delete/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/mongodb/execute/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/mongodb/insert/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/mongodb/query/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/mongodb/update/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/mysql/utils.ts": [
+    "executeQuery"
+  ],
+  "apps/sim/app/api/tools/mysql/delete/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/mysql/execute/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/mysql/insert/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/mysql/query/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/mysql/update/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/neo4j/create/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/neo4j/delete/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/neo4j/execute/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/neo4j/merge/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/neo4j/query/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/neo4j/update/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/onedrive/files/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/tools/onedrive/folder/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/tools/onedrive/folders/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/tools/onedrive/upload/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/outlook/copy/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/outlook/delete/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/outlook/draft/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/outlook/folders/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/tools/outlook/mark-read/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/outlook/mark-unread/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/outlook/move/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/outlook/send/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/postgresql/utils.ts": [
+    "executeQuery",
+    "executeInsert",
+    "executeUpdate",
+    "executeDelete"
+  ],
+  "apps/sim/app/api/tools/postgresql/delete/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/postgresql/execute/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/postgresql/insert/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/postgresql/query/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/postgresql/update/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/rds/utils.ts": [
+    "executeStatement",
+    "executeInsert",
+    "executeUpdate",
+    "executeDelete"
+  ],
+  "apps/sim/app/api/tools/rds/delete/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/rds/execute/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/rds/insert/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/rds/query/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/rds/update/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/s3/copy-object/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/s3/delete-object/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/s3/list-objects/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/s3/put-object/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/search/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/sftp/delete/route.ts": [
+    "deleteRecursive",
+    "POST"
+  ],
+  "apps/sim/app/api/tools/sftp/download/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/sftp/list/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/sftp/mkdir/route.ts": [
+    "mkdirRecursive",
+    "POST"
+  ],
+  "apps/sim/app/api/tools/sftp/upload/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/sharepoint/site/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/tools/sharepoint/sites/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/tools/sharepoint/upload/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/slack/add-reaction/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/slack/channels/route.ts": [
+    "POST",
+    "fetchSlackChannels"
+  ],
+  "apps/sim/app/api/tools/slack/delete-message/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/slack/read-messages/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/slack/send-message/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/slack/update-message/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/slack/users/route.ts": [
+    "POST",
+    "fetchSlackUser",
+    "fetchSlackUsers"
+  ],
+  "apps/sim/app/api/tools/sms/send/route.ts": [
+    "POST"
   ],
   "apps/sim/app/api/tools/smtp/send/route.ts": [
-    "isNodeError"
+    "POST"
   ],
-  "apps/sim/app/chat/components/auth/email/email-auth.tsx": [
-    "handleEmailKeyDown",
-    "handleEmailChange",
-    "handleSendOtp",
-    "handleVerifyOtp",
-    "handleResendOtp"
+  "apps/sim/app/api/tools/sqs/send/route.ts": [
+    "POST"
   ],
-  "apps/sim/app/chat/components/auth/password/password-auth.tsx": [
-    "handleKeyDown",
-    "handlePasswordChange",
-    "handleAuthenticate"
+  "apps/sim/app/api/tools/ssh/utils.ts": [
+    "executeSSHCommand"
   ],
-  "apps/sim/app/chat/components/auth/sso/sso-auth.tsx": [
-    "handleKeyDown",
-    "handleEmailChange",
-    "handleAuthenticate"
+  "apps/sim/app/api/tools/ssh/check-command-exists/route.ts": [
+    "POST"
   ],
-  "apps/sim/app/chat/components/input/input.tsx": [
-    "handleClickOutside",
-    "handleActivate",
-    "handleFileSelect",
-    "handleRemoveFile",
-    "handleSubmit",
-    "handleInputChange",
-    "handleVoiceStart"
+  "apps/sim/app/api/tools/ssh/check-file-exists/route.ts": [
+    "getSFTP",
+    "POST"
+  ],
+  "apps/sim/app/api/tools/ssh/create-directory/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/ssh/delete-file/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/ssh/download-file/route.ts": [
+    "getSFTP",
+    "POST"
+  ],
+  "apps/sim/app/api/tools/ssh/execute-command/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/ssh/execute-script/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/ssh/get-system-info/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/ssh/list-directory/route.ts": [
+    "getSFTP",
+    "listDir",
+    "POST"
+  ],
+  "apps/sim/app/api/tools/ssh/move-rename/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/ssh/read-file-content/route.ts": [
+    "getSFTP",
+    "POST"
+  ],
+  "apps/sim/app/api/tools/ssh/upload-file/route.ts": [
+    "getSFTP",
+    "POST"
+  ],
+  "apps/sim/app/api/tools/ssh/write-file-content/route.ts": [
+    "getSFTP",
+    "POST"
+  ],
+  "apps/sim/app/api/tools/stagehand/agent/route.ts": [
+    "getSchemaObject",
+    "formatSchemaForInstructions",
+    "processVariables",
+    "substituteVariables",
+    "POST"
+  ],
+  "apps/sim/app/api/tools/stagehand/extract/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/telegram/send-document/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/thinking/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/vision/analyze/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/wealthbox/item/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/tools/wealthbox/items/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/tools/webflow/collections/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/webflow/items/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/webflow/sites/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/tools/wordpress/upload/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/usage/route.ts": [
+    "GET",
+    "PUT"
+  ],
+  "apps/sim/app/api/user/super-user/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/users/me/api-keys/route.ts": [
+    "GET",
+    "POST"
+  ],
+  "apps/sim/app/api/users/me/api-keys/[id]/route.ts": [
+    "DELETE"
+  ],
+  "apps/sim/app/api/users/me/profile/route.ts": [
+    "PATCH",
+    "GET"
+  ],
+  "apps/sim/app/api/users/me/settings/route.ts": [
+    "GET",
+    "PATCH"
+  ],
+  "apps/sim/app/api/users/me/settings/unsubscribe/route.ts": [
+    "GET",
+    "POST"
+  ],
+  "apps/sim/app/api/users/me/subscription/[id]/transfer/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/users/me/usage-limits/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/users/me/usage-logs/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/v1/admin/types.ts": [
+    "toAdminWorkflow",
+    "parseWorkflowVariables",
+    "extractWorkflowMetadata"
+  ],
+  "apps/sim/app/api/v1/admin/workspaces/[id]/import/route.ts": [
+    "importSingleWorkflow"
+  ],
+  "apps/sim/app/api/v1/logs/route.ts": [
+    "encodeCursor",
+    "decodeCursor",
+    "GET"
+  ],
+  "apps/sim/app/api/v1/logs/executions/[executionId]/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/v1/logs/[id]/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/wand/route.ts": [
+    "safeStringify",
+    "updateUserStatsForWand",
+    "POST"
+  ],
+  "apps/sim/app/api/webhooks/route.ts": [
+    "GET",
+    "POST",
+    "createAirtableWebhookSubscription",
+    "createCalendlyWebhookSubscription",
+    "createWebflowWebhookSubscription"
+  ],
+  "apps/sim/app/api/webhooks/cleanup/idempotency/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/webhooks/poll/gmail/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/webhooks/poll/outlook/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/webhooks/poll/rss/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/webhooks/test/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/webhooks/test/[id]/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/webhooks/trigger/[path]/route.ts": [
+    "GET",
+    "POST"
+  ],
+  "apps/sim/app/api/webhooks/[id]/route.ts": [
+    "GET",
+    "PATCH",
+    "DELETE"
+  ],
+  "apps/sim/app/api/webhooks/[id]/test-url/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/workflows/middleware.ts": [
+    "validateWorkflowAccess"
+  ],
+  "apps/sim/app/api/workflows/route.ts": [
+    "GET",
+    "POST"
+  ],
+  "apps/sim/app/api/workflows/yaml/convert/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/workflows/yaml/export/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/workflows/[id]/route.ts": [
+    "GET",
+    "DELETE",
+    "PUT"
+  ],
+  "apps/sim/app/api/workflows/[id]/autolayout/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/workflows/[id]/chat/status/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/workflows/[id]/deploy/route.ts": [
+    "GET",
+    "POST",
+    "DELETE"
+  ],
+  "apps/sim/app/api/workflows/[id]/deployed/route.ts": [
+    "addNoCacheHeaders",
+    "GET"
+  ],
+  "apps/sim/app/api/workflows/[id]/deployments/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/workflows/[id]/deployments/[version]/route.ts": [
+    "GET",
+    "PATCH"
+  ],
+  "apps/sim/app/api/workflows/[id]/deployments/[version]/activate/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/workflows/[id]/deployments/[version]/revert/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/workflows/[id]/duplicate/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/workflows/[id]/execute/route.ts": [
+    "executeWorkflow",
+    "createFilteredResult",
+    "resolveOutputIds",
+    "handleAsyncExecution",
+    "POST"
+  ],
+  "apps/sim/app/api/workflows/[id]/log/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/workflows/[id]/paused/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/workflows/[id]/paused/[executionId]/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/workflows/[id]/state/route.ts": [
+    "PUT",
+    "getSubBlockValue",
+    "syncWorkflowWebhooks",
+    "syncWorkflowSchedules",
+    "buildScheduleMetadata",
+    "convertToScheduleBlock",
+    "buildWebhookMetadata",
+    "upsertWebhookRecord",
+    "upsertScheduleRecord",
+    "syncBlockResources",
+    "stringifySubBlockValue"
+  ],
+  "apps/sim/app/api/workflows/[id]/status/route.ts": [
+    "GET"
+  ],
+  "apps/sim/app/api/workflows/[id]/variables/route.ts": [
+    "POST",
+    "GET"
+  ],
+  "apps/sim/app/api/workspaces/route.ts": [
+    "GET",
+    "POST",
+    "createDefaultWorkspace",
+    "createWorkspace",
+    "migrateExistingWorkflows",
+    "ensureWorkflowsHaveWorkspace"
+  ],
+  "apps/sim/app/api/workspaces/invitations/route.ts": [
+    "GET",
+    "POST",
+    "sendInvitationEmail"
+  ],
+  "apps/sim/app/api/workspaces/invitations/[invitationId]/route.ts": [
+    "GET",
+    "DELETE",
+    "POST"
+  ],
+  "apps/sim/app/api/workspaces/members/[id]/route.ts": [
+    "DELETE"
+  ],
+  "apps/sim/app/api/workspaces/[id]/route.ts": [
+    "GET",
+    "PATCH",
+    "DELETE",
+    "PUT"
+  ],
+  "apps/sim/app/api/workspaces/[id]/api-keys/route.ts": [
+    "GET",
+    "POST",
+    "DELETE"
+  ],
+  "apps/sim/app/api/workspaces/[id]/api-keys/[keyId]/route.ts": [
+    "PUT",
+    "DELETE"
+  ],
+  "apps/sim/app/api/workspaces/[id]/duplicate/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/workspaces/[id]/environment/route.ts": [
+    "GET",
+    "PUT",
+    "DELETE"
+  ],
+  "apps/sim/app/api/workspaces/[id]/files/route.ts": [
+    "GET",
+    "POST"
+  ],
+  "apps/sim/app/api/workspaces/[id]/files/[fileId]/route.ts": [
+    "DELETE"
+  ],
+  "apps/sim/app/api/workspaces/[id]/files/[fileId]/download/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/workspaces/[id]/metrics/executions/route.ts": [
+    "GET",
+    "percentile"
+  ],
+  "apps/sim/app/api/workspaces/[id]/notifications/route.ts": [
+    "checkWorkspaceWriteAccess",
+    "GET",
+    "POST"
+  ],
+  "apps/sim/app/api/workspaces/[id]/notifications/[notificationId]/route.ts": [
+    "checkWorkspaceWriteAccess",
+    "getSubscription",
+    "GET",
+    "PUT",
+    "DELETE"
+  ],
+  "apps/sim/app/api/workspaces/[id]/notifications/[notificationId]/test/route.ts": [
+    "generateSignature",
+    "buildTestPayload",
+    "testWebhook",
+    "testEmail",
+    "testSlack",
+    "requ"
+  ],
+  "apps/sim/app/api/workspaces/[id]/permissions/route.ts": [
+    "GET",
+    "PATCH"
+  ],
+  "apps/sim/app/api/yaml/autolayout/route.ts": [
+    "POST"
+  ],
+  "apps/sim/app/api/__test-utils__/utils.ts": [
+    "mockTriggerDevSdk",
+    "mockWorkflowAccessValidation",
+    "mockScheduleExecuteDb",
+    "mockWorkflowUtils"
+  ],
+  "apps/sim/app/changelog.xml/route.ts": [
+    "escapeXml",
+    "GET"
   ],
   "apps/sim/app/chat/components/message/components/file-download.tsx": [
-    "handleDownload",
-    "handleDownloadAll"
-  ],
-  "apps/sim/app/chat/components/voice-interface/voice-interface.tsx": [
-    "handleKeyDown"
-  ],
-  "apps/sim/app/chat/hooks/use-chat-streaming.ts": [
-    "handleStreamedResponse"
+    "triggerDownload"
   ],
   "apps/sim/app/chat/[identifier]/chat.tsx": [
-    "handleAuthSuccess",
-    "handleSendMessage"
+    "createAudioStreamHandler"
   ],
-  "apps/sim/app/invite/[id]/invite.tsx": [
-    "handleAcceptInvitation"
-  ],
-  "apps/sim/app/unsubscribe/unsubscribe.tsx": [
-    "handleUnsubscribe"
-  ],
-  "apps/sim/app/workspace/providers/socket-provider.tsx": [
-    "rehydrateWorkflowStores"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/knowledge/knowledge.tsx": [
-    "handleSortChange",
-    "handleKnowledgeBaseCreated",
-    "handleRetry"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/knowledge/components/create-base-modal/create-base-modal.tsx": [
-    "handleClose",
-    "processFiles",
-    "handleFileChange",
-    "handleDragEnter",
-    "handleDragLeave",
-    "handleDragOver",
-    "handleDrop"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/knowledge/components/knowledge-header/knowledge-header.tsx": [
-    "handleWorkspaceChange"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/knowledge/hooks/use-knowledge-upload.ts": [
-    "runWithConcurrency",
-    "abortHandler"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/components/add-documents-modal/add-documents-modal.tsx": [
-    "handleClose",
-    "processFiles",
-    "handleFileChange",
-    "handleDragEnter",
-    "handleDragLeave",
-    "handleDragOver",
-    "handleDrop",
-    "handleRetryFile",
-    "handleUpload"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/components/base-tags-modal/base-tags-modal.tsx": [
-    "handleDeleteTagClick",
-    "handleViewDocuments",
-    "handleClose"
+  "apps/sim/app/llms.txt/route.ts": [
+    "GET"
   ],
   "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/document.tsx": [
-    "handleChunkClick",
-    "handleCloseModal",
-    "handleToggleEnabled",
-    "handleDeleteChunk",
-    "handleChunkDeleted",
-    "handleCloseDeleteModal",
-    "handleSelectChunk",
-    "handleSelectAll",
-    "handleChunkCreated",
-    "handleDeleteDocument",
-    "handleBulkEnable",
-    "handleBulkDisable",
-    "handleBulkDelete"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/components/create-chunk-modal/create-chunk-modal.tsx": [
-    "handleCreateChunk",
-    "handleCloseAttempt",
-    "handleConfirmDiscard"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/components/delete-chunk-modal/delete-chunk-modal.tsx": [
-    "handleDeleteChunk"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/components/document-tags-modal/document-tags-modal.tsx": [
-    "handleRemoveTag",
-    "handleClose"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/components/edit-chunk-modal/edit-chunk-modal.tsx": [
-    "handleSaveContent",
-    "handleNavigate",
-    "handleCloseAttempt",
-    "handleConfirmDiscard"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/logs/logs.tsx": [
-    "handleLogClick",
-    "handleCloseSidebar",
-    "handleExport",
-    "handlePopState",
-    "handleScroll",
-    "handleKeyDown"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/logs/components/log-details/log-details.tsx": [
-    "handleKeyDown",
-    "handleNavigate"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/logs/components/log-details/components/file-download/file-download.tsx": [
-    "handleDownload",
-    "handleDownload"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/logs/components/logs-toolbar/logs-toolbar.tsx": [
-    "fetchWorkflows"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/logs/components/logs-toolbar/components/controls/controls.tsx": [
-    "handleTimeRangeSelect"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/logs/components/logs-toolbar/components/notifications/notifications.tsx": [
-    "handleSave",
-    "handleEdit",
-    "handleDelete",
-    "handleTest"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/logs/components/logs-toolbar/components/notifications/components/slack-channel-selector/slack-channel-selector.tsx": [
-    "handleChange"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/logs/components/logs-toolbar/components/notifications/components/workflow-selector/workflow-selector.tsx": [
-    "handleMultiSelectChange",
-    "handleRemove"
+    "truncateContent"
   ],
   "apps/sim/app/workspace/[workspaceId]/logs/components/logs-toolbar/components/search/search.tsx": [
-    "handleFiltersChange"
+    "truncateFilterValue"
   ],
-  "apps/sim/app/workspace/[workspaceId]/logs/hooks/use-log-details-resize.ts": [
-    "handleMouseMove",
-    "handleMouseUp"
+  "apps/sim/app/workspace/[workspaceId]/w/page.tsx": [
+    "WorkflowsPage"
   ],
-  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/sidebar.tsx": [
-    "handleOpenHelpModal",
-    "handleScrollToItem"
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/workflow-list/components/workflow-item/workflow-item.tsx": [
+    "WorkflowItem",
+    "workflowIdsToDelete"
   ],
-  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/settings-modal.tsx": [
-    "handleOpenSettings",
-    "handleCloseSettings",
-    "handlePrefetch",
-    "handleDialogOpenChange"
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/hooks/use-workflow-operations.ts": [
+    "useWorkflowOperations"
   ],
-  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/api-keys/api-keys.tsx": [
-    "handleCreateKey",
-    "handleDeleteKey",
-    "handleModalClose"
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/hooks/use-workflow-selection.ts": [
+    "useWorkflowSelection"
   ],
-  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/copilot/copilot.tsx": [
-    "handleCreateKey",
-    "handleDeleteKey"
+  "apps/sim/app/workspace/[workspaceId]/w/hooks/use-delete-workflow.ts": [
+    "useDeleteWorkflow"
   ],
-  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/custom-tools/custom-tools.tsx": [
-    "handleDeleteClick",
-    "handleDeleteTool",
-    "handleToolSaved"
+  "apps/sim/app/workspace/[workspaceId]/w/hooks/use-duplicate-workflow.ts": [
+    "useDuplicateWorkflow"
   ],
-  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/files/files.tsx": [
-    "handleUploadClick",
-    "handleFileChange",
-    "handleDownload",
-    "handleDelete",
-    "truncateMiddle"
+  "apps/sim/app/workspace/[workspaceId]/w/hooks/use-export-workflow.ts": [
+    "useExportWorkflow"
   ],
-  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/general/general.tsx": [
-    "handleUpdateName",
-    "handleKeyDown",
-    "handleCancelEdit",
-    "handleInputBlur",
-    "handleSignOut",
-    "handleResetPasswordConfirm",
-    "handleThemeChange",
-    "handleAutoConnectChange",
-    "handleSnapToGridChange",
-    "handleSnapToGridCommit",
-    "handleTrainingControlsChange",
-    "handleErrorNotificationsChange",
-    "handleSuperUserModeToggle",
-    "handleTelemetryToggle"
+  "apps/sim/app/workspace/[workspaceId]/w/hooks/use-import-workflow.ts": [
+    "useImportWorkflow"
   ],
-  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/integrations/integrations.tsx": [
-    "handle",
-    "handleConnect",
-    "handleDisconnect"
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/layout.tsx": [
+    "WorkflowLayout"
   ],
-  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/mcp/components/formatted-input/formatted-input.tsx": [
-    "handleScroll"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/sso/sso.tsx": [
-    "handleSubmit",
-    "handleInputChange",
-    "handleEdit"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/subscription/subscription.tsx": [
-    "handleBadgeClick",
-    "handleContactEnterprise"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/subscription/components/cancel-subscription/cancel-subscription.tsx": [
-    "handleCancel",
-    "handleKeep"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/subscription/components/credit-balance/credit-balance.tsx": [
-    "handleAmountChange",
-    "handlePurchase",
-    "handleOpenChange"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/subscription/components/usage-limit/usage-limit.tsx": [
-    "handleStartEdit",
-    "handleSubmit",
-    "handleCancelEdit",
-    "handleKeyDown"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/team-management/components/member-invitation-card/member-invitation-card.tsx": [
-    "handleEmailChange",
-    "handleInviteClick"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/team-management/components/team-members/team-members.tsx": [
-    "handleCancelInvitation"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/template-profile/template-profile.tsx": [
-    "handleSubmit"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/usage-indicator/usage-indicator.tsx": [
-    "handleOperationConfirmed"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/workflow-list/workflow-list.tsx": [
-    "collectWorkflowIds"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/workspace-header/workspace-header.tsx": [
-    "handleContextMenu",
-    "handleRenameAction",
-    "handleDuplicateAction",
-    "handleExportAction",
-    "handleDeleteAction",
-    "handleDeleteWorkspace"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/hooks/use-context-menu.ts": [
-    "handleClickOutside"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/hooks/use-sidebar-resize.ts": [
-    "handleMouseMove",
-    "handleMouseUp"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/workflow.tsx": [
-    "handleOpenOAuthConnect",
-    "handleKeyDown",
-    "handleRemoveFromSubflow",
-    "handleAddBlockFromToolbar",
-    "handleOverlayToolbarDrop",
-    "handleShowTriggerWarning",
-    "handleKeyDown",
-    "handleSubBlockValueUpdate"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/chat/chat.tsx": [
-    "processFileAttachments"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/chat/components/chat-message/chat-message.tsx": [
-    "handleAttachmentClick"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/chat/components/output-select/output-select.tsx": [
-    "handleOutputSelection",
-    "handleKeyDown",
-    "handleClickOutside"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/panel.tsx": [
-    "handleTabClick"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/copilot-message/copilot-message.tsx": [
-    "handleCopyContent"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/copilot-message/components/file-display.tsx": [
-    "handleFileClick",
-    "handleImageError"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/copilot-message/components/markdown-renderer.tsx": [
-    "handleCopy"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/copilot-message/components/usage-limit-actions.tsx": [
-    "handleUpdateLimit",
-    "handleNavigateToUpgrade"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/copilot-message/hooks/use-checkpoint-management.ts": [
-    "handleKeyDown",
-    "handleCheckpointDiscardKeyDown"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/copilot-message/hooks/use-message-editing.ts": [
-    "handleKeyDown",
-    "handleClickOutside"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/tool-call/tool-call.tsx": [
-    "handleStateChange"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/user-input/components/mention-menu/mention-menu.tsx": [
-    "handleAggregatedItemClick"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/user-input/components/mode-selector/mode-selector.tsx": [
-    "handleSelect",
-    "handleClickOutside"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/user-input/components/model-selector/model-selector.tsx": [
-    "handleSelect",
-    "handleClickOutside"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/user-input/hooks/use-mention-data.ts": [
-    "syncWorkflowBlocks"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/user-input/hooks/use-mention-menu.ts": [
-    "handleClickOutside"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/user-input/hooks/use-textarea-auto-resize.ts": [
-    "handleScroll",
-    "handleResize"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/deploy-modal.tsx": [
-    "handleOpenDeployModal",
-    "handleUndeploy",
-    "handleRedeploy",
-    "handleCloseModal",
-    "handlePostDeploymentUpdate",
-    "handleChatFormSubmit",
-    "handleChatDelete"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/components/api/api.tsx": [
-    "handleCopy"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/components/chat/chat.tsx": [
-    "handleSubmit",
-    "handleDelete",
-    "handleChange"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/components/general/components/versions.tsx": [
-    "handleStartRename",
-    "handleSaveRename",
-    "handleCancelRename",
-    "handleRowClick",
-    "handlePromote",
-    "handleLoadDeployment"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/components/template/template.tsx": [
-    "handleCreatorProfileSaved",
-    "handleSubmit",
-    "handleDelete"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/hooks/use-deployed-state.ts": [
-    "getCurrentActiveWorkflowId"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/editor.tsx": [
-    "handleOpenDocs"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/env-var-dropdown.tsx": [
-    "handleEnvVarSelect",
-    "handleKeyboardEvent"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/checkbox-list/checkbox-list.tsx": [
-    "handleChange"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/code/code.tsx": [
-    "handleDrop",
-    "handleTagSelect",
-    "handleEnvVarSelect",
-    "handleCopy"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/condition-input/condition-input.tsx": [
-    "handleDrop",
-    "handleTagSelect",
-    "handleEnvVarSelect",
-    "handleTagSelectImmediate",
-    "handleEnvVarSelectImmediate"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/credential-selector/credential-selector.tsx": [
-    "handleVisibilityChange",
-    "handlePageShow",
-    "handleCredentialDisconnected"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/credential-selector/components/oauth-required-modal.tsx": [
-    "handleConnectDirectly"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/document-tag-entry/document-tag-entry.tsx": [
-    "handleTagSelection",
-    "handleValueChange",
-    "handleTagDropdownSelection",
-    "handleAddRow",
-    "handleDeleteRow"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/eval-input/eval-input.tsx": [
-    "handleRangeBlur"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/file-upload/file-upload.tsx": [
-    "handleOpenFileDialog",
-    "truncateMiddle",
-    "handleFileChange",
-    "handleSelectWorkspaceFile",
-    "handleRemoveFile"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/grouped-checkbox-list/grouped-checkbox-list.tsx": [
-    "handleToggle",
-    "handleSelectAll",
-    "handleClear"
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/user-input/hooks/use-mention-insert-handlers.ts": [
+    "useMentionInsertHandlers"
   ],
   "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/input-mapping/input-mapping.tsx": [
-    "handleFieldUpdate",
-    "handleScroll"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/knowledge-tag-filters/knowledge-tag-filters.tsx": [
-    "handleCellChange",
-    "handleTagNameSelection",
-    "handleTagDropdownSelection",
-    "handleAddRow",
-    "handleDeleteRow"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/long-input/long-input.tsx": [
-    "handleMouseMove",
-    "handleMouseUp"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/mcp-dynamic-args/mcp-dynamic-args.tsx": [
-    "handleChange",
-    "handleDrop",
-    "handleDragOver",
-    "handleTagSelect"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/mcp-server-modal/mcp-server-selector.tsx": [
-    "handleComboboxChange"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/mcp-server-modal/mcp-tool-selector.tsx": [
-    "handleComboboxChange",
-    "handleOpenChange"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/messages-input/messages-input.tsx": [
-    "handleMouseMove",
-    "handleMouseUp"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/project-selector/project-selector-input.tsx": [
-    "handleChange"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/schedule-save/schedule-save.tsx": [
-    "handleSave",
-    "handleDelete",
-    "handleDeleteConfirm",
-    "handleToggleStatus"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/slider-input/slider-input.tsx": [
-    "handleValueChange"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/switch/switch.tsx": [
-    "handleChange"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/table/table.tsx": [
-    "handleDeleteRow",
-    "handleScroll",
-    "tagSelectHandler",
-    "envVarSelectHandler"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tag-dropdown/tag-dropdown.tsx": [
-    "checkTagTrigger",
-    "handleKeyboardEvent"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tag-dropdown/components/keyboard-navigation-handler.tsx": [
-    "KeyboardNavigationHandler",
-    "handleKeyboardEvent"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/time-input/time-input.tsx": [
-    "handleBlur"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/tool-input.tsx": [
-    "handleDragStart",
-    "handleDragOver",
-    "handleDragEnd",
-    "handleMcpToolSelect",
-    "handleDrop"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/components/tool-credential-selector.tsx": [
-    "handleVisibilityChange",
-    "handlePageShow",
-    "handleCredentialDisconnected"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/components/custom-tool-modal/custom-tool-modal.tsx": [
-    "handleClose",
-    "handleSave",
-    "handleJsonSchemaChange",
-    "handleFunctionCodeChange",
-    "checkSchemaParamTrigger",
-    "handleEnvVarSelect",
-    "handleTagSelect",
-    "handleSchemaParamSelect",
-    "handleKeyDown",
-    "handleSchemaWandClick",
-    "handleSchemaPromptBlur",
-    "handleSchemaPromptChange",
-    "handleSchemaPromptSubmit",
-    "handleSchemaPromptKeyDown",
-    "handleCodeWandClick",
-    "handleCodePromptBlur",
-    "handleCodePromptChange",
-    "handleCodePromptSubmit",
-    "handleCodePromptKeyDown",
-    "handleDelete"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/trigger-save/trigger-save.tsx": [
-    "handleSave",
-    "handleDeleteClick",
-    "handleDeleteConfirm"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/variables-input/variables-input.tsx": [
-    "handleVariableSelect",
-    "handleTagSelect",
-    "handleValueInputChange",
-    "handleDrop",
-    "handleDragOver",
-    "handleDragLeave"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/hooks/use-connections-resize.ts": [
-    "handleMouseMove",
-    "handleMouseUp"
+    "isInputTriggerBlock"
   ],
   "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/toolbar/toolbar.tsx": [
-    "handleSearchClick",
-    "handleSearchBlur",
-    "handleKeyDown",
-    "focusTrigger"
+    "getTriggers"
   ],
   "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/toolbar/hooks/use-toolbar-resize.ts": [
-    "handleMouseMove",
-    "handleMouseUp"
+    "calculateTriggerHeights"
   ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/hooks/use-panel-resize.ts": [
-    "handleMouseMove",
-    "handleMouseUp"
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/workflow-controls/workflow-controls.tsx": [
+    "WorkflowControls"
   ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/subflows/subflow-node.tsx": [
-    "SubflowNodeStyles",
-    "getHandleClasses",
-    "getHandleStyle"
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/workflow-block/hooks/use-child-workflow.ts": [
+    "useChildWorkflow"
   ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/terminal/terminal.tsx": [
-    "formatRunId",
-    "getRunIdColor",
-    "handleKeyDown",
-    "handleKeyDown",
-    "handleKeyDown",
-    "handleKeyDown",
-    "handleResize"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/terminal/hooks/use-output-panel-resize.ts": [
-    "handleMouseMove",
-    "handleMouseUp"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/terminal/hooks/use-terminal-resize.ts": [
-    "handleMouseMove",
-    "handleMouseUp"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/training-modal/training-modal.tsx": [
-    "handleStart",
-    "handleCopyDataset",
-    "handleExportAll",
-    "handleSendOne",
-    "handleSendAll",
-    "handleSendSelected",
-    "handleSendLiveWorkflow"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/variables/variables.tsx": [
-    "handleHeaderKeyDown",
-    "handleVariableNameKeyDown",
-    "handleClose"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/wand-prompt-bar/wand-prompt-bar.tsx": [
-    "handleCancel",
-    "handleClickOutside"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/workflow-block/hooks/use-schedule-info.ts": [
-    "handleScheduleUpdate"
-  ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/hooks/use-scroll-management.ts": [
-    "handleUserScroll"
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/hooks/use-current-workflow.ts": [
+    "useCurrentWorkflow"
   ],
   "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/hooks/use-workflow-execution.ts": [
-    "processUploadResult",
-    "executeWorkflow",
-    "handleExecutionError"
+    "useWorkflowExecution"
   ],
-  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/hooks/use-float/use-float-boundary-sync.ts": [
-    "handleResize"
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/utils/workflow-execution-utils.ts": [
+    "executeWorkflowWithFullLogging"
+  ],
+  "apps/sim/app/_shell/hydration-error-handler.tsx": [
+    "HydrationErrorHandler"
+  ],
+  "apps/sim/background/schedule-execution.ts": [
+    "calculateNextRunFromDeployment",
+    "determineNextRunAfterError",
+    "runWorkflowExecution",
+    "calculateNextRunTime",
+    "executeScheduleJob"
   ],
   "apps/sim/background/webhook-execution.ts": [
-    "runOperation"
+    "processTriggerFileOutputs",
+    "executeWebhookJob",
+    "executeWebhookJobInternal"
   ],
-  "apps/sim/blocks/blocks/chat_trigger.ts": [
-    "ChatTriggerIcon"
+  "apps/sim/background/workflow-execution.ts": [
+    "executeWorkflowJob"
   ],
-  "apps/sim/blocks/blocks/input_trigger.ts": [
-    "InputTriggerIcon"
+  "apps/sim/components/icons.tsx": [
+    "WorkflowIcon"
   ],
-  "apps/sim/blocks/blocks/manual_trigger.ts": [
-    "ManualTriggerIcon"
+  "apps/sim/executor/constants.ts": [
+    "ortsHandles(blo"
   ],
-  "apps/sim/blocks/blocks/workflow.ts": [
-    "getAvailableWorkflows"
+  "apps/sim/executor/dag/construction/edges.test.ts": [
+    "createMockWorkflow"
   ],
-  "apps/sim/blocks/blocks/workflow_input.ts": [
-    "getAvailableWorkflows"
+  "apps/sim/executor/handlers/registry.ts": [
+    "createBlockHandlers"
   ],
-  "apps/sim/components/emcn/components/popover/popover.tsx": [
-    "handleWheel",
-    "handleClick",
-    "handleClick",
-    "handleChange"
+  "apps/sim/executor/human-in-the-loop/utils.ts": [
+    "buildTriggerBlockId"
   ],
-  "apps/sim/components/ui/input-otp-form.tsx": [
-    "handleComplete",
-    "handleSubmit"
+  "apps/sim/executor/utils/reference-validation.ts": [
+    "createWorkflowVariablePattern"
   ],
-  "apps/sim/components/ui/tag-input.tsx": [
-    "handleKeyDown",
-    "handleBlur"
-  ],
-  "apps/sim/executor/__test-utils__/executor-mocks.ts": [
-    "createMockHandler",
-    "defaultCanHandle",
-    "setupHandlerMocks",
-    "createMinimalWorkflow",
-    "createWorkflowWithCondition",
-    "createWorkflowWithLoop",
-    "createWorkflowWithErrorPath",
-    "createWorkflowWithParallel",
-    "createWorkflowWithResponse",
-    "createWorkflowWithParallelArray",
-    "createWorkflowWithParallelObject"
+  "apps/sim/executor/utils/start-block.ts": [
+    "getFilesFromWorkflowInput",
+    "buildManualTriggerOutput",
+    "buildIntegrationTriggerOutput"
   ],
   "apps/sim/hooks/use-collaborative-workflow.ts": [
-    "moveHandler",
-    "parentUpdateHandler",
-    "skipEdgeHandler",
-    "diffOperationHandler",
-    "handleWorkflowOperation",
-    "handleSubblockUpdate",
-    "handleVariableUpdate",
-    "handleUserJoined",
-    "handleUserLeft",
-    "handleWorkflowDeleted",
-    "handleWorkflowReverted",
-    "handleOperationConfirmed",
-    "handleOperationFailed"
+    "useCollaborativeWorkflow"
   ],
-  "apps/sim/hooks/use-stream-cleanup.ts": [
-    "handleBeforeUnload"
+  "apps/sim/hooks/use-trigger-config-aggregation.ts": [
+    "useTriggerConfigAggregation",
+    "populateTriggerFieldsFromConfig"
   ],
-  "apps/sim/lib/blog/code.tsx": [
-    "handleCopy"
+  "apps/sim/hooks/use-webhook-management.ts": [
+    "resolveEffectiveTriggerId"
+  ],
+  "apps/sim/hooks/queries/folders.ts": [
+    "createFolderMutationHandlers"
+  ],
+  "apps/sim/hooks/queries/logs.ts": [
+    "useWorkflowDashboardLogs"
+  ],
+  "apps/sim/hooks/queries/templates.ts": [
+    "fetchTemplateByWorkflow",
+    "useTemplateByWorkflow"
+  ],
+  "apps/sim/hooks/queries/workflows.ts": [
+    "mapWorkflow",
+    "fetchWorkflows",
+    "useWorkflows",
+    "createWorkflowMutationHandlers",
+    "useCreateWorkflow",
+    "useDuplicateWorkflowMutation"
+  ],
+  "apps/sim/hooks/queries/utils/optimistic-mutation.ts": [
+    "createOptimisticMutationHandlers"
+  ],
+  "apps/sim/lib/billing/core/usage-log.ts": [
+    "logWorkflowUsageBatch",
+    "getUserIdFromWorkflow"
+  ],
+  "apps/sim/lib/billing/webhooks/disputes.ts": [
+    "handleChargeDispute",
+    "handleDisputeClosed"
+  ],
+  "apps/sim/lib/billing/webhooks/enterprise.ts": [
+    "handleManualEnterpriseSubscription"
+  ],
+  "apps/sim/lib/billing/webhooks/invoices.ts": [
+    "handleCreditPurchaseSuccess",
+    "handleInvoicePaymentSucceeded",
+    "handleInvoicePaymentFailed"
+  ],
+  "apps/sim/lib/billing/webhooks/subscription.ts": [
+    "handleSubscriptionCreated",
+    "handleSubscriptionDeleted"
+  ],
+  "apps/sim/lib/copilot/api.ts": [
+    "handleApiError",
+    "sendStreamingMessage"
+  ],
+  "apps/sim/lib/copilot/process-contents.ts": [
+    "processWorkflowFromDb",
+    "processWorkflowBlockFromDb"
+  ],
+  "apps/sim/lib/copilot/auth/permissions.ts": [
+    "verifyWorkflowAccess"
   ],
   "apps/sim/lib/copilot/tools/server/workflow/edit-workflow.ts": [
-    "mapConnectionTypeToHandle"
+    "validateSourceHandleForBlock",
+    "validateConditionHandle",
+    "validateTargetHandle",
+    "applyTriggerConfigToBlockSubblocks",
+    "applyOperationsToWorkflowState",
+    "validateWorkflowSelectorIds",
+    "getCurrentWorkflowStateFromDb"
+  ],
+  "apps/sim/lib/core/telemetry.ts": [
+    "createOTelSpansForWorkflowExecution"
+  ],
+  "apps/sim/lib/core/security/csp.ts": [
+    "generateRuntimeCSP",
+    "getWorkflowExecutionCSPPolicy"
+  ],
+  "apps/sim/lib/core/utils/display-filters.ts": [
+    "truncateString"
+  ],
+  "apps/sim/lib/environment/api.ts": [
+    "fetchPersonalEnvironment",
+    "fetchWorkspaceEnvironment"
+  ],
+  "apps/sim/lib/execution/e2b.ts": [
+    "executeInE2B"
   ],
   "apps/sim/lib/execution/isolated-vm.ts": [
-    "readyHandler"
+    "handleWorkerMessage",
+    "executeInIsolatedVM"
   ],
-  "apps/sim/lib/knowledge/documents/queue.ts": [
-    "processJobsContinuously",
-    "processInMemoryContinuously"
+  "apps/sim/lib/guardrails/validate_pii.ts": [
+    "executePythonPIIDetection"
+  ],
+  "apps/sim/lib/knowledge/documents/document-processor.ts": [
+    "handleFileForOCR"
+  ],
+  "apps/sim/lib/knowledge/documents/service.ts": [
+    "isTriggerAvailable",
+    "processDocumentsWithTrigger"
+  ],
+  "apps/sim/lib/logs/events.ts": [
+    "emitWorkflowExecutionCompleted"
+  ],
+  "apps/sim/lib/logs/get-trigger-options.ts": [
+    "resetTriggerOptionsCache",
+    "getTriggerOptions",
+    "initializeTriggerMetadataMap"
+  ],
+  "apps/sim/lib/logs/execution/logging-factory.ts": [
+    "createTriggerObject",
+    "loadWorkflowStateForExecution"
+  ],
+  "apps/sim/lib/logs/execution/trace-spans/trace-spans.ts": [
+    "isSyntheticWorkflowWrapper",
+    "flattenWorkflowChildren",
+    "ensureNestedWorkflowsProcessed"
+  ],
+  "apps/sim/lib/notifications/alert-rules.ts": [
+    "shouldTriggerAlert"
+  ],
+  "apps/sim/lib/notifications/inactivity-polling.ts": [
+    "deploymentHasTriggerType",
+    "getWorkflowsWithTriggerTypes",
+    "checkWorkflowInactivity"
+  ],
+  "apps/sim/lib/og/capture-preview.ts": [
+    "captureWorkflowPreview"
+  ],
+  "apps/sim/lib/tokenization/estimators.ts": [
+    "truncateToTokenLimit"
+  ],
+  "apps/sim/lib/webhooks/processor.ts": [
+    "handleProviderChallenges",
+    "findWebhookAndWorkflow"
+  ],
+  "apps/sim/lib/webhooks/utils.server.ts": [
+    "handleWhatsAppVerification",
+    "handleSlackChallenge"
+  ],
+  "apps/sim/lib/workflows/defaults.ts": [
+    "buildDefaultWorkflowArtifacts"
+  ],
+  "apps/sim/lib/workflows/state-builder.ts": [
+    "buildWorkflowStateForTemplate"
   ],
   "apps/sim/lib/workflows/utils.ts": [
-    "workflowHasResponseBlock"
+    "getWorkflowById",
+    "getWorkflowAccessContext",
+    "updateWorkflowRunCounts",
+    "hasWorkflowChanged",
+    "validateWorkflowPermissions"
   ],
-  "apps/sim/lib/workflows/training/compute-edit-sequence.ts": [
-    "processBlock",
-    "processBlockConnections"
+  "apps/sim/lib/workflows/autolayout/core.ts": [
+    "getSourceHandleYOffset",
+    "getTargetHandleYOffset"
+  ],
+  "apps/sim/lib/workflows/blocks/block-outputs.ts": [
+    "getTriggerId"
+  ],
+  "apps/sim/lib/workflows/credentials/credential-extractor.ts": [
+    "sanitizeWorkflowForSharing"
+  ],
+  "apps/sim/lib/workflows/credentials/credential-resolver.ts": [
+    "resolveCredentialsForWorkflow"
+  ],
+  "apps/sim/lib/workflows/diff/diff-engine.ts": [
+    "stripWorkflowDiffMarkers"
+  ],
+  "apps/sim/lib/workflows/executor/execution-core.ts": [
+    "executeWorkflowCore"
+  ],
+  "apps/sim/lib/workflows/operations/import-export.ts": [
+    "extractWorkflowsFromZip",
+    "extractWorkflowsFromFiles",
+    "extractWorkflowName"
+  ],
+  "apps/sim/lib/workflows/operations/socket-operations.ts": [
+    "enqueueWorkflowOperation",
+    "enqueueReplaceWorkflowState"
+  ],
+  "apps/sim/lib/workflows/persistence/custom-tools-persistence.ts": [
+    "extractCustomToolsFromWorkflowState"
+  ],
+  "apps/sim/lib/workflows/persistence/duplicate.ts": [
+    "duplicateWorkflow"
+  ],
+  "apps/sim/lib/workflows/persistence/utils.ts": [
+    "loadDeployedWorkflowState",
+    "loadWorkflowFromNormalizedTables",
+    "saveWorkflowToNormalizedTables",
+    "workflowExistsInNormalizedTables",
+    "deployWorkflow",
+    "regenerateWorkflowStateIds"
+  ],
+  "apps/sim/lib/workflows/sanitization/validation.ts": [
+    "validateWorkflowState"
+  ],
+  "apps/sim/lib/workflows/schedules/utils.ts": [
+    "calculateNextRunTime"
+  ],
+  "apps/sim/lib/workflows/triggers/trigger-utils.ts": [
+    "getAllTriggerBlocks",
+    "hasTriggerCapability",
+    "getTriggersForSidebar",
+    "getTriggerDisplayName",
+    "groupTriggersByPath",
+    "selectBestTrigger",
+    "triggerNeedsMockPayload",
+    "extractTriggerMockPayload"
+  ],
+  "apps/sim/providers/index.ts": [
+    "executeProviderRequest"
+  ],
+  "apps/sim/scripts/export-workflow.ts": [
+    "exportWorkflow"
+  ],
+  "apps/sim/serializer/__test-utils__/test-workflows.ts": [
+    "createMinimalWorkflowState",
+    "createConditionalWorkflowState",
+    "createLoopWorkflowState",
+    "createComplexWorkflowState",
+    "createAgentWithToolsWorkflowState",
+    "createInvalidWorkflowState",
+    "createInvalidSerializedWorkflow",
+    "createMissingMetadataWorkflow"
+  ],
+  "apps/sim/socket-server/database/operations.ts": [
+    "getWorkflowState",
+    "persistWorkflowOperation"
+  ],
+  "apps/sim/socket-server/handlers/connection.ts": [
+    "setupConnectionHandlers"
+  ],
+  "apps/sim/socket-server/handlers/index.ts": [
+    "setupAllHandlers"
+  ],
+  "apps/sim/socket-server/handlers/operations.ts": [
+    "setupOperationsHandlers"
+  ],
+  "apps/sim/socket-server/handlers/presence.ts": [
+    "setupPresenceHandlers"
+  ],
+  "apps/sim/socket-server/handlers/subblocks.ts": [
+    "setupSubblocksHandlers"
+  ],
+  "apps/sim/socket-server/handlers/variables.ts": [
+    "setupVariablesHandlers"
   ],
   "apps/sim/socket-server/handlers/workflow.ts": [
-    "createWorkflowRoom"
+    "setupWorkflowHandlers"
   ],
-  "apps/sim/stores/folders/store.ts": [
-    "useIsWorkflowSelected"
+  "apps/sim/socket-server/middleware/permissions.ts": [
+    "verifyWorkflowAccess"
   ],
-  "apps/sim/stores/logs/filters/store.ts": [
-    "parseTriggerArrayFromURL"
+  "apps/sim/socket-server/routes/http.ts": [
+    "createHttpHandler"
   ],
-  "apps/sim/stores/workflows/workflow/store.ts": [
-    "handleWebhookToggle"
+  "apps/sim/stores/index.ts": [
+    "handleBeforeUnload"
   ],
-  "apps/sim/tools/http/utils.ts": [
-    "processUrl"
+  "apps/sim/stores/copilot-training/store.ts": [
+    "captureWorkflowSnapshot"
   ],
-  "apps/sim/tools/reddit/get_comments.ts": [
-    "processComments"
+  "apps/sim/stores/undo-redo/store.ts": [
+    "runWithUndoRedoRecordingSuspended"
   ],
-  "apps/sim/tools/wealthbox/utils.ts": [
-    "handleApiError"
+  "apps/sim/stores/workflow-diff/store.ts": [
+    "cloneWorkflowState",
+    "applyWorkflowStateToStores",
+    "persistWorkflowStateToServer",
+    "findLatestEditWorkflowToolCallId"
+  ],
+  "apps/sim/stores/workflows/index.ts": [
+    "getWorkflowWithValues",
+    "getAllWorkflowsWithValues"
+  ],
+  "apps/sim/stores/workflows/json/importer.ts": [
+    "parseWorkflowJson"
+  ],
+  "apps/sim/stores/workflows/registry/store.ts": [
+    "resetWorkflowStores",
+    "workflow"
+  ],
+  "apps/sim/stores/workflows/registry/utils.ts": [
+    "getNextWorkflowColor",
+    "generateCreativeWorkflowName"
+  ],
+  "apps/sim/stores/workflows/yaml/importer.ts": [
+    "parseWorkflowYaml",
+    "convertYamlToWorkflow"
+  ],
+  "apps/sim/stores/workflows/yaml/parsing-utils.ts": [
+    "createConditionHandle"
+  ],
+  "apps/sim/tools/index.ts": [
+    "handleBodySizeLimitError",
+    "executeTool",
+    "handleInternalRequest",
+    "handleProxyRequest",
+    "executeMcpTool"
+  ],
+  "apps/sim/tools/params.ts": [
+    "applyDynamicSchemaForWorkflow",
+    "fetchWorkflowInputFields"
+  ],
+  "apps/sim/tools/utils.ts": [
+    "executeRequest"
+  ],
+  "apps/sim/tools/google_drive/utils.ts": [
+    "handleSheetsFormat"
+  ],
+  "apps/sim/tools/intercom/types.ts": [
+    "handleIntercomError"
+  ],
+  "apps/sim/tools/kalshi/types.ts": [
+    "handleKalshiError"
+  ],
+  "apps/sim/tools/mailchimp/types.ts": [
+    "handleMailchimpError"
+  ],
+  "apps/sim/tools/polymarket/types.ts": [
+    "handlePolymarketError"
+  ],
+  "apps/sim/tools/zendesk/types.ts": [
+    "handleZendeskError"
+  ],
+  "apps/sim/triggers/index.ts": [
+    "getTrigger",
+    "getTriggersByProvider",
+    "getAllTriggers",
+    "getTriggerIds",
+    "isTriggerValid"
+  ],
+  "packages/cli/src/index.ts": [
+    "isDockerRunning",
+    "runCommand"
+  ],
+  "packages/db/scripts/migrate-deployment-versions.ts": [
+    "loadWorkflowFromNormalizedTables",
+    "migrateWorkflows"
   ]
 }
