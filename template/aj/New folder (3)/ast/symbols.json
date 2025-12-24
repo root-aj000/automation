@@ -1,0 +1,4202 @@
+{
+  "getPriority": {
+    "file": "apps/sim/lib/workflows/triggers/trigger-utils.ts",
+    "line": 311,
+    "kind": "arrow_function"
+  },
+  "generateBreadcrumbs": {
+    "file": "apps/docs/app/[lang]/[[...slug]]/page.tsx",
+    "line": 30,
+    "kind": "arrow_function"
+  },
+  "SOC2BadgeIcon": {
+    "file": "apps/sim/components/icons.tsx",
+    "line": 3078,
+    "kind": "arrow_function"
+  },
+  "HIPAABadgeIcon": {
+    "file": "apps/sim/components/icons.tsx",
+    "line": 3118,
+    "kind": "arrow_function"
+  },
+  "SMSIcon": {
+    "file": "apps/sim/components/icons.tsx",
+    "line": 3173,
+    "kind": "arrow_function"
+  },
+  "ResendIcon": {
+    "file": "apps/sim/components/icons.tsx",
+    "line": 3186,
+    "kind": "arrow_function"
+  },
+  "GoogleVaultIcon": {
+    "file": "apps/sim/components/icons.tsx",
+    "line": 3202,
+    "kind": "arrow_function"
+  },
+  "handleCopy": {
+    "file": "apps/sim/lib/blog/code.tsx",
+    "line": 15,
+    "kind": "arrow_function"
+  },
+  "handleImageClick": {
+    "file": "apps/docs/components/ui/image.tsx",
+    "line": 22,
+    "kind": "arrow_function"
+  },
+  "(locale === currentL": {
+    "file": "apps/docs/components/ui/language-dropdown.tsx",
+    "line": 41,
+    "kind": "arrow_function"
+  },
+  "'Esca": {
+    "file": "apps/docs/components/ui/language-dropdown.tsx",
+    "line": 67,
+    "kind": "arrow_function"
+  },
+  "handleKeyDown": {
+    "file": "apps/sim/components/ui/tag-input.tsx",
+    "line": 40,
+    "kind": "arrow_function"
+  },
+  "handleClickOutside": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/wand-prompt-bar/wand-prompt-bar.tsx",
+    "line": 47,
+    "kind": "arrow_function"
+  },
+  "handleClick": {
+    "file": "apps/sim/components/emcn/components/popover/popover.tsx",
+    "line": 580,
+    "kind": "arrow_function"
+  },
+  "handleVideoClick": {
+    "file": "apps/docs/components/ui/video.tsx",
+    "line": 28,
+    "kind": "arrow_function"
+  },
+  "shutdownHandler": {
+    "file": "apps/sim/instrumentation-node.ts",
+    "line": 98,
+    "kind": "arrow_function"
+  },
+  "checkCustomBrand": {
+    "file": "apps/sim/app/invite/components/status-card.tsx",
+    "line": 75,
+    "kind": "arrow_function"
+  },
+  "handleSSOClick": {
+    "file": "apps/sim/app/(auth)/components/sso-login-button.tsx",
+    "line": 31,
+    "kind": "arrow_function"
+  },
+  "validateEmailField": {
+    "file": "apps/sim/app/chat/components/auth/sso/sso-auth.tsx",
+    "line": 24,
+    "kind": "arrow_function"
+  },
+  "validateCallbackUrl": {
+    "file": "apps/sim/app/(auth)/sso/sso-form.tsx",
+    "line": 35,
+    "kind": "arrow_function"
+  },
+  "validatePassword": {
+    "file": "apps/sim/app/(auth)/signup/signup-form.tsx",
+    "line": 152,
+    "kind": "arrow_function"
+  },
+  "handleEmailChange": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/team-management/components/member-invitation-card/member-invitation-card.tsx",
+    "line": 110,
+    "kind": "arrow_function"
+  },
+  "handlePasswordChange": {
+    "file": "apps/sim/app/chat/components/auth/password/password-auth.tsx",
+    "line": 76,
+    "kind": "arrow_function"
+  },
+  "handleForgotPassword": {
+    "file": "apps/sim/app/(auth)/login/login-form.tsx",
+    "line": 299,
+    "kind": "arrow_function"
+  },
+  "handleResetPassword": {
+    "file": "apps/sim/app/(auth)/reset-password/page.tsx",
+    "line": 36,
+    "kind": "arrow_function"
+  },
+  "handleSubmit": {
+    "file": "apps/sim/components/ui/input-otp-form.tsx",
+    "line": 27,
+    "kind": "arrow_function"
+  },
+  "validateName": {
+    "file": "apps/sim/app/(landing)/careers/page.tsx",
+    "line": 26,
+    "kind": "arrow_function"
+  },
+  "handleNameChange": {
+    "file": "apps/sim/app/(auth)/signup/signup-form.tsx",
+    "line": 211,
+    "kind": "arrow_function"
+  },
+  "handleRedirect": {
+    "file": "apps/sim/app/(auth)/verify/use-verification.ts",
+    "line": 206,
+    "kind": "arrow_function"
+  },
+  "handleResend": {
+    "file": "apps/sim/app/(auth)/verify/verify-content.tsx",
+    "line": 55,
+    "kind": "arrow_function"
+  },
+  "validateEmail": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/template-profile/template-profile.tsx",
+    "line": 220,
+    "kind": "arrow_function"
+  },
+  "validatePosition": {
+    "file": "apps/sim/app/(landing)/careers/page.tsx",
+    "line": 47,
+    "kind": "arrow_function"
+  },
+  "validateLinkedIn": {
+    "file": "apps/sim/app/(landing)/careers/page.tsx",
+    "line": 55,
+    "kind": "arrow_function"
+  },
+  "validatePortfolio": {
+    "file": "apps/sim/app/(landing)/careers/page.tsx",
+    "line": 66,
+    "kind": "arrow_function"
+  },
+  "validateLocation": {
+    "file": "apps/sim/app/(landing)/careers/page.tsx",
+    "line": 77,
+    "kind": "arrow_function"
+  },
+  "validateMessage": {
+    "file": "apps/sim/app/(landing)/careers/page.tsx",
+    "line": 85,
+    "kind": "arrow_function"
+  },
+  "handleFileChange": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/file-upload/file-upload.tsx",
+    "line": 137,
+    "kind": "arrow_function"
+  },
+  "handleServiceClick": {
+    "file": "apps/sim/app/(landing)/components/hero/hero.tsx",
+    "line": 179,
+    "kind": "arrow_function"
+  },
+  "updateVisibleIcons": {
+    "file": "apps/sim/app/(landing)/components/hero/hero.tsx",
+    "line": 187,
+    "kind": "arrow_function"
+  },
+  "startInterval": {
+    "file": "apps/sim/app/(landing)/components/hero/hero.tsx",
+    "line": 230,
+    "kind": "arrow_function"
+  },
+  "handleIconContainerMouseEnter": {
+    "file": "apps/sim/app/(landing)/components/hero/hero.tsx",
+    "line": 252,
+    "kind": "arrow_function"
+  },
+  "handleIconContainerMouseLeave": {
+    "file": "apps/sim/app/(landing)/components/hero/hero.tsx",
+    "line": 262,
+    "kind": "arrow_function"
+  },
+  "updateDimensions": {
+    "file": "apps/sim/app/(landing)/components/hero/components/landing-canvas/dot-pattern.tsx",
+    "line": 80,
+    "kind": "arrow_function"
+  },
+  "handleCtaClick": {
+    "file": "apps/sim/app/(landing)/components/landing-pricing/landing-pricing.tsx",
+    "line": 104,
+    "kind": "arrow_function"
+  },
+  "fetchStars": {
+    "file": "apps/sim/app/(landing)/components/nav/nav.tsx",
+    "line": 33,
+    "kind": "arrow_function"
+  },
+  "NavLinks": {
+    "file": "apps/sim/app/(landing)/components/nav/nav.tsx",
+    "line": 59,
+    "kind": "arrow_function"
+  },
+  "() => {\n    // Ea": {
+    "file": "apps/sim/app/(landing)/components/testimonials/testimonials.tsx",
+    "line": 118,
+    "kind": "arrow_function"
+  },
+  "escapeXml": {
+    "file": "apps/sim/app/api/auth/sso/register/route.ts",
+    "line": 178,
+    "kind": "arrow_function"
+  },
+  "createMockStream": {
+    "file": "apps/sim/app/api/chat/[identifier]/route.test.ts",
+    "line": 9,
+    "kind": "arrow_function"
+  },
+  "createMockFormData": {
+    "file": "apps/sim/app/api/files/upload/route.test.ts",
+    "line": 11,
+    "kind": "arrow_function"
+  },
+  "createMockFile": {
+    "file": "apps/sim/app/api/files/upload/route.test.ts",
+    "line": 21,
+    "kind": "arrow_function"
+  },
+  "getSearchResultFields": {
+    "file": "apps/sim/app/api/knowledge/search/utils.ts",
+    "line": 106,
+    "kind": "arrow_function"
+  },
+  "resetMocks": {
+    "file": "apps/sim/app/api/knowledge/[id]/documents/[documentId]/route.test.ts",
+    "line": 88,
+    "kind": "arrow_function"
+  },
+  "createTraceSpans": {
+    "file": "apps/sim/app/api/logs/route.ts",
+    "line": 328,
+    "kind": "arrow_function"
+  },
+  "extractCostSummary": {
+    "file": "apps/sim/app/api/logs/route.ts",
+    "line": 358,
+    "kind": "arrow_function"
+  },
+  "getProxyHeaders": {
+    "file": "apps/sim/app/api/proxy/route.ts",
+    "line": 33,
+    "kind": "arrow_function"
+  },
+  "formatResponse": {
+    "file": "apps/sim/app/api/proxy/route.ts",
+    "line": 50,
+    "kind": "arrow_function"
+  },
+  "createErrorResponse": {
+    "file": "apps/sim/app/api/tools/jira/issues/route.ts",
+    "line": 10,
+    "kind": "arrow_function"
+  },
+  "validateRequiredParams": {
+    "file": "apps/sim/app/api/tools/jira/issues/route.ts",
+    "line": 19,
+    "kind": "arrow_function"
+  },
+  "escapeJql": {
+    "file": "apps/sim/app/api/tools/jira/issues/route.ts",
+    "line": 152,
+    "kind": "arrow_function"
+  },
+  "buildJql": {
+    "file": "apps/sim/app/api/tools/jira/issues/route.ts",
+    "line": 154,
+    "kind": "arrow_function"
+  },
+  "getChatDisplayName": {
+    "file": "apps/sim/app/api/tools/microsoft-teams/chats/route.ts",
+    "line": 19,
+    "kind": "arrow_function"
+  },
+  "indexToColLetters": {
+    "file": "apps/sim/app/api/tools/onedrive/upload/route.ts",
+    "line": 277,
+    "kind": "arrow_function"
+  },
+  "isNodeError": {
+    "file": "apps/sim/app/api/tools/smtp/send/route.ts",
+    "line": 182,
+    "kind": "arrow_function"
+  },
+  "hasResponseCode": {
+    "file": "apps/sim/app/api/tools/smtp/send/route.ts",
+    "line": 201,
+    "kind": "arrow_function"
+  },
+  "createTempWebhookData": {
+    "file": "apps/sim/app/api/webhooks/route.ts",
+    "line": 269,
+    "kind": "arrow_function"
+  },
+  "sendEvent": {
+    "file": "apps/sim/app/api/workflows/[id]/execute/route.ts",
+    "line": 625,
+    "kind": "arrow_function"
+  },
+  "onBlockStart": {
+    "file": "apps/sim/app/api/workflows/[id]/execute/route.ts",
+    "line": 648,
+    "kind": "arrow_function"
+  },
+  "lockComplete = ": {
+    "file": "apps/sim/app/api/workflows/[id]/execute/route.ts",
+    "line": 677,
+    "kind": "arrow_function"
+  },
+  "m = asyn": {
+    "file": "apps/sim/app/api/workflows/[id]/execute/route.ts",
+    "line": 744,
+    "kind": "arrow_function"
+  },
+  "decryptAll": {
+    "file": "apps/sim/lib/environment/utils.ts",
+    "line": 69,
+    "kind": "arrow_function"
+  },
+  "setAuthenticated": {
+    "file": "apps/sim/app/api/__test-utils__/utils.ts",
+    "line": 591,
+    "kind": "arrow_function"
+  },
+  "setUnauthenticated": {
+    "file": "apps/sim/app/api/__test-utils__/utils.ts",
+    "line": 593,
+    "kind": "arrow_function"
+  },
+  "createDbError": {
+    "file": "apps/sim/app/api/__test-utils__/utils.ts",
+    "line": 1105,
+    "kind": "arrow_function"
+  },
+  "createSelectChain": {
+    "file": "apps/sim/app/api/__test-utils__/utils.ts",
+    "line": 1109,
+    "kind": "arrow_function"
+  },
+  "createInsertChain": {
+    "file": "apps/sim/app/api/__test-utils__/utils.ts",
+    "line": 1133,
+    "kind": "arrow_function"
+  },
+  "createUpdateChain": {
+    "file": "apps/sim/app/api/__test-utils__/utils.ts",
+    "line": 1150,
+    "kind": "arrow_function"
+  },
+  "createDeleteChain": {
+    "file": "apps/sim/app/api/__test-utils__/utils.ts",
+    "line": 1169,
+    "kind": "arrow_function"
+  },
+  "createTransactionMock": {
+    "file": "apps/sim/app/api/__test-utils__/utils.ts",
+    "line": 1178,
+    "kind": "arrow_function"
+  },
+  "createAuthMethod": {
+    "file": "apps/sim/app/api/__test-utils__/utils.ts",
+    "line": 1226,
+    "kind": "arrow_function"
+  },
+  "loadMore": {
+    "file": "apps/sim/app/changelog/components/timeline-list.tsx",
+    "line": 63,
+    "kind": "arrow_function"
+  },
+  "handleEmailKeyDown": {
+    "file": "apps/sim/app/chat/components/auth/email/email-auth.tsx",
+    "line": 103,
+    "kind": "arrow_function"
+  },
+  "handleSendOtp": {
+    "file": "apps/sim/app/chat/components/auth/email/email-auth.tsx",
+    "line": 121,
+    "kind": "arrow_function"
+  },
+  "handleVerifyOtp": {
+    "file": "apps/sim/app/chat/components/auth/email/email-auth.tsx",
+    "line": 162,
+    "kind": "arrow_function"
+  },
+  "handleResendOtp": {
+    "file": "apps/sim/app/chat/components/auth/email/email-auth.tsx",
+    "line": 197,
+    "kind": "arrow_function"
+  },
+  "handleAuthenticate": {
+    "file": "apps/sim/app/chat/components/auth/sso/sso-auth.tsx",
+    "line": 94,
+    "kind": "arrow_function"
+  },
+  "adjustTextareaHeight": {
+    "file": "apps/sim/app/chat/components/input/input.tsx",
+    "line": 50,
+    "kind": "arrow_function"
+  },
+  "handleActivate": {
+    "file": "apps/sim/app/chat/components/input/input.tsx",
+    "line": 101,
+    "kind": "arrow_function"
+  },
+  "handleFileSelect": {
+    "file": "apps/sim/app/chat/components/input/input.tsx",
+    "line": 107,
+    "kind": "arrow_function"
+  },
+  "handleRemoveFile": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/file-upload/file-upload.tsx",
+    "line": 363,
+    "kind": "arrow_function"
+  },
+  "handleInputChange": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/sso/sso.tsx",
+    "line": 332,
+    "kind": "arrow_function"
+  },
+  "handleVoiceStart": {
+    "file": "apps/sim/app/chat/components/input/input.tsx",
+    "line": 188,
+    "kind": "arrow_function"
+  },
+  "formatFileSize": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/file-upload/file-upload.tsx",
+    "line": 119,
+    "kind": "arrow_function"
+  },
+  "getFileIcon": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/copilot-message/components/file-display.tsx",
+    "line": 50,
+    "kind": "arrow_function"
+  },
+  "handleDownload": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/files/files.tsx",
+    "line": 157,
+    "kind": "arrow_function"
+  },
+  "renderIcon": {
+    "file": "apps/sim/app/chat/components/message/components/file-download.tsx",
+    "line": 98,
+    "kind": "arrow_function"
+  },
+  "handleDownloadAll": {
+    "file": "apps/sim/app/chat/components/message/components/file-download.tsx",
+    "line": 142,
+    "kind": "arrow_function"
+  },
+  "updateVisualization": {
+    "file": "apps/sim/app/chat/components/voice-interface/voice-interface.tsx",
+    "line": 186,
+    "kind": "arrow_function"
+  },
+  "getStatusText": {
+    "file": "apps/sim/app/chat/components/voice-interface/voice-interface.tsx",
+    "line": 460,
+    "kind": "arrow_function"
+  },
+  "getButtonContent": {
+    "file": "apps/sim/app/chat/components/voice-interface/voice-interface.tsx",
+    "line": 471,
+    "kind": "arrow_function"
+  },
+  "ndleMouseMove =": {
+    "file": "apps/sim/app/chat/components/voice-interface/components/particles.tsx",
+    "line": 345,
+    "kind": "arrow_function"
+  },
+  "dateCameraPosition =": {
+    "file": "apps/sim/app/chat/components/voice-interface/components/particles.tsx",
+    "line": 355,
+    "kind": "arrow_function"
+  },
+  "lculateAudioIntensity =": {
+    "file": "apps/sim/app/chat/components/voice-interface/components/particles.tsx",
+    "line": 362,
+    "kind": "arrow_function"
+  },
+  "dateShaderColors =": {
+    "file": "apps/sim/app/chat/components/voice-interface/components/particles.tsx",
+    "line": 399,
+    "kind": "arrow_function"
+  },
+  "imate =": {
+    "file": "apps/sim/app/chat/components/voice-interface/components/particles.tsx",
+    "line": 439,
+    "kind": "arrow_function"
+  },
+  "ndleResize =": {
+    "file": "apps/sim/app/chat/components/voice-interface/components/particles.tsx",
+    "line": 469,
+    "kind": "arrow_function"
+  },
+  "stopStreaming": {
+    "file": "apps/sim/app/chat/hooks/use-chat-streaming.ts",
+    "line": 75,
+    "kind": "arrow_function"
+  },
+  "handleStreamedResponse": {
+    "file": "apps/sim/app/chat/hooks/use-chat-streaming.ts",
+    "line": 112,
+    "kind": "arrow_function"
+  },
+  "formatValue": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/terminal/components/prettier-output.tsx",
+    "line": 35,
+    "kind": "arrow_function"
+  },
+  "getOutputValue": {
+    "file": "apps/sim/app/chat/hooks/use-chat-streaming.ts",
+    "line": 258,
+    "kind": "arrow_function"
+  },
+  "fetchChatConfig": {
+    "file": "apps/sim/app/chat/[identifier]/chat.tsx",
+    "line": 208,
+    "kind": "arrow_function"
+  },
+  "refreshChat": {
+    "file": "apps/sim/app/chat/[identifier]/chat.tsx",
+    "line": 277,
+    "kind": "arrow_function"
+  },
+  "handleAuthSuccess": {
+    "file": "apps/sim/app/chat/[identifier]/chat.tsx",
+    "line": 281,
+    "kind": "arrow_function"
+  },
+  "handleSendMessage": {
+    "file": "apps/sim/app/chat/[identifier]/chat.tsx",
+    "line": 289,
+    "kind": "arrow_function"
+  },
+  "handleAcceptInvitation": {
+    "file": "apps/sim/app/invite/[id]/invite.tsx",
+    "line": 158,
+    "kind": "arrow_function"
+  },
+  "getCallbackUrl": {
+    "file": "apps/sim/app/invite/[id]/invite.tsx",
+    "line": 217,
+    "kind": "arrow_function"
+  },
+  "Detail = a": {
+    "file": "apps/sim/app/resume/[workflowId]/[executionId]/resume-page-client.tsx",
+    "line": 540,
+    "kind": "arrow_function"
+  },
+  "redirectToWorkspace": {
+    "file": "apps/sim/app/templates/templates.tsx",
+    "line": 67,
+    "kind": "arrow_function"
+  },
+  "fetchUserOrganizations": {
+    "file": "apps/sim/app/templates/[id]/template.tsx",
+    "line": 170,
+    "kind": "arrow_function"
+  },
+  "fetchSuperUserStatus": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/general/general.tsx",
+    "line": 90,
+    "kind": "arrow_function"
+  },
+  "fetchWorkspaces": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/components/knowledge-header/knowledge-header.tsx",
+    "line": 67,
+    "kind": "arrow_function"
+  },
+  "checkWorkspaceAccess": {
+    "file": "apps/sim/app/templates/[id]/template.tsx",
+    "line": 274,
+    "kind": "arrow_function"
+  },
+  "eTemplate = () =>": {
+    "file": "apps/sim/app/templates/[id]/template.tsx",
+    "line": 390,
+    "kind": "arrow_function"
+  },
+  "itTemplate = async": {
+    "file": "apps/sim/app/templates/[id]/template.tsx",
+    "line": 405,
+    "kind": "arrow_function"
+  },
+  "rkspaceSelectForUse = async": {
+    "file": "apps/sim/app/templates/[id]/template.tsx",
+    "line": 456,
+    "kind": "arrow_function"
+  },
+  "rkspaceSelectForEdit = async": {
+    "file": "apps/sim/app/templates/[id]/template.tsx",
+    "line": 481,
+    "kind": "arrow_function"
+  },
+  "prove = async": {
+    "file": "apps/sim/app/templates/[id]/template.tsx",
+    "line": 507,
+    "kind": "arrow_function"
+  },
+  "ject = async": {
+    "file": "apps/sim/app/templates/[id]/template.tsx",
+    "line": 530,
+    "kind": "arrow_function"
+  },
+  "ggleVerification = async": {
+    "file": "apps/sim/app/templates/[id]/template.tsx",
+    "line": 553,
+    "kind": "arrow_function"
+  },
+  "areToTwitter = () =>": {
+    "file": "apps/sim/app/templates/[id]/template.tsx",
+    "line": 582,
+    "kind": "arrow_function"
+  },
+  "ToLinkedIn = () => {\n": {
+    "file": "apps/sim/app/templates/[id]/template.tsx",
+    "line": 610,
+    "kind": "arrow_function"
+  },
+  "ink = async ()": {
+    "file": "apps/sim/app/templates/[id]/template.tsx",
+    "line": 619,
+    "kind": "arrow_function"
+  },
+  "handleUnsubscribe": {
+    "file": "apps/sim/app/unsubscribe/unsubscribe.tsx",
+    "line": 61,
+    "kind": "arrow_function"
+  },
+  "redirectToFirstWorkspace": {
+    "file": "apps/sim/app/workspace/page.tsx",
+    "line": 15,
+    "kind": "arrow_function"
+  },
+  "useSocket": {
+    "file": "apps/sim/app/workspace/providers/socket-provider.tsx",
+    "line": 99,
+    "kind": "arrow_function"
+  },
+  "generateSocketToken": {
+    "file": "apps/sim/app/workspace/providers/socket-provider.tsx",
+    "line": 135,
+    "kind": "arrow_function"
+  },
+  "initializeSocket": {
+    "file": "apps/sim/app/workspace/providers/socket-provider.tsx",
+    "line": 163,
+    "kind": "arrow_function"
+  },
+  "rehydrateWorkflowStores": {
+    "file": "apps/sim/app/workspace/providers/socket-provider.tsx",
+    "line": 319,
+    "kind": "arrow_function"
+  },
+  "handleSortChange": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/knowledge.tsx",
+    "line": 67,
+    "kind": "arrow_function"
+  },
+  "handleKnowledgeBaseCreated": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/knowledge.tsx",
+    "line": 77,
+    "kind": "arrow_function"
+  },
+  "handleRetry": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/knowledge.tsx",
+    "line": 84,
+    "kind": "arrow_function"
+  },
+  "formatKnowledgeBaseForDisplay": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/knowledge.tsx",
+    "line": 100,
+    "kind": "arrow_function"
+  },
+  "handleClose": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/variables/variables.tsx",
+    "line": 275,
+    "kind": "arrow_function"
+  },
+  "processFiles": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/components/add-documents-modal/add-documents-modal.tsx",
+    "line": 96,
+    "kind": "arrow_function"
+  },
+  "handleDragEnter": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/components/add-documents-modal/add-documents-modal.tsx",
+    "line": 139,
+    "kind": "arrow_function"
+  },
+  "handleDragLeave": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/variables-input/variables-input.tsx",
+    "line": 244,
+    "kind": "arrow_function"
+  },
+  "handleDragOver": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/variables-input/variables-input.tsx",
+    "line": 238,
+    "kind": "arrow_function"
+  },
+  "handleDrop": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/variables-input/variables-input.tsx",
+    "line": 205,
+    "kind": "arrow_function"
+  },
+  "removeFile": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/components/add-documents-modal/add-documents-modal.tsx",
+    "line": 180,
+    "kind": "arrow_function"
+  },
+  "onSubmit": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/components/create-base-modal/create-base-modal.tsx",
+    "line": 244,
+    "kind": "arrow_function"
+  },
+  "PdfIcon": {
+    "file": "apps/sim/components/icons/document-icons.tsx",
+    "line": 7,
+    "kind": "arrow_function"
+  },
+  "DocxIcon": {
+    "file": "apps/sim/components/icons/document-icons.tsx",
+    "line": 35,
+    "kind": "arrow_function"
+  },
+  "XlsxIcon": {
+    "file": "apps/sim/components/icons/document-icons.tsx",
+    "line": 63,
+    "kind": "arrow_function"
+  },
+  "CsvIcon": {
+    "file": "apps/sim/components/icons/document-icons.tsx",
+    "line": 91,
+    "kind": "arrow_function"
+  },
+  "TxtIcon": {
+    "file": "apps/sim/components/icons/document-icons.tsx",
+    "line": 114,
+    "kind": "arrow_function"
+  },
+  "AudioIcon": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/components/icons/document-icons.tsx",
+    "line": 151,
+    "kind": "arrow_function"
+  },
+  "VideoIcon": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/components/icons/document-icons.tsx",
+    "line": 177,
+    "kind": "arrow_function"
+  },
+  "DefaultFileIcon": {
+    "file": "apps/sim/components/icons/document-icons.tsx",
+    "line": 142,
+    "kind": "arrow_function"
+  },
+  "handleWorkspaceChange": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/components/knowledge-header/knowledge-header.tsx",
+    "line": 98,
+    "kind": "arrow_function"
+  },
+  "calculateUploadTimeoutMs": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/hooks/use-knowledge-upload.ts",
+    "line": 110,
+    "kind": "arrow_function"
+  },
+  "sleep": {
+    "file": "apps/sim/executor/handlers/wait/wait-handler.ts",
+    "line": 13,
+    "kind": "arrow_function"
+  },
+  "getHighResTime": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/hooks/use-knowledge-upload.ts",
+    "line": 124,
+    "kind": "arrow_function"
+  },
+  "formatMegabytes": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/hooks/use-knowledge-upload.ts",
+    "line": 132,
+    "kind": "arrow_function"
+  },
+  "calculateThroughputMbps": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/hooks/use-knowledge-upload.ts",
+    "line": 137,
+    "kind": "arrow_function"
+  },
+  "formatDurationSeconds": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/hooks/use-knowledge-upload.ts",
+    "line": 145,
+    "kind": "arrow_function"
+  },
+  "getFileContentType": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/hooks/use-knowledge-upload.ts",
+    "line": 150,
+    "kind": "arrow_function"
+  },
+  "runWithConcurrency": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/hooks/use-knowledge-upload.ts",
+    "line": 161,
+    "kind": "arrow_function"
+  },
+  "getErrorName": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/hooks/use-knowledge-upload.ts",
+    "line": 198,
+    "kind": "arrow_function"
+  },
+  "getErrorMessage": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/hooks/use-knowledge-upload.ts",
+    "line": 204,
+    "kind": "arrow_function"
+  },
+  "isAbortError": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/hooks/use-knowledge-upload.ts",
+    "line": 210,
+    "kind": "arrow_function"
+  },
+  "isNetworkError": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/hooks/use-knowledge-upload.ts",
+    "line": 215,
+    "kind": "arrow_function"
+  },
+  "normalizePresignedData": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/hooks/use-knowledge-upload.ts",
+    "line": 251,
+    "kind": "arrow_function"
+  },
+  "getPresignedData": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/hooks/use-knowledge-upload.ts",
+    "line": 278,
+    "kind": "arrow_function"
+  },
+  "createUploadedFile": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/hooks/use-knowledge-upload.ts",
+    "line": 351,
+    "kind": "arrow_function"
+  },
+  "createErrorFromException": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/hooks/use-knowledge-upload.ts",
+    "line": 374,
+    "kind": "arrow_function"
+  },
+  "uploadSingleFileWithRetry": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/hooks/use-knowledge-upload.ts",
+    "line": 400,
+    "kind": "arrow_function"
+  },
+  "uploadFileDirectly": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/hooks/use-knowledge-upload.ts",
+    "line": 482,
+    "kind": "arrow_function"
+  },
+  "abortHandler": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/hooks/use-knowledge-upload.ts",
+    "line": 502,
+    "kind": "arrow_function"
+  },
+  "uploadFileInChunks": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/hooks/use-knowledge-upload.ts",
+    "line": 600,
+    "kind": "arrow_function"
+  },
+  "uploadPart": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/hooks/use-knowledge-upload.ts",
+    "line": 660,
+    "kind": "arrow_function"
+  },
+  "uploadFileThroughAPI": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/hooks/use-knowledge-upload.ts",
+    "line": 771,
+    "kind": "arrow_function"
+  },
+  "uploadFilesInBatches": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/hooks/use-knowledge-upload.ts",
+    "line": 830,
+    "kind": "arrow_function"
+  },
+  "uploadFiles": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/hooks/use-knowledge-upload.ts",
+    "line": 985,
+    "kind": "arrow_function"
+  },
+  "handleRetryFile": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/components/add-documents-modal/add-documents-modal.tsx",
+    "line": 187,
+    "kind": "arrow_function"
+  },
+  "handleUpload": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/components/add-documents-modal/add-documents-modal.tsx",
+    "line": 212,
+    "kind": "arrow_function"
+  },
+  "getTagUsage": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/components/base-tags-modal/base-tags-modal.tsx",
+    "line": 134,
+    "kind": "arrow_function"
+  },
+  "handleDeleteTagClick": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/components/base-tags-modal/base-tags-modal.tsx",
+    "line": 145,
+    "kind": "arrow_function"
+  },
+  "handleViewDocuments": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/components/base-tags-modal/base-tags-modal.tsx",
+    "line": 151,
+    "kind": "arrow_function"
+  },
+  "openTagCreator": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/components/document-tags-modal/document-tags-modal.tsx",
+    "line": 216,
+    "kind": "arrow_function"
+  },
+  "cancelCreatingTag": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/components/base-tags-modal/base-tags-modal.tsx",
+    "line": 165,
+    "kind": "arrow_function"
+  },
+  "hasTagNameConflict": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/components/document-tags-modal/document-tags-modal.tsx",
+    "line": 236,
+    "kind": "arrow_function"
+  },
+  "canSaveTag": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/components/base-tags-modal/base-tags-modal.tsx",
+    "line": 183,
+    "kind": "arrow_function"
+  },
+  "getSlotUsageByFieldType": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/components/base-tags-modal/base-tags-modal.tsx",
+    "line": 188,
+    "kind": "arrow_function"
+  },
+  "hasAvailableSlots": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/components/base-tags-modal/base-tags-modal.tsx",
+    "line": 196,
+    "kind": "arrow_function"
+  },
+  "saveTagDefinition": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/components/base-tags-modal/base-tags-modal.tsx",
+    "line": 212,
+    "kind": "arrow_function"
+  },
+  "confirmDeleteTag": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/components/base-tags-modal/base-tags-modal.tsx",
+    "line": 266,
+    "kind": "arrow_function"
+  },
+  "searchAllChunks": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/document.tsx",
+    "line": 323,
+    "kind": "arrow_function"
+  },
+  "fetchDocument": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/document.tsx",
+    "line": 470,
+    "kind": "arrow_function"
+  },
+  "handleChunkClick": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/document.tsx",
+    "line": 528,
+    "kind": "arrow_function"
+  },
+  "handleCloseModal": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/deploy-modal.tsx",
+    "line": 472,
+    "kind": "arrow_function"
+  },
+  "handleToggleEnabled": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/document.tsx",
+    "line": 538,
+    "kind": "arrow_function"
+  },
+  "handleDeleteChunk": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/components/delete-chunk-modal/delete-chunk-modal.tsx",
+    "line": 29,
+    "kind": "arrow_function"
+  },
+  "handleChunkDeleted": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/document.tsx",
+    "line": 578,
+    "kind": "arrow_function"
+  },
+  "handleCloseDeleteModal": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/document.tsx",
+    "line": 589,
+    "kind": "arrow_function"
+  },
+  "handleSelectChunk": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/document.tsx",
+    "line": 594,
+    "kind": "arrow_function"
+  },
+  "handleSelectAll": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/grouped-checkbox-list/grouped-checkbox-list.tsx",
+    "line": 69,
+    "kind": "arrow_function"
+  },
+  "handleChunkCreated": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/document.tsx",
+    "line": 614,
+    "kind": "arrow_function"
+  },
+  "handleDeleteDocument": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/document.tsx",
+    "line": 622,
+    "kind": "arrow_function"
+  },
+  "performBulkChunkOperation": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/document.tsx",
+    "line": 657,
+    "kind": "arrow_function"
+  },
+  "handleBulkEnable": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/document.tsx",
+    "line": 713,
+    "kind": "arrow_function"
+  },
+  "handleBulkDisable": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/document.tsx",
+    "line": 720,
+    "kind": "arrow_function"
+  },
+  "handleBulkDelete": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/document.tsx",
+    "line": 727,
+    "kind": "arrow_function"
+  },
+  "handleCreateChunk": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/components/create-chunk-modal/create-chunk-modal.tsx",
+    "line": 43,
+    "kind": "arrow_function"
+  },
+  "onClose": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/components/create-chunk-modal/create-chunk-modal.tsx",
+    "line": 97,
+    "kind": "arrow_function"
+  },
+  "handleCloseAttempt": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/components/edit-chunk-modal/edit-chunk-modal.tsx",
+    "line": 149,
+    "kind": "arrow_function"
+  },
+  "handleConfirmDiscard": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/components/edit-chunk-modal/edit-chunk-modal.tsx",
+    "line": 158,
+    "kind": "arrow_function"
+  },
+  "handleRemoveTag": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/components/document-tags-modal/document-tags-modal.tsx",
+    "line": 194,
+    "kind": "arrow_function"
+  },
+  "startEditingTag": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/components/document-tags-modal/document-tags-modal.tsx",
+    "line": 205,
+    "kind": "arrow_function"
+  },
+  "cancelEditingTag": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/components/document-tags-modal/document-tags-modal.tsx",
+    "line": 226,
+    "kind": "arrow_function"
+  },
+  "saveDocumentTag": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/components/document-tags-modal/document-tags-modal.tsx",
+    "line": 258,
+    "kind": "arrow_function"
+  },
+  "hasTagChanges": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/components/document-tags-modal/document-tags-modal.tsx",
+    "line": 364,
+    "kind": "arrow_function"
+  },
+  "handleSaveContent": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/components/edit-chunk-modal/edit-chunk-modal.tsx",
+    "line": 72,
+    "kind": "arrow_function"
+  },
+  "navigateToChunk": {
+    "file": "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/components/edit-chunk-modal/edit-chunk-modal.tsx",
+    "line": 110,
+    "kind": "arrow_function"
+  },
+  "handleNavigate": {
+    "file": "apps/sim/app/workspace/[workspaceId]/logs/components/log-details/log-details.tsx",
+    "line": 94,
+    "kind": "arrow_function"
+  },
+  "handleLogClick": {
+    "file": "apps/sim/app/workspace/[workspaceId]/logs/logs.tsx",
+    "line": 158,
+    "kind": "arrow_function"
+  },
+  "handleCloseSidebar": {
+    "file": "apps/sim/app/workspace/[workspaceId]/logs/logs.tsx",
+    "line": 193,
+    "kind": "arrow_function"
+  },
+  "handleExport": {
+    "file": "apps/sim/app/workspace/[workspaceId]/logs/logs.tsx",
+    "line": 245,
+    "kind": "arrow_function"
+  },
+  "handlePopState": {
+    "file": "apps/sim/app/workspace/[workspaceId]/logs/logs.tsx",
+    "line": 279,
+    "kind": "arrow_function"
+  },
+  "handleScroll": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/table/table.tsx",
+    "line": 184,
+    "kind": "arrow_function"
+  },
+  "rmatDate =": {
+    "file": "apps/sim/app/workspace/[workspaceId]/logs/utils.ts",
+    "line": 430,
+    "kind": "arrow_function"
+  },
+  "getTimeFilterFromRange": {
+    "file": "apps/sim/app/workspace/[workspaceId]/logs/components/dashboard/dashboard.tsx",
+    "line": 174,
+    "kind": "arrow_function"
+  },
+  "update": {
+    "file": "apps/sim/app/workspace/[workspaceId]/logs/components/dashboard/components/line-chart/line-chart.tsx",
+    "line": 64,
+    "kind": "arrow_function"
+  },
+  "resolveColor": {
+    "file": "apps/sim/app/workspace/[workspaceId]/logs/components/dashboard/components/line-chart/line-chart.tsx",
+    "line": 74,
+    "kind": "arrow_function"
+  },
+  "formatTick": {
+    "file": "apps/sim/app/workspace/[workspaceId]/logs/components/dashboard/components/line-chart/line-chart.tsx",
+    "line": 516,
+    "kind": "arrow_function"
+  },
+  "fmtCompact": {
+    "file": "apps/sim/app/workspace/[workspaceId]/logs/components/dashboard/components/line-chart/line-chart.tsx",
+    "line": 555,
+    "kind": "arrow_function"
+  },
+  "fmt": {
+    "file": "apps/sim/app/workspace/[workspaceId]/logs/components/dashboard/components/line-chart/line-chart.tsx",
+    "line": 615,
+    "kind": "arrow_function"
+  },
+  "goToPreviousIteration": {
+    "file": "apps/sim/app/workspace/[workspaceId]/logs/components/log-details/components/frozen-canvas/frozen-canvas.tsx",
+    "line": 227,
+    "kind": "arrow_function"
+  },
+  "goToNextIteration": {
+    "file": "apps/sim/app/workspace/[workspaceId]/logs/components/log-details/components/frozen-canvas/frozen-canvas.tsx",
+    "line": 233,
+    "kind": "arrow_function"
+  },
+  "collectBlockSpans": {
+    "file": "apps/sim/app/workspace/[workspaceId]/logs/components/log-details/components/frozen-canvas/frozen-canvas.tsx",
+    "line": 424,
+    "kind": "arrow_function"
+  },
+  "fetchData": {
+    "file": "apps/sim/app/workspace/[workspaceId]/logs/components/log-details/components/frozen-canvas/frozen-canvas.tsx",
+    "line": 522,
+    "kind": "arrow_function"
+  },
+  "computeSegment": {
+    "file": "apps/sim/app/workspace/[workspaceId]/logs/components/log-details/components/trace-spans/trace-spans.tsx",
+    "line": 195,
+    "kind": "arrow_function"
+  },
+  "fetchWorkflows": {
+    "file": "apps/sim/app/workspace/[workspaceId]/logs/components/logs-toolbar/logs-toolbar.tsx",
+    "line": 161,
+    "kind": "arrow_function"
+  },
+  "handleTimeRangeSelect": {
+    "file": "apps/sim/app/workspace/[workspaceId]/logs/components/logs-toolbar/components/controls/controls.tsx",
+    "line": 48,
+    "kind": "arrow_function"
+  },
+  "validateForm": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/components/chat/chat.tsx",
+    "line": 136,
+    "kind": "arrow_function"
+  },
+  "handleSave": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/trigger-save/trigger-save.tsx",
+    "line": 221,
+    "kind": "arrow_function"
+  },
+  "handleEdit": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/sso/sso.tsx",
+    "line": 362,
+    "kind": "arrow_function"
+  },
+  "handleDelete": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/components/custom-tool-modal/custom-tool-modal.tsx",
+    "line": 809,
+    "kind": "arrow_function"
+  },
+  "handleTest": {
+    "file": "apps/sim/app/workspace/[workspaceId]/logs/components/logs-toolbar/components/notifications/notifications.tsx",
+    "line": 565,
+    "kind": "arrow_function"
+  },
+  "handleChange": {
+    "file": "apps/sim/components/emcn/components/popover/popover.tsx",
+    "line": 722,
+    "kind": "arrow_function"
+  },
+  "load": {
+    "file": "apps/sim/app/workspace/[workspaceId]/logs/components/logs-toolbar/components/notifications/components/workflow-selector/workflow-selector.tsx",
+    "line": 32,
+    "kind": "arrow_function"
+  },
+  "handleMultiSelectChange": {
+    "file": "apps/sim/app/workspace/[workspaceId]/logs/components/logs-toolbar/components/notifications/components/workflow-selector/workflow-selector.tsx",
+    "line": 68,
+    "kind": "arrow_function"
+  },
+  "handleRemove": {
+    "file": "apps/sim/app/workspace/[workspaceId]/logs/components/logs-toolbar/components/notifications/components/workflow-selector/workflow-selector.tsx",
+    "line": 76,
+    "kind": "arrow_function"
+  },
+  "handleFiltersChange": {
+    "file": "apps/sim/app/workspace/[workspaceId]/logs/components/logs-toolbar/components/search/search.tsx",
+    "line": 74,
+    "kind": "arrow_function"
+  },
+  "measure": {
+    "file": "apps/sim/app/workspace/[workspaceId]/logs/components/logs-toolbar/components/search/search.tsx",
+    "line": 125,
+    "kind": "arrow_function"
+  },
+  "handleMouseMove": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/terminal/hooks/use-terminal-resize.ts",
+    "line": 19,
+    "kind": "arrow_function"
+  },
+  "handleMouseUp": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/terminal/hooks/use-terminal-resize.ts",
+    "line": 28,
+    "kind": "arrow_function"
+  },
+  "onKeyDown": {
+    "file": "apps/sim/app/workspace/[workspaceId]/providers/global-commands-provider.tsx",
+    "line": 155,
+    "kind": "arrow_function"
+  },
+  "handleOpenHelpModal": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/sidebar.tsx",
+    "line": 100,
+    "kind": "arrow_function"
+  },
+  "handleScrollToItem": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/sidebar.tsx",
+    "line": 107,
+    "kind": "arrow_function"
+  },
+  "tryScroll": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/sidebar.tsx",
+    "line": 111,
+    "kind": "arrow_function"
+  },
+  "updatePopoverZIndex": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/help-modal/help-modal.tsx",
+    "line": 112,
+    "kind": "arrow_function"
+  },
+  "leKeyDown = (": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/search-modal/search-modal.tsx",
+    "line": 460,
+    "kind": "arrow_function"
+  },
+  "handleOpenSettings": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/settings-modal.tsx",
+    "line": 272,
+    "kind": "arrow_function"
+  },
+  "handleCloseSettings": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/settings-modal.tsx",
+    "line": 277,
+    "kind": "arrow_function"
+  },
+  "prefetchGeneral": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/settings-modal.tsx",
+    "line": 298,
+    "kind": "arrow_function"
+  },
+  "prefetchSubscription": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/settings-modal.tsx",
+    "line": 321,
+    "kind": "arrow_function"
+  },
+  "prefetchOrganization": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/settings-modal.tsx",
+    "line": 335,
+    "kind": "arrow_function"
+  },
+  "prefetchSSO": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/settings-modal.tsx",
+    "line": 354,
+    "kind": "arrow_function"
+  },
+  "handlePrefetch": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/settings-modal.tsx",
+    "line": 368,
+    "kind": "arrow_function"
+  },
+  "handleDialogOpenChange": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/settings-modal.tsx",
+    "line": 388,
+    "kind": "arrow_function"
+  },
+  "handleCreateKey": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/copilot/copilot.tsx",
+    "line": 71,
+    "kind": "arrow_function"
+  },
+  "handleDeleteKey": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/copilot/copilot.tsx",
+    "line": 105,
+    "kind": "arrow_function"
+  },
+  "copyToClipboard": {
+    "file": "apps/sim/components/ui/copy-button.tsx",
+    "line": 16,
+    "kind": "arrow_function"
+  },
+  "handleModalClose": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/api-keys/api-keys.tsx",
+    "line": 171,
+    "kind": "arrow_function"
+  },
+  "formatDate": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/components/general/components/versions.tsx",
+    "line": 42,
+    "kind": "arrow_function"
+  },
+  "handleDeleteClick": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/trigger-save/trigger-save.tsx",
+    "line": 308,
+    "kind": "arrow_function"
+  },
+  "handleDeleteTool": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/custom-tools/custom-tools.tsx",
+    "line": 65,
+    "kind": "arrow_function"
+  },
+  "handleToolSaved": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/custom-tools/custom-tools.tsx",
+    "line": 92,
+    "kind": "arrow_function"
+  },
+  "createEmptyEnvVar": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/environment/environment.tsx",
+    "line": 43,
+    "kind": "arrow_function"
+  },
+  "handleUploadClick": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/files/files.tsx",
+    "line": 105,
+    "kind": "arrow_function"
+  },
+  "truncateMiddle": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/file-upload/file-upload.tsx",
+    "line": 128,
+    "kind": "arrow_function"
+  },
+  "formatStorageSize": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/files/files.tsx",
+    "line": 229,
+    "kind": "arrow_function"
+  },
+  "handleUpdateName": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/general/general.tsx",
+    "line": 142,
+    "kind": "arrow_function"
+  },
+  "handleCancelEdit": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/subscription/components/usage-limit/usage-limit.tsx",
+    "line": 154,
+    "kind": "arrow_function"
+  },
+  "handleInputBlur": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/general/general.tsx",
+    "line": 178,
+    "kind": "arrow_function"
+  },
+  "handleSignOut": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/general/general.tsx",
+    "line": 182,
+    "kind": "arrow_function"
+  },
+  "handleResetPasswordConfirm": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/general/general.tsx",
+    "line": 192,
+    "kind": "arrow_function"
+  },
+  "handleThemeChange": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/general/general.tsx",
+    "line": 231,
+    "kind": "arrow_function"
+  },
+  "handleAutoConnectChange": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/general/general.tsx",
+    "line": 235,
+    "kind": "arrow_function"
+  },
+  "handleSnapToGridChange": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/general/general.tsx",
+    "line": 241,
+    "kind": "arrow_function"
+  },
+  "handleSnapToGridCommit": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/general/general.tsx",
+    "line": 245,
+    "kind": "arrow_function"
+  },
+  "handleTrainingControlsChange": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/general/general.tsx",
+    "line": 253,
+    "kind": "arrow_function"
+  },
+  "handleErrorNotificationsChange": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/general/general.tsx",
+    "line": 259,
+    "kind": "arrow_function"
+  },
+  "handleSuperUserModeToggle": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/general/general.tsx",
+    "line": 265,
+    "kind": "arrow_function"
+  },
+  "handleTelemetryToggle": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/general/general.tsx",
+    "line": 271,
+    "kind": "arrow_function"
+  },
+  "handle": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/integrations/integrations.tsx",
+    "line": 159,
+    "kind": "arrow_function"
+  },
+  "handleConnect": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/integrations/integrations.tsx",
+    "line": 176,
+    "kind": "arrow_function"
+  },
+  "handleDisconnect": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/integrations/integrations.tsx",
+    "line": 197,
+    "kind": "arrow_function"
+  },
+  "confirmDisconnect": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/integrations/integrations.tsx",
+    "line": 205,
+    "kind": "arrow_function"
+  },
+  "scrollToHighlightedService": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/integrations/integrations.tsx",
+    "line": 261,
+    "kind": "arrow_function"
+  },
+  "validateProviderId": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/sso/sso.tsx",
+    "line": 173,
+    "kind": "arrow_function"
+  },
+  "validateIssuerUrl": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/sso/sso.tsx",
+    "line": 179,
+    "kind": "arrow_function"
+  },
+  "validateDomain": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/sso/sso.tsx",
+    "line": 194,
+    "kind": "arrow_function"
+  },
+  "validateRequired": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/sso/sso.tsx",
+    "line": 203,
+    "kind": "arrow_function"
+  },
+  "validateAll": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/sso/sso.tsx",
+    "line": 209,
+    "kind": "arrow_function"
+  },
+  "hasAnyErrors": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/sso/sso.tsx",
+    "line": 244,
+    "kind": "arrow_function"
+  },
+  "isFormValid": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/sso/sso.tsx",
+    "line": 247,
+    "kind": "arrow_function"
+  },
+  "updateWorkspaceSettings": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/subscription/subscription.tsx",
+    "line": 216,
+    "kind": "arrow_function"
+  },
+  "handleBadgeClick": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/subscription/subscription.tsx",
+    "line": 276,
+    "kind": "arrow_function"
+  },
+  "handleContactEnterprise": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/subscription/subscription.tsx",
+    "line": 297,
+    "kind": "arrow_function"
+  },
+  "handleCancel": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/wand-prompt-bar/wand-prompt-bar.tsx",
+    "line": 34,
+    "kind": "arrow_function"
+  },
+  "handleKeep": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/subscription/components/cancel-subscription/cancel-subscription.tsx",
+    "line": 120,
+    "kind": "arrow_function"
+  },
+  "getPeriodEndDate": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/subscription/components/cancel-subscription/cancel-subscription.tsx",
+    "line": 174,
+    "kind": "arrow_function"
+  },
+  "formatCost": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/subscription/components/cost-breakdown/cost-breakdown.tsx",
+    "line": 13,
+    "kind": "arrow_function"
+  },
+  "handleAmountChange": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/subscription/components/credit-balance/credit-balance.tsx",
+    "line": 42,
+    "kind": "arrow_function"
+  },
+  "handlePurchase": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/subscription/components/credit-balance/credit-balance.tsx",
+    "line": 48,
+    "kind": "arrow_function"
+  },
+  "handleOpenChange": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/mcp-server-modal/mcp-tool-selector.tsx",
+    "line": 90,
+    "kind": "arrow_function"
+  },
+  "handleStartEdit": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/subscription/components/usage-limit/usage-limit.tsx",
+    "line": 55,
+    "kind": "arrow_function"
+  },
+  "validateEmailInput": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/team-management/components/member-invitation-card/member-invitation-card.tsx",
+    "line": 96,
+    "kind": "arrow_function"
+  },
+  "handleInviteClick": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/team-management/components/member-invitation-card/member-invitation-card.tsx",
+    "line": 118,
+    "kind": "arrow_function"
+  },
+  "handleCancelInvitation": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/team-management/components/team-members/team-members.tsx",
+    "line": 126,
+    "kind": "arrow_function"
+  },
+  "validateUrl": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/template-profile/template-profile.tsx",
+    "line": 210,
+    "kind": "arrow_function"
+  },
+  "updateField": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/starter/input-format.tsx",
+    "line": 136,
+    "kind": "arrow_function"
+  },
+  "handleOperationConfirmed": {
+    "file": "apps/sim/hooks/use-collaborative-workflow.ts",
+    "line": 633,
+    "kind": "arrow_function"
+  },
+  "collectWorkflowIds": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/workflow-list/workflow-list.tsx",
+    "line": 112,
+    "kind": "arrow_function"
+  },
+  "handleContextMenu": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/workspace-header/workspace-header.tsx",
+    "line": 185,
+    "kind": "arrow_function"
+  },
+  "closeContextMenu": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/workspace-header/workspace-header.tsx",
+    "line": 197,
+    "kind": "arrow_function"
+  },
+  "handleRenameAction": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/workspace-header/workspace-header.tsx",
+    "line": 204,
+    "kind": "arrow_function"
+  },
+  "handleDuplicateAction": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/workspace-header/workspace-header.tsx",
+    "line": 214,
+    "kind": "arrow_function"
+  },
+  "handleExportAction": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/workspace-header/workspace-header.tsx",
+    "line": 224,
+    "kind": "arrow_function"
+  },
+  "handleDeleteAction": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/workspace-header/workspace-header.tsx",
+    "line": 233,
+    "kind": "arrow_function"
+  },
+  "handleDeleteWorkspace": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/workspace-header/workspace-header.tsx",
+    "line": 247,
+    "kind": "arrow_function"
+  },
+  "useAutoScroll": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/hooks/use-auto-scroll.ts",
+    "line": 6,
+    "kind": "arrow_function"
+  },
+  "calculateAbsolutePosition": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/components/workflow-preview/workflow-preview.tsx",
+    "line": 146,
+    "kind": "arrow_function"
+  },
+  "downloadFile": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/hooks/use-export-workflow.ts",
+    "line": 52,
+    "kind": "arrow_function"
+  },
+  "handleOpenOAuthConnect": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/workflow.tsx",
+    "line": 207,
+    "kind": "arrow_function"
+  },
+  "handleRemoveFromSubflow": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/workflow.tsx",
+    "line": 533,
+    "kind": "arrow_function"
+  },
+  "handleAddBlockFromToolbar": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/workflow.tsx",
+    "line": 928,
+    "kind": "arrow_function"
+  },
+  "calculateSmartPosition": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/workflow.tsx",
+    "line": 940,
+    "kind": "arrow_function"
+  },
+  "handleOverlayToolbarDrop": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/workflow.tsx",
+    "line": 1081,
+    "kind": "arrow_function"
+  },
+  "handleShowTriggerWarning": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/workflow.tsx",
+    "line": 1147,
+    "kind": "arrow_function"
+  },
+  "handleSubBlockValueUpdate": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/workflow.tsx",
+    "line": 2241,
+    "kind": "arrow_function"
+  },
+  "processFileAttachments": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/chat/chat.tsx",
+    "line": 89,
+    "kind": "arrow_function"
+  },
+  "extractOutputFromLogs": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/chat/chat.tsx",
+    "line": 122,
+    "kind": "arrow_function"
+  },
+  "formatOutputContent": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/chat/chat.tsx",
+    "line": 153,
+    "kind": "arrow_function"
+  },
+  "openImageInNewWindow": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/chat/components/chat-message/chat-message.tsx",
+    "line": 38,
+    "kind": "arrow_function"
+  },
+  "WordWrap": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/chat/components/chat-message/chat-message.tsx",
+    "line": 63,
+    "kind": "arrow_function"
+  },
+  "handleAttachmentClick": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/chat/components/chat-message/chat-message.tsx",
+    "line": 103,
+    "kind": "arrow_function"
+  },
+  "addOutput": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/chat/components/output-select/output-select.tsx",
+    "line": 140,
+    "kind": "arrow_function"
+  },
+  "createOutput": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/chat/components/output-select/output-select.tsx",
+    "line": 142,
+    "kind": "arrow_function"
+  },
+  "isSelectedValue": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/chat/components/output-select/output-select.tsx",
+    "line": 188,
+    "kind": "arrow_function"
+  },
+  "getOutputColor": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/chat/components/output-select/output-select.tsx",
+    "line": 279,
+    "kind": "arrow_function"
+  },
+  "handleOutputSelection": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/chat/components/output-select/output-select.tsx",
+    "line": 295,
+    "kind": "arrow_function"
+  },
+  "openSubscriptionSettings": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/panel.tsx",
+    "line": 126,
+    "kind": "arrow_function"
+  },
+  "handleTabClick": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/panel.tsx",
+    "line": 171,
+    "kind": "arrow_function"
+  },
+  "handleCopyContent": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/copilot-message/copilot-message.tsx",
+    "line": 158,
+    "kind": "arrow_function"
+  },
+  "getLastBlockContent": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/copilot-message/copilot-message.tsx",
+    "line": 576,
+    "kind": "arrow_function"
+  },
+  "getFileUrl": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/copilot-message/components/file-display.tsx",
+    "line": 68,
+    "kind": "arrow_function"
+  },
+  "handleFileClick": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/copilot-message/components/file-display.tsx",
+    "line": 83,
+    "kind": "arrow_function"
+  },
+  "isImageFile": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/user-input/components/attached-files-display/attached-files-display.tsx",
+    "line": 67,
+    "kind": "arrow_function"
+  },
+  "handleImageError": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/copilot-message/components/file-display.tsx",
+    "line": 101,
+    "kind": "arrow_function"
+  },
+  "getTextContent": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/copilot-message/components/markdown-renderer.tsx",
+    "line": 14,
+    "kind": "arrow_function"
+  },
+  "animateText": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/copilot-message/components/smooth-streaming.tsx",
+    "line": 73,
+    "kind": "arrow_function"
+  },
+  "formatDuration": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/terminal/terminal.tsx",
+    "line": 122,
+    "kind": "arrow_function"
+  },
+  "handleUpdateLimit": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/copilot-message/components/usage-limit-actions.tsx",
+    "line": 31,
+    "kind": "arrow_function"
+  },
+  "handleNavigateToUpgrade": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/copilot-message/components/usage-limit-actions.tsx",
+    "line": 60,
+    "kind": "arrow_function"
+  },
+  "handleCheckpointDiscardKeyDown": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/copilot-message/hooks/use-checkpoint-management.ts",
+    "line": 238,
+    "kind": "arrow_function"
+  },
+  "handleStateChange": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/tool-call/tool-call.tsx",
+    "line": 591,
+    "kind": "arrow_function"
+  },
+  "checkPosition": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/user-input/user-input.tsx",
+    "line": 227,
+    "kind": "arrow_function"
+  },
+  "LoadingState": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/user-input/components/mention-menu/mention-menu.tsx",
+    "line": 37,
+    "kind": "arrow_function"
+  },
+  "handleAggregatedItemClick": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/user-input/components/mention-menu/mention-menu.tsx",
+    "line": 264,
+    "kind": "arrow_function"
+  },
+  "getCaretViewport": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/user-input/components/mention-menu/mention-menu.tsx",
+    "line": 318,
+    "kind": "arrow_function"
+  },
+  "getModeIcon": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/user-input/components/mode-selector/mode-selector.tsx",
+    "line": 38,
+    "kind": "arrow_function"
+  },
+  "getModeText": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/user-input/components/mode-selector/mode-selector.tsx",
+    "line": 48,
+    "kind": "arrow_function"
+  },
+  "handleSelect": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/user-input/components/model-selector/model-selector.tsx",
+    "line": 71,
+    "kind": "arrow_function"
+  },
+  "getCollapsedModeLabel": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/user-input/components/model-selector/model-selector.tsx",
+    "line": 54,
+    "kind": "arrow_function"
+  },
+  "getModelIcon": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/user-input/components/model-selector/model-selector.tsx",
+    "line": 59,
+    "kind": "arrow_function"
+  },
+  "syncWorkflowBlocks": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/user-input/hooks/use-mention-data.ts",
+    "line": 153,
+    "kind": "arrow_function"
+  },
+  "handleResize": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/hooks/use-float/use-float-boundary-sync.ts",
+    "line": 77,
+    "kind": "arrow_function"
+  },
+  "refetchWithErrorHandling": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/deploy.tsx",
+    "line": 78,
+    "kind": "arrow_function"
+  },
+  "getTooltipText": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/deploy.tsx",
+    "line": 91,
+    "kind": "arrow_function"
+  },
+  "getApiKeyLabel": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/deploy-modal.tsx",
+    "line": 100,
+    "kind": "arrow_function"
+  },
+  "getApiHeaderPlaceholder": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/deploy-modal.tsx",
+    "line": 107,
+    "kind": "arrow_function"
+  },
+  "getInputFormatExample": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/deploy-modal.tsx",
+    "line": 110,
+    "kind": "arrow_function"
+  },
+  "onDeploy": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/deploy-modal.tsx",
+    "line": 202,
+    "kind": "arrow_function"
+  },
+  "handleOpenDeployModal": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/deploy-modal.tsx",
+    "line": 322,
+    "kind": "arrow_function"
+  },
+  "handleUndeploy": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/deploy-modal.tsx",
+    "line": 404,
+    "kind": "arrow_function"
+  },
+  "handleRedeploy": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/deploy-modal.tsx",
+    "line": 428,
+    "kind": "arrow_function"
+  },
+  "handlePostDeploymentUpdate": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/deploy-modal.tsx",
+    "line": 478,
+    "kind": "arrow_function"
+  },
+  "handleChatFormSubmit": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/deploy-modal.tsx",
+    "line": 506,
+    "kind": "arrow_function"
+  },
+  "handleChatDelete": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/deploy-modal.tsx",
+    "line": 518,
+    "kind": "arrow_function"
+  },
+  "getBaseEndpoint": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/components/api/api.tsx",
+    "line": 86,
+    "kind": "arrow_function"
+  },
+  "getPayloadObject": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/components/api/api.tsx",
+    "line": 91,
+    "kind": "arrow_function"
+  },
+  "getStreamPayloadObject": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/components/api/api.tsx",
+    "line": 104,
+    "kind": "arrow_function"
+  },
+  "getSyncCommand": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/components/api/api.tsx",
+    "line": 112,
+    "kind": "arrow_function"
+  },
+  "getStreamCommand": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/components/api/api.tsx",
+    "line": 170,
+    "kind": "arrow_function"
+  },
+  "getAsyncCommand": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/components/api/api.tsx",
+    "line": 243,
+    "kind": "arrow_function"
+  },
+  "getAsyncExampleTitle": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/components/api/api.tsx",
+    "line": 399,
+    "kind": "arrow_function"
+  },
+  "setError": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/components/chat/chat.tsx",
+    "line": 132,
+    "kind": "arrow_function"
+  },
+  "confirmLoadDeployment": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/components/general/general.tsx",
+    "line": 109,
+    "kind": "arrow_function"
+  },
+  "confirmPromoteToLive": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/components/general/general.tsx",
+    "line": 132,
+    "kind": "arrow_function"
+  },
+  "handleStartRename": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/components/general/components/versions.tsx",
+    "line": 91,
+    "kind": "arrow_function"
+  },
+  "handleSaveRename": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/components/general/components/versions.tsx",
+    "line": 97,
+    "kind": "arrow_function"
+  },
+  "handleCancelRename": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/components/general/components/versions.tsx",
+    "line": 132,
+    "kind": "arrow_function"
+  },
+  "handleRowClick": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/components/general/components/versions.tsx",
+    "line": 137,
+    "kind": "arrow_function"
+  },
+  "handlePromote": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/components/general/components/versions.tsx",
+    "line": 142,
+    "kind": "arrow_function"
+  },
+  "handleLoadDeployment": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/components/general/components/versions.tsx",
+    "line": 147,
+    "kind": "arrow_function"
+  },
+  "fetchCreatorOptions": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/components/template/template.tsx",
+    "line": 130,
+    "kind": "arrow_function"
+  },
+  "handleCreatorProfileSaved": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/components/template/template.tsx",
+    "line": 167,
+    "kind": "arrow_function"
+  },
+  "checkForChanges": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/hooks/use-change-detection.ts",
+    "line": 88,
+    "kind": "arrow_function"
+  },
+  "fetchDeployedState": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/hooks/use-deployed-state.ts",
+    "line": 34,
+    "kind": "arrow_function"
+  },
+  "getCurrentActiveWorkflowId": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/hooks/use-deployed-state.ts",
+    "line": 44,
+    "kind": "arrow_function"
+  },
+  "IconComponent": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/components/mcp-tools-list.tsx",
+    "line": 5,
+    "kind": "arrow_function"
+  },
+  "handleOpenDocs": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/editor.tsx",
+    "line": 160,
+    "kind": "arrow_function"
+  },
+  "calculateFieldsHeight": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/connection-blocks/connection-blocks.tsx",
+    "line": 35,
+    "kind": "arrow_function"
+  },
+  "isFieldRequired": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/sub-block.tsx",
+    "line": 76,
+    "kind": "arrow_function"
+  },
+  "evalCond": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/sub-block.tsx",
+    "line": 81,
+    "kind": "arrow_function"
+  },
+  "getPreviewValue": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/sub-block.tsx",
+    "line": 134,
+    "kind": "arrow_function"
+  },
+  "getCaretViewportPosition": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tag-dropdown/tag-dropdown.tsx",
+    "line": 316,
+    "kind": "arrow_function"
+  },
+  "openEnvironmentSettings": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/env-var-dropdown.tsx",
+    "line": 170,
+    "kind": "arrow_function"
+  },
+  "handleEnvVarSelect": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/components/custom-tool-modal/custom-tool-modal.tsx",
+    "line": 625,
+    "kind": "arrow_function"
+  },
+  "handleKeyboardEvent": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tag-dropdown/components/keyboard-navigation-handler.tsx",
+    "line": 112,
+    "kind": "arrow_function"
+  },
+  "shouldHighlightReference": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/condition-input/condition-input.tsx",
+    "line": 120,
+    "kind": "arrow_function"
+  },
+  "pushPlainText": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/formatted-text.tsx",
+    "line": 54,
+    "kind": "arrow_function"
+  },
+  "applyDarkModeTokenStyling": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/code/code.tsx",
+    "line": 74,
+    "kind": "arrow_function"
+  },
+  "createHighlightFunction": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/code/code.tsx",
+    "line": 94,
+    "kind": "arrow_function"
+  },
+  "getDefaultValueString": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/code/code.tsx",
+    "line": 309,
+    "kind": "arrow_function"
+  },
+  "setReadOnly": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/code/code.tsx",
+    "line": 366,
+    "kind": "arrow_function"
+  },
+  "updateActiveLineNumber": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/code/code.tsx",
+    "line": 405,
+    "kind": "arrow_function"
+  },
+  "calculateVisualLines": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/components/code-editor/code-editor.tsx",
+    "line": 66,
+    "kind": "arrow_function"
+  },
+  "handleTagSelect": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/variables-input/variables-input.tsx",
+    "line": 153,
+    "kind": "arrow_function"
+  },
+  "generateStableId": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/condition-input/condition-input.tsx",
+    "line": 86,
+    "kind": "arrow_function"
+  },
+  "createDefaultBlocks": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/condition-input/condition-input.tsx",
+    "line": 172,
+    "kind": "arrow_function"
+  },
+  "safeParseJSON": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/condition-input/condition-input.tsx",
+    "line": 218,
+    "kind": "arrow_function"
+  },
+  "renderLineNumbers": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/condition-input/condition-input.tsx",
+    "line": 412,
+    "kind": "arrow_function"
+  },
+  "handleTagSelectImmediate": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/condition-input/condition-input.tsx",
+    "line": 518,
+    "kind": "arrow_function"
+  },
+  "handleEnvVarSelectImmediate": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/condition-input/condition-input.tsx",
+    "line": 548,
+    "kind": "arrow_function"
+  },
+  "updateBlockTitles": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/condition-input/condition-input.tsx",
+    "line": 585,
+    "kind": "arrow_function"
+  },
+  "addBlock": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/condition-input/condition-input.tsx",
+    "line": 593,
+    "kind": "arrow_function"
+  },
+  "removeBlock": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/condition-input/condition-input.tsx",
+    "line": 627,
+    "kind": "arrow_function"
+  },
+  "moveBlock": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/condition-input/condition-input.tsx",
+    "line": 644,
+    "kind": "arrow_function"
+  },
+  "refresh": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/components/tool-credential-selector.tsx",
+    "line": 256,
+    "kind": "arrow_function"
+  },
+  "handleVisibilityChange": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/components/tool-credential-selector.tsx",
+    "line": 260,
+    "kind": "arrow_function"
+  },
+  "handlePageShow": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/components/tool-credential-selector.tsx",
+    "line": 266,
+    "kind": "arrow_function"
+  },
+  "handleCredentialDisconnected": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/components/tool-credential-selector.tsx",
+    "line": 272,
+    "kind": "arrow_function"
+  },
+  "handleConnectDirectly": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/credential-selector/components/oauth-required-modal.tsx",
+    "line": 342,
+    "kind": "arrow_function"
+  },
+  "updateRowsAndGenerateJson": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/document-tag-entry/document-tag-entry.tsx",
+    "line": 117,
+    "kind": "arrow_function"
+  },
+  "handleTagSelection": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/document-tag-entry/document-tag-entry.tsx",
+    "line": 153,
+    "kind": "arrow_function"
+  },
+  "handleValueChange": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/slider-input/slider-input.tsx",
+    "line": 52,
+    "kind": "arrow_function"
+  },
+  "handleTagDropdownSelection": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/knowledge-tag-filters/knowledge-tag-filters.tsx",
+    "line": 186,
+    "kind": "arrow_function"
+  },
+  "handleAddRow": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/knowledge-tag-filters/knowledge-tag-filters.tsx",
+    "line": 204,
+    "kind": "arrow_function"
+  },
+  "handleDeleteRow": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/table/table.tsx",
+    "line": 144,
+    "kind": "arrow_function"
+  },
+  "renderHeader": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/table/table.tsx",
+    "line": 149,
+    "kind": "arrow_function"
+  },
+  "renderTagNameCell": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/knowledge-tag-filters/knowledge-tag-filters.tsx",
+    "line": 260,
+    "kind": "arrow_function"
+  },
+  "normalizeVariableReferences": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/dropdown/dropdown.tsx",
+    "line": 201,
+    "kind": "arrow_function"
+  },
+  "convertJsonToBuilderData": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/dropdown/dropdown.tsx",
+    "line": 210,
+    "kind": "arrow_function"
+  },
+  "inferType": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/dropdown/dropdown.tsx",
+    "line": 242,
+    "kind": "arrow_function"
+  },
+  "createDefaultMetric": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/eval-input/eval-input.tsx",
+    "line": 32,
+    "kind": "arrow_function"
+  },
+  "addMetric": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/eval-input/eval-input.tsx",
+    "line": 69,
+    "kind": "arrow_function"
+  },
+  "removeMetric": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/eval-input/eval-input.tsx",
+    "line": 76,
+    "kind": "arrow_function"
+  },
+  "updateMetric": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/eval-input/eval-input.tsx",
+    "line": 81,
+    "kind": "arrow_function"
+  },
+  "updateRange": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/eval-input/eval-input.tsx",
+    "line": 88,
+    "kind": "arrow_function"
+  },
+  "handleRangeBlur": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/eval-input/eval-input.tsx",
+    "line": 105,
+    "kind": "arrow_function"
+  },
+  "updateMetricField": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/eval-input/eval-input.tsx",
+    "line": 125,
+    "kind": "arrow_function"
+  },
+  "renderMetricHeader": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/eval-input/eval-input.tsx",
+    "line": 129,
+    "kind": "arrow_function"
+  },
+  "loadWorkspaceFiles": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/file-upload/file-upload.tsx",
+    "line": 69,
+    "kind": "arrow_function"
+  },
+  "handleOpenFileDialog": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/file-upload/file-upload.tsx",
+    "line": 104,
+    "kind": "arrow_function"
+  },
+  "handleSelectWorkspaceFile": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/file-upload/file-upload.tsx",
+    "line": 329,
+    "kind": "arrow_function"
+  },
+  "handleToggle": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/grouped-checkbox-list/grouped-checkbox-list.tsx",
+    "line": 58,
+    "kind": "arrow_function"
+  },
+  "handleClear": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/grouped-checkbox-list/grouped-checkbox-list.tsx",
+    "line": 75,
+    "kind": "arrow_function"
+  },
+  "SelectedCountDisplay": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/grouped-checkbox-list/grouped-checkbox-list.tsx",
+    "line": 83,
+    "kind": "arrow_function"
+  },
+  "handleFieldUpdate": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/input-mapping/input-mapping.tsx",
+    "line": 244,
+    "kind": "arrow_function"
+  },
+  "toggleCollapse": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/variables-input/variables-input.tsx",
+    "line": 249,
+    "kind": "arrow_function"
+  },
+  "parseFilters": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/knowledge-tag-filters/knowledge-tag-filters.tsx",
+    "line": 75,
+    "kind": "arrow_function"
+  },
+  "updateFilters": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/knowledge-tag-filters/knowledge-tag-filters.tsx",
+    "line": 112,
+    "kind": "arrow_function"
+  },
+  "rowsToFilters": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/knowledge-tag-filters/knowledge-tag-filters.tsx",
+    "line": 118,
+    "kind": "arrow_function"
+  },
+  "handleCellChange": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/knowledge-tag-filters/knowledge-tag-filters.tsx",
+    "line": 132,
+    "kind": "arrow_function"
+  },
+  "handleTagNameSelection": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/knowledge-tag-filters/knowledge-tag-filters.tsx",
+    "line": 158,
+    "kind": "arrow_function"
+  },
+  "renderOperatorCell": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/knowledge-tag-filters/knowledge-tag-filters.tsx",
+    "line": 282,
+    "kind": "arrow_function"
+  },
+  "setRefs": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/long-input/long-input.tsx",
+    "line": 299,
+    "kind": "arrow_function"
+  },
+  "handleComboboxChange": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/mcp-server-modal/mcp-tool-selector.tsx",
+    "line": 75,
+    "kind": "arrow_function"
+  },
+  "formatRole": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/messages-input/messages-input.tsx",
+    "line": 205,
+    "kind": "arrow_function"
+  },
+  "handleDeleteConfirm": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/trigger-save/trigger-save.tsx",
+    "line": 313,
+    "kind": "arrow_function"
+  },
+  "handleToggleStatus": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/schedule-save/schedule-save.tsx",
+    "line": 338,
+    "kind": "arrow_function"
+  },
+  "createDefaultField": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/starter/input-format.tsx",
+    "line": 71,
+    "kind": "arrow_function"
+  },
+  "validateFieldName": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/starter/input-format.tsx",
+    "line": 82,
+    "kind": "arrow_function"
+  },
+  "addField": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/starter/input-format.tsx",
+    "line": 120,
+    "kind": "arrow_function"
+  },
+  "removeField": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/starter/input-format.tsx",
+    "line": 128,
+    "kind": "arrow_function"
+  },
+  "syncOverlayScroll": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/starter/input-format.tsx",
+    "line": 156,
+    "kind": "arrow_function"
+  },
+  "renderFieldHeader": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/starter/input-format.tsx",
+    "line": 164,
+    "kind": "arrow_function"
+  },
+  "updateCellValue": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/table/table.tsx",
+    "line": 117,
+    "kind": "arrow_function"
+  },
+  "renderCell": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/table/table.tsx",
+    "line": 167,
+    "kind": "arrow_function"
+  },
+  "syncScrollAfterUpdate": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/table/table.tsx",
+    "line": 191,
+    "kind": "arrow_function"
+  },
+  "tagSelectHandler": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/table/table.tsx",
+    "line": 206,
+    "kind": "arrow_function"
+  },
+  "envVarSelectHandler": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/table/table.tsx",
+    "line": 216,
+    "kind": "arrow_function"
+  },
+  "checkTagTrigger": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tag-dropdown/tag-dropdown.tsx",
+    "line": 76,
+    "kind": "arrow_function"
+  },
+  "getTagSearchTerm": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tag-dropdown/tag-dropdown.tsx",
+    "line": 89,
+    "kind": "arrow_function"
+  },
+  "ensureRootTag": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tag-dropdown/tag-dropdown.tsx",
+    "line": 124,
+    "kind": "arrow_function"
+  },
+  "getSubBlockValue": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/hooks/use-block-output-fields.ts",
+    "line": 23,
+    "kind": "arrow_function"
+  },
+  "getOutputTypeForPath": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tag-dropdown/tag-dropdown.tsx",
+    "line": 140,
+    "kind": "arrow_function"
+  },
+  "generateOutputPaths": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/hooks/use-block-output-fields.ts",
+    "line": 49,
+    "kind": "arrow_function"
+  },
+  "generateOutputPathsWithTypes": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tag-dropdown/tag-dropdown.tsx",
+    "line": 235,
+    "kind": "arrow_function"
+  },
+  "generateToolOutputPaths": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/hooks/use-block-output-fields.ts",
+    "line": 30,
+    "kind": "arrow_function"
+  },
+  "getToolOutputType": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tag-dropdown/tag-dropdown.tsx",
+    "line": 294,
+    "kind": "arrow_function"
+  },
+  "TagIcon": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tag-dropdown/tag-dropdown.tsx",
+    "line": 366,
+    "kind": "arrow_function"
+  },
+  "TagDropdownBackButton": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tag-dropdown/tag-dropdown.tsx",
+    "line": 388,
+    "kind": "arrow_function"
+  },
+  "TagDropdown": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tag-dropdown/tag-dropdown.tsx",
+    "line": 438,
+    "kind": "arrow_function"
+  },
+  "KeyboardNavigationHandler": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tag-dropdown/components/keyboard-navigation-handler.tsx",
+    "line": 18,
+    "kind": "arrow_function"
+  },
+  "openFolderWithSelection": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tag-dropdown/components/keyboard-navigation-handler.tsx",
+    "line": 98,
+    "kind": "arrow_function"
+  },
+  "selectionCallback": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tag-dropdown/components/keyboard-navigation-handler.tsx",
+    "line": 105,
+    "kind": "arrow_function"
+  },
+  "formatDisplayTime": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/time-input/time-input.tsx",
+    "line": 34,
+    "kind": "arrow_function"
+  },
+  "formatStorageTime": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/time-input/time-input.tsx",
+    "line": 44,
+    "kind": "arrow_function"
+  },
+  "updateTime": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/time-input/time-input.tsx",
+    "line": 54,
+    "kind": "arrow_function"
+  },
+  "handleBlur": {
+    "file": "apps/sim/components/ui/tag-input.tsx",
+    "line": 49,
+    "kind": "arrow_function"
+  },
+  "isToolAlreadySelected": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/tool-input.tsx",
+    "line": 981,
+    "kind": "arrow_function"
+  },
+  "hasMultipleOperations": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/tool-input.tsx",
+    "line": 998,
+    "kind": "arrow_function"
+  },
+  "getOperationOptions": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/tool-input.tsx",
+    "line": 1008,
+    "kind": "arrow_function"
+  },
+  "getToolIdForOperation": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/tool-input.tsx",
+    "line": 1046,
+    "kind": "arrow_function"
+  },
+  "initializeToolParams": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/tool-input.tsx",
+    "line": 1080,
+    "kind": "arrow_function"
+  },
+  "toggleToolExpansion": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/tool-input.tsx",
+    "line": 1373,
+    "kind": "arrow_function"
+  },
+  "handleDragStart": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/tool-input.tsx",
+    "line": 1391,
+    "kind": "arrow_function"
+  },
+  "handleDragEnd": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/tool-input.tsx",
+    "line": 1405,
+    "kind": "arrow_function"
+  },
+  "handleMcpToolSelect": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/tool-input.tsx",
+    "line": 1410,
+    "kind": "arrow_function"
+  },
+  "toolRequiresOAuth": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/tool-input.tsx",
+    "line": 1450,
+    "kind": "arrow_function"
+  },
+  "getToolOAuthConfig": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/tool-input.tsx",
+    "line": 1455,
+    "kind": "arrow_function"
+  },
+  "evaluateParameterCondition": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/tool-input.tsx",
+    "line": 1466,
+    "kind": "arrow_function"
+  },
+  "getProviderIcon": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/components/tool-credential-selector.tsx",
+    "line": 18,
+    "kind": "arrow_function"
+  },
+  "getProviderName": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/components/tool-credential-selector.tsx",
+    "line": 28,
+    "kind": "arrow_function"
+  },
+  "escapeHtml": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/components/code-editor/code-editor.tsx",
+    "line": 139,
+    "kind": "arrow_function"
+  },
+  "resetForm": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/components/custom-tool-modal/custom-tool-modal.tsx",
+    "line": 289,
+    "kind": "arrow_function"
+  },
+  "validateJsonSchema": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/components/custom-tool-modal/custom-tool-modal.tsx",
+    "line": 316,
+    "kind": "arrow_function"
+  },
+  "handleJsonSchemaChange": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/components/custom-tool-modal/custom-tool-modal.tsx",
+    "line": 498,
+    "kind": "arrow_function"
+  },
+  "handleFunctionCodeChange": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/components/custom-tool-modal/custom-tool-modal.tsx",
+    "line": 548,
+    "kind": "arrow_function"
+  },
+  "checkSchemaParamTrigger": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/components/custom-tool-modal/custom-tool-modal.tsx",
+    "line": 608,
+    "kind": "arrow_function"
+  },
+  "handleSchemaParamSelect": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/components/custom-tool-modal/custom-tool-modal.tsx",
+    "line": 636,
+    "kind": "arrow_function"
+  },
+  "handleSchemaWandClick": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/components/custom-tool-modal/custom-tool-modal.tsx",
+    "line": 731,
+    "kind": "arrow_function"
+  },
+  "handleSchemaPromptBlur": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/components/custom-tool-modal/custom-tool-modal.tsx",
+    "line": 740,
+    "kind": "arrow_function"
+  },
+  "handleSchemaPromptChange": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/components/custom-tool-modal/custom-tool-modal.tsx",
+    "line": 746,
+    "kind": "arrow_function"
+  },
+  "handleSchemaPromptSubmit": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/components/custom-tool-modal/custom-tool-modal.tsx",
+    "line": 750,
+    "kind": "arrow_function"
+  },
+  "handleSchemaPromptKeyDown": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/components/custom-tool-modal/custom-tool-modal.tsx",
+    "line": 759,
+    "kind": "arrow_function"
+  },
+  "handleCodeWandClick": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/components/custom-tool-modal/custom-tool-modal.tsx",
+    "line": 770,
+    "kind": "arrow_function"
+  },
+  "handleCodePromptBlur": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/components/custom-tool-modal/custom-tool-modal.tsx",
+    "line": 779,
+    "kind": "arrow_function"
+  },
+  "handleCodePromptChange": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/components/custom-tool-modal/custom-tool-modal.tsx",
+    "line": 785,
+    "kind": "arrow_function"
+  },
+  "handleCodePromptSubmit": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/components/custom-tool-modal/custom-tool-modal.tsx",
+    "line": 789,
+    "kind": "arrow_function"
+  },
+  "handleCodePromptKeyDown": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/components/custom-tool-modal/custom-tool-modal.tsx",
+    "line": 798,
+    "kind": "arrow_function"
+  },
+  "useCommandContext": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/components/tool-command/tool-command.tsx",
+    "line": 26,
+    "kind": "arrow_function"
+  },
+  "useCommandKeyDown": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/components/tool-command/tool-command.tsx",
+    "line": 34,
+    "kind": "arrow_function"
+  },
+  "generateTestUrl": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/trigger-save/trigger-save.tsx",
+    "line": 280,
+    "kind": "arrow_function"
+  },
+  "getAvailableVariablesFor": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/variables-input/variables-input.tsx",
+    "line": 73,
+    "kind": "arrow_function"
+  },
+  "addAssignment": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/variables-input/variables-input.tsx",
+    "line": 121,
+    "kind": "arrow_function"
+  },
+  "removeAssignment": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/variables-input/variables-input.tsx",
+    "line": 131,
+    "kind": "arrow_function"
+  },
+  "updateAssignment": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/variables-input/variables-input.tsx",
+    "line": 136,
+    "kind": "arrow_function"
+  },
+  "handleVariableSelect": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/variables-input/variables-input.tsx",
+    "line": 141,
+    "kind": "arrow_function"
+  },
+  "handleValueInputChange": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/variables-input/variables-input.tsx",
+    "line": 180,
+    "kind": "arrow_function"
+  },
+  "normalizeDependencyValue": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/hooks/use-depends-on-gate.ts",
+    "line": 63,
+    "kind": "arrow_function"
+  },
+  "isValueSatisfied": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/hooks/use-depends-on-gate.ts",
+    "line": 122,
+    "kind": "arrow_function"
+  },
+  "getMergedSubBlocks": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/hooks/use-block-connections.ts",
+    "line": 103,
+    "kind": "arrow_function"
+  },
+  "handleSearchClick": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/toolbar/toolbar.tsx",
+    "line": 282,
+    "kind": "arrow_function"
+  },
+  "handleSearchBlur": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/toolbar/toolbar.tsx",
+    "line": 312,
+    "kind": "arrow_function"
+  },
+  "focusTrigger": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/toolbar/toolbar.tsx",
+    "line": 394,
+    "kind": "arrow_function"
+  },
+  "focusBlock": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/toolbar/toolbar.tsx",
+    "line": 403,
+    "kind": "arrow_function"
+  },
+  "focusSearchInput": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/toolbar/toolbar.tsx",
+    "line": 412,
+    "kind": "arrow_function"
+  },
+  "cleanup": {
+    "file": "apps/sim/lib/mcp/service.ts",
+    "line": 566,
+    "kind": "arrow_function"
+  },
+  "SkeletonControlBar": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/skeleton-loading/skeleton-loading.tsx",
+    "line": 7,
+    "kind": "arrow_function"
+  },
+  "SubflowNodeStyles": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/subflows/subflow-node.tsx",
+    "line": 18,
+    "kind": "arrow_function"
+  },
+  "getHandleClasses": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/subflows/subflow-node.tsx",
+    "line": 109,
+    "kind": "arrow_function"
+  },
+  "getHandleStyle": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/subflows/subflow-node.tsx",
+    "line": 122,
+    "kind": "arrow_function"
+  },
+  "getBlockIcon": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/terminal/terminal.tsx",
+    "line": 101,
+    "kind": "arrow_function"
+  },
+  "getStatusInfo": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/terminal/terminal.tsx",
+    "line": 131,
+    "kind": "arrow_function"
+  },
+  "ColumnHeader": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/terminal/terminal.tsx",
+    "line": 143,
+    "kind": "arrow_function"
+  },
+  "ToggleButton": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/terminal/terminal.tsx",
+    "line": 161,
+    "kind": "arrow_function"
+  },
+  "formatTimestamp": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/terminal/terminal.tsx",
+    "line": 181,
+    "kind": "arrow_function"
+  },
+  "formatRunId": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/terminal/terminal.tsx",
+    "line": 197,
+    "kind": "arrow_function"
+  },
+  "getRunIdColor": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/terminal/terminal.tsx",
+    "line": 205,
+    "kind": "arrow_function"
+  },
+  "isEventFromEditableElement": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/terminal/terminal.tsx",
+    "line": 225,
+    "kind": "arrow_function"
+  },
+  "isEditable": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/terminal/terminal.tsx",
+    "line": 229,
+    "kind": "arrow_function"
+  },
+  "getValueType": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/terminal/components/prettier-output.tsx",
+    "line": 22,
+    "kind": "arrow_function"
+  },
+  "getCollapsedPreview": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/terminal/components/prettier-output.tsx",
+    "line": 47,
+    "kind": "arrow_function"
+  },
+  "handleStart": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/training-modal/training-modal.tsx",
+    "line": 80,
+    "kind": "arrow_function"
+  },
+  "handleCopyDataset": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/training-modal/training-modal.tsx",
+    "line": 88,
+    "kind": "arrow_function"
+  },
+  "handleExportAll": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/training-modal/training-modal.tsx",
+    "line": 106,
+    "kind": "arrow_function"
+  },
+  "sendToIndexer": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/training-modal/training-modal.tsx",
+    "line": 117,
+    "kind": "arrow_function"
+  },
+  "handleSendOne": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/training-modal/training-modal.tsx",
+    "line": 149,
+    "kind": "arrow_function"
+  },
+  "handleSendAll": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/training-modal/training-modal.tsx",
+    "line": 205,
+    "kind": "arrow_function"
+  },
+  "handleSendSelected": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/training-modal/training-modal.tsx",
+    "line": 240,
+    "kind": "arrow_function"
+  },
+  "toggleDatasetSelection": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/training-modal/training-modal.tsx",
+    "line": 283,
+    "kind": "arrow_function"
+  },
+  "toggleSelectAll": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/training-modal/training-modal.tsx",
+    "line": 293,
+    "kind": "arrow_function"
+  },
+  "handleSendLiveWorkflow": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/training-modal/training-modal.tsx",
+    "line": 301,
+    "kind": "arrow_function"
+  },
+  "toggleCollapsed": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/variables/variables.tsx",
+    "line": 168,
+    "kind": "arrow_function"
+  },
+  "handleHeaderKeyDown": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/variables/variables.tsx",
+    "line": 175,
+    "kind": "arrow_function"
+  },
+  "clearVariableState": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/variables/variables.tsx",
+    "line": 182,
+    "kind": "arrow_function"
+  },
+  "handleVariableNameKeyDown": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/variables/variables.tsx",
+    "line": 269,
+    "kind": "arrow_function"
+  },
+  "isTableRowArray": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/workflow-block/workflow-block.tsx",
+    "line": 70,
+    "kind": "arrow_function"
+  },
+  "isFieldFormatArray": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/workflow-block/workflow-block.tsx",
+    "line": 85,
+    "kind": "arrow_function"
+  },
+  "isPlainObject": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/workflow-block/workflow-block.tsx",
+    "line": 96,
+    "kind": "arrow_function"
+  },
+  "isVariableAssignmentsArray": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/workflow-block/workflow-block.tsx",
+    "line": 103,
+    "kind": "arrow_function"
+  },
+  "isMessagesArray": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/workflow-block/workflow-block.tsx",
+    "line": 121,
+    "kind": "arrow_function"
+  },
+  "isTagFilterArray": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/workflow-block/workflow-block.tsx",
+    "line": 148,
+    "kind": "arrow_function"
+  },
+  "isDocumentTagArray": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/workflow-block/workflow-block.tsx",
+    "line": 169,
+    "kind": "arrow_function"
+  },
+  "tryParseJson": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/workflow-block/workflow-block.tsx",
+    "line": 184,
+    "kind": "arrow_function"
+  },
+  "getDisplayValue": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/workflow-block/workflow-block.tsx",
+    "line": 203,
+    "kind": "arrow_function"
+  },
+  "getItemDisplayValue": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/workflow-block/workflow-block.tsx",
+    "line": 292,
+    "kind": "arrow_function"
+  },
+  "dleClasses = (po": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/workflow-block/workflow-block.tsx",
+    "line": 788,
+    "kind": "arrow_function"
+  },
+  "dleStyle = (po": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/workflow-block/workflow-block.tsx",
+    "line": 804,
+    "kind": "arrow_function"
+  },
+  "getTooltipMessage": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/workflow-block/components/action-bar/action-bar.tsx",
+    "line": 67,
+    "kind": "arrow_function"
+  },
+  "handleScheduleUpdate": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/workflow-block/hooks/use-schedule-info.ts",
+    "line": 146,
+    "kind": "arrow_function"
+  },
+  "isObject": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/hooks/use-block-output-fields.ts",
+    "line": 18,
+    "kind": "arrow_function"
+  },
+  "extractChildFields": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/hooks/use-block-output-fields.ts",
+    "line": 88,
+    "kind": "arrow_function"
+  },
+  "extractNestedFields": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/hooks/use-block-output-fields.ts",
+    "line": 118,
+    "kind": "arrow_function"
+  },
+  "createFieldFromOutput": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/hooks/use-block-output-fields.ts",
+    "line": 135,
+    "kind": "arrow_function"
+  },
+  "getToolOutputs": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/hooks/use-block-output-fields.ts",
+    "line": 161,
+    "kind": "arrow_function"
+  },
+  "handleUserScroll": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/hooks/use-scroll-management.ts",
+    "line": 105,
+    "kind": "arrow_function"
+  },
+  "persistLogs": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/hooks/use-workflow-execution.ts",
+    "line": 227,
+    "kind": "arrow_function"
+  },
+  "isUploadErrorCapable": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/hooks/use-workflow-execution.ts",
+    "line": 327,
+    "kind": "arrow_function"
+  },
+  "processUploadResult": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/hooks/use-workflow-execution.ts",
+    "line": 352,
+    "kind": "arrow_function"
+  },
+  "onStream": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/hooks/use-workflow-execution.ts",
+    "line": 402,
+    "kind": "arrow_function"
+  },
+  "onBlockComplete": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/hooks/use-workflow-execution.ts",
+    "line": 448,
+    "kind": "arrow_function"
+  },
+  "executeWorkflow": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/hooks/use-workflow-execution.ts",
+    "line": 662,
+    "kind": "arrow_function"
+  },
+  "extractTestValuesFromInputFormat": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/hooks/use-workflow-execution.ts",
+    "line": 756,
+    "kind": "arrow_function"
+  },
+  "handleExecutionError": {
+    "file": "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/hooks/use-workflow-execution.ts",
+    "line": 1090,
+    "kind": "arrow_function"
+  },
+  "preventZoom": {
+    "file": "apps/sim/app/_shell/zoom-prevention.tsx",
+    "line": 7,
+    "kind": "arrow_function"
+  },
+  "runOperation": {
+    "file": "apps/sim/background/webhook-execution.ts",
+    "line": 118,
+    "kind": "arrow_function"
+  },
+  "getBlock": {
+    "file": "apps/sim/blocks/registry.ts",
+    "line": 285,
+    "kind": "arrow_function"
+  },
+  "getBlockByToolName": {
+    "file": "apps/sim/blocks/registry.ts",
+    "line": 295,
+    "kind": "arrow_function"
+  },
+  "getBlocksByCategory": {
+    "file": "apps/sim/blocks/registry.ts",
+    "line": 299,
+    "kind": "arrow_function"
+  },
+  "getAllBlockTypes": {
+    "file": "apps/sim/blocks/registry.ts",
+    "line": 302,
+    "kind": "arrow_function"
+  },
+  "isValidBlockType": {
+    "file": "apps/sim/blocks/registry.ts",
+    "line": 304,
+    "kind": "arrow_function"
+  },
+  "getAllBlocks": {
+    "file": "apps/sim/blocks/registry.ts",
+    "line": 307,
+    "kind": "arrow_function"
+  },
+  "getCurrentOllamaModels": {
+    "file": "apps/sim/blocks/blocks/translate.ts",
+    "line": 7,
+    "kind": "arrow_function"
+  },
+  "getCurrentVLLMModels": {
+    "file": "apps/sim/blocks/blocks/agent.ts",
+    "line": 23,
+    "kind": "arrow_function"
+  },
+  "getToolIdFromBlock": {
+    "file": "apps/sim/blocks/blocks/agent.ts",
+    "line": 52,
+    "kind": "arrow_function"
+  },
+  "ChatTriggerIcon": {
+    "file": "apps/sim/blocks/blocks/chat_trigger.ts",
+    "line": 6,
+    "kind": "arrow_function"
+  },
+  "parseJson": {
+    "file": "apps/sim/blocks/blocks/sqs.ts",
+    "line": 93,
+    "kind": "arrow_function"
+  },
+  "generateEvaluatorPrompt": {
+    "file": "apps/sim/blocks/blocks/evaluator.ts",
+    "line": 48,
+    "kind": "arrow_function"
+  },
+  "generateResponseFormat": {
+    "file": "apps/sim/blocks/blocks/evaluator.ts",
+    "line": 120,
+    "kind": "arrow_function"
+  },
+  "WebhookIcon": {
+    "file": "apps/sim/blocks/blocks/generic_webhook.ts",
+    "line": 7,
+    "kind": "arrow_function"
+  },
+  "InputTriggerIcon": {
+    "file": "apps/sim/blocks/blocks/input_trigger.ts",
+    "line": 6,
+    "kind": "arrow_function"
+  },
+  "parseCommaSeparated": {
+    "file": "apps/sim/blocks/blocks/jira.ts",
+    "line": 556,
+    "kind": "arrow_function"
+  },
+  "ManualTriggerIcon": {
+    "file": "apps/sim/blocks/blocks/manual_trigger.ts",
+    "line": 6,
+    "kind": "arrow_function"
+  },
+  "n = (valu": {
+    "file": "apps/sim/blocks/blocks/rds.ts",
+    "line": 259,
+    "kind": "arrow_function"
+  },
+  "generateRouterPrompt": {
+    "file": "apps/sim/blocks/blocks/router.ts",
+    "line": 50,
+    "kind": "arrow_function"
+  },
+  "ScheduleIcon": {
+    "file": "apps/sim/blocks/blocks/schedule.ts",
+    "line": 6,
+    "kind": "arrow_function"
+  },
+  "coerceBoolean": {
+    "file": "apps/sim/blocks/blocks/sharepoint.ts",
+    "line": 293,
+    "kind": "arrow_function"
+  },
+  "getTranslationPrompt": {
+    "file": "apps/sim/blocks/blocks/translate.ts",
+    "line": 11,
+    "kind": "arrow_function"
+  },
+  "WaitIcon": {
+    "file": "apps/sim/blocks/blocks/wait.ts",
+    "line": 6,
+    "kind": "arrow_function"
+  },
+  "getWebhookProviderIcon": {
+    "file": "apps/sim/blocks/blocks/webhook.ts",
+    "line": 18,
+    "kind": "arrow_function"
+  },
+  "getAvailableWorkflows": {
+    "file": "apps/sim/blocks/blocks/workflow_input.ts",
+    "line": 6,
+    "kind": "arrow_function"
+  },
+  "getPermissionLabel": {
+    "file": "apps/sim/components/emails/batch-invitation-email.tsx",
+    "line": 33,
+    "kind": "arrow_function"
+  },
+  "getRoleLabel": {
+    "file": "apps/sim/components/emails/batch-invitation-email.tsx",
+    "line": 46,
+    "kind": "arrow_function"
+  },
+  "getTypeLabel": {
+    "file": "apps/sim/components/emails/help-confirmation-email.tsx",
+    "line": 26,
+    "kind": "arrow_function"
+  },
+  "InvitationEmail": {
+    "file": "apps/sim/components/emails/invitation-email.tsx",
+    "line": 31,
+    "kind": "arrow_function"
+  },
+  "getSubjectByType": {
+    "file": "apps/sim/components/emails/otp-verification-email.tsx",
+    "line": 25,
+    "kind": "arrow_function"
+  },
+  "getMessage": {
+    "file": "apps/sim/components/emails/otp-verification-email.tsx",
+    "line": 50,
+    "kind": "arrow_function"
+  },
+  "getExperienceLabel": {
+    "file": "apps/sim/components/emails/careers/careers-submission-email.tsx",
+    "line": 31,
+    "kind": "arrow_function"
+  },
+  "updateHeight": {
+    "file": "apps/sim/components/emcn/components/code/code.tsx",
+    "line": 563,
+    "kind": "arrow_function"
+  },
+  "updateIndicator": {
+    "file": "apps/sim/components/emcn/components/modal/modal.tsx",
+    "line": 272,
+    "kind": "arrow_function"
+  },
+  "usePopoverContext": {
+    "file": "apps/sim/components/emcn/components/popover/popover.tsx",
+    "line": 106,
+    "kind": "arrow_function"
+  },
+  "Popover": {
+    "file": "apps/sim/components/emcn/components/popover/popover.tsx",
+    "line": 133,
+    "kind": "arrow_function"
+  },
+  "handleWheel": {
+    "file": "apps/sim/components/emcn/components/popover/popover.tsx",
+    "line": 305,
+    "kind": "arrow_function"
+  },
+  "handleComplete": {
+    "file": "apps/sim/components/ui/input-otp-form.tsx",
+    "line": 23,
+    "kind": "arrow_function"
+  },
+  "addTag": {
+    "file": "apps/sim/components/ui/tag-input.tsx",
+    "line": 28,
+    "kind": "arrow_function"
+  },
+  "removeTag": {
+    "file": "apps/sim/components/ui/tag-input.tsx",
+    "line": 36,
+    "kind": "arrow_function"
+  },
+  "checkCancelled": {
+    "file": "apps/sim/executor/handlers/wait/wait-handler.ts",
+    "line": 68,
+    "kind": "arrow_function"
+  },
+  "createMockHandler": {
+    "file": "apps/sim/executor/__test-utils__/executor-mocks.ts",
+    "line": 7,
+    "kind": "arrow_function"
+  },
+  "defaultCanHandle": {
+    "file": "apps/sim/executor/__test-utils__/executor-mocks.ts",
+    "line": 14,
+    "kind": "arrow_function"
+  },
+  "setupHandlerMocks": {
+    "file": "apps/sim/executor/__test-utils__/executor-mocks.ts",
+    "line": 35,
+    "kind": "arrow_function"
+  },
+  "setupStoreMocks": {
+    "file": "apps/sim/executor/__test-utils__/executor-mocks.ts",
+    "line": 61,
+    "kind": "arrow_function"
+  },
+  "setupExecutorCoreMocks": {
+    "file": "apps/sim/executor/__test-utils__/executor-mocks.ts",
+    "line": 112,
+    "kind": "arrow_function"
+  },
+  "createMinimalWorkflow": {
+    "file": "apps/sim/executor/__test-utils__/executor-mocks.ts",
+    "line": 154,
+    "kind": "arrow_function"
+  },
+  "createWorkflowWithCondition": {
+    "file": "apps/sim/executor/__test-utils__/executor-mocks.ts",
+    "line": 185,
+    "kind": "arrow_function"
+  },
+  "createWorkflowWithLoop": {
+    "file": "apps/sim/executor/__test-utils__/executor-mocks.ts",
+    "line": 244,
+    "kind": "arrow_function"
+  },
+  "createWorkflowWithErrorPath": {
+    "file": "apps/sim/executor/__test-utils__/executor-mocks.ts",
+    "line": 300,
+    "kind": "arrow_function"
+  },
+  "createWorkflowWithParallel": {
+    "file": "apps/sim/executor/__test-utils__/executor-mocks.ts",
+    "line": 359,
+    "kind": "arrow_function"
+  },
+  "createWorkflowWithResponse": {
+    "file": "apps/sim/executor/__test-utils__/executor-mocks.ts",
+    "line": 419,
+    "kind": "arrow_function"
+  },
+  "createMockContext": {
+    "file": "apps/sim/executor/__test-utils__/executor-mocks.ts",
+    "line": 477,
+    "kind": "arrow_function"
+  },
+  "createLoopManagerMock": {
+    "file": "apps/sim/executor/__test-utils__/executor-mocks.ts",
+    "line": 501,
+    "kind": "arrow_function"
+  },
+  "createParallelExecutionState": {
+    "file": "apps/sim/executor/__test-utils__/executor-mocks.ts",
+    "line": 518,
+    "kind": "arrow_function"
+  },
+  "createParallelManagerMock": {
+    "file": "apps/sim/executor/__test-utils__/executor-mocks.ts",
+    "line": 538,
+    "kind": "arrow_function"
+  },
+  "createParallelInputResolver": {
+    "file": "apps/sim/executor/__test-utils__/executor-mocks.ts",
+    "line": 740,
+    "kind": "arrow_function"
+  },
+  "createWorkflowWithParallelArray": {
+    "file": "apps/sim/executor/__test-utils__/executor-mocks.ts",
+    "line": 773,
+    "kind": "arrow_function"
+  },
+  "createWorkflowWithParallelObject": {
+    "file": "apps/sim/executor/__test-utils__/executor-mocks.ts",
+    "line": 838,
+    "kind": "arrow_function"
+  },
+  "setupParallelTestMocks": {
+    "file": "apps/sim/executor/__test-utils__/executor-mocks.ts",
+    "line": 903,
+    "kind": "arrow_function"
+  },
+  "setupAllMocks": {
+    "file": "apps/sim/executor/__test-utils__/executor-mocks.ts",
+    "line": 923,
+    "kind": "arrow_function"
+  },
+  "moveHandler": {
+    "file": "apps/sim/hooks/use-collaborative-workflow.ts",
+    "line": 32,
+    "kind": "arrow_function"
+  },
+  "parentUpdateHandler": {
+    "file": "apps/sim/hooks/use-collaborative-workflow.ts",
+    "line": 39,
+    "kind": "arrow_function"
+  },
+  "skipEdgeHandler": {
+    "file": "apps/sim/hooks/use-collaborative-workflow.ts",
+    "line": 54,
+    "kind": "arrow_function"
+  },
+  "diffOperationHandler": {
+    "file": "apps/sim/hooks/use-collaborative-workflow.ts",
+    "line": 59,
+    "kind": "arrow_function"
+  },
+  "handleWorkflowOperation": {
+    "file": "apps/sim/hooks/use-collaborative-workflow.ts",
+    "line": 189,
+    "kind": "arrow_function"
+  },
+  "findAllDescendants": {
+    "file": "apps/sim/stores/workflows/workflow/store.ts",
+    "line": 368,
+    "kind": "arrow_function"
+  },
+  "handleSubblockUpdate": {
+    "file": "apps/sim/hooks/use-collaborative-workflow.ts",
+    "line": 485,
+    "kind": "arrow_function"
+  },
+  "handleVariableUpdate": {
+    "file": "apps/sim/hooks/use-collaborative-workflow.ts",
+    "line": 504,
+    "kind": "arrow_function"
+  },
+  "handleUserJoined": {
+    "file": "apps/sim/hooks/use-collaborative-workflow.ts",
+    "line": 528,
+    "kind": "arrow_function"
+  },
+  "handleUserLeft": {
+    "file": "apps/sim/hooks/use-collaborative-workflow.ts",
+    "line": 532,
+    "kind": "arrow_function"
+  },
+  "handleWorkflowDeleted": {
+    "file": "apps/sim/hooks/use-collaborative-workflow.ts",
+    "line": 536,
+    "kind": "arrow_function"
+  },
+  "handleWorkflowReverted": {
+    "file": "apps/sim/hooks/use-collaborative-workflow.ts",
+    "line": 552,
+    "kind": "arrow_function"
+  },
+  "handleOperationFailed": {
+    "file": "apps/sim/hooks/use-collaborative-workflow.ts",
+    "line": 639,
+    "kind": "arrow_function"
+  },
+  "loadSchedule": {
+    "file": "apps/sim/hooks/use-schedule-management.ts",
+    "line": 66,
+    "kind": "arrow_function"
+  },
+  "saveConfig": {
+    "file": "apps/sim/hooks/use-webhook-management.ts",
+    "line": 319,
+    "kind": "arrow_function"
+  },
+  "deleteConfig": {
+    "file": "apps/sim/hooks/use-webhook-management.ts",
+    "line": 345,
+    "kind": "arrow_function"
+  },
+  "handleBeforeUnload": {
+    "file": "apps/sim/hooks/use-stream-cleanup.ts",
+    "line": 26,
+    "kind": "arrow_function"
+  },
+  "updateLimit": {
+    "file": "apps/sim/hooks/use-subscription-state.ts",
+    "line": 181,
+    "kind": "arrow_function"
+  },
+  "loadWebhookOrGenerateUrl": {
+    "file": "apps/sim/hooks/use-webhook-management.ts",
+    "line": 144,
+    "kind": "arrow_function"
+  },
+  "createWebhook": {
+    "file": "apps/sim/hooks/use-webhook-management.ts",
+    "line": 214,
+    "kind": "arrow_function"
+  },
+  "updateWebhook": {
+    "file": "apps/sim/hooks/use-webhook-management.ts",
+    "line": 275,
+    "kind": "arrow_function"
+  },
+  "fetchPermissions": {
+    "file": "apps/sim/hooks/use-workspace-permissions.ts",
+    "line": 42,
+    "kind": "arrow_function"
+  },
+  "updatePermissions": {
+    "file": "apps/sim/hooks/use-workspace-permissions.ts",
+    "line": 79,
+    "kind": "arrow_function"
+  },
+  "serializeDocumentParams": {
+    "file": "apps/sim/hooks/queries/knowledge.ts",
+    "line": 195,
+    "kind": "arrow_function"
+  },
+  "serializeChunkParams": {
+    "file": "apps/sim/hooks/queries/knowledge.ts",
+    "line": 219,
+    "kind": "arrow_function"
+  },
+  "ensureCredential": {
+    "file": "apps/sim/hooks/selectors/registry.ts",
+    "line": 17,
+    "kind": "arrow_function"
+  },
+  "ensureDomain": {
+    "file": "apps/sim/hooks/selectors/registry.ts",
+    "line": 24,
+    "kind": "arrow_function"
+  },
+  "ensureKnowledgeBase": {
+    "file": "apps/sim/hooks/selectors/registry.ts",
+    "line": 31,
+    "kind": "arrow_function"
+  },
+  "useSubscription": {
+    "file": "apps/sim/lib/auth/auth-client.ts",
+    "line": 49,
+    "kind": "arrow_function"
+  },
+  "getJwtSecret": {
+    "file": "apps/sim/lib/auth/internal.ts",
+    "line": 8,
+    "kind": "arrow_function"
+  },
+  "createStripeClientSingleton": {
+    "file": "apps/sim/lib/billing/stripe-client.ts",
+    "line": 17,
+    "kind": "arrow_function"
+  },
+  "getPaymentMethodId": {
+    "file": "apps/sim/lib/billing/threshold-billing.ts",
+    "line": 33,
+    "kind": "arrow_function"
+  },
+  "To = a": {
+    "file": "apps/sim/lib/billing/core/usage.ts",
+    "line": 640,
+    "kind": "arrow_function"
+  },
+  "FreeTierEmail = a": {
+    "file": "apps/sim/lib/billing/core/usage.ts",
+    "line": 695,
+    "kind": "arrow_function"
+  },
+  "tPaymentMethodId =": {
+    "file": "apps/sim/lib/billing/webhooks/invoices.ts",
+    "line": 759,
+    "kind": "arrow_function"
+  },
+  "getThemeColors": {
+    "file": "apps/sim/lib/branding/branding.ts",
+    "line": 44,
+    "kind": "arrow_function"
+  },
+  "getBrandConfig": {
+    "file": "apps/sim/lib/branding/branding.ts",
+    "line": 61,
+    "kind": "arrow_function"
+  },
+  "useBrandConfig": {
+    "file": "apps/sim/lib/branding/branding.ts",
+    "line": 78,
+    "kind": "arrow_function"
+  },
+  "TITLE_GENERATION_USER_PROMPT": {
+    "file": "apps/sim/lib/copilot/prompts.ts",
+    "line": 6,
+    "kind": "arrow_function"
+  },
+  "getActionText": {
+    "file": "apps/sim/lib/copilot/tools/client/workflow/manage-mcp-tool.ts",
+    "line": 69,
+    "kind": "arrow_function"
+  },
+  "shouldShowToolName": {
+    "file": "apps/sim/lib/copilot/tools/client/workflow/manage-custom-tool.ts",
+    "line": 98,
+    "kind": "arrow_function"
+  },
+  "shouldShowServerName": {
+    "file": "apps/sim/lib/copilot/tools/client/workflow/manage-mcp-tool.ts",
+    "line": 80,
+    "kind": "arrow_function"
+  },
+  "toTableRows": {
+    "file": "apps/sim/lib/copilot/tools/server/other/make-api-request.ts",
+    "line": 21,
+    "kind": "arrow_function"
+  },
+  "toStringSafe": {
+    "file": "apps/sim/lib/copilot/tools/server/other/make-api-request.ts",
+    "line": 43,
+    "kind": "arrow_function"
+  },
+  "stripHtml": {
+    "file": "apps/sim/lib/copilot/tools/server/other/make-api-request.ts",
+    "line": 52,
+    "kind": "arrow_function"
+  },
+  "sortKeys": {
+    "file": "apps/sim/lib/copilot/tools/server/workflow/edit-workflow.ts",
+    "line": 712,
+    "kind": "arrow_function"
+  },
+  "findChildren": {
+    "file": "apps/sim/lib/copilot/tools/server/workflow/edit-workflow.ts",
+    "line": 1202,
+    "kind": "arrow_function"
+  },
+  "mapConnectionTypeToHandle": {
+    "file": "apps/sim/lib/copilot/tools/server/workflow/edit-workflow.ts",
+    "line": 1520,
+    "kind": "arrow_function"
+  },
+  "addEdgeForTarget": {
+    "file": "apps/sim/lib/copilot/tools/server/workflow/edit-workflow.ts",
+    "line": 1528,
+    "kind": "arrow_function"
+  },
+  "getEnv": {
+    "file": "apps/sim/lib/core/config/env.ts",
+    "line": 11,
+    "kind": "arrow_function"
+  },
+  "isTruthy": {
+    "file": "apps/sim/lib/core/config/env.ts",
+    "line": 364,
+    "kind": "arrow_function"
+  },
+  "isFalsy": {
+    "file": "apps/sim/lib/core/config/env.ts",
+    "line": 368,
+    "kind": "arrow_function"
+  },
+  "createMockAdapter": {
+    "file": "apps/sim/lib/core/rate-limiter/rate-limiter.test.ts",
+    "line": 6,
+    "kind": "arrow_function"
+  },
+  "noop": {
+    "file": "apps/sim/lib/core/utils/request.ts",
+    "line": 11,
+    "kind": "arrow_function"
+  },
+  "readyHandler": {
+    "file": "apps/sim/lib/execution/isolated-vm.ts",
+    "line": 226,
+    "kind": "arrow_function"
+  },
+  "createMockModule": {
+    "file": "apps/sim/lib/file-parsers/index.test.ts",
+    "line": 71,
+    "kind": "arrow_function"
+  },
+  "processJobsContinuously": {
+    "file": "apps/sim/lib/knowledge/documents/queue.ts",
+    "line": 88,
+    "kind": "arrow_function"
+  },
+  "processInMemoryContinuously": {
+    "file": "apps/sim/lib/knowledge/documents/queue.ts",
+    "line": 126,
+    "kind": "arrow_function"
+  },
+  "setTagValue": {
+    "file": "apps/sim/lib/knowledge/documents/service.ts",
+    "line": 131,
+    "kind": "arrow_function"
+  },
+  "getOrderByColumn": {
+    "file": "apps/sim/lib/knowledge/documents/service.ts",
+    "line": 906,
+    "kind": "arrow_function"
+  },
+  "convertTagValue": {
+    "file": "apps/sim/lib/knowledge/documents/service.ts",
+    "line": 1524,
+    "kind": "arrow_function"
+  },
+  "getMinLogLevel": {
+    "file": "apps/sim/lib/logs/console/logger.ts",
+    "line": 38,
+    "kind": "arrow_function"
+  },
+  "formatObject": {
+    "file": "apps/sim/lib/logs/console/logger.ts",
+    "line": 87,
+    "kind": "arrow_function"
+  },
+  "checkSpanForErrors": {
+    "file": "apps/sim/lib/logs/execution/logger.ts",
+    "line": 236,
+    "kind": "arrow_function"
+  },
+  "extractFilesFromObject": {
+    "file": "apps/sim/lib/logs/execution/logger.ts",
+    "line": 622,
+    "kind": "arrow_function"
+  },
+  "collectCostSpans": {
+    "file": "apps/sim/lib/logs/execution/logging-factory.ts",
+    "line": 83,
+    "kind": "arrow_function"
+  },
+  "checkForErrors": {
+    "file": "apps/sim/lib/logs/execution/logging-session.ts",
+    "line": 150,
+    "kind": "arrow_function"
+  },
+  "addRelativeTimestamps": {
+    "file": "apps/sim/lib/logs/execution/trace-spans/trace-spans.ts",
+    "line": 416,
+    "kind": "arrow_function"
+  },
+  "checkChildren": {
+    "file": "apps/sim/lib/logs/execution/trace-spans/trace-spans.ts",
+    "line": 428,
+    "kind": "arrow_function"
+  },
+  "getCredentials": {
+    "file": "apps/sim/lib/oauth/oauth.ts",
+    "line": 1133,
+    "kind": "arrow_function"
+  },
+  "enqueue": {
+    "file": "apps/sim/lib/webhooks/rss-polling-service.ts",
+    "line": 141,
+    "kind": "arrow_function"
+  },
+  "extractContent": {
+    "file": "apps/sim/lib/webhooks/gmail-polling-service.ts",
+    "line": 576,
+    "kind": "arrow_function"
+  },
+  "getSecretKey": {
+    "file": "apps/sim/lib/webhooks/test-tokens.ts",
+    "line": 9,
+    "kind": "arrow_function"
+  },
+  "malizeAnswers = ": {
+    "file": "apps/sim/lib/webhooks/utils.server.ts",
+    "line": 1110,
+    "kind": "arrow_function"
+  },
+  "workflowHasResponseBlock": {
+    "file": "apps/sim/lib/workflows/utils.ts",
+    "line": 465,
+    "kind": "arrow_function"
+  },
+  "createHttpResponseFromBlock": {
+    "file": "apps/sim/lib/workflows/utils.ts",
+    "line": 483,
+    "kind": "arrow_function"
+  },
+  "evaluate": {
+    "file": "apps/sim/lib/workflows/credentials/credential-extractor.ts",
+    "line": 121,
+    "kind": "arrow_function"
+  },
+  "findChildBlocks": {
+    "file": "apps/sim/lib/workflows/sanitization/json-sanitizer.ts",
+    "line": 264,
+    "kind": "arrow_function"
+  },
+  "sanitizeBlock": {
+    "file": "apps/sim/lib/workflows/sanitization/json-sanitizer.ts",
+    "line": 271,
+    "kind": "arrow_function"
+  },
+  "getPart": {
+    "file": "apps/sim/lib/workflows/schedules/utils.ts",
+    "line": 211,
+    "kind": "arrow_function"
+  },
+  "parseCronToHumanReadable": {
+    "file": "apps/sim/lib/workflows/schedules/utils.ts",
+    "line": 470,
+    "kind": "arrow_function"
+  },
+  "getScheduleInfo": {
+    "file": "apps/sim/lib/workflows/schedules/utils.ts",
+    "line": 498,
+    "kind": "arrow_function"
+  },
+  "sendChunk": {
+    "file": "apps/sim/lib/workflows/streaming/streaming.ts",
+    "line": 58,
+    "kind": "arrow_function"
+  },
+  "onStreamCallback": {
+    "file": "apps/sim/lib/workflows/streaming/streaming.ts",
+    "line": 64,
+    "kind": "arrow_function"
+  },
+  "onBlockCompleteCallback": {
+    "file": "apps/sim/lib/workflows/streaming/streaming.ts",
+    "line": 104,
+    "kind": "arrow_function"
+  },
+  "processBlock": {
+    "file": "apps/sim/lib/workflows/training/compute-edit-sequence.ts",
+    "line": 41,
+    "kind": "arrow_function"
+  },
+  "processBlockConnections": {
+    "file": "apps/sim/lib/workflows/training/compute-edit-sequence.ts",
+    "line": 75,
+    "kind": "arrow_function"
+  },
+  "duplicateFolderHierarchy": {
+    "file": "apps/sim/lib/workspaces/duplicate.ts",
+    "line": 101,
+    "kind": "arrow_function"
+  },
+  "checkForForcedToolUsage": {
+    "file": "apps/sim/providers/vllm/index.ts",
+    "line": 271,
+    "kind": "arrow_function"
+  },
+  "createWorkflowRoom": {
+    "file": "apps/sim/socket-server/handlers/workflow.ts",
+    "line": 17,
+    "kind": "arrow_function"
+  },
+  "cleanupUserFromRoom": {
+    "file": "apps/sim/socket-server/handlers/workflow.ts",
+    "line": 24,
+    "kind": "arrow_function"
+  },
+  "resetAllStores": {
+    "file": "apps/sim/stores/index.ts",
+    "line": 205,
+    "kind": "arrow_function"
+  },
+  "logAllStores": {
+    "file": "apps/sim/stores/index.ts",
+    "line": 231,
+    "kind": "arrow_function"
+  },
+  "calculateDefaultPosition": {
+    "file": "apps/sim/stores/variables/store.ts",
+    "line": 37,
+    "kind": "arrow_function"
+  },
+  "formatCSVValue": {
+    "file": "apps/sim/stores/terminal/console/store.ts",
+    "line": 179,
+    "kind": "arrow_function"
+  },
+  "getDefaultChatDimensions": {
+    "file": "apps/sim/stores/chat/store.ts",
+    "line": 391,
+    "kind": "arrow_function"
+  },
+  "constrainChatPosition": {
+    "file": "apps/sim/stores/chat/store.ts",
+    "line": 403,
+    "kind": "arrow_function"
+  },
+  "getChatPosition": {
+    "file": "apps/sim/stores/chat/store.ts",
+    "line": 443,
+    "kind": "arrow_function"
+  },
+  "buildTree": {
+    "file": "apps/sim/stores/folders/store.ts",
+    "line": 147,
+    "kind": "arrow_function"
+  },
+  "useIsWorkflowSelected": {
+    "file": "apps/sim/stores/folders/store.ts",
+    "line": 186,
+    "kind": "arrow_function"
+  },
+  "getMaxLogDetailsWidth": {
+    "file": "apps/sim/stores/logs/store.ts",
+    "line": 14,
+    "kind": "arrow_function"
+  },
+  "getSearchParams": {
+    "file": "apps/sim/stores/logs/filters/store.ts",
+    "line": 4,
+    "kind": "arrow_function"
+  },
+  "updateURL": {
+    "file": "apps/sim/stores/logs/filters/store.ts",
+    "line": 9,
+    "kind": "arrow_function"
+  },
+  "parseTimeRangeFromURL": {
+    "file": "apps/sim/stores/logs/filters/store.ts",
+    "line": 19,
+    "kind": "arrow_function"
+  },
+  "parseLogLevelFromURL": {
+    "file": "apps/sim/stores/logs/filters/store.ts",
+    "line": 46,
+    "kind": "arrow_function"
+  },
+  "parseTriggerArrayFromURL": {
+    "file": "apps/sim/stores/logs/filters/store.ts",
+    "line": 59,
+    "kind": "arrow_function"
+  },
+  "parseStringArrayFromURL": {
+    "file": "apps/sim/stores/logs/filters/store.ts",
+    "line": 66,
+    "kind": "arrow_function"
+  },
+  "timeRangeToURL": {
+    "file": "apps/sim/stores/logs/filters/store.ts",
+    "line": 71,
+    "kind": "arrow_function"
+  },
+  "xtToContent = (text": {
+    "file": "apps/sim/stores/panel/copilot/store.ts",
+    "line": 1142,
+    "kind": "arrow_function"
+  },
+  "Update = () =>": {
+    "file": "apps/sim/stores/panel/copilot/store.ts",
+    "line": 1488,
+    "kind": "arrow_function"
+  },
+  "s: ClientT": {
+    "file": "apps/sim/stores/panel/copilot/store.ts",
+    "line": 3116,
+    "kind": "arrow_function"
+  },
+  "updateReferences": {
+    "file": "apps/sim/stores/panel/variables/store.ts",
+    "line": 189,
+    "kind": "arrow_function"
+  },
+  "updateBlockOutput": {
+    "file": "apps/sim/stores/terminal/console/store.ts",
+    "line": 16,
+    "kind": "arrow_function"
+  },
+  "isStreamingOutput": {
+    "file": "apps/sim/stores/terminal/console/store.ts",
+    "line": 29,
+    "kind": "arrow_function"
+  },
+  "shouldSkipEntry": {
+    "file": "apps/sim/stores/terminal/console/store.ts",
+    "line": 51,
+    "kind": "arrow_function"
+  },
+  "constrainPosition": {
+    "file": "apps/sim/stores/variables/store.ts",
+    "line": 62,
+    "kind": "arrow_function"
+  },
+  "getVariablesPosition": {
+    "file": "apps/sim/stores/variables/store.ts",
+    "line": 94,
+    "kind": "arrow_function"
+  },
+  "getDefaultVariablesDimensions": {
+    "file": "apps/sim/stores/variables/store.ts",
+    "line": 428,
+    "kind": "arrow_function"
+  },
+  "createRequestId": {
+    "file": "apps/sim/stores/workflows/registry/store.ts",
+    "line": 27,
+    "kind": "arrow_function"
+  },
+  "isEnvVarReference": {
+    "file": "apps/sim/stores/workflows/subblock/utils.ts",
+    "line": 6,
+    "kind": "arrow_function"
+  },
+  "extractEnvVarName": {
+    "file": "apps/sim/stores/workflows/subblock/utils.ts",
+    "line": 14,
+    "kind": "arrow_function"
+  },
+  "handleWebhookToggle": {
+    "file": "apps/sim/stores/workflows/workflow/store.ts",
+    "line": 1146,
+    "kind": "arrow_function"
+  },
+  "findDescendants": {
+    "file": "apps/sim/stores/workflows/workflow/utils.ts",
+    "line": 144,
+    "kind": "arrow_function"
+  },
+  "getOrder": {
+    "file": "apps/sim/stores/workflows/yaml/parsing-utils.ts",
+    "line": 315,
+    "kind": "arrow_function"
+  },
+  "createMockExecutionContext": {
+    "file": "apps/sim/tools/index.test.ts",
+    "line": 16,
+    "kind": "arrow_function"
+  },
+  "testErrorFormat": {
+    "file": "apps/sim/tools/index.test.ts",
+    "line": 554,
+    "kind": "arrow_function"
+  },
+  "mockStoreGetter": {
+    "file": "apps/sim/tools/utils.test.ts",
+    "line": 667,
+    "kind": "arrow_function"
+  },
+  "transformTable": {
+    "file": "apps/sim/tools/http/utils.ts",
+    "line": 129,
+    "kind": "arrow_function"
+  },
+  "escapeCell": {
+    "file": "apps/sim/tools/google_drive/utils.ts",
+    "line": 75,
+    "kind": "arrow_function"
+  },
+  "normalizeAnswerContainer": {
+    "file": "apps/sim/tools/google_form/get_responses.ts",
+    "line": 84,
+    "kind": "arrow_function"
+  },
+  "normalizeAnswers": {
+    "file": "apps/sim/tools/google_form/get_responses.ts",
+    "line": 101,
+    "kind": "arrow_function"
+  },
+  "normalizeResponse": {
+    "file": "apps/sim/tools/google_form/get_responses.ts",
+    "line": 122,
+    "kind": "arrow_function"
+  },
+  "isList": {
+    "file": "apps/sim/tools/google_form/get_responses.ts",
+    "line": 130,
+    "kind": "arrow_function"
+  },
+  "toTimestamp": {
+    "file": "apps/sim/tools/google_form/get_responses.ts",
+    "line": 135,
+    "kind": "arrow_function"
+  },
+  "buildProxyUrl": {
+    "file": "apps/sim/tools/http/request.test.ts",
+    "line": 487,
+    "kind": "arrow_function"
+  },
+  "getDefaultHeaders": {
+    "file": "apps/sim/tools/http/utils.ts",
+    "line": 14,
+    "kind": "arrow_function"
+  },
+  "processUrl": {
+    "file": "apps/sim/tools/http/utils.ts",
+    "line": 54,
+    "kind": "arrow_function"
+  },
+  "shouldUseProxy": {
+    "file": "apps/sim/tools/http/utils.ts",
+    "line": 96,
+    "kind": "arrow_function"
+  },
+  "parseJsonParam": {
+    "file": "apps/sim/tools/incidentio/workflows_create.ts",
+    "line": 123,
+    "kind": "arrow_function"
+  },
+  "extractDescription": {
+    "file": "apps/sim/tools/jira/bulk_read.ts",
+    "line": 68,
+    "kind": "arrow_function"
+  },
+  "resolveProjectKey": {
+    "file": "apps/sim/tools/jira/bulk_read.ts",
+    "line": 81,
+    "kind": "arrow_function"
+  },
+  "extractText": {
+    "file": "apps/sim/tools/jira/get_worklogs.ts",
+    "line": 102,
+    "kind": "arrow_function"
+  },
+  "extractProfileId": {
+    "file": "apps/sim/tools/linkedin/share_post.ts",
+    "line": 10,
+    "kind": "arrow_function"
+  },
+  "isEmptyValue": {
+    "file": "apps/sim/tools/microsoft_excel/utils.ts",
+    "line": 9,
+    "kind": "arrow_function"
+  },
+  "parseEmails": {
+    "file": "apps/sim/tools/outlook/forward.ts",
+    "line": 57,
+    "kind": "arrow_function"
+  },
+  "processComments": {
+    "file": "apps/sim/tools/reddit/get_comments.ts",
+    "line": 166,
+    "kind": "arrow_function"
+  },
+  "formatTrack": {
+    "file": "apps/sim/tools/spotify/get_queue.ts",
+    "line": 60,
+    "kind": "arrow_function"
+  },
+  "safeStringify": {
+    "file": "apps/sim/tools/wealthbox/utils.ts",
+    "line": 8,
+    "kind": "arrow_function"
+  },
+  "validateAndBuildContactBody": {
+    "file": "apps/sim/tools/wealthbox/utils.ts",
+    "line": 21,
+    "kind": "arrow_function"
+  },
+  "validateAndBuildNoteBody": {
+    "file": "apps/sim/tools/wealthbox/utils.ts",
+    "line": 59,
+    "kind": "arrow_function"
+  },
+  "handleApiError": {
+    "file": "apps/sim/tools/wealthbox/utils.ts",
+    "line": 97,
+    "kind": "arrow_function"
+  },
+  "formatNoteResponse": {
+    "file": "apps/sim/tools/wealthbox/utils.ts",
+    "line": 104,
+    "kind": "arrow_function"
+  },
+  "formatTaskResponse": {
+    "file": "apps/sim/tools/wealthbox/utils.ts",
+    "line": 132,
+    "kind": "arrow_function"
+  },
+  "validateAndBuildTaskBody": {
+    "file": "apps/sim/tools/wealthbox/utils.ts",
+    "line": 164,
+    "kind": "arrow_function"
+  },
+  "transformTweet": {
+    "file": "apps/sim/tools/x/types.ts",
+    "line": 149,
+    "kind": "arrow_function"
+  },
+  "transformUser": {
+    "file": "apps/sim/tools/x/types.ts",
+    "line": 174,
+    "kind": "arrow_function"
+  },
+  "createMockHeaders": {
+    "file": "apps/sim/tools/__test-utils__/test-tools.ts",
+    "line": 18,
+    "kind": "arrow_function"
+  }
+}

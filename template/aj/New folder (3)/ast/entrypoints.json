@@ -1,0 +1,781 @@
+{
+  "apps/docs/components/ui/code-block.tsx": [
+    "handleCopy"
+  ],
+  "apps/docs/components/ui/image.tsx": [
+    "handleImageClick"
+  ],
+  "apps/docs/components/ui/lightbox.tsx": [
+    "handleKeyDown",
+    "handleClickOutside"
+  ],
+  "apps/docs/components/ui/search-trigger.tsx": [
+    "handleClick"
+  ],
+  "apps/docs/components/ui/video.tsx": [
+    "handleVideoClick"
+  ],
+  "apps/sim/instrumentation-node.ts": [
+    "shutdownHandler"
+  ],
+  "apps/sim/app/(auth)/components/sso-login-button.tsx": [
+    "handleSSOClick"
+  ],
+  "apps/sim/app/(auth)/login/login-form.tsx": [
+    "handleKeyDown",
+    "handleEmailChange",
+    "handlePasswordChange",
+    "handleForgotPassword"
+  ],
+  "apps/sim/app/(auth)/reset-password/page.tsx": [
+    "handleResetPassword"
+  ],
+  "apps/sim/app/(auth)/reset-password/reset-password-form.tsx": [
+    "handleSubmit",
+    "handleSubmit"
+  ],
+  "apps/sim/app/(auth)/signup/signup-form.tsx": [
+    "handlePasswordChange",
+    "handleNameChange",
+    "handleEmailChange"
+  ],
+  "apps/sim/app/(auth)/sso/sso-form.tsx": [
+    "handleEmailChange"
+  ],
+  "apps/sim/app/(auth)/verify/use-verification.ts": [
+    "handleRedirect"
+  ],
+  "apps/sim/app/(auth)/verify/verify-content.tsx": [
+    "handleResend"
+  ],
+  "apps/sim/app/(landing)/careers/page.tsx": [
+    "handleFileChange"
+  ],
+  "apps/sim/app/(landing)/components/hero/hero.tsx": [
+    "handleServiceClick",
+    "handleIconContainerMouseEnter",
+    "handleIconContainerMouseLeave",
+    "handleSubmit",
+    "handleKeyDown"
+  ],
+  "apps/sim/app/(landing)/components/landing-pricing/landing-pricing.tsx": [
+    "handleCtaClick"
+  ],
+  "apps/sim/app/api/tools/smtp/send/route.ts": [
+    "isNodeError"
+  ],
+  "apps/sim/app/chat/components/auth/email/email-auth.tsx": [
+    "handleEmailKeyDown",
+    "handleEmailChange",
+    "handleSendOtp",
+    "handleVerifyOtp",
+    "handleResendOtp"
+  ],
+  "apps/sim/app/chat/components/auth/password/password-auth.tsx": [
+    "handleKeyDown",
+    "handlePasswordChange",
+    "handleAuthenticate"
+  ],
+  "apps/sim/app/chat/components/auth/sso/sso-auth.tsx": [
+    "handleKeyDown",
+    "handleEmailChange",
+    "handleAuthenticate"
+  ],
+  "apps/sim/app/chat/components/input/input.tsx": [
+    "handleClickOutside",
+    "handleActivate",
+    "handleFileSelect",
+    "handleRemoveFile",
+    "handleSubmit",
+    "handleInputChange",
+    "handleVoiceStart"
+  ],
+  "apps/sim/app/chat/components/message/components/file-download.tsx": [
+    "handleDownload",
+    "handleDownloadAll"
+  ],
+  "apps/sim/app/chat/components/voice-interface/voice-interface.tsx": [
+    "handleKeyDown"
+  ],
+  "apps/sim/app/chat/hooks/use-chat-streaming.ts": [
+    "handleStreamedResponse"
+  ],
+  "apps/sim/app/chat/[identifier]/chat.tsx": [
+    "handleAuthSuccess",
+    "handleSendMessage"
+  ],
+  "apps/sim/app/invite/[id]/invite.tsx": [
+    "handleAcceptInvitation"
+  ],
+  "apps/sim/app/unsubscribe/unsubscribe.tsx": [
+    "handleUnsubscribe"
+  ],
+  "apps/sim/app/workspace/providers/socket-provider.tsx": [
+    "rehydrateWorkflowStores"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/knowledge/knowledge.tsx": [
+    "handleSortChange",
+    "handleKnowledgeBaseCreated",
+    "handleRetry"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/knowledge/components/create-base-modal/create-base-modal.tsx": [
+    "handleClose",
+    "processFiles",
+    "handleFileChange",
+    "handleDragEnter",
+    "handleDragLeave",
+    "handleDragOver",
+    "handleDrop"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/knowledge/components/knowledge-header/knowledge-header.tsx": [
+    "handleWorkspaceChange"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/knowledge/hooks/use-knowledge-upload.ts": [
+    "runWithConcurrency",
+    "abortHandler"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/components/add-documents-modal/add-documents-modal.tsx": [
+    "handleClose",
+    "processFiles",
+    "handleFileChange",
+    "handleDragEnter",
+    "handleDragLeave",
+    "handleDragOver",
+    "handleDrop",
+    "handleRetryFile",
+    "handleUpload"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/components/base-tags-modal/base-tags-modal.tsx": [
+    "handleDeleteTagClick",
+    "handleViewDocuments",
+    "handleClose"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/document.tsx": [
+    "handleChunkClick",
+    "handleCloseModal",
+    "handleToggleEnabled",
+    "handleDeleteChunk",
+    "handleChunkDeleted",
+    "handleCloseDeleteModal",
+    "handleSelectChunk",
+    "handleSelectAll",
+    "handleChunkCreated",
+    "handleDeleteDocument",
+    "handleBulkEnable",
+    "handleBulkDisable",
+    "handleBulkDelete"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/components/create-chunk-modal/create-chunk-modal.tsx": [
+    "handleCreateChunk",
+    "handleCloseAttempt",
+    "handleConfirmDiscard"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/components/delete-chunk-modal/delete-chunk-modal.tsx": [
+    "handleDeleteChunk"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/components/document-tags-modal/document-tags-modal.tsx": [
+    "handleRemoveTag",
+    "handleClose"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/knowledge/[id]/[documentId]/components/edit-chunk-modal/edit-chunk-modal.tsx": [
+    "handleSaveContent",
+    "handleNavigate",
+    "handleCloseAttempt",
+    "handleConfirmDiscard"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/logs/logs.tsx": [
+    "handleLogClick",
+    "handleCloseSidebar",
+    "handleExport",
+    "handlePopState",
+    "handleScroll",
+    "handleKeyDown"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/logs/components/log-details/log-details.tsx": [
+    "handleKeyDown",
+    "handleNavigate"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/logs/components/log-details/components/file-download/file-download.tsx": [
+    "handleDownload",
+    "handleDownload"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/logs/components/logs-toolbar/logs-toolbar.tsx": [
+    "fetchWorkflows"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/logs/components/logs-toolbar/components/controls/controls.tsx": [
+    "handleTimeRangeSelect"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/logs/components/logs-toolbar/components/notifications/notifications.tsx": [
+    "handleSave",
+    "handleEdit",
+    "handleDelete",
+    "handleTest"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/logs/components/logs-toolbar/components/notifications/components/slack-channel-selector/slack-channel-selector.tsx": [
+    "handleChange"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/logs/components/logs-toolbar/components/notifications/components/workflow-selector/workflow-selector.tsx": [
+    "handleMultiSelectChange",
+    "handleRemove"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/logs/components/logs-toolbar/components/search/search.tsx": [
+    "handleFiltersChange"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/logs/hooks/use-log-details-resize.ts": [
+    "handleMouseMove",
+    "handleMouseUp"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/sidebar.tsx": [
+    "handleOpenHelpModal",
+    "handleScrollToItem"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/settings-modal.tsx": [
+    "handleOpenSettings",
+    "handleCloseSettings",
+    "handlePrefetch",
+    "handleDialogOpenChange"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/api-keys/api-keys.tsx": [
+    "handleCreateKey",
+    "handleDeleteKey",
+    "handleModalClose"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/copilot/copilot.tsx": [
+    "handleCreateKey",
+    "handleDeleteKey"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/custom-tools/custom-tools.tsx": [
+    "handleDeleteClick",
+    "handleDeleteTool",
+    "handleToolSaved"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/files/files.tsx": [
+    "handleUploadClick",
+    "handleFileChange",
+    "handleDownload",
+    "handleDelete",
+    "truncateMiddle"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/general/general.tsx": [
+    "handleUpdateName",
+    "handleKeyDown",
+    "handleCancelEdit",
+    "handleInputBlur",
+    "handleSignOut",
+    "handleResetPasswordConfirm",
+    "handleThemeChange",
+    "handleAutoConnectChange",
+    "handleSnapToGridChange",
+    "handleSnapToGridCommit",
+    "handleTrainingControlsChange",
+    "handleErrorNotificationsChange",
+    "handleSuperUserModeToggle",
+    "handleTelemetryToggle"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/integrations/integrations.tsx": [
+    "handle",
+    "handleConnect",
+    "handleDisconnect"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/mcp/components/formatted-input/formatted-input.tsx": [
+    "handleScroll"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/sso/sso.tsx": [
+    "handleSubmit",
+    "handleInputChange",
+    "handleEdit"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/subscription/subscription.tsx": [
+    "handleBadgeClick",
+    "handleContactEnterprise"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/subscription/components/cancel-subscription/cancel-subscription.tsx": [
+    "handleCancel",
+    "handleKeep"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/subscription/components/credit-balance/credit-balance.tsx": [
+    "handleAmountChange",
+    "handlePurchase",
+    "handleOpenChange"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/subscription/components/usage-limit/usage-limit.tsx": [
+    "handleStartEdit",
+    "handleSubmit",
+    "handleCancelEdit",
+    "handleKeyDown"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/team-management/components/member-invitation-card/member-invitation-card.tsx": [
+    "handleEmailChange",
+    "handleInviteClick"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/team-management/components/team-members/team-members.tsx": [
+    "handleCancelInvitation"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/settings-modal/components/template-profile/template-profile.tsx": [
+    "handleSubmit"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/usage-indicator/usage-indicator.tsx": [
+    "handleOperationConfirmed"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/workflow-list/workflow-list.tsx": [
+    "collectWorkflowIds"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/components/workspace-header/workspace-header.tsx": [
+    "handleContextMenu",
+    "handleRenameAction",
+    "handleDuplicateAction",
+    "handleExportAction",
+    "handleDeleteAction",
+    "handleDeleteWorkspace"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/hooks/use-context-menu.ts": [
+    "handleClickOutside"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/components/sidebar/hooks/use-sidebar-resize.ts": [
+    "handleMouseMove",
+    "handleMouseUp"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/workflow.tsx": [
+    "handleOpenOAuthConnect",
+    "handleKeyDown",
+    "handleRemoveFromSubflow",
+    "handleAddBlockFromToolbar",
+    "handleOverlayToolbarDrop",
+    "handleShowTriggerWarning",
+    "handleKeyDown",
+    "handleSubBlockValueUpdate"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/chat/chat.tsx": [
+    "processFileAttachments"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/chat/components/chat-message/chat-message.tsx": [
+    "handleAttachmentClick"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/chat/components/output-select/output-select.tsx": [
+    "handleOutputSelection",
+    "handleKeyDown",
+    "handleClickOutside"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/panel.tsx": [
+    "handleTabClick"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/copilot-message/copilot-message.tsx": [
+    "handleCopyContent"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/copilot-message/components/file-display.tsx": [
+    "handleFileClick",
+    "handleImageError"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/copilot-message/components/markdown-renderer.tsx": [
+    "handleCopy"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/copilot-message/components/usage-limit-actions.tsx": [
+    "handleUpdateLimit",
+    "handleNavigateToUpgrade"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/copilot-message/hooks/use-checkpoint-management.ts": [
+    "handleKeyDown",
+    "handleCheckpointDiscardKeyDown"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/copilot-message/hooks/use-message-editing.ts": [
+    "handleKeyDown",
+    "handleClickOutside"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/tool-call/tool-call.tsx": [
+    "handleStateChange"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/user-input/components/mention-menu/mention-menu.tsx": [
+    "handleAggregatedItemClick"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/user-input/components/mode-selector/mode-selector.tsx": [
+    "handleSelect",
+    "handleClickOutside"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/user-input/components/model-selector/model-selector.tsx": [
+    "handleSelect",
+    "handleClickOutside"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/user-input/hooks/use-mention-data.ts": [
+    "syncWorkflowBlocks"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/user-input/hooks/use-mention-menu.ts": [
+    "handleClickOutside"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/copilot/components/user-input/hooks/use-textarea-auto-resize.ts": [
+    "handleScroll",
+    "handleResize"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/deploy-modal.tsx": [
+    "handleOpenDeployModal",
+    "handleUndeploy",
+    "handleRedeploy",
+    "handleCloseModal",
+    "handlePostDeploymentUpdate",
+    "handleChatFormSubmit",
+    "handleChatDelete"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/components/api/api.tsx": [
+    "handleCopy"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/components/chat/chat.tsx": [
+    "handleSubmit",
+    "handleDelete",
+    "handleChange"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/components/general/components/versions.tsx": [
+    "handleStartRename",
+    "handleSaveRename",
+    "handleCancelRename",
+    "handleRowClick",
+    "handlePromote",
+    "handleLoadDeployment"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/components/deploy-modal/components/template/template.tsx": [
+    "handleCreatorProfileSaved",
+    "handleSubmit",
+    "handleDelete"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/deploy/hooks/use-deployed-state.ts": [
+    "getCurrentActiveWorkflowId"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/editor.tsx": [
+    "handleOpenDocs"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/env-var-dropdown.tsx": [
+    "handleEnvVarSelect",
+    "handleKeyboardEvent"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/checkbox-list/checkbox-list.tsx": [
+    "handleChange"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/code/code.tsx": [
+    "handleDrop",
+    "handleTagSelect",
+    "handleEnvVarSelect",
+    "handleCopy"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/condition-input/condition-input.tsx": [
+    "handleDrop",
+    "handleTagSelect",
+    "handleEnvVarSelect",
+    "handleTagSelectImmediate",
+    "handleEnvVarSelectImmediate"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/credential-selector/credential-selector.tsx": [
+    "handleVisibilityChange",
+    "handlePageShow",
+    "handleCredentialDisconnected"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/credential-selector/components/oauth-required-modal.tsx": [
+    "handleConnectDirectly"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/document-tag-entry/document-tag-entry.tsx": [
+    "handleTagSelection",
+    "handleValueChange",
+    "handleTagDropdownSelection",
+    "handleAddRow",
+    "handleDeleteRow"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/eval-input/eval-input.tsx": [
+    "handleRangeBlur"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/file-upload/file-upload.tsx": [
+    "handleOpenFileDialog",
+    "truncateMiddle",
+    "handleFileChange",
+    "handleSelectWorkspaceFile",
+    "handleRemoveFile"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/grouped-checkbox-list/grouped-checkbox-list.tsx": [
+    "handleToggle",
+    "handleSelectAll",
+    "handleClear"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/input-mapping/input-mapping.tsx": [
+    "handleFieldUpdate",
+    "handleScroll"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/knowledge-tag-filters/knowledge-tag-filters.tsx": [
+    "handleCellChange",
+    "handleTagNameSelection",
+    "handleTagDropdownSelection",
+    "handleAddRow",
+    "handleDeleteRow"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/long-input/long-input.tsx": [
+    "handleMouseMove",
+    "handleMouseUp"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/mcp-dynamic-args/mcp-dynamic-args.tsx": [
+    "handleChange",
+    "handleDrop",
+    "handleDragOver",
+    "handleTagSelect"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/mcp-server-modal/mcp-server-selector.tsx": [
+    "handleComboboxChange"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/mcp-server-modal/mcp-tool-selector.tsx": [
+    "handleComboboxChange",
+    "handleOpenChange"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/messages-input/messages-input.tsx": [
+    "handleMouseMove",
+    "handleMouseUp"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/project-selector/project-selector-input.tsx": [
+    "handleChange"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/schedule-save/schedule-save.tsx": [
+    "handleSave",
+    "handleDelete",
+    "handleDeleteConfirm",
+    "handleToggleStatus"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/slider-input/slider-input.tsx": [
+    "handleValueChange"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/switch/switch.tsx": [
+    "handleChange"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/table/table.tsx": [
+    "handleDeleteRow",
+    "handleScroll",
+    "tagSelectHandler",
+    "envVarSelectHandler"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tag-dropdown/tag-dropdown.tsx": [
+    "checkTagTrigger",
+    "handleKeyboardEvent"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tag-dropdown/components/keyboard-navigation-handler.tsx": [
+    "KeyboardNavigationHandler",
+    "handleKeyboardEvent"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/time-input/time-input.tsx": [
+    "handleBlur"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/tool-input.tsx": [
+    "handleDragStart",
+    "handleDragOver",
+    "handleDragEnd",
+    "handleMcpToolSelect",
+    "handleDrop"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/components/tool-credential-selector.tsx": [
+    "handleVisibilityChange",
+    "handlePageShow",
+    "handleCredentialDisconnected"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/tool-input/components/custom-tool-modal/custom-tool-modal.tsx": [
+    "handleClose",
+    "handleSave",
+    "handleJsonSchemaChange",
+    "handleFunctionCodeChange",
+    "checkSchemaParamTrigger",
+    "handleEnvVarSelect",
+    "handleTagSelect",
+    "handleSchemaParamSelect",
+    "handleKeyDown",
+    "handleSchemaWandClick",
+    "handleSchemaPromptBlur",
+    "handleSchemaPromptChange",
+    "handleSchemaPromptSubmit",
+    "handleSchemaPromptKeyDown",
+    "handleCodeWandClick",
+    "handleCodePromptBlur",
+    "handleCodePromptChange",
+    "handleCodePromptSubmit",
+    "handleCodePromptKeyDown",
+    "handleDelete"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/trigger-save/trigger-save.tsx": [
+    "handleSave",
+    "handleDeleteClick",
+    "handleDeleteConfirm"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/components/sub-block/components/variables-input/variables-input.tsx": [
+    "handleVariableSelect",
+    "handleTagSelect",
+    "handleValueInputChange",
+    "handleDrop",
+    "handleDragOver",
+    "handleDragLeave"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/editor/hooks/use-connections-resize.ts": [
+    "handleMouseMove",
+    "handleMouseUp"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/toolbar/toolbar.tsx": [
+    "handleSearchClick",
+    "handleSearchBlur",
+    "handleKeyDown",
+    "focusTrigger"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/components/toolbar/hooks/use-toolbar-resize.ts": [
+    "handleMouseMove",
+    "handleMouseUp"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/panel/hooks/use-panel-resize.ts": [
+    "handleMouseMove",
+    "handleMouseUp"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/subflows/subflow-node.tsx": [
+    "SubflowNodeStyles",
+    "getHandleClasses",
+    "getHandleStyle"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/terminal/terminal.tsx": [
+    "formatRunId",
+    "getRunIdColor",
+    "handleKeyDown",
+    "handleKeyDown",
+    "handleKeyDown",
+    "handleKeyDown",
+    "handleResize"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/terminal/hooks/use-output-panel-resize.ts": [
+    "handleMouseMove",
+    "handleMouseUp"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/terminal/hooks/use-terminal-resize.ts": [
+    "handleMouseMove",
+    "handleMouseUp"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/training-modal/training-modal.tsx": [
+    "handleStart",
+    "handleCopyDataset",
+    "handleExportAll",
+    "handleSendOne",
+    "handleSendAll",
+    "handleSendSelected",
+    "handleSendLiveWorkflow"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/variables/variables.tsx": [
+    "handleHeaderKeyDown",
+    "handleVariableNameKeyDown",
+    "handleClose"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/wand-prompt-bar/wand-prompt-bar.tsx": [
+    "handleCancel",
+    "handleClickOutside"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/components/workflow-block/hooks/use-schedule-info.ts": [
+    "handleScheduleUpdate"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/hooks/use-scroll-management.ts": [
+    "handleUserScroll"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/hooks/use-workflow-execution.ts": [
+    "processUploadResult",
+    "executeWorkflow",
+    "handleExecutionError"
+  ],
+  "apps/sim/app/workspace/[workspaceId]/w/[workflowId]/hooks/use-float/use-float-boundary-sync.ts": [
+    "handleResize"
+  ],
+  "apps/sim/background/webhook-execution.ts": [
+    "runOperation"
+  ],
+  "apps/sim/blocks/blocks/chat_trigger.ts": [
+    "ChatTriggerIcon"
+  ],
+  "apps/sim/blocks/blocks/input_trigger.ts": [
+    "InputTriggerIcon"
+  ],
+  "apps/sim/blocks/blocks/manual_trigger.ts": [
+    "ManualTriggerIcon"
+  ],
+  "apps/sim/blocks/blocks/workflow.ts": [
+    "getAvailableWorkflows"
+  ],
+  "apps/sim/blocks/blocks/workflow_input.ts": [
+    "getAvailableWorkflows"
+  ],
+  "apps/sim/components/emcn/components/popover/popover.tsx": [
+    "handleWheel",
+    "handleClick",
+    "handleClick",
+    "handleChange"
+  ],
+  "apps/sim/components/ui/input-otp-form.tsx": [
+    "handleComplete",
+    "handleSubmit"
+  ],
+  "apps/sim/components/ui/tag-input.tsx": [
+    "handleKeyDown",
+    "handleBlur"
+  ],
+  "apps/sim/executor/__test-utils__/executor-mocks.ts": [
+    "createMockHandler",
+    "defaultCanHandle",
+    "setupHandlerMocks",
+    "createMinimalWorkflow",
+    "createWorkflowWithCondition",
+    "createWorkflowWithLoop",
+    "createWorkflowWithErrorPath",
+    "createWorkflowWithParallel",
+    "createWorkflowWithResponse",
+    "createWorkflowWithParallelArray",
+    "createWorkflowWithParallelObject"
+  ],
+  "apps/sim/hooks/use-collaborative-workflow.ts": [
+    "moveHandler",
+    "parentUpdateHandler",
+    "skipEdgeHandler",
+    "diffOperationHandler",
+    "handleWorkflowOperation",
+    "handleSubblockUpdate",
+    "handleVariableUpdate",
+    "handleUserJoined",
+    "handleUserLeft",
+    "handleWorkflowDeleted",
+    "handleWorkflowReverted",
+    "handleOperationConfirmed",
+    "handleOperationFailed"
+  ],
+  "apps/sim/hooks/use-stream-cleanup.ts": [
+    "handleBeforeUnload"
+  ],
+  "apps/sim/lib/blog/code.tsx": [
+    "handleCopy"
+  ],
+  "apps/sim/lib/copilot/tools/server/workflow/edit-workflow.ts": [
+    "mapConnectionTypeToHandle"
+  ],
+  "apps/sim/lib/execution/isolated-vm.ts": [
+    "readyHandler"
+  ],
+  "apps/sim/lib/knowledge/documents/queue.ts": [
+    "processJobsContinuously",
+    "processInMemoryContinuously"
+  ],
+  "apps/sim/lib/workflows/utils.ts": [
+    "workflowHasResponseBlock"
+  ],
+  "apps/sim/lib/workflows/training/compute-edit-sequence.ts": [
+    "processBlock",
+    "processBlockConnections"
+  ],
+  "apps/sim/socket-server/handlers/workflow.ts": [
+    "createWorkflowRoom"
+  ],
+  "apps/sim/stores/folders/store.ts": [
+    "useIsWorkflowSelected"
+  ],
+  "apps/sim/stores/logs/filters/store.ts": [
+    "parseTriggerArrayFromURL"
+  ],
+  "apps/sim/stores/workflows/workflow/store.ts": [
+    "handleWebhookToggle"
+  ],
+  "apps/sim/tools/http/utils.ts": [
+    "processUrl"
+  ],
+  "apps/sim/tools/reddit/get_comments.ts": [
+    "processComments"
+  ],
+  "apps/sim/tools/wealthbox/utils.ts": [
+    "handleApiError"
+  ]
+}
