@@ -1,0 +1,2712 @@
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const user = pgTable('user', {
+  id: text('id').primaryKey(),
+  name: text('name').notNull(),
+  email: text('email').notNull().unique(),
+  emailVerified: boolean('email_verified').notNull(),
+  image: text('image'),
+  createdAt: timestamp('created_at').notNull(),
+  updatedAt: timestamp('updated_at').notNull(),
+  stripeCustomerId: text('stripe_customer_id'),
+})
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:50:38.502180
+
+```text
+Okay, let's start by looking at this user table. The user has an ID, name, email, email verification status, image, timestamps for creation and updates, and a Stripe customer ID. 
+
+First, I need to explain each field in simple terms. The ID is like a unique identifier, probably a string. Name and email are straightforward. Email being unique means no two users can have the same email. EmailVerified is a boolean, so it's either true or false. Image might be a URL to a profile picture. Created and updated timestamps track when the user was added and last updated. StripeCustomerId relates to payment processing.
+
+Now, how does this table link to others? The presence of stripeCustomerId suggests a link to a Stripe customers table, maybe in another service. But since there's no foreign key here, it's probably a reference to an external system. If there were other tables in the same database, like orders or subscriptions, they might reference the user's ID as a foreign key. For example, an orders table could have a user_id column pointing to this user's id. But based on the given table alone, direct links aren't shown except through the Stripe ID indirectly.
+
+So the explanation should mention each field's purpose in layman's terms, note the uniqueness constraints, and discuss possible relationships, especially pointing out that links to other tables would require foreign keys, which aren't present here except for the Stripe reference. Emphasize that each user is uniquely identified and how other services or tables might connect using the user's ID or Stripe ID.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const session = pgTable(
+  'session',
+  {
+    id: text('id').primaryKey(),
+    expiresAt: timestamp('expires_at').notNull(),
+    token: text('token').notNull().unique(),
+    createdAt: timestamp('created_at').notNull(),
+    updatedAt: timestamp('updated_at').notNull(),
+    ipAddress: text('ip_address'),
+    userAgent: text('user_agent'),
+    userId: text('user_id')
+      .notNull()
+      .references(() => user.id, { onDelete: 'cascade' }),
+    activeOrganizationId: text('active_organization_id').references(() => organization.id, {
+      onDelete: 'set null',
+    }),
+  },
+  (table) => ({
+    userIdIdx: index('session_user_id_idx').on(table.userId),
+    tokenIdx: index('session_token_idx').on(table.token),
+  })
+)
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:50:44.031780
+
+```text
+Okay, I need to analyze this Drizzle ORM session table and explain it to a non-technical person. Let me start by breaking down each field.
+
+First, the session table has an ID as the primary key. ExpiresAt tells when the session ends. Token is a unique string, probably for authentication. CreatedAt and UpdatedAt track when the session was made and last updated. IpAddress and UserAgent store the user's device and location info.
+
+The important part is the userId field. It references the user table's id, so each session is linked to a user. The onDelete: 'cascade' means if the user is deleted, their sessions are too. That's a crucial link.
+
+Then there's activeOrganizationId referencing an organization table's id. If the organization is deleted, this field becomes null. So sessions can belong to an organization, but it's optional.
+
+Indexes on userId and token help speed up searches. For a non-tech person, indexes are like a book's index, making finding data faster.
+
+So, the main links are to user and organization tables. Explaining relationships in simple terms: sessions belong to users and might be part of an organization. If a user is removed, their sessions go away too. If an organization is deleted, the session's link to it is removed but the session stays.
+
+Need to make sure the explanation avoids jargon and uses analogies where possible. Mention that each session is a temporary login instance tied to a user, and possibly an organization, with some automatic cleanup when users or orgs are deleted.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const account = pgTable(
+  'account',
+  {
+    id: text('id').primaryKey(),
+    accountId: text('account_id').notNull(),
+    providerId: text('provider_id').notNull(),
+    userId: text('user_id')
+      .notNull()
+      .references(() => user.id, { onDelete: 'cascade' }),
+    accessToken: text('access_token'),
+    refreshToken: text('refresh_token'),
+    idToken: text('id_token'),
+    accessTokenExpiresAt: timestamp('access_token_expires_at'),
+    refreshTokenExpiresAt: timestamp('refresh_token_expires_at'),
+    scope: text('scope'),
+    password: text('password'),
+    createdAt: timestamp('created_at').notNull(),
+    updatedAt: timestamp('updated_at').notNull(),
+  },
+  (table) => ({
+    userIdIdx: index('account_user_id_idx').on(table.userId),
+  })
+)
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:50:49.653548
+
+```text
+Okay, let's tackle this account table. First, I'll look at each field and see what they mean. The id is the primary key, so each account has a unique identifier. Then there's account_id and provider_id, which probably relate to the user's account with a third-party provider like Google or GitHub. The user_id references the user table, linking each account to a user. Access tokens and refresh tokens are for authentication, with expiration times. Passwords might be stored here if using email/password login. Created and updated timestamps track when the account was made and last modified.
+
+The user_id field has a reference to the user table's id with onDelete cascade, meaning deleting a user removes their accounts. The index on user_id speeds up searches. Now, explaining this to a non-technical person: The account table stores login methods (like Google or email) linked to a user. Each method has tokens for secure access and expiration times. If a user is deleted, their linked accounts go too. Links to other tables are through user_id to the user table. Maybe the provider_id links to a providers table, but that's not shown here. Emphasize security aspects like tokens and password storage, and how accounts are tied to users.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const verification = pgTable(
+  'verification',
+  {
+    id: text('id').primaryKey(),
+    identifier: text('identifier').notNull(),
+    value: text('value').notNull(),
+    expiresAt: timestamp('expires_at').notNull(),
+    createdAt: timestamp('created_at'),
+    updatedAt: timestamp('updated_at'),
+  },
+  (table) => ({
+    identifierIdx: index('verification_identifier_idx').on(table.identifier),
+  })
+)
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:50:55.809739
+
+```text
+Okay, let me look at this verification table. The fields here are id, identifier, value, expiresAt, createdAt, and updatedAt. The id is the primary key, so each verification record is unique. The identifier and value fields are both required. The identifier probably represents what's being verified, like an email or phone number, and the value could be a code or token sent for verification. The expiresAt field means each verification has a time limit. Created and updated timestamps track when the record was made and last changed. There's an index on the identifier to make searches faster.
+
+Now, how does this link to other tables? Unlike previous tables, there's no explicit foreign key reference here. The identifier might relate to a user's email or another identifier in the user table, but it's not directly linked via a foreign key. So the connection is implicit based on the identifier matching a user's attribute. For example, when a user requests email verification, a record here with their email as the identifier and a code as the value is created. The system checks this table when the user enters the code. Since there's no direct database link, it's more of a logical connection rather than a formal database relationship. Need to explain this in simple terms: verification codes are stored here with expiration times and are tied to user identifiers, but not directly linked through the database structure. The index helps quickly find the code when needed.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const workflowFolder = pgTable(
+  'workflow_folder',
+  {
+    id: text('id').primaryKey(),
+    name: text('name').notNull(),
+    userId: text('user_id')
+      .notNull()
+      .references(() => user.id, { onDelete: 'cascade' }),
+    workspaceId: text('workspace_id')
+      .notNull()
+      .references(() => workspace.id, { onDelete: 'cascade' }),
+    parentId: text('parent_id'), // Self-reference will be handled by foreign key constraint
+    color: text('color').default('#6B7280'),
+    isExpanded: boolean('is_expanded').notNull().default(true),
+    sortOrder: integer('sort_order').notNull().default(0),
+    createdAt: timestamp('created_at').notNull().defaultNow(),
+    updatedAt: timestamp('updated_at').notNull().defaultNow(),
+  },
+  (table) => ({
+    userIdx: index('workflow_folder_user_idx').on(table.userId),
+    workspaceParentIdx: index('workflow_folder_workspace_parent_idx').on(
+      table.workspaceId,
+      table.parentId
+    ),
+    parentSortIdx: index('workflow_folder_parent_sort_idx').on(table.parentId, table.sortOrder),
+  })
+)
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:51:02.876283
+
+```text
+Alright, let's tackle this workflowFolder table. First, I need to understand each field and how they relate. The id is the primary key, so each folder has a unique identifier. The name is straightforward—it's the folder's name. The userId and workspaceId are references to the user and workspace tables, which means each folder is linked to a specific user and workspace. The parentId is interesting because it suggests a self-referential structure, allowing folders to be nested within other folders.
+
+The color field sets a default color, probably for UI purposes. isExpanded determines if the folder is open or closed by default. sortOrder dictates the arrangement of folders. CreatedAt and updatedAt track when the folder was made and last modified. The indexes on userId, workspaceId, parentId, and sortOrder help optimize queries, like finding all folders in a workspace or sorting them in order.
+
+Now, explaining this to a non-technical person: Workflow folders help organize workflows, similar to how you organize files on a computer. Each folder belongs to a user and a workspace, ensuring it's part of the right team or project. Folders can have subfolders (parentId), allowing a nested structure. The color and expansion settings enhance user experience, while sortOrder keeps things tidy. If a user or workspace is deleted, their folders are automatically removed (cascade). Links to other tables are through userId and workspaceId, connecting folders to their respective users and workspaces. The parentId links folders within the same table, enabling hierarchy.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const workflow = pgTable(
+  'workflow',
+  {
+    id: text('id').primaryKey(),
+    userId: text('user_id')
+      .notNull()
+      .references(() => user.id, { onDelete: 'cascade' }),
+    workspaceId: text('workspace_id').references(() => workspace.id, { onDelete: 'cascade' }),
+    folderId: text('folder_id').references(() => workflowFolder.id, { onDelete: 'set null' }),
+    name: text('name').notNull(),
+    description: text('description'),
+    color: text('color').notNull().default('#3972F6'),
+    lastSynced: timestamp('last_synced').notNull(),
+    createdAt: timestamp('created_at').notNull(),
+    updatedAt: timestamp('updated_at').notNull(),
+    isDeployed: boolean('is_deployed').notNull().default(false),
+    deployedState: json('deployed_state'),
+    deployedAt: timestamp('deployed_at'),
+    pinnedApiKeyId: text('pinned_api_key_id').references(() => apiKey.id, { onDelete: 'set null' }),
+    collaborators: json('collaborators').notNull().default('[]'),
+    runCount: integer('run_count').notNull().default(0),
+    lastRunAt: timestamp('last_run_at'),
+    variables: json('variables').default('{}'),
+    isPublished: boolean('is_published').notNull().default(false),
+    marketplaceData: json('marketplace_data'),
+  },
+  (table) => ({
+    userIdIdx: index('workflow_user_id_idx').on(table.userId),
+    workspaceIdIdx: index('workflow_workspace_id_idx').on(table.workspaceId),
+    userWorkspaceIdx: index('workflow_user_workspace_idx').on(table.userId, table.workspaceId),
+  })
+)
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:51:11.274674
+
+```text
+Okay, let's dive into this workflow table. First, I need to understand each field and how they connect to other tables. The primary key is 'id', so each workflow has a unique identifier. The 'userId' references the user table, meaning every workflow is linked to a specific user. If the user is deleted, their workflows are also deleted because of 'onDelete: cascade'. Then there's 'workspaceId' which points to the workspace table. Deleting a workspace will delete its workflows too. 
+
+The 'folderId' links to the workflowFolder table, allowing workflows to be organized into folders. If a folder is deleted, the workflow's folderId becomes null, so the workflow stays but loses its folder association. The 'pinnedApiKeyId' references the apiKey table, which means a workflow can be associated with a specific API key. If the API key is deleted, this field becomes null.
+
+Other fields like 'name', 'description', 'color' are descriptive attributes. 'lastSynced' tracks when the workflow was last synchronized. Timestamps 'createdAt' and 'updatedAt' show when the workflow was created and last modified. Deployment-related fields like 'isDeployed', 'deployedState', and 'deployedAt' indicate if the workflow is live and when. 'Collaborators' and 'variables' store JSON data for team members and configuration settings. 'RunCount' and 'lastRunAt' track usage metrics. 'IsPublished' and 'marketplaceData' suggest workflows can be published to a marketplace with additional info.
+
+Indexes on userId, workspaceId, and combinations help speed up searches. For example, finding all workflows by a user or within a workspace is faster. The userWorkspaceIdx combines user and workspace for efficient queries.
+
+To explain to a non-technical person: Workflows are like automated processes created by users. They belong to a user and a workspace (team/project). They can be organized into folders, use API keys for access, track usage, and be published. If a user or workspace is deleted, their workflows are removed. Folders or API keys being deleted just remove the link, not the workflow itself. Collaborators and variables allow team input and customization.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const workflowBlocks = pgTable(
+  'workflow_blocks',
+  {
+    id: text('id').primaryKey(),
+    workflowId: text('workflow_id')
+      .notNull()
+      .references(() => workflow.id, { onDelete: 'cascade' }),
+
+    type: text('type').notNull(), // 'starter', 'agent', 'api', 'function'
+    name: text('name').notNull(),
+
+    positionX: decimal('position_x').notNull(),
+    positionY: decimal('position_y').notNull(),
+
+    enabled: boolean('enabled').notNull().default(true),
+    horizontalHandles: boolean('horizontal_handles').notNull().default(true),
+    isWide: boolean('is_wide').notNull().default(false),
+    advancedMode: boolean('advanced_mode').notNull().default(false),
+    triggerMode: boolean('trigger_mode').notNull().default(false),
+    height: decimal('height').notNull().default('0'),
+
+    subBlocks: jsonb('sub_blocks').notNull().default('{}'),
+    outputs: jsonb('outputs').notNull().default('{}'),
+    data: jsonb('data').default('{}'),
+
+    createdAt: timestamp('created_at').notNull().defaultNow(),
+    updatedAt: timestamp('updated_at').notNull().defaultNow(),
+  },
+  (table) => ({
+    workflowIdIdx: index('workflow_blocks_workflow_id_idx').on(table.workflowId),
+    workflowTypeIdx: index('workflow_blocks_workflow_type_idx').on(table.workflowId, table.type),
+  })
+)
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:51:17.512472
+
+```text
+Okay, let's take a look at this `workflow_blocks` table. First, I need to understand each field and how they relate to each other and other tables. The primary key is `id`, so each block has a unique identifier. The `workflowId` references the `workflow` table, which means each block is part of a specific workflow. If the workflow is deleted, the block gets deleted too because of `onDelete: 'cascade'`.
+
+Next, there's the `type` field which categorizes the block into types like 'starter', 'agent', etc. The `name` gives the block a label. Position fields (`positionX` and `positionY`) suggest these blocks are arranged visually, maybe in a UI canvas. 
+
+The boolean fields like `enabled`, `horizontalHandles`, `isWide`, `advancedMode`, and `triggerMode` control the block's behavior and appearance. Defaults are set for most, which means they have standard settings unless changed. The `height` field might determine how tall the block appears.
+
+The `subBlocks`, `outputs`, and `data` fields use JSONB to store complex structures, allowing flexibility in what each block can contain. Timestamps track creation and updates.
+
+Indexes on `workflowId` and a combination of `workflowId` and `type` help in quickly finding blocks related to a workflow or filtering by type within a workflow.
+
+Now, explaining this to a non-technical person: Workflow blocks are like building pieces in a flowchart. Each belongs to a workflow and can be a starter, agent, etc. They have positions on a canvas, settings for appearance/behavior, and store detailed info in JSON. Linked to their parent workflow, deleting the workflow removes its blocks. Indexes make finding blocks efficient.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const workflowEdges = pgTable(
+  'workflow_edges',
+  {
+    id: text('id').primaryKey(),
+    workflowId: text('workflow_id')
+      .notNull()
+      .references(() => workflow.id, { onDelete: 'cascade' }),
+
+    sourceBlockId: text('source_block_id')
+      .notNull()
+      .references(() => workflowBlocks.id, { onDelete: 'cascade' }),
+    targetBlockId: text('target_block_id')
+      .notNull()
+      .references(() => workflowBlocks.id, { onDelete: 'cascade' }),
+    sourceHandle: text('source_handle'),
+    targetHandle: text('target_handle'),
+
+    createdAt: timestamp('created_at').notNull().defaultNow(),
+  },
+  (table) => ({
+    workflowIdIdx: index('workflow_edges_workflow_id_idx').on(table.workflowId),
+    workflowSourceIdx: index('workflow_edges_workflow_source_idx').on(
+      table.workflowId,
+      table.sourceBlockId
+    ),
+    workflowTargetIdx: index('workflow_edges_workflow_target_idx').on(
+      table.workflowId,
+      table.targetBlockId
+    ),
+  })
+)
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:51:22.735600
+
+```text
+Okay, let's break down this `workflow_edges` table. First, I need to understand what each field represents and how they connect to other tables. The `id` is the primary key, so each edge has a unique identifier. The `workflowId` references the `workflow` table, meaning each edge belongs to a specific workflow. If the workflow is deleted, the edges linked to it are also removed due to `onDelete: 'cascade'`.
+
+Next, there are `sourceBlockId` and `targetBlockId`, which both reference the `workflowBlocks` table. This means edges connect two blocks within the same workflow. Deleting a block removes any edges connected to it. The `sourceHandle` and `targetHandle` might specify which part of the blocks are connected, like specific ports or connectors.
+
+The `createdAt` timestamp tracks when the edge was created. Indexes on `workflowId`, `sourceBlockId`, and `targetBlockId` help optimize queries, such as finding all edges in a workflow or connected to a specific block.
+
+For a non-technical explanation: Workflow edges are like arrows connecting blocks in a flowchart. Each arrow is part of a workflow and links two blocks. If the workflow or blocks are deleted, the arrows disappear too. The handles might indicate where the connection points are on the blocks. Indexes act like a table of contents, making it quicker to find connections.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const workflowSubflows = pgTable(
+  'workflow_subflows',
+  {
+    id: text('id').primaryKey(),
+    workflowId: text('workflow_id')
+      .notNull()
+      .references(() => workflow.id, { onDelete: 'cascade' }),
+
+    type: text('type').notNull(), // 'loop' or 'parallel'
+    config: jsonb('config').notNull().default('{}'),
+
+    createdAt: timestamp('created_at').notNull().defaultNow(),
+    updatedAt: timestamp('updated_at').notNull().defaultNow(),
+  },
+  (table) => ({
+    workflowIdIdx: index('workflow_subflows_workflow_id_idx').on(table.workflowId),
+    workflowTypeIdx: index('workflow_subflows_workflow_type_idx').on(table.workflowId, table.type),
+  })
+)
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:51:29.394273
+
+```text
+Okay, let's see. The user wants me to analyze this Drizzle ORM table called 'workflow_subflows'. First, I need to understand what each part does and explain it in simple terms. Let's start by looking at the fields.
+
+The 'id' is the primary key, so each subflow has a unique identifier. Then there's 'workflowId' which references the 'workflow' table. That means each subflow is linked to a specific workflow. The 'onDelete: 'cascade'' part tells me that if the workflow is deleted, all its subflows get deleted too. That's important for data integrity.
+
+The 'type' field can be 'loop' or 'parallel', which suggests different kinds of subflows. The 'config' field is a JSONB type, so it stores configuration settings as JSON data. Default is an empty object, meaning it can hold various settings depending on the subflow type.
+
+Then there are timestamps for when the subflow was created and updated. The indexes on 'workflowId' and 'workflowId + type' help speed up queries when searching for subflows by workflow or by type within a workflow.
+
+Now, linking to other tables: The main link is through 'workflowId' to the 'workflow' table. There's no direct foreign key to other tables here, but since 'config' might include references to blocks or other components, those could be indirect. But based on the given table, the explicit link is only to the 'workflow' table.
+
+For a non-technical explanation: Subflows are parts of a workflow that handle specific tasks, like loops or parallel processes. Each is tied to a workflow and gets removed if the workflow is deleted. The configuration holds settings for how the subflow operates. Indexes help in quickly finding subflows when needed.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const waitlist = pgTable('waitlist', {
+  id: text('id').primaryKey(),
+  email: text('email').notNull().unique(),
+  status: text('status').notNull().default('pending'), // pending, approved, rejected
+  createdAt: timestamp('created_at').notNull().defaultNow(),
+  updatedAt: timestamp('updated_at').notNull().defaultNow(),
+})
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:51:33.894976
+
+```text
+Okay, let's look at this `waitlist` table. The main fields here are `id`, `email`, `status`, `createdAt`, and `updatedAt`. The `id` is the primary key, so each entry has a unique identifier. The `email` is marked as unique, meaning no two entries can have the same email. The `status` has default 'pending' and can be pending, approved, or rejected. The timestamps track when the entry was added and last updated.
+
+Now, how does this table link to others? There are no foreign keys here, so it doesn't directly connect to other tables like users or workflows. It's standalone, managing waitlist entries. The purpose is to track people waiting for access, their approval status, and timestamps. For a non-tech person, it's like a guest list where each person's email and status are recorded. If needed, other tables might reference waitlist emails, but the schema here doesn't show that. The unique email ensures each person is only listed once.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const workflowExecutionSnapshots = pgTable(
+  'workflow_execution_snapshots',
+  {
+    id: text('id').primaryKey(),
+    workflowId: text('workflow_id')
+      .notNull()
+      .references(() => workflow.id, { onDelete: 'cascade' }),
+    stateHash: text('state_hash').notNull(),
+    stateData: jsonb('state_data').notNull(),
+    createdAt: timestamp('created_at').notNull().defaultNow(),
+  },
+  (table) => ({
+    workflowIdIdx: index('workflow_snapshots_workflow_id_idx').on(table.workflowId),
+    stateHashIdx: index('workflow_snapshots_hash_idx').on(table.stateHash),
+    workflowHashUnique: uniqueIndex('workflow_snapshots_workflow_hash_idx').on(
+      table.workflowId,
+      table.stateHash
+    ),
+    createdAtIdx: index('workflow_snapshots_created_at_idx').on(table.createdAt),
+  })
+)
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:51:39.733704
+
+```text
+Okay, let's break down this table. The name is 'workflow_execution_snapshots', which suggests it's about saving snapshots of workflows during execution. The fields are id, workflowId, stateHash, stateData, and createdAt. The id is the primary key, so each snapshot is unique.
+
+The workflowId references the workflow table, meaning each snapshot is tied to a specific workflow. The 'onDelete: cascade' part means if the workflow is deleted, its snapshots are too. That's a direct link to the workflow table.
+
+StateHash is a unique identifier for the state, probably a checksum to detect changes. StateData holds the actual snapshot data in JSON format. CreatedAt tracks when the snapshot was taken.
+
+The indexes on workflowId, stateHash, and their combination help speed up searches. The unique index ensures each workflow and stateHash pair is unique, preventing duplicates. The createdAt index allows quick sorting by time.
+
+For a non-technical person: This table saves moments in time of a workflow's state, like taking a photo of its progress. Each photo is linked to the workflow and includes the data and a unique code (stateHash) to identify changes. If the workflow is deleted, all its photos are removed. Indexes help organize these photos for quick access.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const workflowExecutionLogs = pgTable(
+  'workflow_execution_logs',
+  {
+    id: text('id').primaryKey(),
+    workflowId: text('workflow_id')
+      .notNull()
+      .references(() => workflow.id, { onDelete: 'cascade' }),
+    executionId: text('execution_id').notNull(),
+    stateSnapshotId: text('state_snapshot_id')
+      .notNull()
+      .references(() => workflowExecutionSnapshots.id),
+
+    level: text('level').notNull(), // 'info', 'error'
+    trigger: text('trigger').notNull(), // 'api', 'webhook', 'schedule', 'manual', 'chat'
+
+    startedAt: timestamp('started_at').notNull(),
+    endedAt: timestamp('ended_at'),
+    totalDurationMs: integer('total_duration_ms'),
+
+    executionData: jsonb('execution_data').notNull().default('{}'),
+    cost: jsonb('cost'),
+    files: jsonb('files'), // File metadata for execution files
+    createdAt: timestamp('created_at').notNull().defaultNow(),
+  },
+  (table) => ({
+    workflowIdIdx: index('workflow_execution_logs_workflow_id_idx').on(table.workflowId),
+    executionIdIdx: index('workflow_execution_logs_execution_id_idx').on(table.executionId),
+    stateSnapshotIdIdx: index('workflow_execution_logs_state_snapshot_id_idx').on(
+      table.stateSnapshotId
+    ),
+    triggerIdx: index('workflow_execution_logs_trigger_idx').on(table.trigger),
+    levelIdx: index('workflow_execution_logs_level_idx').on(table.level),
+    startedAtIdx: index('workflow_execution_logs_started_at_idx').on(table.startedAt),
+    executionIdUnique: uniqueIndex('workflow_execution_logs_execution_id_unique').on(
+      table.executionId
+    ),
+    // Composite index for the new join-based query pattern
+    workflowStartedAtIdx: index('workflow_execution_logs_workflow_started_at_idx').on(
+      table.workflowId,
+      table.startedAt
+    ),
+  })
+)
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:51:47.208695
+
+```text
+Okay, let me try to understand this workflowExecutionLogs table. First, I need to look at each field and see what it does. The primary key is 'id', so each log entry is unique. The 'workflowId' references the workflow table, meaning each log is linked to a specific workflow. If the workflow is deleted, the logs are too because of 'onDelete: cascade'. 
+
+Then there's 'executionId', which seems like a unique identifier for each run of the workflow. The 'stateSnapshotId' links to the workflowExecutionSnapshots table, connecting each log to a specific snapshot of the workflow's state at that time. 
+
+Fields like 'level' indicate if the log is info or an error. 'Trigger' tells what started the execution, like an API call or a schedule. Timestamps 'startedAt' and 'endedAt' track when the execution began and ended, with 'totalDurationMs' showing how long it took. 
+
+JSON fields like 'executionData', 'cost', and 'files' store detailed info about the execution, costs incurred, and files involved. The indexes on various fields help in quickly searching logs by workflow, execution ID, trigger type, etc.
+
+For a non-technical explanation: This table keeps detailed records of each time a workflow runs. It notes which workflow it was, what triggered it, success or errors, duration, and related data. Linked to workflows and state snapshots, ensuring logs are organized and can be retrieved efficiently using indexes.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const environment = pgTable('environment', {
+  id: text('id').primaryKey(), // Use the user id as the key
+  userId: text('user_id')
+    .notNull()
+    .references(() => user.id, { onDelete: 'cascade' })
+    .unique(), // One environment per user
+  variables: json('variables').notNull(),
+  updatedAt: timestamp('updated_at').notNull().defaultNow(),
+})
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:51:52.427600
+
+```text
+Alright, let's break down this `environment` table. First, the primary key is `id`, which uses the user's ID. That means each environment entry is directly tied to a specific user. The `userId` field reinforces this by referencing the `user` table, ensuring that each environment belongs to exactly one user. The `unique` constraint here is interesting—it enforces a one-to-one relationship, so no two users can share the same environment entry.
+
+The `variables` field stores JSON data, which likely holds user-specific configurations or settings. Since it's JSON, it can handle various data structures, making it flexible for different needs. The `updatedAt` timestamp keeps track of when the environment was last modified, which is useful for auditing or syncing purposes.
+
+Now, linking to other tables: The main connection is through `userId` to the `user` table. If a user is deleted, their environment entry is automatically removed due to the `onDelete: 'cascade'` clause. There's no direct link to other tables like `workflow` or `apiKey` here, but the variables might reference data used elsewhere indirectly.
+
+For a non-technical person, this table acts like a personal settings profile for each user. Imagine each user having their own digital workspace where they can customize settings, and if they leave the platform, their workspace is cleaned up automatically. The JSON variables are like a drawer where all their personal preferences and tools are stored, easily adjustable without affecting others.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const workspaceEnvironment = pgTable(
+  'workspace_environment',
+  {
+    id: text('id').primaryKey(),
+    workspaceId: text('workspace_id')
+      .notNull()
+      .references(() => workspace.id, { onDelete: 'cascade' }),
+    variables: json('variables').notNull().default('{}'),
+    createdAt: timestamp('created_at').notNull().defaultNow(),
+    updatedAt: timestamp('updated_at').notNull().defaultNow(),
+  },
+  (table) => ({
+    workspaceUnique: uniqueIndex('workspace_environment_workspace_unique').on(table.workspaceId),
+  })
+)
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:51:57.653135
+
+```text
+Okay, let's dive into this workspace_environment table. The primary key is 'id', so each entry has a unique identifier. The 'workspaceId' references the workspace table, meaning each environment is linked to a specific workspace. The 'onDelete: cascade' part means if the workspace is deleted, its environment entries go too. The 'unique' constraint ensures each workspace has only one environment entry.
+
+The 'variables' field stores JSON data, likely configuration settings specific to the workspace. Default is an empty object, so it starts blank. Timestamps track when the environment was created and last updated.
+
+For a non-technical explanation: This table holds workspace-specific settings, like a shared configuration file for a team. Each workspace has its own environment, and deleting the workspace removes its settings. Variables can be customized without affecting other workspaces. The unique constraint prevents duplicate settings per workspace.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const settings = pgTable('settings', {
+  id: text('id').primaryKey(), // Use the user id as the key
+  userId: text('user_id')
+    .notNull()
+    .references(() => user.id, { onDelete: 'cascade' })
+    .unique(), // One settings record per user
+
+  // General settings
+  theme: text('theme').notNull().default('system'),
+  autoConnect: boolean('auto_connect').notNull().default(true),
+  autoFillEnvVars: boolean('auto_fill_env_vars').notNull().default(true), // DEPRECATED: autofill feature removed
+  autoPan: boolean('auto_pan').notNull().default(true),
+  consoleExpandedByDefault: boolean('console_expanded_by_default').notNull().default(true),
+
+  // Privacy settings
+  telemetryEnabled: boolean('telemetry_enabled').notNull().default(true),
+
+  // Email preferences
+  emailPreferences: json('email_preferences').notNull().default('{}'),
+
+  // Billing usage notifications preference
+  billingUsageNotificationsEnabled: boolean('billing_usage_notifications_enabled')
+    .notNull()
+    .default(true),
+
+  // UI preferences
+  showFloatingControls: boolean('show_floating_controls').notNull().default(true),
+  showTrainingControls: boolean('show_training_controls').notNull().default(false),
+
+  // Copilot preferences - maps model_id to enabled/disabled boolean
+  copilotEnabledModels: jsonb('copilot_enabled_models').notNull().default('{}'),
+
+  updatedAt: timestamp('updated_at').notNull().defaultNow(),
+})
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:52:03.391034
+
+```text
+Okay, let's take a look at this `settings` table. The primary key is `id`, which uses the user's ID. That means each user has their own settings entry. The `userId` field references the `user` table, ensuring that each settings entry is linked to exactly one user. The `unique` constraint here makes sure that no user can have more than one settings record. If a user is deleted, their settings are automatically removed because of `onDelete: 'cascade'`.
+
+The fields in this table cover various user preferences. There's `theme` for the interface theme, `autoConnect` for automatic connections, and `autoPan` for screen movement. Privacy settings like `telemetryEnabled` control data sharing. Email preferences and billing notifications are stored here too. UI settings like `showFloatingControls` and `showTrainingControls` manage what the user sees. `copilotEnabledModels` uses JSONB to track which AI models are active for the user. `updatedAt` keeps track of when the settings were last changed.
+
+For a non-technical person, this table is like a personalized settings dashboard for each user. It remembers their choices for how the app looks and behaves, notification preferences, and privacy options. Each user's settings are tied directly to their account, so if they delete their account, all their preferences are removed too. The link to the `user` table ensures that settings are unique and properly managed per user.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const workflowSchedule = pgTable(
+  'workflow_schedule',
+  {
+    id: text('id').primaryKey(),
+    workflowId: text('workflow_id')
+      .notNull()
+      .references(() => workflow.id, { onDelete: 'cascade' }),
+    blockId: text('block_id').references(() => workflowBlocks.id, { onDelete: 'cascade' }),
+    cronExpression: text('cron_expression'),
+    nextRunAt: timestamp('next_run_at'),
+    lastRanAt: timestamp('last_ran_at'),
+    triggerType: text('trigger_type').notNull(), // "manual", "webhook", "schedule"
+    timezone: text('timezone').notNull().default('UTC'),
+    failedCount: integer('failed_count').notNull().default(0), // Track consecutive failures
+    status: text('status').notNull().default('active'), // 'active' or 'disabled'
+    lastFailedAt: timestamp('last_failed_at'), // When the schedule last failed
+    createdAt: timestamp('created_at').notNull().defaultNow(),
+    updatedAt: timestamp('updated_at').notNull().defaultNow(),
+  },
+  (table) => {
+    return {
+      workflowBlockUnique: uniqueIndex('workflow_schedule_workflow_block_unique').on(
+        table.workflowId,
+        table.blockId
+      ),
+    }
+  }
+)
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:52:10.041669
+
+```text
+Okay, let me break down this workflow_schedule table. First, the primary key is id, so each schedule has a unique identifier. The workflowId references the workflow table, meaning each schedule is linked to a specific workflow. If the workflow is deleted, the schedule is too because of onDelete: cascade. The blockId references workflowBlocks, suggesting schedules might be tied to specific blocks within a workflow. The cronExpression and timezone fields indicate scheduled runs, like setting up a recurring task.
+
+NextRunAt and lastRanAt track when the schedule should run next and when it last ran. TriggerType can be manual, webhook, or schedule, showing how the workflow is initiated. FailedCount and lastFailedAt monitor issues, while status shows if the schedule is active or disabled. The unique index on workflowId and blockId ensures each block in a workflow has only one schedule.
+
+For a non-technical explanation: This table manages when and how workflows run automatically. Each schedule is linked to a workflow and a specific part (block) within it. It handles recurring runs based on cron expressions, tracks failures, and allows enabling/disabling schedules. If the workflow or block is deleted, the schedule is removed. The unique constraint prevents duplicate schedules for the same workflow block.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const webhook = pgTable(
+  'webhook',
+  {
+    id: text('id').primaryKey(),
+    workflowId: text('workflow_id')
+      .notNull()
+      .references(() => workflow.id, { onDelete: 'cascade' }),
+    blockId: text('block_id').references(() => workflowBlocks.id, { onDelete: 'cascade' }), // ID of the webhook trigger block (nullable for legacy starter block webhooks)
+    path: text('path').notNull(),
+    provider: text('provider'), // e.g., "whatsapp", "github", etc.
+    providerConfig: json('provider_config'), // Store provider-specific configuration
+    isActive: boolean('is_active').notNull().default(true),
+    createdAt: timestamp('created_at').notNull().defaultNow(),
+    updatedAt: timestamp('updated_at').notNull().defaultNow(),
+  },
+  (table) => {
+    return {
+      // Ensure webhook paths are unique
+      pathIdx: uniqueIndex('path_idx').on(table.path),
+    }
+  }
+)
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:52:16.499964
+
+```text
+Okay, let's take a look at this webhook table. First, I need to understand each field and how they relate to other tables. The id is the primary key, so each webhook has a unique identifier. The workflowId references the workflow table, meaning each webhook is linked to a specific workflow. If the workflow is deleted, the webhook is too because of onDelete: cascade. The blockId references workflowBlocks, so a webhook might be associated with a specific block in the workflow. 
+
+The path field is the URL endpoint for the webhook, which must be unique. Provider and providerConfig suggest integration with external services like WhatsApp or GitHub. isActive indicates if the webhook is enabled. Created and updated timestamps track when it was made and last modified.
+
+The unique index on path ensures no two webhooks have the same URL. Links to workflow and workflowBlocks tables show that webhooks are tied to workflows and possibly specific blocks. Explaining this non-technically: Webhooks are like doorbells for workflows; when someone presses (sends a request) the doorbell (webhook path), the workflow starts. Each doorbell is linked to a workflow and possibly a specific part (block) of it. If the workflow is deleted, the doorbell is removed too. The unique path ensures each doorbell has a distinct address.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const workflowLogWebhook = pgTable(
+  'workflow_log_webhook',
+  {
+    id: text('id').primaryKey(),
+    workflowId: text('workflow_id')
+      .notNull()
+      .references(() => workflow.id, { onDelete: 'cascade' }),
+    url: text('url').notNull(),
+    secret: text('secret'),
+    includeFinalOutput: boolean('include_final_output').notNull().default(false),
+    includeTraceSpans: boolean('include_trace_spans').notNull().default(false),
+    includeRateLimits: boolean('include_rate_limits').notNull().default(false),
+    includeUsageData: boolean('include_usage_data').notNull().default(false),
+    levelFilter: text('level_filter')
+      .array()
+      .notNull()
+      .default(sql`ARRAY['info', 'error']::text[]`),
+    triggerFilter: text('trigger_filter')
+      .array()
+      .notNull()
+      .default(sql`ARRAY['api', 'webhook', 'schedule', 'manual', 'chat']::text[]`),
+    active: boolean('active').notNull().default(true),
+    createdAt: timestamp('created_at').notNull().defaultNow(),
+    updatedAt: timestamp('updated_at').notNull().defaultNow(),
+  },
+  (table) => ({
+    workflowIdIdx: index('workflow_log_webhook_workflow_id_idx').on(table.workflowId),
+    activeIdx: index('workflow_log_webhook_active_idx').on(table.active),
+  })
+)
+
+export const webhookDeliveryStatusEnum = pgEnum('webhook_delivery_status', [
+  'pending',
+  'in_progress',
+  'success',
+  'failed',
+])
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:52:22.735643
+
+```text
+Okay, let's dive into this table. The name is workflow_log_webhook, so it's probably about sending workflow logs to external systems via webhooks. Let's look at each field.
+
+The id is the primary key, so each entry is unique. workflowId references the workflow table, linking each webhook log to a specific workflow. If the workflow is deleted, these entries go too because of onDelete: cascade. 
+
+The url is where the logs are sent. Secret might be for security, like a password. The include... fields (includeFinalOutput, includeTraceSpans, etc.) determine what data gets sent. LevelFilter and triggerFilter are arrays that specify which log levels (info, error) and triggers (api, webhook, etc.) to include. Active indicates if the webhook is enabled. Created and updated timestamps track when it was made and modified.
+
+The indexes on workflowId and active help quickly find active webhooks for a workflow. The webhook_delivery_status enum lists possible statuses: pending, in_progress, success, failed. This might be used in another table to track delivery attempts.
+
+For a non-technical explanation: This table sets up automated notifications (webhooks) to send workflow activity reports to a specified URL. You can choose what details to include, filter by event type and severity, and enable/disable notifications. Linked to workflows, so deleting a workflow removes its notifications.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const workflowLogWebhookDelivery = pgTable(
+  'workflow_log_webhook_delivery',
+  {
+    id: text('id').primaryKey(),
+    subscriptionId: text('subscription_id')
+      .notNull()
+      .references(() => workflowLogWebhook.id, { onDelete: 'cascade' }),
+    workflowId: text('workflow_id')
+      .notNull()
+      .references(() => workflow.id, { onDelete: 'cascade' }),
+    executionId: text('execution_id').notNull(),
+    status: webhookDeliveryStatusEnum('status').notNull().default('pending'),
+    attempts: integer('attempts').notNull().default(0),
+    lastAttemptAt: timestamp('last_attempt_at'),
+    nextAttemptAt: timestamp('next_attempt_at'),
+    responseStatus: integer('response_status'),
+    responseBody: text('response_body'),
+    errorMessage: text('error_message'),
+    createdAt: timestamp('created_at').notNull().defaultNow(),
+    updatedAt: timestamp('updated_at').notNull().defaultNow(),
+  },
+  (table) => ({
+    subscriptionIdIdx: index('workflow_log_webhook_delivery_subscription_id_idx').on(
+      table.subscriptionId
+    ),
+    executionIdIdx: index('workflow_log_webhook_delivery_execution_id_idx').on(table.executionId),
+    statusIdx: index('workflow_log_webhook_delivery_status_idx').on(table.status),
+    nextAttemptIdx: index('workflow_log_webhook_delivery_next_attempt_idx').on(table.nextAttemptAt),
+  })
+)
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:52:32.473113
+
+```text
+Okay, let's tackle this table step by step. First, I need to understand what it's for. The table is called "workflow_log_webhook_delivery", which suggests it's related to tracking the delivery of logs from workflows via webhooks. 
+
+Starting with the fields:
+
+- **id**: Primary key, so each entry is unique.
+- **subscriptionId**: References the workflowLogWebhook.id. This means each delivery is linked to a specific webhook subscription. If the subscription is deleted, the delivery records are too (onDelete: 'cascade').
+- **workflowId**: References the workflow.id. So, each delivery is tied to a workflow. Deleting the workflow removes these entries.
+- **executionId**: Likely links to a specific workflow run, maybe from workflowExecutionLogs.
+- **status**: Uses an enum (pending, in_progress, success, failed). Shows the delivery state.
+- **attempts**: Number of tries made to deliver the webhook.
+- **lastAttemptAt**: Timestamp of the last try.
+- **nextAttemptAt**: When the next try will be, useful for retries.
+- **responseStatus**: HTTP status code from the webhook receiver.
+- **responseBody**: What the receiver sent back.
+- **errorMessage**: Details if there was a failure.
+- **createdAt** and **updatedAt**: Track when the entry was made and last updated.
+
+Indexes are on subscriptionId, executionId, status, and nextAttemptAt. These help quickly find deliveries by subscription, execution, status, or scheduled retry time.
+
+Now, linking to other tables:
+
+1. **workflowLogWebhook**: Through subscriptionId. Each delivery is part of a subscription setup in that table.
+2. **workflow**: Through workflowId. Shows which workflow the log is from.
+3. **workflowExecutionLogs**: Indirectly via executionId, assuming executionId references an execution log entry.
+
+For a non-technical explanation: This table tracks attempts to send workflow logs to external URLs (webhooks). Each entry records details like how many times it tried, the outcome, and any errors. It’s connected to the webhook subscription settings and the workflow itself, ensuring everything stays organized and automated.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const apiKey = pgTable(
+  'api_key',
+  {
+    id: text('id').primaryKey(),
+    userId: text('user_id')
+      .notNull()
+      .references(() => user.id, { onDelete: 'cascade' }),
+    workspaceId: text('workspace_id').references(() => workspace.id, { onDelete: 'cascade' }), // Only set for workspace keys
+    createdBy: text('created_by').references(() => user.id, { onDelete: 'set null' }), // Who created the workspace key
+    name: text('name').notNull(),
+    key: text('key').notNull().unique(),
+    type: text('type').notNull().default('personal'), // 'personal' or 'workspace'
+    lastUsed: timestamp('last_used'),
+    createdAt: timestamp('created_at').notNull().defaultNow(),
+    updatedAt: timestamp('updated_at').notNull().defaultNow(),
+    expiresAt: timestamp('expires_at'),
+  },
+  (table) => ({
+    // Ensure workspace keys have a workspace_id and personal keys don't
+    workspaceTypeCheck: check(
+      'workspace_type_check',
+      sql`(type = 'workspace' AND workspace_id IS NOT NULL) OR (type = 'personal' AND workspace_id IS NULL)`
+    ),
+  })
+)
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:52:40.143332
+
+```text
+Okay, let's look at this `api_key` table. The first thing I notice is that each API key has an `id` as the primary key, making each key unique. The `userId` references the `user` table, so every API key is linked to a specific user. If a user is deleted, their API keys are automatically removed because of `onDelete: 'cascade'`.
+
+There's also a `workspaceId` field that references the `workspace` table. This is only set for keys of type 'workspace', meaning those keys are tied to a team or project rather than an individual user. The `createdBy` field references another user, indicating who created the workspace key. If that user is deleted, `onDelete: 'set null'` means the `createdBy` field will just be set to null instead of deleting the key.
+
+The `name` and `key` fields store the API key's name and the actual key value, which must be unique. The `type` field distinguishes between 'personal' and 'workspace' keys. The check constraint `workspaceTypeCheck` ensures that workspace keys have a `workspaceId` and personal keys do not, maintaining data integrity.
+
+Other fields like `lastUsed`, `createdAt`, `updatedAt`, and `expiresAt` track usage and validity. Indexes aren't explicitly mentioned here, but the unique constraint on `key` and the check constraint help manage data consistency.
+
+For a non-technical explanation: This table manages API keys used to access services. Each key is either personal (linked to a user) or for a workspace (linked to a team). Personal keys are removed if the user leaves, while workspace keys stay unless the workspace is deleted. The system ensures workspace keys are correctly assigned to teams and personal keys aren't. Usage dates help track activity and security.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const marketplace = pgTable('marketplace', {
+  id: text('id').primaryKey(),
+  workflowId: text('workflow_id')
+    .notNull()
+    .references(() => workflow.id, { onDelete: 'cascade' }),
+  state: json('state').notNull(),
+  name: text('name').notNull(),
+  description: text('description'),
+  authorId: text('author_id')
+    .notNull()
+    .references(() => user.id),
+  authorName: text('author_name').notNull(),
+  views: integer('views').notNull().default(0),
+  category: text('category'),
+  createdAt: timestamp('created_at').notNull().defaultNow(),
+  updatedAt: timestamp('updated_at').notNull().defaultNow(),
+})
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:52:46.900122
+
+```text
+Okay, let's look at this marketplace table. The main fields here are id, workflowId, state, name, description, authorId, authorName, views, category, and timestamps. The id is the primary key, so each marketplace entry is unique.
+
+The workflowId references the workflow table, meaning each marketplace entry is linked to a specific workflow. If the workflow is deleted, the marketplace entry is also removed because of onDelete: cascade. The authorId references the user table, linking the entry to the user who created it. However, there's no onDelete here, so if the user is deleted, the authorId might become invalid unless there's a trigger handling it elsewhere.
+
+State stores JSON data, probably the workflow's configuration or current state. Name and description are for display purposes. AuthorName is stored directly here, which might be a denormalization to avoid joins when displaying the author's name. Views track how many times the entry has been viewed. Category helps in organizing entries.
+
+Timestamps track creation and last update. There are no indexes mentioned, so queries might be slower without proper indexing on fields like category or authorId.
+
+For a non-technical person: This table is like a catalog where users can publish their workflows. Each entry is tied to a workflow and its creator. If the workflow is removed, its listing disappears. Views count how popular it is, and categories help in browsing. The author's name is shown directly, and the state holds the workflow's setup data.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const userStats = pgTable('user_stats', {
+  id: text('id').primaryKey(),
+  userId: text('user_id')
+    .notNull()
+    .references(() => user.id, { onDelete: 'cascade' })
+    .unique(), // One record per user
+  totalManualExecutions: integer('total_manual_executions').notNull().default(0),
+  totalApiCalls: integer('total_api_calls').notNull().default(0),
+  totalWebhookTriggers: integer('total_webhook_triggers').notNull().default(0),
+  totalScheduledExecutions: integer('total_scheduled_executions').notNull().default(0),
+  totalChatExecutions: integer('total_chat_executions').notNull().default(0),
+  totalTokensUsed: integer('total_tokens_used').notNull().default(0),
+  totalCost: decimal('total_cost').notNull().default('0'),
+  currentUsageLimit: decimal('current_usage_limit').default(DEFAULT_FREE_CREDITS.toString()), // Default $10 for free plan, null for team/enterprise
+  usageLimitUpdatedAt: timestamp('usage_limit_updated_at').defaultNow(),
+  // Billing period tracking
+  currentPeriodCost: decimal('current_period_cost').notNull().default('0'), // Usage in current billing period
+  lastPeriodCost: decimal('last_period_cost').default('0'), // Usage from previous billing period
+  billedOverageThisPeriod: decimal('billed_overage_this_period').notNull().default('0'), // Amount of overage already billed via threshold billing
+  // Pro usage snapshot when joining a team (to prevent double-billing)
+  proPeriodCostSnapshot: decimal('pro_period_cost_snapshot').default('0'), // Snapshot of Pro usage when joining team
+  // Copilot usage tracking
+  totalCopilotCost: decimal('total_copilot_cost').notNull().default('0'),
+  totalCopilotTokens: integer('total_copilot_tokens').notNull().default(0),
+  totalCopilotCalls: integer('total_copilot_calls').notNull().default(0),
+  lastActive: timestamp('last_active').notNull().defaultNow(),
+  billingBlocked: boolean('billing_blocked').notNull().default(false),
+})
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:52:55.102383
+
+```text
+Okay, let's dive into this user_stats table. The primary key is id, so each entry is unique. The userId references the user table and is unique, meaning each user has exactly one stats record. If a user is deleted, their stats are too because of onDelete: cascade.
+
+The fields track various user activities like manual executions, API calls, webhook triggers, etc. These are all counters that increment each time the user performs those actions. Cost-related fields track monetary usage, with defaults set to zero. Usage limits and billing periods help manage subscription tiers, storing current and previous period costs. Copilot-specific metrics track AI-related usage. LastActive shows when the user was last active, and billingBlocked flags if billing is restricted.
+
+For non-technical users: This table is like a user's activity and billing report. It tracks how much they use different features, calculates costs, and manages billing cycles. Linked to their user account, so deleting the account removes the stats. Helps in monitoring usage against limits and billing accordingly.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const customTools = pgTable('custom_tools', {
+  id: text('id').primaryKey(),
+  userId: text('user_id')
+    .notNull()
+    .references(() => user.id, { onDelete: 'cascade' }),
+  title: text('title').notNull(),
+  schema: json('schema').notNull(),
+  code: text('code').notNull(),
+  createdAt: timestamp('created_at').notNull().defaultNow(),
+  updatedAt: timestamp('updated_at').notNull().defaultNow(),
+})
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:53:02.262191
+
+```text
+Okay, let's take a look at this Drizzle ORM table called "custom_tools". First, I need to understand each part of it and then explain it in a way that's easy for someone without a technical background to grasp.
+
+Starting with the fields:
+
+- **id**: This is the primary key, meaning each tool has a unique identifier. Like a serial number for a product.
+- **userId**: This references the user table's id. So each tool is linked to a specific user. If the user is deleted, their tools are also removed (onDelete: 'cascade').
+- **title**: The name of the tool. Simple enough.
+- **schema**: This is a JSON field, so it stores structured data defining the tool's configuration or parameters. Maybe it's like a blueprint.
+- **code**: The actual code that makes the tool work. This could be scripts or functions.
+- **createdAt** and **updatedAt**: Timestamps for when the tool was created and last updated.
+
+Now, how is this table linked to others? The **userId** field connects to the **user** table, establishing a relationship where each tool belongs to a user. There's no direct link to other tables like workflows or organizations here, but the schema or code might reference other components indirectly.
+
+For a non-technical explanation: This table is like a personal toolbox where each user can create and store their own tools. Each tool has a name, a blueprint (schema), and the actual code that runs it. The toolbox is tied to the user's account, so if the user leaves, their tools are removed. The timestamps help track when tools were added or modified.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const subscription = pgTable(
+  'subscription',
+  {
+    id: text('id').primaryKey(),
+    plan: text('plan').notNull(),
+    referenceId: text('reference_id').notNull(),
+    stripeCustomerId: text('stripe_customer_id'),
+    stripeSubscriptionId: text('stripe_subscription_id'),
+    status: text('status'),
+    periodStart: timestamp('period_start'),
+    periodEnd: timestamp('period_end'),
+    cancelAtPeriodEnd: boolean('cancel_at_period_end'),
+    seats: integer('seats'),
+    trialStart: timestamp('trial_start'),
+    trialEnd: timestamp('trial_end'),
+    metadata: json('metadata'),
+  },
+  (table) => ({
+    referenceStatusIdx: index('subscription_reference_status_idx').on(
+      table.referenceId,
+      table.status
+    ),
+    enterpriseMetadataCheck: check(
+      'check_enterprise_metadata',
+      sql`plan != 'enterprise' OR metadata IS NOT NULL`
+    ),
+  })
+)
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:53:08.308290
+
+```text
+Okay, let's break down this "subscription" table. First, I need to understand each field and how they relate. The primary key is "id", so each subscription has a unique identifier. The "plan" field indicates the type of subscription, like basic or enterprise. "referenceId" might be an internal identifier for the subscription, perhaps linking to another system or user.
+
+The Stripe-related fields ("stripeCustomerId" and "stripeSubscriptionId") connect this table to Stripe's payment system. "status" shows if the subscription is active, canceled, etc. "periodStart" and "periodEnd" track the subscription's billing cycle. "cancelAtPeriodEnd" is a flag indicating if the subscription will end after the current period. "seats" could refer to the number of users allowed under the subscription. Trial periods are tracked with "trialStart" and "trialEnd". "metadata" stores additional JSON data, which might include custom settings or enterprise-specific info.
+
+The indexes: "referenceStatusIdx" helps quickly find subscriptions by their reference ID and status. The check constraint "enterpriseMetadataCheck" ensures that enterprise plans have metadata, which might be necessary for enterprise features.
+
+Linking to other tables: The "referenceId" could link to a user or organization table, but it's not explicitly a foreign key here. The Stripe IDs connect to Stripe's system externally. The check constraint ties the plan type to metadata presence.
+
+For a non-technical explanation: This table manages subscription details, including plan type, billing dates, and payment system links. It ensures enterprise subscriptions have necessary metadata. It's connected to payment systems like Stripe and possibly other internal user/organization data through reference IDs. The indexes help in quickly accessing subscription info based on status or reference IDs.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const userRateLimits = pgTable('user_rate_limits', {
+  referenceId: text('reference_id').primaryKey(), // Can be userId or organizationId for pooling
+  syncApiRequests: integer('sync_api_requests').notNull().default(0), // Sync API requests counter
+  asyncApiRequests: integer('async_api_requests').notNull().default(0), // Async API requests counter
+  apiEndpointRequests: integer('api_endpoint_requests').notNull().default(0), // External API endpoint requests counter
+  windowStart: timestamp('window_start').notNull().defaultNow(),
+  lastRequestAt: timestamp('last_request_at').notNull().defaultNow(),
+  isRateLimited: boolean('is_rate_limited').notNull().default(false),
+  rateLimitResetAt: timestamp('rate_limit_reset_at'),
+})
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:53:16.299560
+
+```text
+Okay, I need to analyze this Drizzle ORM table called user_rate_limits. Let's start by looking at each field and understanding what it does. The primary key is reference_id, which can be either a user ID or an organization ID. That suggests this table is used to track rate limits for both individual users and entire organizations. 
+
+The next three fields are counters: sync_api_requests, async_api_requests, and api_endpoint_requests. These likely keep track of how many requests have been made, split by different types. The window_start and last_request_at timestamps probably define the time window for these counts, like resetting the counters after a certain period. 
+
+The is_rate_limited boolean indicates if the user or organization is currently being rate-limited, and rate_limit_reset_at tells when the rate limit will reset. 
+
+Now, how does this table link to others? The reference_id isn't a foreign key here, but since it can reference user.id or organization.id, there's an indirect relationship. Depending on the application logic, when a user or organization makes an API request, their reference_id is used to check and update these rate limits. 
+
+For a non-technical explanation, this table acts like a traffic light system for API usage. Each user or organization has a counter that tracks how many requests they make. If they hit the limit, the system temporarily stops their requests (red light) until the reset time. The counts reset after a certain period, allowing requests again (green light). The link to users or organizations is through their unique IDs, ensuring each entity's usage is monitored separately.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const chat = pgTable(
+  'chat',
+  {
+    id: text('id').primaryKey(),
+    workflowId: text('workflow_id')
+      .notNull()
+      .references(() => workflow.id, { onDelete: 'cascade' }),
+    userId: text('user_id')
+      .notNull()
+      .references(() => user.id, { onDelete: 'cascade' }),
+    identifier: text('identifier').notNull(),
+    title: text('title').notNull(),
+    description: text('description'),
+    isActive: boolean('is_active').notNull().default(true),
+    customizations: json('customizations').default('{}'), // For UI customization options
+
+    // Authentication options
+    authType: text('auth_type').notNull().default('public'), // 'public', 'password', 'email'
+    password: text('password'), // Stored hashed, populated when authType is 'password'
+    allowedEmails: json('allowed_emails').default('[]'), // Array of allowed emails or domains when authType is 'email'
+
+    // Output configuration
+    outputConfigs: json('output_configs').default('[]'), // Array of {blockId, path} objects
+
+    createdAt: timestamp('created_at').notNull().defaultNow(),
+    updatedAt: timestamp('updated_at').notNull().defaultNow(),
+  },
+  (table) => {
+    return {
+      // Ensure identifiers are unique
+      identifierIdx: uniqueIndex('identifier_idx').on(table.identifier),
+    }
+  }
+)
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:53:25.001806
+
+```text
+Okay, let's break down this 'chat' table. The primary key is 'id', so each chat has a unique identifier. The 'workflowId' and 'userId' fields reference the workflow and user tables. This means each chat is linked to a specific workflow and user. If either the workflow or user is deleted, the chat is automatically removed due to 'onDelete: cascade'.
+
+The 'identifier' is a unique field, ensuring no two chats have the same identifier. The title and description give the chat a name and brief explanation. 'isActive' determines if the chat is currently usable. 'customizations' stores UI settings in JSON format, allowing personalized appearances.
+
+Authentication settings include 'authType' (public, password, email), 'password' (hashed), and 'allowedEmails' (list of permitted emails/domains). 'outputConfigs' defines where the chat's output goes, referencing blocks and paths in the workflow. Timestamps track creation and last update.
+
+The 'identifierIdx' ensures each identifier is unique, preventing duplicates. Links to workflow and user tables establish relationships, enabling features like user-specific chats or workflow-integrated conversations.
+
+For a non-technical explanation: This table manages chat sessions tied to workflows and users. Each chat has security settings, customization options, and output destinations. It's connected to workflows and users, ensuring data integrity when they're deleted.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const organization = pgTable('organization', {
+  id: text('id').primaryKey(),
+  name: text('name').notNull(),
+  slug: text('slug').notNull(),
+  logo: text('logo'),
+  metadata: json('metadata'),
+  orgUsageLimit: decimal('org_usage_limit'),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull(),
+})
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:53:33.086075
+
+```text
+Okay, let me try to figure out this Drizzle ORM table called 'organization'. First, I need to understand each part of the table and how it connects to other tables. 
+
+Starting with the fields:
+
+- **id**: This is the primary key, so each organization has a unique identifier. Like a serial number for a company.
+- **name**: The organization's name, which is required. Makes sense.
+- **slug**: A URL-friendly version of the name, probably used in web addresses. For example, "acme-corp" instead of "Acme Corporation".
+- **logo**: Stores the path or URL to the organization's logo image.
+- **metadata**: JSON field for extra information about the organization. This could be things like contact details, settings, or other custom data.
+- **orgUsageLimit**: A decimal number that might track usage limits, like API calls or storage. Could be related to billing or subscriptions.
+- **createdAt** and **updatedAt**: Timestamps for when the organization was created and last updated.
+
+Now, how is this table linked to others? The 'id' field here is likely referenced by other tables that need to associate data with an organization. For example, a 'user' table might have an 'organizationId' field linking users to their organization. Similarly, tables like 'workspace' or 'subscription' might reference this 'id' to tie resources to the organization. 
+
+Since there are no foreign keys defined here, the connections are made in other tables that point to this one. For instance, if another table has a field like 'organizationId' that references 'organization.id', that establishes a relationship.
+
+For a non-technical person: This table is like a digital profile for a company or group. It keeps track of the name, a web-friendly version of the name, logo, settings, usage limits, and timestamps. Other parts of the app, like user accounts or projects, link to this profile to know which company they belong to. If the company's profile is deleted, related data in other parts of the app might also be removed or updated based on how those links are set up.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const member = pgTable(
+  'member',
+  {
+    id: text('id').primaryKey(),
+    userId: text('user_id')
+      .notNull()
+      .references(() => user.id, { onDelete: 'cascade' }),
+    organizationId: text('organization_id')
+      .notNull()
+      .references(() => organization.id, { onDelete: 'cascade' }),
+    role: text('role').notNull(), // 'admin' or 'member' - team-level permissions only
+    createdAt: timestamp('created_at').defaultNow().notNull(),
+  },
+  (table) => ({
+    userIdIdx: index('member_user_id_idx').on(table.userId),
+    organizationIdIdx: index('member_organization_id_idx').on(table.organizationId),
+  })
+)
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:53:39.958900
+
+```text
+Okay, I need to analyze this Drizzle ORM table called 'member'. Let me start by looking at each part of the table definition.
+
+First, the primary key is 'id', so each member has a unique identifier. The 'userId' references the 'user' table's 'id' field. That means each member is linked to a specific user. The 'onDelete: cascade' part tells me that if a user is deleted, their corresponding member entry here will also be deleted automatically. Similarly, 'organizationId' references the 'organization' table's 'id', linking each member to an organization. Again, 'onDelete: cascade' means if the organization is deleted, all its members are removed too.
+
+The 'role' field indicates whether the member is an admin or a regular member. This probably controls their permissions within the organization. The 'createdAt' timestamp records when the member was added.
+
+There are two indexes: one on 'userId' and another on 'organizationId'. These indexes help speed up database queries when searching for members by user or organization.
+
+Now, linking to other tables: This 'member' table acts as a bridge between 'user' and 'organization'. It's a classic many-to-many relationship where users can belong to multiple organizations and organizations can have multiple users. Each row in 'member' connects a user to an organization with a specific role.
+
+For a non-technical explanation: This table keeps track of which users are part of which organizations and what their roles are (like admin or member). If a user leaves or an organization is dissolved, their connections here are automatically cleaned up. The indexes help quickly find all members of an organization or all organizations a user belongs to.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const invitation = pgTable(
+  'invitation',
+  {
+    id: text('id').primaryKey(),
+    email: text('email').notNull(),
+    inviterId: text('inviter_id')
+      .notNull()
+      .references(() => user.id, { onDelete: 'cascade' }),
+    organizationId: text('organization_id')
+      .notNull()
+      .references(() => organization.id, { onDelete: 'cascade' }),
+    role: text('role').notNull(),
+    status: text('status').notNull(),
+    expiresAt: timestamp('expires_at').notNull(),
+    createdAt: timestamp('created_at').defaultNow().notNull(),
+  },
+  (table) => ({
+    emailIdx: index('invitation_email_idx').on(table.email),
+    organizationIdIdx: index('invitation_organization_id_idx').on(table.organizationId),
+  })
+)
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:53:51.827673
+
+```text
+Okay, let's tackle this invitation table. First, I need to understand each field and how they relate to other parts of the system. The id is the primary key, so each invitation is unique. The email field is the recipient's email address, which is required. The inviterId references the user table, meaning the person who sent the invitation. If that user is deleted, the invitation is too because of onDelete: cascade.
+
+The organizationId links to the organization table, so each invitation is for a specific group. If the organization is deleted, the invitation goes away. The role determines what permissions the invited user will have, like admin or member. The status could be pending, accepted, or expired. The expiresAt field sets when the invitation is no longer valid. CreatedAt tracks when the invitation was sent.
+
+The indexes on email and organizationId help quickly find invitations by those fields. This is useful for checking if an email already has an invite or listing all invites for an organization.
+
+For a non-technical person: This table manages invites to join organizations. Each invite has details like who sent it, which organization it's for, the role offered, and an expiration date. If the sender or organization is removed, the invite is automatically canceled. The indexes help quickly find invites by email or organization.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const workspace = pgTable('workspace', {
+  id: text('id').primaryKey(),
+  name: text('name').notNull(),
+  ownerId: text('owner_id')
+    .notNull()
+    .references(() => user.id, { onDelete: 'cascade' }),
+  createdAt: timestamp('created_at').notNull().defaultNow(),
+  updatedAt: timestamp('updated_at').notNull().defaultNow(),
+})
+
+export const permissionTypeEnum = pgEnum('permission_type', ['admin', 'write', 'read'])
+
+export const workspaceInvitationStatusEnum = pgEnum('workspace_invitation_status', [
+  'pending',
+  'accepted',
+  'rejected',
+  'cancelled',
+])
+
+export type WorkspaceInvitationStatus = (typeof workspaceInvitationStatusEnum.enumValues)[number]
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:54:01.565615
+
+```text
+Okay, let's start by looking at the `workspace` table. The primary key is `id`, so each workspace has a unique identifier. The `name` is straightforward—it's the workspace's name. The `ownerId` references the `user` table, meaning each workspace is owned by a specific user. If the user is deleted, the workspace is also removed because of `onDelete: 'cascade'`. The `createdAt` and `updatedAt` timestamps track when the workspace was created and last updated.
+
+Next, there's an enum `permissionTypeEnum` with values 'admin', 'write', and 'read'. This likely defines the access levels users can have within a workspace. Another enum, `workspaceInvitationStatusEnum`, lists possible invitation statuses: 'pending', 'accepted', 'rejected', 'cancelled'. These enums are used in other tables to manage permissions and invitations but aren't part of the `workspace` table itself.
+
+To link this table to others, the `ownerId` connects workspaces to users. Other tables like `workspace_members` or `workspace_invitations` would reference `workspace.id` to associate users and invitations with specific workspaces. The enums ensure consistent status and permission values across related tables.
+
+For a non-technical explanation: The workspace table is like a digital space where a user (owner) organizes projects. Each workspace has a name and tracks creation/update times. Permissions (admin, write, read) control what users can do, and invitations can be pending, accepted, etc. Deleting the owner removes the workspace. Enums standardize status and permission options.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const workspaceInvitation = pgTable('workspace_invitation', {
+  id: text('id').primaryKey(),
+  workspaceId: text('workspace_id')
+    .notNull()
+    .references(() => workspace.id, { onDelete: 'cascade' }),
+  email: text('email').notNull(),
+  inviterId: text('inviter_id')
+    .notNull()
+    .references(() => user.id, { onDelete: 'cascade' }),
+  role: text('role').notNull().default('member'),
+  status: workspaceInvitationStatusEnum('status').notNull().default('pending'),
+  token: text('token').notNull().unique(),
+  permissions: permissionTypeEnum('permissions').notNull().default('admin'),
+  orgInvitationId: text('org_invitation_id'),
+  expiresAt: timestamp('expires_at').notNull(),
+  createdAt: timestamp('created_at').notNull().defaultNow(),
+  updatedAt: timestamp('updated_at').notNull().defaultNow(),
+})
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:54:12.198293
+
+```text
+Okay, let's break down this workspace_invitation table. First, I need to look at each field and understand its purpose. The primary key is 'id', so each invitation has a unique identifier. The 'workspaceId' references the workspace table, meaning each invitation is linked to a specific workspace. If the workspace is deleted, the invitation is automatically removed due to 'onDelete: cascade'.
+
+The 'email' field is the recipient's email address. The 'inviterId' references the user table, indicating who sent the invitation. If the inviter is deleted, the invitation is also removed. The 'role' and 'permissions' fields define the access level the invitee will have, with defaults set to 'member' and 'admin' respectively. Wait, that seems conflicting—maybe 'role' is a broader category and 'permissions' is more specific.
+
+The 'status' uses an enum (pending, accepted, etc.) to track the invitation's current state. The 'token' is a unique string, probably used in the invitation link for security. 'orgInvitationId' might link to an organization-level invitation, but it's not a foreign key here. 'expiresAt' sets when the invitation becomes invalid. Timestamps track creation and updates.
+
+For linking to other tables: workspaceInvitation connects to workspace via workspaceId, and to user via inviterId. The enums (permissionTypeEnum and workspaceInvitationStatusEnum) ensure consistent values across the system. The 'orgInvitationId' could link to an organization invitation table, but that's not shown here.
+
+Non-technical explanation: This table manages invitations to join workspaces. Each invite includes the workspace, inviter, recipient's email, access level, and expiration. Statuses track if it's pending or accepted. Tokens secure the invite process. Links to workspace and user ensure data integrity when those are deleted.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const permissions = pgTable(
+  'permissions',
+  {
+    id: text('id').primaryKey(),
+    userId: text('user_id')
+      .notNull()
+      .references(() => user.id, { onDelete: 'cascade' }),
+    entityType: text('entity_type').notNull(), // 'workspace', 'workflow', 'organization', etc.
+    entityId: text('entity_id').notNull(), // ID of the workspace, workflow, etc.
+    permissionType: permissionTypeEnum('permission_type').notNull(), // Use enum instead of text
+    createdAt: timestamp('created_at').notNull().defaultNow(),
+    updatedAt: timestamp('updated_at').notNull().defaultNow(),
+  },
+  (table) => ({
+    // Primary access pattern - get all permissions for a user
+    userIdIdx: index('permissions_user_id_idx').on(table.userId),
+
+    // Entity-based queries - get all users with permissions on an entity
+    entityIdx: index('permissions_entity_idx').on(table.entityType, table.entityId),
+
+    // User + entity type queries - get user's permissions for all workspaces
+    userEntityTypeIdx: index('permissions_user_entity_type_idx').on(table.userId, table.entityType),
+
+    // Specific permission checks - does user have specific permission on entity
+    userEntityPermissionIdx: index('permissions_user_entity_permission_idx').on(
+      table.userId,
+      table.entityType,
+      table.permissionType
+    ),
+
+    // User + specific entity queries - get user's permissions for specific entity
+    userEntityIdx: index('permissions_user_entity_idx').on(
+      table.userId,
+      table.entityType,
+      table.entityId
+    ),
+
+    // Uniqueness constraint - prevent duplicate permission rows (one permission per user/entity)
+    uniquePermissionConstraint: uniqueIndex('permissions_unique_constraint').on(
+      table.userId,
+      table.entityType,
+      table.entityId
+    ),
+  })
+)
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:54:19.058124
+
+```text
+Okay, let's tackle this permissions table. First, I need to understand each field and how they relate to each other and other tables. The primary key is 'id', so each permission entry is unique. The 'userId' references the user table, linking each permission to a specific user. If the user is deleted, their permissions are also removed because of 'onDelete: cascade'.
+
+The 'entityType' and 'entityId' fields define what the permission applies to. For example, entityType could be 'workspace' and entityId would be the specific workspace's ID. 'permissionType' uses an enum (admin, write, read) to specify the access level. Timestamps track when the permission was created and last updated.
+
+The indexes are crucial here. They optimize queries like fetching all permissions for a user, checking permissions on a specific entity, or ensuring no duplicate permissions exist. The unique constraint ensures a user can't have multiple permissions for the same entity, preventing duplicates.
+
+Linking to other tables: The 'userId' connects to the user table. 'entityId' and 'entityType' together reference other tables like workspace, workflow, or organization based on the entityType. For example, if entityType is 'workspace', entityId would be a workspace ID.
+
+For a non-technical explanation: This table manages user access rights. Each entry specifies what a user can do (read, write, admin) with a specific resource (like a workspace or workflow). It ensures users don't have duplicate permissions and allows quick checks of their access levels. If a user is removed, their access rights are automatically revoked.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const memory = pgTable(
+  'memory',
+  {
+    id: text('id').primaryKey(),
+    workflowId: text('workflow_id').references(() => workflow.id, { onDelete: 'cascade' }),
+    key: text('key').notNull(), // Identifier for the memory within its context
+    type: text('type').notNull(), // 'agent' or 'raw'
+    data: json('data').notNull(), // Stores either agent message data or raw data
+    createdAt: timestamp('created_at').notNull().defaultNow(),
+    updatedAt: timestamp('updated_at').notNull().defaultNow(),
+    deletedAt: timestamp('deleted_at'),
+  },
+  (table) => {
+    return {
+      // Add index on key for faster lookups
+      keyIdx: index('memory_key_idx').on(table.key),
+
+      // Add index on workflowId for faster filtering
+      workflowIdx: index('memory_workflow_idx').on(table.workflowId),
+
+      // Compound unique index to ensure keys are unique per workflow
+      uniqueKeyPerWorkflowIdx: uniqueIndex('memory_workflow_key_idx').on(
+        table.workflowId,
+        table.key
+      ),
+    }
+  }
+)
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:54:27.573530
+
+```text
+Okay, let's take a look at this "memory" table. First, I need to understand each part of it and how it connects to other parts of the database. 
+
+Starting with the fields:
+
+- **id**: This is the primary key, so every entry in the table has a unique identifier here. Like a serial number for each memory.
+- **workflowId**: This references the workflow table. That means each memory is linked to a specific workflow. If the workflow gets deleted, the memory entries linked to it will also be removed because of `onDelete: 'cascade'`.
+- **key**: A unique identifier for the memory within the workflow. It's like a label or tag that helps find the memory quickly.
+- **type**: Specifies if the memory is for an 'agent' or 'raw' data. This tells us what kind of information is stored.
+- **data**: Stores the actual content of the memory in JSON format. This could be messages from an agent or any raw data.
+- **createdAt** and **updatedAt**: Track when the memory was created and last updated.
+- **deletedAt**: Marks when a memory was deleted, allowing for soft deletes (keeping the record but marking it as deleted).
+
+Now, the indexes:
+
+- **keyIdx**: Makes looking up memories by their key faster.
+- **workflowIdx**: Speeds up queries that filter memories by their associated workflow.
+- **uniqueKeyPerWorkflowIdx**: Ensures that each key is unique within a workflow. This prevents duplicate keys in the same workflow.
+
+Linking to other tables: The main connection is through `workflowId`, which ties each memory to a workflow. This means if you delete a workflow, all related memories are automatically deleted. There's no direct link to other tables like users or agents here, but `type` might imply relationships elsewhere in the application (like agent messages being linked to agent-related tables).
+
+For a non-technical explanation: This table acts like a storage box where workflows keep their important information. Each box (memory) has a unique label (key) and belongs to a specific workflow. The box can hold either agent messages or raw data. The system ensures labels aren't duplicated in the same workflow and can quickly find any box using the label or workflow. If a workflow is removed, its storage boxes are thrown away too.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const knowledgeBase = pgTable(
+  'knowledge_base',
+  {
+    id: text('id').primaryKey(),
+    userId: text('user_id')
+      .notNull()
+      .references(() => user.id, { onDelete: 'cascade' }),
+    workspaceId: text('workspace_id').references(() => workspace.id),
+    name: text('name').notNull(),
+    description: text('description'),
+
+    // Token tracking for usage
+    tokenCount: integer('token_count').notNull().default(0),
+
+    // Embedding configuration
+    embeddingModel: text('embedding_model').notNull().default('text-embedding-3-small'),
+    embeddingDimension: integer('embedding_dimension').notNull().default(1536),
+
+    // Chunking configuration stored as JSON for flexibility
+    chunkingConfig: json('chunking_config')
+      .notNull()
+      .default('{"maxSize": 1024, "minSize": 1, "overlap": 200}'),
+
+    // Soft delete support
+    deletedAt: timestamp('deleted_at'),
+
+    // Metadata and timestamps
+    createdAt: timestamp('created_at').notNull().defaultNow(),
+    updatedAt: timestamp('updated_at').notNull().defaultNow(),
+  },
+  (table) => ({
+    // Primary access patterns
+    userIdIdx: index('kb_user_id_idx').on(table.userId),
+    workspaceIdIdx: index('kb_workspace_id_idx').on(table.workspaceId),
+    // Composite index for user's workspaces
+    userWorkspaceIdx: index('kb_user_workspace_idx').on(table.userId, table.workspaceId),
+    // Index for soft delete filtering
+    deletedAtIdx: index('kb_deleted_at_idx').on(table.deletedAt),
+  })
+)
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:54:36.992358
+
+```text
+Okay, let me take a look at this Drizzle ORM table called "knowledge_base". The first thing I notice is that each entry has a unique 'id' as the primary key. The 'user_id' field references the user table, meaning every knowledge base is linked to a specific user. If a user gets deleted, their knowledge bases are also removed because of the 'onDelete: cascade' setting. 
+
+Then there's 'workspace_id' which references the workspace table. This suggests that a knowledge base can be associated with a workspace, but it's optional since the field isn't marked as 'notNull'. So, a knowledge base might belong to either a user or a workspace.
+
+The 'name' and 'description' fields are straightforward—they store the name and a brief description of the knowledge base. The 'token_count' keeps track of how many tokens are used, which might relate to usage limits or billing. 
+
+The 'embedding_model' and 'embedding_dimension' fields are technical. They probably define how text is converted into vectors for machine learning purposes, with defaults set for simplicity. The 'chunking_config' is a JSON field that stores settings for breaking down text into manageable parts, which is important for processing large documents.
+
+The 'deleted_at' field allows for soft deletes, meaning entries aren't immediately removed but marked as deleted. 'created_at' and 'updated_at' track when the knowledge base was created and last updated.
+
+Indexes like 'userIdIdx' and 'workspaceIdIdx' help speed up searches by user or workspace. The 'userWorkspaceIdx' composite index optimizes queries that involve both user and workspace. The 'deletedAtIdx' makes it efficient to filter out deleted entries.
+
+For linking to other tables, besides the explicit references to 'user' and 'workspace', there might be related tables for documents or embeddings that reference 'knowledge_base.id'. The 'chunking_config' and 'embedding_model' could relate to how data is processed and stored elsewhere in the system.
+
+In simple terms, this table is like a digital filing cabinet where users or teams (workspaces) can store and organize information. Each cabinet has settings for how information is processed and tracked. If a user leaves, their cabinets are removed, but workspace cabinets stay unless the workspace is deleted. The indexes act like a table of contents, making it quick to find specific cabinets based on user, workspace, or deletion status.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const document = pgTable(
+  'document',
+  {
+    id: text('id').primaryKey(),
+    knowledgeBaseId: text('knowledge_base_id')
+      .notNull()
+      .references(() => knowledgeBase.id, { onDelete: 'cascade' }),
+
+    // File information
+    filename: text('filename').notNull(),
+    fileUrl: text('file_url').notNull(),
+    fileSize: integer('file_size').notNull(), // Size in bytes
+    mimeType: text('mime_type').notNull(), // e.g., 'application/pdf', 'text/plain'
+
+    // Content statistics
+    chunkCount: integer('chunk_count').notNull().default(0),
+    tokenCount: integer('token_count').notNull().default(0),
+    characterCount: integer('character_count').notNull().default(0),
+
+    // Processing status
+    processingStatus: text('processing_status').notNull().default('pending'), // 'pending', 'processing', 'completed', 'failed'
+    processingStartedAt: timestamp('processing_started_at'),
+    processingCompletedAt: timestamp('processing_completed_at'),
+    processingError: text('processing_error'),
+
+    // Document state
+    enabled: boolean('enabled').notNull().default(true), // Enable/disable from knowledge base
+    deletedAt: timestamp('deleted_at'), // Soft delete
+
+    // Document tags for filtering (inherited by all chunks)
+    tag1: text('tag1'),
+    tag2: text('tag2'),
+    tag3: text('tag3'),
+    tag4: text('tag4'),
+    tag5: text('tag5'),
+    tag6: text('tag6'),
+    tag7: text('tag7'),
+
+    // Timestamps
+    uploadedAt: timestamp('uploaded_at').notNull().defaultNow(),
+  },
+  (table) => ({
+    // Primary access pattern - documents by knowledge base
+    knowledgeBaseIdIdx: index('doc_kb_id_idx').on(table.knowledgeBaseId),
+    // Search by filename (for search functionality)
+    filenameIdx: index('doc_filename_idx').on(table.filename),
+    // Order by upload date (for listing documents)
+    kbUploadedAtIdx: index('doc_kb_uploaded_at_idx').on(table.knowledgeBaseId, table.uploadedAt),
+    // Processing status filtering
+    processingStatusIdx: index('doc_processing_status_idx').on(
+      table.knowledgeBaseId,
+      table.processingStatus
+    ),
+    // Tag indexes for filtering
+    tag1Idx: index('doc_tag1_idx').on(table.tag1),
+    tag2Idx: index('doc_tag2_idx').on(table.tag2),
+    tag3Idx: index('doc_tag3_idx').on(table.tag3),
+    tag4Idx: index('doc_tag4_idx').on(table.tag4),
+    tag5Idx: index('doc_tag5_idx').on(table.tag5),
+    tag6Idx: index('doc_tag6_idx').on(table.tag6),
+    tag7Idx: index('doc_tag7_idx').on(table.tag7),
+  })
+)
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:54:45.794005
+
+```text
+Alright, let's tackle this Drizzle ORM table called 'document'. First, I need to understand what each field represents and how they relate to each other and other tables.
+
+Starting with the primary key 'id', each document has a unique identifier. The 'knowledgeBaseId' references the 'knowledgeBase' table's 'id' field. This means each document is linked to a specific knowledge base. The 'onDelete: cascade' part indicates that if a knowledge base is deleted, all its documents will also be removed automatically. This ensures data integrity.
+
+Next, there are fields related to the file itself: 'filename', 'fileUrl', 'fileSize', and 'mimeType'. These store the document's name, location, size, and type. The content statistics like 'chunkCount', 'tokenCount', and 'characterCount' track how the document is processed into smaller parts (chunks) and the associated metrics.
+
+The 'processingStatus' field shows the document's current state, whether it's pending, processing, completed, or failed. The timestamps 'processingStartedAt' and 'processingCompletedAt' track when processing begins and ends, while 'processingError' logs any issues encountered.
+
+The 'enabled' field acts as a toggle to include or exclude the document from the knowledge base. 'deletedAt' supports soft deletion, allowing documents to be marked as deleted without permanent removal. Tags (tag1 to tag7) provide categorization for filtering documents.
+
+Indexes are set up to optimize queries. For example, 'knowledgeBaseIdIdx' speeds up fetching documents by their knowledge base. Filename and processing status indexes improve search efficiency. Tag indexes facilitate quick filtering based on tags.
+
+For a non-technical explanation: This table manages documents within a knowledge base. Each document is linked to a knowledge base and includes details like file info, processing status, and tags. If the knowledge base is deleted, its documents are too. The indexes help quickly find and organize documents based on various criteria.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const knowledgeBaseTagDefinitions = pgTable(
+  'knowledge_base_tag_definitions',
+  {
+    id: text('id').primaryKey(),
+    knowledgeBaseId: text('knowledge_base_id')
+      .notNull()
+      .references(() => knowledgeBase.id, { onDelete: 'cascade' }),
+    tagSlot: text('tag_slot', {
+      enum: TAG_SLOTS,
+    }).notNull(),
+    displayName: text('display_name').notNull(),
+    fieldType: text('field_type').notNull().default('text'), // 'text', future: 'date', 'number', 'range'
+    createdAt: timestamp('created_at').notNull().defaultNow(),
+    updatedAt: timestamp('updated_at').notNull().defaultNow(),
+  },
+  (table) => ({
+    // Ensure unique tag slot per knowledge base
+    kbTagSlotIdx: uniqueIndex('kb_tag_definitions_kb_slot_idx').on(
+      table.knowledgeBaseId,
+      table.tagSlot
+    ),
+    // Ensure unique display name per knowledge base
+    kbDisplayNameIdx: uniqueIndex('kb_tag_definitions_kb_display_name_idx').on(
+      table.knowledgeBaseId,
+      table.displayName
+    ),
+    // Index for querying by knowledge base
+    kbIdIdx: index('kb_tag_definitions_kb_id_idx').on(table.knowledgeBaseId),
+  })
+)
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:54:53.379890
+
+```text
+Okay, let's break down this Drizzle ORM table called "knowledge_base_tag_definitions". 
+
+First, the primary key is "id", so each tag definition has a unique identifier. The "knowledgeBaseId" references the "knowledgeBase" table, meaning each tag is linked to a specific knowledge base. If the knowledge base is deleted, all its tag definitions are removed too because of "onDelete: cascade".
+
+The "tagSlot" uses an enum (probably like tag1, tag2, etc.) to identify which slot this tag occupies. Each slot must be unique per knowledge base. "displayName" is the user-friendly name for the tag, which must also be unique within the knowledge base. "fieldType" determines the type of data the tag holds, like text, date, etc., with a default of text.
+
+The indexes ensure that each tag slot and display name is unique within a knowledge base, preventing duplicates. They also speed up queries when searching tags by knowledge base.
+
+For a non-technical person: This table manages custom tags for organizing documents in a knowledge base. Each tag has a slot (position), name, and data type. Tags are tied to their knowledge base and can't have duplicate names or slots. Deleting a knowledge base removes all its tags.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const embedding = pgTable(
+  'embedding',
+  {
+    id: text('id').primaryKey(),
+    knowledgeBaseId: text('knowledge_base_id')
+      .notNull()
+      .references(() => knowledgeBase.id, { onDelete: 'cascade' }),
+    documentId: text('document_id')
+      .notNull()
+      .references(() => document.id, { onDelete: 'cascade' }),
+
+    // Chunk information
+    chunkIndex: integer('chunk_index').notNull(),
+    chunkHash: text('chunk_hash').notNull(),
+    content: text('content').notNull(),
+    contentLength: integer('content_length').notNull(),
+    tokenCount: integer('token_count').notNull(),
+
+    // Vector embeddings - optimized for text-embedding-3-small with HNSW support
+    embedding: vector('embedding', { dimensions: 1536 }), // For text-embedding-3-small
+    embeddingModel: text('embedding_model').notNull().default('text-embedding-3-small'),
+
+    // Chunk boundaries and overlap
+    startOffset: integer('start_offset').notNull(),
+    endOffset: integer('end_offset').notNull(),
+
+    // Tag columns inherited from document for efficient filtering
+    tag1: text('tag1'),
+    tag2: text('tag2'),
+    tag3: text('tag3'),
+    tag4: text('tag4'),
+    tag5: text('tag5'),
+    tag6: text('tag6'),
+    tag7: text('tag7'),
+
+    // Chunk state - enable/disable from knowledge base
+    enabled: boolean('enabled').notNull().default(true),
+
+    // Full-text search support - generated tsvector column
+    contentTsv: tsvector('content_tsv').generatedAlwaysAs(
+      (): SQL => sql`to_tsvector('english', ${embedding.content})`
+    ),
+
+    // Timestamps
+    createdAt: timestamp('created_at').notNull().defaultNow(),
+    updatedAt: timestamp('updated_at').notNull().defaultNow(),
+  },
+  (table) => ({
+    // Primary vector search pattern
+    kbIdIdx: index('emb_kb_id_idx').on(table.knowledgeBaseId),
+
+    // Document-level access
+    docIdIdx: index('emb_doc_id_idx').on(table.documentId),
+
+    // Chunk ordering within documents
+    docChunkIdx: uniqueIndex('emb_doc_chunk_idx').on(table.documentId, table.chunkIndex),
+
+    // Model-specific queries for A/B testing or migrations
+    kbModelIdx: index('emb_kb_model_idx').on(table.knowledgeBaseId, table.embeddingModel),
+
+    // Enabled state filtering indexes (for chunk enable/disable functionality)
+    kbEnabledIdx: index('emb_kb_enabled_idx').on(table.knowledgeBaseId, table.enabled),
+    docEnabledIdx: index('emb_doc_enabled_idx').on(table.documentId, table.enabled),
+
+    // Vector similarity search indexes (HNSW) - optimized for small embeddings
+    embeddingVectorHnswIdx: index('embedding_vector_hnsw_idx')
+      .using('hnsw', table.embedding.op('vector_cosine_ops'))
+      .with({
+        m: 16,
+        ef_construction: 64,
+      }),
+
+    // Tag indexes for efficient filtering
+    tag1Idx: index('emb_tag1_idx').on(table.tag1),
+    tag2Idx: index('emb_tag2_idx').on(table.tag2),
+    tag3Idx: index('emb_tag3_idx').on(table.tag3),
+    tag4Idx: index('emb_tag4_idx').on(table.tag4),
+    tag5Idx: index('emb_tag5_idx').on(table.tag5),
+    tag6Idx: index('emb_tag6_idx').on(table.tag6),
+    tag7Idx: index('emb_tag7_idx').on(table.tag7),
+
+    // Full-text search index
+    contentFtsIdx: index('emb_content_fts_idx').using('gin', table.contentTsv),
+
+    // Ensure embedding exists (simplified since we only support one model)
+    embeddingNotNullCheck: check('embedding_not_null_check', sql`"embedding" IS NOT NULL`),
+  })
+)
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:55:05.769409
+
+```text
+Okay, let's tackle this table step by step. First, I need to understand what each part does and how they connect. The table is called "embedding," which probably deals with converting text into vectors for machine learning purposes. Let's break down the fields:
+
+1. **Primary Keys and References**:
+   - `id` is the unique identifier for each embedding.
+   - `knowledgeBaseId` references the `knowledgeBase` table. This means each embedding is linked to a specific knowledge base. If the knowledge base is deleted, the embedding is too (`onDelete: 'cascade'`).
+   - `documentId` references the `document` table. So, embeddings are tied to specific documents. If a document is deleted, its embeddings go away.
+
+2. **Chunk Information**:
+   - `chunkIndex`, `chunkHash`, `content`, `contentLength`, `tokenCount` track individual text chunks. This suggests documents are split into parts (chunks) for processing.
+
+3. **Embedding Details**:
+   - `embedding` stores the vector representation of the chunk. The `vector` type with 1536 dimensions matches OpenAI's text-embedding-3-small model.
+   - `embeddingModel` specifies which model was used, defaulting to the same.
+
+4. **Chunk Boundaries and Tags**:
+   - `startOffset` and `endOffset` mark where the chunk is in the original document.
+   - Tags (`tag1` to `tag7`) inherited from the document allow filtering embeddings by these tags.
+
+5. **State Management**:
+   - `enabled` allows enabling/disabling embeddings without deleting them.
+
+6. **Full-Text Search**:
+   - `contentTsv` is a generated column for efficient text searches using PostgreSQL's full-text capabilities.
+
+7. **Timestamps**:
+   - `createdAt` and `updatedAt` track when embeddings were created or modified.
+
+**Indexes**:
+- **Vector Search**: The `embeddingVectorHnswIdx` uses HNSW (Hierarchical Navigable Small World) for efficient similarity searches. Parameters like `m` and `ef_construction` optimize the index structure.
+- **Document and Knowledge Base Access**: Indexes on `knowledgeBaseId`, `documentId`, and their combinations speed up queries fetching embeddings by these IDs.
+- **Tag Indexes**: Each tag has an index for quick filtering.
+- **Full-Text Search**: The `contentFtsIdx` uses a GIN index on the generated `contentTsv` column.
+
+**Checks**:
+- `embeddingNotNullCheck` ensures that every embedding has a vector, preventing incomplete entries.
+
+**Links to Other Tables**:
+- **Knowledge Base**: Through `knowledgeBaseId`, embeddings are part of a knowledge base. Deleting the knowledge base removes all related embeddings.
+- **Document**: Through `documentId`, embeddings belong to a document. If the document is deleted, its embeddings are too.
+- **Tags**: Inherited from the document, embeddings can be filtered using the same tags, linking them indirectly to the document's tagging structure.
+
+**Non-Technical Explanation**:
+This table is like a library's index system for AI. When you add a document to a knowledge base, it's split into sections (chunks). Each chunk is converted into a numerical vector (embedding) that AI uses to understand content. These vectors are stored here with details about their origin (document and knowledge base), position in the document, and tags for organization. The system allows quick searches using these vectors or text content. If a document or knowledge base is removed, all related data here is automatically cleaned up. The indexes act like a well-organized filing system, making retrieval fast and efficient.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const docsEmbeddings = pgTable(
+  'docs_embeddings',
+  {
+    chunkId: uuid('chunk_id').primaryKey().defaultRandom(),
+    chunkText: text('chunk_text').notNull(),
+    sourceDocument: text('source_document').notNull(),
+    sourceLink: text('source_link').notNull(),
+    headerText: text('header_text').notNull(),
+    headerLevel: integer('header_level').notNull(),
+    tokenCount: integer('token_count').notNull(),
+
+    // Vector embedding - optimized for text-embedding-3-small with HNSW support
+    embedding: vector('embedding', { dimensions: 1536 }).notNull(),
+    embeddingModel: text('embedding_model').notNull().default('text-embedding-3-small'),
+
+    // Metadata for flexible filtering
+    metadata: jsonb('metadata').notNull().default('{}'),
+
+    // Full-text search support - generated tsvector column
+    chunkTextTsv: tsvector('chunk_text_tsv').generatedAlwaysAs(
+      (): SQL => sql`to_tsvector('english', ${docsEmbeddings.chunkText})`
+    ),
+
+    // Timestamps
+    createdAt: timestamp('created_at').notNull().defaultNow(),
+    updatedAt: timestamp('updated_at').notNull().defaultNow(),
+  },
+  (table) => ({
+    // Source document queries
+    sourceDocumentIdx: index('docs_emb_source_document_idx').on(table.sourceDocument),
+
+    // Header level filtering
+    headerLevelIdx: index('docs_emb_header_level_idx').on(table.headerLevel),
+
+    // Combined source and header queries
+    sourceHeaderIdx: index('docs_emb_source_header_idx').on(
+      table.sourceDocument,
+      table.headerLevel
+    ),
+
+    // Model-specific queries
+    modelIdx: index('docs_emb_model_idx').on(table.embeddingModel),
+
+    // Timestamp queries
+    createdAtIdx: index('docs_emb_created_at_idx').on(table.createdAt),
+
+    // Vector similarity search indexes (HNSW) - optimized for documentation embeddings
+    embeddingVectorHnswIdx: index('docs_embedding_vector_hnsw_idx')
+      .using('hnsw', table.embedding.op('vector_cosine_ops'))
+      .with({
+        m: 16,
+        ef_construction: 64,
+      }),
+
+    // GIN index for JSONB metadata queries
+    metadataGinIdx: index('docs_emb_metadata_gin_idx').using('gin', table.metadata),
+
+    // Full-text search index
+    chunkTextFtsIdx: index('docs_emb_chunk_text_fts_idx').using('gin', table.chunkTextTsv),
+
+    // Constraints
+    embeddingNotNullCheck: check('docs_embedding_not_null_check', sql`"embedding" IS NOT NULL`),
+    headerLevelCheck: check(
+      'docs_header_level_check',
+      sql`"header_level" >= 1 AND "header_level" <= 6`
+    ),
+  })
+)
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:55:17.132920
+
+```text
+Okay, I need to analyze this Drizzle ORM table called `docs_embeddings`. Let's start by understanding what each part does and how it connects to other tables.
+
+First, the primary key is `chunkId`, which is a UUID generated randomly. This means each entry in this table is uniquely identified by this ID. 
+
+The fields `chunkText`, `sourceDocument`, `sourceLink`, `headerText`, and `headerLevel` seem to describe the content and origin of the text chunk. `chunkText` holds the actual text, `sourceDocument` and `sourceLink` indicate where the text came from, `headerText` is the heading of the section, and `headerLevel` tells the hierarchy level of the header (like H1, H2 in HTML). `tokenCount` likely tracks the number of tokens in the chunk, useful for managing API usage or processing costs.
+
+The `embedding` field is a vector of 1536 dimensions, which matches OpenAI's text-embedding-3-small model. This vector represents the text chunk in a numerical form that machine learning models can work with. The `embeddingModel` specifies which model was used, defaulting to text-embedding-3-small.
+
+`metadata` is a JSONB field for additional flexible data, allowing for various custom attributes without changing the schema. The `chunkTextTsv` is a generated column for full-text search, converting the chunk text into a search-optimized format.
+
+Timestamps `createdAt` and `updatedAt` track when the entry was added or modified.
+
+Now, looking at the indexes:
+- `sourceDocumentIdx`, `headerLevelIdx`, and `sourceHeaderIdx` help quickly filter chunks by their source document, header level, or both.
+- `modelIdx` allows filtering by the embedding model used.
+- `createdAtIdx` helps in sorting or filtering by creation time.
+- `embeddingVectorHnswIdx` is an HNSW index optimized for fast similarity searches on the embedding vectors.
+- `metadataGinIdx` and `chunkTextFtsIdx` support efficient querying on the JSONB metadata and full-text search, respectively.
+
+The check constraints ensure that the `embedding` field isn't null and that `headerLevel` is between 1 and 6, maintaining data integrity.
+
+Linking to other tables: While there are no explicit foreign keys here, `sourceDocument` and `sourceLink` might reference documents in another table (like a `documents` table) by their identifiers or URLs. The `embeddingModel` could reference a table of available models, but since it's a text field with a default, it's likely managed within the application.
+
+For a non-technical person: This table stores text snippets from documents along with their numerical representations (embeddings) for AI processing. Each snippet knows its source document, heading, and other details. The system organizes this data to enable quick searches by content, source, or metadata. The indexes act like a book's index, helping find information rapidly. If a document is removed, related snippets here might be deleted or handled by the application logic.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const copilotChats = pgTable(
+  'copilot_chats',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    userId: text('user_id')
+      .notNull()
+      .references(() => user.id, { onDelete: 'cascade' }),
+    workflowId: text('workflow_id')
+      .notNull()
+      .references(() => workflow.id, { onDelete: 'cascade' }),
+    title: text('title'),
+    messages: jsonb('messages').notNull().default('[]'),
+    model: text('model').notNull().default('claude-3-7-sonnet-latest'),
+    conversationId: text('conversation_id'),
+    previewYaml: text('preview_yaml'), // YAML content for pending workflow preview
+    createdAt: timestamp('created_at').notNull().defaultNow(),
+    updatedAt: timestamp('updated_at').notNull().defaultNow(),
+  },
+  (table) => ({
+    // Primary access patterns
+    userIdIdx: index('copilot_chats_user_id_idx').on(table.userId),
+    workflowIdIdx: index('copilot_chats_workflow_id_idx').on(table.workflowId),
+    userWorkflowIdx: index('copilot_chats_user_workflow_idx').on(table.userId, table.workflowId),
+
+    // Ordering indexes
+    createdAtIdx: index('copilot_chats_created_at_idx').on(table.createdAt),
+    updatedAtIdx: index('copilot_chats_updated_at_idx').on(table.updatedAt),
+  })
+)
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:55:24.096440
+
+```text
+Okay, let's break down this `copilot_chats` table. The primary key is `id`, which is a randomly generated UUID. This ensures each chat session has a unique identifier. The `userId` and `workflowId` fields link each chat to a specific user and workflow. If a user or workflow is deleted, their related chats are automatically removed due to `onDelete: 'cascade'`.
+
+The `title` gives the chat a name, while `messages` stores the conversation history in JSON format. The `model` field specifies which AI model is used, defaulting to 'claude-3-7-sonnet-latest'. `conversationId` might track ongoing conversations, and `previewYaml` could hold configuration data for workflows. Timestamps track when the chat was created and last updated.
+
+Indexes on `userId`, `workflowId`, and their combination help quickly retrieve chats for a user or workflow. Additional indexes on `createdAt` and `updatedAt` allow efficient sorting by time.
+
+For a non-technical person: This table manages AI chat sessions tied to users and workflows. Each chat saves conversation history, model used, and workflow previews. Deleting a user or workflow removes their chats. Indexes help organize chats for quick access.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const workflowCheckpoints = pgTable(
+  'workflow_checkpoints',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    userId: text('user_id')
+      .notNull()
+      .references(() => user.id, { onDelete: 'cascade' }),
+    workflowId: text('workflow_id')
+      .notNull()
+      .references(() => workflow.id, { onDelete: 'cascade' }),
+    chatId: uuid('chat_id')
+      .notNull()
+      .references(() => copilotChats.id, { onDelete: 'cascade' }),
+    messageId: text('message_id'), // ID of the user message that triggered this checkpoint
+    workflowState: json('workflow_state').notNull(), // JSON workflow state
+    createdAt: timestamp('created_at').notNull().defaultNow(),
+    updatedAt: timestamp('updated_at').notNull().defaultNow(),
+  },
+  (table) => ({
+    // Primary access patterns
+    userIdIdx: index('workflow_checkpoints_user_id_idx').on(table.userId),
+    workflowIdIdx: index('workflow_checkpoints_workflow_id_idx').on(table.workflowId),
+    chatIdIdx: index('workflow_checkpoints_chat_id_idx').on(table.chatId),
+    messageIdIdx: index('workflow_checkpoints_message_id_idx').on(table.messageId),
+
+    // Combined indexes for common queries
+    userWorkflowIdx: index('workflow_checkpoints_user_workflow_idx').on(
+      table.userId,
+      table.workflowId
+    ),
+    workflowChatIdx: index('workflow_checkpoints_workflow_chat_idx').on(
+      table.workflowId,
+      table.chatId
+    ),
+
+    // Ordering indexes
+    createdAtIdx: index('workflow_checkpoints_created_at_idx').on(table.createdAt),
+    chatCreatedAtIdx: index('workflow_checkpoints_chat_created_at_idx').on(
+      table.chatId,
+      table.createdAt
+    ),
+  })
+)
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:55:31.362955
+
+```text
+Okay, let's dive into this table. It's called workflow_checkpoints, which makes me think it's used to save specific states or versions of workflows. The primary key is an id generated as a UUID, so each checkpoint is unique. The userId, workflowId, and chatId all reference other tables—users, workflows, and copilot_chats. The onDelete: 'cascade' means if any of those referenced entries are deleted, the checkpoint is also removed automatically. 
+
+The messageId probably links to a specific message in the chat that triggered the checkpoint. workflowState stores the actual state of the workflow at that point in JSON format. The timestamps track when the checkpoint was created and updated.
+
+Indexes are set up on userId, workflowId, chatId, and messageId to speed up queries. Combined indexes like userWorkflowIdx and workflowChatIdx help with queries that filter by both fields. Ordering indexes like createdAtIdx allow quick sorting by creation time.
+
+For a non-technical person, this table acts like a save point in a video game. Each save point captures the workflow's state at a specific moment, linked to the user and chat session. If the user or workflow is deleted, those save points are cleared. The indexes help quickly find save points based on user, workflow, or chat.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const templates = pgTable(
+  'templates',
+  {
+    id: text('id').primaryKey(),
+    workflowId: text('workflow_id').references(() => workflow.id),
+    userId: text('user_id')
+      .notNull()
+      .references(() => user.id, { onDelete: 'cascade' }),
+    name: text('name').notNull(),
+    description: text('description'),
+    author: text('author').notNull(),
+    views: integer('views').notNull().default(0),
+    stars: integer('stars').notNull().default(0),
+    color: text('color').notNull().default('#3972F6'),
+    icon: text('icon').notNull().default('FileText'), // Lucide icon name as string
+    category: text('category').notNull(),
+    state: jsonb('state').notNull(), // Using jsonb for better performance
+    createdAt: timestamp('created_at').notNull().defaultNow(),
+    updatedAt: timestamp('updated_at').notNull().defaultNow(),
+  },
+  (table) => ({
+    // Primary access patterns
+    workflowIdIdx: index('templates_workflow_id_idx').on(table.workflowId),
+    userIdIdx: index('templates_user_id_idx').on(table.userId),
+    categoryIdx: index('templates_category_idx').on(table.category),
+
+    // Sorting indexes for popular/trending templates
+    viewsIdx: index('templates_views_idx').on(table.views),
+    starsIdx: index('templates_stars_idx').on(table.stars),
+
+    // Composite indexes for common queries
+    categoryViewsIdx: index('templates_category_views_idx').on(table.category, table.views),
+    categoryStarsIdx: index('templates_category_stars_idx').on(table.category, table.stars),
+    userCategoryIdx: index('templates_user_category_idx').on(table.userId, table.category),
+
+    // Temporal indexes
+    createdAtIdx: index('templates_created_at_idx').on(table.createdAt),
+    updatedAtIdx: index('templates_updated_at_idx').on(table.updatedAt),
+  })
+)
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:55:39.244930
+
+```text
+Okay, let's tackle this Drizzle ORM table called "templates". First, I need to understand what each field represents and how they connect to other parts of the system. 
+
+The primary key is "id", so each template has a unique identifier. The "workflowId" references the workflow table, which suggests that a template might be based on an existing workflow. However, it's optional here (since there's no "notNull" constraint), meaning templates can exist without being tied to a specific workflow. 
+
+The "userId" references the user table, indicating that every template is linked to a user. The "onDelete: 'cascade'" part means if a user is deleted, all their templates are removed automatically. This maintains data integrity by preventing orphaned templates.
+
+Next, there are fields like "name", "description", and "author" which are descriptive attributes. "Views" and "stars" track popularity metrics, showing how many times a template has been viewed or favorited. "Color" and "icon" handle visual aspects, using hex codes and icon names for display purposes. "Category" helps in organizing templates into groups.
+
+The "state" field uses JSONB, which is efficient for storing structured data like template configurations. Timestamps "createdAt" and "updatedAt" track when the template was made and last modified.
+
+Now, looking at the indexes:
+- Indexes on "workflowId", "userId", and "category" speed up searches by these fields.
+- Indexes on "views" and "stars" help in sorting templates by popularity.
+- Composite indexes like "categoryViewsIdx" optimize queries that filter by category and sort by views or stars.
+- Temporal indexes on "createdAt" and "updatedAt" facilitate sorting by date.
+
+For linking to other tables:
+- **User Table**: Through "userId", each template is connected to a user. Deleting a user removes their templates.
+- **Workflow Table**: Optional link via "workflowId", allowing templates to be associated with workflows if needed.
+- **Implicit Links**: Categories might relate to a separate categories table, though not shown here. Similarly, icons could reference an icon library.
+
+Non-Technical Explanation: This table acts like a recipe book where users can save and share their workflow designs. Each recipe (template) includes details like name, author, and category. Popularity is tracked via views and stars. Users' recipes are removed if they leave, and some recipes might be based on existing workflows. The indexes help quickly find recipes by category, popularity, or author.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const templateStars = pgTable(
+  'template_stars',
+  {
+    id: text('id').primaryKey(),
+    userId: text('user_id')
+      .notNull()
+      .references(() => user.id, { onDelete: 'cascade' }),
+    templateId: text('template_id')
+      .notNull()
+      .references(() => templates.id, { onDelete: 'cascade' }),
+    starredAt: timestamp('starred_at').notNull().defaultNow(),
+    createdAt: timestamp('created_at').notNull().defaultNow(),
+  },
+  (table) => ({
+    // Primary access patterns
+    userIdIdx: index('template_stars_user_id_idx').on(table.userId),
+    templateIdIdx: index('template_stars_template_id_idx').on(table.templateId),
+
+    // Composite indexes for common queries
+    userTemplateIdx: index('template_stars_user_template_idx').on(table.userId, table.templateId),
+    templateUserIdx: index('template_stars_template_user_idx').on(table.templateId, table.userId),
+
+    // Temporal indexes for analytics
+    starredAtIdx: index('template_stars_starred_at_idx').on(table.starredAt),
+    templateStarredAtIdx: index('template_stars_template_starred_at_idx').on(
+      table.templateId,
+      table.starredAt
+    ),
+
+    // Uniqueness constraint - prevent duplicate stars
+    uniqueUserTemplateConstraint: uniqueIndex('template_stars_user_template_unique').on(
+      table.userId,
+      table.templateId
+    ),
+  })
+)
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:55:47.331271
+
+```text
+Okay, let's break down this Drizzle ORM table called "template_stars". 
+
+First, the primary key is "id", so each entry in this table has a unique identifier. The "userId" references the "user" table, meaning each star is linked to a specific user. If a user is deleted, their stars are automatically removed because of the "onDelete: cascade" setting. Similarly, "templateId" references the "templates" table, linking each star to a specific template. If the template is deleted, its stars are also removed.
+
+The "starredAt" timestamp records when the user starred the template, and "createdAt" tracks when the record was created. 
+
+The indexes are set up to optimize common queries:
+- Looking up stars by user or template.
+- Checking if a specific user has starred a particular template.
+- Analyzing star activity over time.
+
+The unique constraint "uniqueUserTemplateConstraint" ensures that a user can't star the same template multiple times, preventing duplicates.
+
+For a non-technical person: This table tracks which users have "starred" or favorited which templates. Each star is tied to a user and a template, ensuring no duplicates. Deleting a user or template removes their stars. The indexes help quickly find stars by user, template, or time.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const copilotFeedback = pgTable(
+  'copilot_feedback',
+  {
+    feedbackId: uuid('feedback_id').primaryKey().defaultRandom(),
+    userId: text('user_id')
+      .notNull()
+      .references(() => user.id, { onDelete: 'cascade' }),
+    chatId: uuid('chat_id')
+      .notNull()
+      .references(() => copilotChats.id, { onDelete: 'cascade' }),
+    userQuery: text('user_query').notNull(),
+    agentResponse: text('agent_response').notNull(),
+    isPositive: boolean('is_positive').notNull(),
+    feedback: text('feedback'), // Optional feedback text
+    workflowYaml: text('workflow_yaml'), // Optional workflow YAML if edit/build workflow was triggered
+    createdAt: timestamp('created_at').notNull().defaultNow(),
+    updatedAt: timestamp('updated_at').notNull().defaultNow(),
+  },
+  (table) => ({
+    // Access patterns
+    userIdIdx: index('copilot_feedback_user_id_idx').on(table.userId),
+    chatIdIdx: index('copilot_feedback_chat_id_idx').on(table.chatId),
+    userChatIdx: index('copilot_feedback_user_chat_idx').on(table.userId, table.chatId),
+
+    // Query patterns
+    isPositiveIdx: index('copilot_feedback_is_positive_idx').on(table.isPositive),
+
+    // Ordering indexes
+    createdAtIdx: index('copilot_feedback_created_at_idx').on(table.createdAt),
+  })
+)
+
+// Tracks immutable deployment versions for each workflow
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:55:54.403036
+
+```text
+Alright, let's take a look at this `copilot_feedback` table. First, I need to understand what each field represents and how they relate to each other and other tables. The primary key is `feedback_id`, which is a UUID generated randomly. This ensures each feedback entry is unique.
+
+The `user_id` references the `user` table, linking each feedback to a specific user. If a user is deleted, their feedback is also removed because of `onDelete: 'cascade'`. Similarly, `chat_id` references the `copilot_chats` table, connecting the feedback to a particular chat session. If the chat is deleted, the feedback goes too.
+
+Fields like `user_query` and `agent_response` store the actual conversation between the user and the AI agent. `is_positive` is a boolean indicating whether the feedback was positive or negative. The optional `feedback` field allows users to add textual comments, and `workflow_yaml` might store the workflow configuration if the user triggered an edit during feedback.
+
+Timestamps `created_at` and `updated_at` track when the feedback was given and last modified. Indexes on `user_id`, `chat_id`, and combinations help quickly retrieve feedback related to specific users or chats. The `is_positive` index allows filtering feedback by sentiment, and `created_at` helps in sorting feedback chronologically.
+
+For a non-technical person: This table collects user feedback on AI interactions. Each entry includes the user's question, the AI's response, and whether the feedback was positive. It's linked to the user and chat session, ensuring feedback is organized and automatically cleaned up if related data is deleted. The indexes act like a filing system for quick access.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const workflowDeploymentVersion = pgTable(
+  'workflow_deployment_version',
+  {
+    id: text('id').primaryKey(),
+    workflowId: text('workflow_id')
+      .notNull()
+      .references(() => workflow.id, { onDelete: 'cascade' }),
+    version: integer('version').notNull(),
+    name: text('name'),
+    state: json('state').notNull(),
+    isActive: boolean('is_active').notNull().default(false),
+    createdAt: timestamp('created_at').notNull().defaultNow(),
+    createdBy: text('created_by'),
+  },
+  (table) => ({
+    workflowIdIdx: index('workflow_deployment_version_workflow_id_idx').on(table.workflowId),
+    workflowVersionUnique: uniqueIndex('workflow_deployment_version_workflow_version_unique').on(
+      table.workflowId,
+      table.version
+    ),
+    workflowActiveIdx: index('workflow_deployment_version_workflow_active_idx').on(
+      table.workflowId,
+      table.isActive
+    ),
+    createdAtIdx: index('workflow_deployment_version_created_at_idx').on(table.createdAt),
+  })
+)
+
+// Idempotency keys for preventing duplicate processing across all webhooks and triggers
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:56:00.752416
+
+```text
+Okay, let's dive into this table. The table is called "workflow_deployment_version", which suggests it's used to track different versions of workflow deployments. Each entry has a unique ID as the primary key. The "workflowId" references the "workflow" table, meaning each version is linked to a specific workflow. If the workflow is deleted, all its versions are removed too because of "onDelete: cascade".
+
+The "version" field is an integer that increments with each deployment, ensuring each version is numbered. The "name" allows users to give a friendly name to a version. "state" stores the workflow's configuration in JSON format at the time of deployment. "isActive" indicates whether this version is currently active, allowing only one active version per workflow. "createdAt" tracks when the version was made, and "createdBy" might note who created it, though it's not a foreign key here.
+
+Indexes like "workflowIdIdx" help quickly find all versions of a workflow. The unique index "workflowVersionUnique" ensures each workflow's version numbers are unique. "workflowActiveIdx" speeds up checking which version is active for a workflow. "createdAtIdx" allows sorting versions by creation time.
+
+For non-tech folks: This table acts like a version history for workflows. Each time a workflow is updated, a new version is saved here. It keeps track of which version is active, preventing duplicates and allowing rollbacks. Linked to workflows, versions are removed if the workflow is deleted.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const idempotencyKey = pgTable(
+  'idempotency_key',
+  {
+    key: text('key').notNull(),
+    namespace: text('namespace').notNull().default('default'),
+    result: json('result').notNull(),
+    createdAt: timestamp('created_at').notNull().defaultNow(),
+  },
+  (table) => ({
+    // Primary key is combination of key and namespace
+    keyNamespacePk: uniqueIndex('idempotency_key_namespace_unique').on(table.key, table.namespace),
+
+    // Index for cleanup operations by creation time
+    createdAtIdx: index('idempotency_key_created_at_idx').on(table.createdAt),
+
+    // Index for namespace-based queries
+    namespaceIdx: index('idempotency_key_namespace_idx').on(table.namespace),
+  })
+)
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:56:08.336655
+
+```text
+Okay, let's take a look at this Drizzle ORM table called "idempotency_key". First, I need to understand what each part does and how it connects to other tables. 
+
+The primary key here is a combination of "key" and "namespace" because of the uniqueIndex "keyNamespacePk". This means that each entry must have a unique combination of key and namespace. The "key" is probably a unique identifier for a request or operation, while "namespace" groups these keys, maybe by service or feature. 
+
+The "result" field stores the outcome of the operation in JSON format. This allows the system to return the same result if the same key is used again, preventing duplicate processing. The "createdAt" timestamp tracks when the key was created, useful for cleaning up old entries.
+
+There's an index on "createdAt" to efficiently find and delete old keys. Another index on "namespace" helps quickly access keys within a specific group. 
+
+This table doesn't have explicit foreign keys, but the "namespace" might relate to other parts of the system, like different services or modules. The keys ensure operations are only processed once, enhancing reliability and preventing errors from duplicate requests.
+
+For a non-technical person: This table is like a receipt system for operations. When a request is made, a receipt (key) is stored with its result. If the same request comes again, the system checks the receipt and returns the stored result instead of processing it again. Namespaces organize receipts by category, and timestamps help manage old receipts.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const mcpServers = pgTable(
+  'mcp_servers',
+  {
+    id: text('id').primaryKey(),
+    workspaceId: text('workspace_id')
+      .notNull()
+      .references(() => workspace.id, { onDelete: 'cascade' }),
+
+    // Track who created the server, but workspace owns it
+    createdBy: text('created_by').references(() => user.id, { onDelete: 'set null' }),
+
+    name: text('name').notNull(),
+    description: text('description'),
+
+    transport: text('transport').notNull(),
+    url: text('url'),
+
+    headers: json('headers').default('{}'),
+    timeout: integer('timeout').default(30000),
+    retries: integer('retries').default(3),
+
+    enabled: boolean('enabled').notNull().default(true),
+    lastConnected: timestamp('last_connected'),
+    connectionStatus: text('connection_status').default('disconnected'),
+    lastError: text('last_error'),
+
+    toolCount: integer('tool_count').default(0),
+    lastToolsRefresh: timestamp('last_tools_refresh'),
+    totalRequests: integer('total_requests').default(0),
+    lastUsed: timestamp('last_used'),
+
+    deletedAt: timestamp('deleted_at'),
+
+    createdAt: timestamp('created_at').notNull().defaultNow(),
+    updatedAt: timestamp('updated_at').notNull().defaultNow(),
+  },
+  (table) => ({
+    // Primary access pattern - active servers by workspace
+    workspaceEnabledIdx: index('mcp_servers_workspace_enabled_idx').on(
+      table.workspaceId,
+      table.enabled
+    ),
+
+    // Soft delete pattern - workspace + not deleted
+    workspaceDeletedIdx: index('mcp_servers_workspace_deleted_idx').on(
+      table.workspaceId,
+      table.deletedAt
+    ),
+  })
+)
+
+// SSO Provider table
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:56:16.461450
+
+```text
+Okay, let's take a look at this Drizzle ORM table called "mcp_servers". First, I need to understand what each part does and how it connects to other tables. 
+
+The primary key is "id", so each server has a unique identifier. The "workspace_id" references the "workspace" table, meaning each server is linked to a specific workspace. If the workspace is deleted, the server entry is removed because of "onDelete: cascade". The "created_by" references the "user" table, showing who created the server. If that user is deleted, "created_by" becomes null but the server stays.
+
+Fields like "name" and "description" give the server a label and details. "transport", "url", "headers", "timeout", and "retries" configure how the server connects and communicates. "enabled" toggles the server's activity, while "lastConnected", "connectionStatus", and "lastError" track its operational status. Metrics like "toolCount", "totalRequests", and "lastUsed" monitor usage. "deletedAt" allows soft deletion, and timestamps track creation and updates.
+
+Indexes "workspaceEnabledIdx" and "workspaceDeletedIdx" optimize queries for active or non-deleted servers in a workspace. 
+
+For non-tech folks: This table manages servers linked to workspaces. Each server has settings, status tracking, and usage stats. Deleting a workspace removes its servers. Created by users, servers remain even if the user leaves. Soft delete allows temporary removal without losing data.
+
+```
+
+---
+
+### 🧑 User
+You are given a FULL Drizzle ORM table.
+
+Analyze it deeply. and explain them for non technical person and tell how table is linked to another table
+
+TABLE:
+```ts
+export const ssoProvider = pgTable(
+  'sso_provider',
+  {
+    id: text('id').primaryKey(),
+    issuer: text('issuer').notNull(),
+    domain: text('domain').notNull(),
+    oidcConfig: text('oidc_config'),
+    samlConfig: text('saml_config'),
+    userId: text('user_id')
+      .notNull()
+      .references(() => user.id, { onDelete: 'cascade' }),
+    providerId: text('provider_id').notNull(),
+    organizationId: text('organization_id').references(() => organization.id, {
+      onDelete: 'cascade',
+    }),
+  },
+  (table) => ({
+    providerIdIdx: index('sso_provider_provider_id_idx').on(table.providerId),
+    domainIdx: index('sso_provider_domain_idx').on(table.domain),
+    userIdIdx: index('sso_provider_user_id_idx').on(table.userId),
+    organizationIdIdx: index('sso_provider_organization_id_idx').on(table.organizationId),
+  })
+)
+```
+
+### 🤖 Agent: `root_agent`
+**Timestamp:** 2025-12-26T14:56:24.001762
+
+```text
+Okay, I need to analyze this Drizzle ORM table called 'sso_provider'. Let's start by looking at each part of the table structure and understand its purpose.
+
+First, the primary key is 'id', which means each entry in this table has a unique identifier. The 'issuer' and 'domain' fields are marked as not null, indicating they are essential pieces of information. These likely relate to the SSO (Single Sign-On) provider's details, such as the identity issuer URL and the domain it's associated with.
+
+Next, there are 'oidc_config' and 'saml_config' fields. These probably store configuration details for OpenID Connect and SAML protocols, which are common in SSO setups. Depending on which protocol is used, one of these fields would be populated.
+
+The 'userId' field references the 'user' table's 'id' with a cascade delete. This means if a user is deleted, their associated SSO provider configurations are also removed. This links each SSO provider entry to a specific user, indicating that the user set up or owns this SSO configuration.
+
+The 'providerId' seems to be another identifier, perhaps an internal or external reference ID for the SSO provider. The 'organizationId' references the 'organization' table, allowing SSO providers to be linked to an entire organization. If the organization is deleted, the SSO provider entry is also removed due to the cascade delete.
+
+Looking at the indexes:
+- 'providerIdIdx' speeds up searches by provider ID.
+- 'domainIdx' helps quickly find SSO configurations by domain.
+- 'userIdIdx' and 'organizationIdIdx' optimize queries related to users and organizations.
+
+For non-technical explanation: This table stores Single Sign-On configurations, linking them to users or organizations. Each entry includes details like domain and protocol settings. If a user or organization is removed, their SSO settings are automatically deleted. The indexes help quickly access these configurations based on common search criteria like domain or user.
+
+```
