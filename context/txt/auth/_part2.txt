@@ -1,0 +1,599 @@
+
+### FILE: anonymous.ts
+import { db } from '@sim/db'
+import * as schema from '@sim/db/schema'
+import { eq } from 'drizzle-orm'
+import { createLogger } from '@/lib/logs/console/logger'
+import { ANONYMOUS_USER, ANONYMOUS_USER_ID } from './constants'
+
+const logger = createLogger('AnonymousAuth')
+
+let anonymousUserEnsured = false
+
+/**
+ * Ensures the anonymous user and their stats record exist in the database.
+ * Called when DISABLE_AUTH is enabled to ensure DB operations work.
+ */
+export async function ensureAnonymousUserExists(): Promise<void> {
+  if (anonymousUserEnsured) return
+
+  try {
+    const existingUser = await db.query.user.findFirst({
+      where: eq(schema.user.id, ANONYMOUS_USER_ID),
+    })
+
+    if (!existingUser) {
+      const now = new Date()
+      await db.insert(schema.user).values({
+        ...ANONYMOUS_USER,
+        createdAt: now,
+        updatedAt: now,
+      })
+      logger.info('Created anonymous user for DISABLE_AUTH mode')
+    }
+
+    const existingStats = await db.query.userStats.findFirst({
+      where: eq(schema.userStats.userId, ANONYMOUS_USER_ID),
+    })
+
+    if (!existingStats) {
+      await db.insert(schema.userStats).values({
+        id: crypto.randomUUID(),
+        userId: ANONYMOUS_USER_ID,
+        currentUsageLimit: '10000000000',
+      })
+      logger.info('Created anonymous user stats for DISABLE_AUTH mode')
+    }
+
+    anonymousUserEnsured = true
+  } catch (error) {
+    if (
+      error instanceof Error &&
+      (error.message.includes('unique') || error.message.includes('duplicate'))
+    ) {
+      anonymousUserEnsured = true
+      return
+    }
+    logger.error('Failed to ensure anonymous user exists', { error })
+    throw error
+  }
+}
+
+export interface AnonymousSession {
+  user: {
+    id: string
+    name: string
+    email: string
+    emailVerified: boolean
+    image: null
+    createdAt: Date
+    updatedAt: Date
+  }
+  session: {
+    id: string
+    userId: string
+    expiresAt: Date
+    createdAt: Date
+    updatedAt: Date
+    token: string
+    ipAddress: null
+    userAgent: null
+  }
+}
+
+/**
+ * Creates an anonymous session for when auth is disabled.
+ */
+export function createAnonymousSession(): AnonymousSession {
+  const now = new Date()
+  return {
+    user: {
+      ...ANONYMOUS_USER,
+      createdAt: now,
+      updatedAt: now,
+    },
+    session: {
+      id: 'anonymous-session',
+      userId: ANONYMOUS_USER_ID,
+      expiresAt: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000), // 1 year
+      createdAt: now,
+      updatedAt: now,
+      token: 'anonymous-token',
+      ipAddress: null,
+      userAgent: null,
+    },
+  }
+}
+
+
+### FILE: auth-client.ts
+import { useContext } from 'react'
+import { ssoClient } from '@better-auth/sso/client'
+import { stripeClient } from '@better-auth/stripe/client'
+import {
+  customSessionClient,
+  emailOTPClient,
+  genericOAuthClient,
+  organizationClient,
+} from 'better-auth/client/plugins'
+import { createAuthClient } from 'better-auth/react'
+import type { auth } from '@/lib/auth'
+import { env } from '@/lib/core/config/env'
+import { isBillingEnabled } from '@/lib/core/config/feature-flags'
+import { getBaseUrl } from '@/lib/core/utils/urls'
+import { SessionContext, type SessionHookResult } from '@/app/_shell/providers/session-provider'
+
+export const client = createAuthClient({
+  baseURL: getBaseUrl(),
+  plugins: [
+    emailOTPClient(),
+    genericOAuthClient(),
+    customSessionClient<typeof auth>(),
+    ...(isBillingEnabled
+      ? [
+          stripeClient({
+            subscription: true, // Enable subscription management
+          }),
+          organizationClient(),
+        ]
+      : []),
+    ...(env.NEXT_PUBLIC_SSO_ENABLED ? [ssoClient()] : []),
+  ],
+})
+
+export function useSession(): SessionHookResult {
+  const ctx = useContext(SessionContext)
+  if (!ctx) {
+    throw new Error(
+      'SessionProvider is not mounted. Wrap your app with <SessionProvider> in app/layout.tsx.'
+    )
+  }
+  return ctx
+}
+
+export const useActiveOrganization = isBillingEnabled
+  ? client.useActiveOrganization
+  : () => ({ data: undefined, isPending: false, error: null })
+
+export const useSubscription = () => {
+  return {
+    list: client.subscription?.list,
+    upgrade: client.subscription?.upgrade,
+    cancel: client.subscription?.cancel,
+    restore: client.subscription?.restore,
+  }
+}
+
+export const { signIn, signUp, signOut } = client
+
+
+### FILE: constants.ts
+/** Anonymous user ID used when DISABLE_AUTH is enabled */
+export const ANONYMOUS_USER_ID = '00000000-0000-0000-0000-000000000000'
+
+export const ANONYMOUS_USER = {
+  id: ANONYMOUS_USER_ID,
+  name: 'Anonymous',
+  email: 'anonymous@localhost',
+  emailVerified: true,
+  image: null,
+} as const
+
+
+### FILE: credential-access.ts
+import { db } from '@sim/db'
+import { account, workflow as workflowTable } from '@sim/db/schema'
+import { eq } from 'drizzle-orm'
+import type { NextRequest } from 'next/server'
+import { checkHybridAuth } from '@/lib/auth/hybrid'
+import { getUserEntityPermissions } from '@/lib/workspaces/permissions/utils'
+
+export interface CredentialAccessResult {
+  ok: boolean
+  error?: string
+  authType?: 'session' | 'api_key' | 'internal_jwt'
+  requesterUserId?: string
+  credentialOwnerUserId?: string
+  workspaceId?: string
+}
+
+/**
+ * Centralizes auth + collaboration rules for credential use.
+ * - Uses checkHybridAuth to authenticate the caller
+ * - Fetches credential owner
+ * - Authorization rules:
+ *   - session/api_key: allow if requester owns the credential; otherwise require workflowId and
+ *     verify BOTH requester and owner have access to the workflow's workspace
+ *   - internal_jwt: require workflowId (by default) and verify credential owner has access to the
+ *     workflow's workspace (requester identity is the system/workflow)
+ */
+export async function authorizeCredentialUse(
+  request: NextRequest,
+  params: { credentialId: string; workflowId?: string; requireWorkflowIdForInternal?: boolean }
+): Promise<CredentialAccessResult> {
+  const { credentialId, workflowId, requireWorkflowIdForInternal = true } = params
+
+  const auth = await checkHybridAuth(request, { requireWorkflowId: requireWorkflowIdForInternal })
+  if (!auth.success || !auth.userId) {
+    return { ok: false, error: auth.error || 'Authentication required' }
+  }
+
+  // Lookup credential owner
+  const [credRow] = await db
+    .select({ userId: account.userId })
+    .from(account)
+    .where(eq(account.id, credentialId))
+    .limit(1)
+
+  if (!credRow) {
+    return { ok: false, error: 'Credential not found' }
+  }
+
+  const credentialOwnerUserId = credRow.userId
+
+  // If requester owns the credential, allow immediately
+  if (auth.authType !== 'internal_jwt' && auth.userId === credentialOwnerUserId) {
+    return {
+      ok: true,
+      authType: auth.authType,
+      requesterUserId: auth.userId,
+      credentialOwnerUserId,
+    }
+  }
+
+  // For collaboration paths, workflowId is required to scope to a workspace
+  if (!workflowId) {
+    return { ok: false, error: 'workflowId is required' }
+  }
+
+  const [wf] = await db
+    .select({ workspaceId: workflowTable.workspaceId })
+    .from(workflowTable)
+    .where(eq(workflowTable.id, workflowId))
+    .limit(1)
+
+  if (!wf || !wf.workspaceId) {
+    return { ok: false, error: 'Workflow not found' }
+  }
+
+  if (auth.authType === 'internal_jwt') {
+    // Internal calls: verify credential owner belongs to the workflow's workspace
+    const ownerPerm = await getUserEntityPermissions(
+      credentialOwnerUserId,
+      'workspace',
+      wf.workspaceId
+    )
+    if (ownerPerm === null) {
+      return { ok: false, error: 'Unauthorized' }
+    }
+    return {
+      ok: true,
+      authType: auth.authType,
+      requesterUserId: auth.userId,
+      credentialOwnerUserId,
+      workspaceId: wf.workspaceId,
+    }
+  }
+
+  // Session/API key: verify BOTH requester and owner belong to the workflow's workspace
+  const requesterPerm = await getUserEntityPermissions(auth.userId, 'workspace', wf.workspaceId)
+  const ownerPerm = await getUserEntityPermissions(
+    credentialOwnerUserId,
+    'workspace',
+    wf.workspaceId
+  )
+  if (requesterPerm === null || ownerPerm === null) {
+    return { ok: false, error: 'Unauthorized' }
+  }
+
+  return {
+    ok: true,
+    authType: auth.authType,
+    requesterUserId: auth.userId,
+    credentialOwnerUserId,
+    workspaceId: wf.workspaceId,
+  }
+}
+
+
+### FILE: hybrid.ts
+import { db } from '@sim/db'
+import { workflow } from '@sim/db/schema'
+import { eq } from 'drizzle-orm'
+import type { NextRequest } from 'next/server'
+import { authenticateApiKeyFromHeader, updateApiKeyLastUsed } from '@/lib/api-key/service'
+import { getSession } from '@/lib/auth'
+import { verifyInternalToken } from '@/lib/auth/internal'
+import { createLogger } from '@/lib/logs/console/logger'
+
+const logger = createLogger('HybridAuth')
+
+export interface AuthResult {
+  success: boolean
+  userId?: string
+  authType?: 'session' | 'api_key' | 'internal_jwt'
+  error?: string
+}
+
+/**
+ * Check for authentication using any of the 3 supported methods:
+ * 1. Session authentication (cookies)
+ * 2. API key authentication (X-API-Key header)
+ * 3. Internal JWT authentication (Authorization: Bearer header)
+ *
+ * For internal JWT calls, requires workflowId to determine user context
+ */
+export async function checkHybridAuth(
+  request: NextRequest,
+  options: { requireWorkflowId?: boolean } = {}
+): Promise<AuthResult> {
+  try {
+    // 1. Check for internal JWT token first
+    const authHeader = request.headers.get('authorization')
+    if (authHeader?.startsWith('Bearer ')) {
+      const token = authHeader.split(' ')[1]
+      const verification = await verifyInternalToken(token)
+
+      if (verification.valid) {
+        let workflowId: string | null = null
+        let userId: string | null = verification.userId || null
+
+        const { searchParams } = new URL(request.url)
+        workflowId = searchParams.get('workflowId')
+        if (!userId) {
+          userId = searchParams.get('userId')
+        }
+
+        if (!workflowId && !userId && request.method === 'POST') {
+          try {
+            // Clone the request to avoid consuming the original body
+            const clonedRequest = request.clone()
+            const bodyText = await clonedRequest.text()
+            if (bodyText) {
+              const body = JSON.parse(bodyText)
+              workflowId = body.workflowId || body._context?.workflowId
+              userId = userId || body.userId || body._context?.userId
+            }
+          } catch {
+            // Ignore JSON parse errors
+          }
+        }
+
+        if (userId) {
+          return {
+            success: true,
+            userId,
+            authType: 'internal_jwt',
+          }
+        }
+
+        if (workflowId) {
+          const [workflowData] = await db
+            .select({ userId: workflow.userId })
+            .from(workflow)
+            .where(eq(workflow.id, workflowId))
+            .limit(1)
+
+          if (!workflowData) {
+            return {
+              success: false,
+              error: 'Workflow not found',
+            }
+          }
+
+          return {
+            success: true,
+            userId: workflowData.userId,
+            authType: 'internal_jwt',
+          }
+        }
+
+        if (options.requireWorkflowId !== false) {
+          return {
+            success: false,
+            error: 'workflowId or userId required for internal JWT calls',
+          }
+        }
+
+        return {
+          success: true,
+          authType: 'internal_jwt',
+        }
+      }
+    }
+
+    // 2. Try session auth (for web UI)
+    const session = await getSession()
+    if (session?.user?.id) {
+      return {
+        success: true,
+        userId: session.user.id,
+        authType: 'session',
+      }
+    }
+
+    // 3. Try API key auth
+    const apiKeyHeader = request.headers.get('x-api-key')
+    if (apiKeyHeader) {
+      const result = await authenticateApiKeyFromHeader(apiKeyHeader)
+      if (result.success) {
+        await updateApiKeyLastUsed(result.keyId!)
+        return {
+          success: true,
+          userId: result.userId!,
+          authType: 'api_key',
+        }
+      }
+
+      return {
+        success: false,
+        error: 'Invalid API key',
+      }
+    }
+
+    // No authentication found
+    return {
+      success: false,
+      error: 'Authentication required - provide session, API key, or internal JWT',
+    }
+  } catch (error) {
+    logger.error('Error in hybrid authentication:', error)
+    return {
+      success: false,
+      error: 'Authentication error',
+    }
+  }
+}
+
+
+### FILE: index.ts
+export type { AnonymousSession } from './anonymous'
+export { createAnonymousSession, ensureAnonymousUserExists } from './anonymous'
+export { auth, getSession, signIn, signUp } from './auth'
+export { ANONYMOUS_USER, ANONYMOUS_USER_ID } from './constants'
+
+
+### FILE: internal.ts
+import { jwtVerify, SignJWT } from 'jose'
+import { type NextRequest, NextResponse } from 'next/server'
+import { env } from '@/lib/core/config/env'
+import { createLogger } from '@/lib/logs/console/logger'
+
+const logger = createLogger('CronAuth')
+
+const getJwtSecret = () => {
+  const secret = new TextEncoder().encode(env.INTERNAL_API_SECRET)
+  return secret
+}
+
+/**
+ * Generate an internal JWT token for server-side API calls
+ * Token expires in 5 minutes to keep it short-lived
+ * @param userId Optional user ID to embed in token payload
+ */
+export async function generateInternalToken(userId?: string): Promise<string> {
+  const secret = getJwtSecret()
+
+  const payload: { type: string; userId?: string } = { type: 'internal' }
+  if (userId) {
+    payload.userId = userId
+  }
+
+  const token = await new SignJWT(payload)
+    .setProtectedHeader({ alg: 'HS256' })
+    .setIssuedAt()
+    .setExpirationTime('5m')
+    .setIssuer('sim-internal')
+    .setAudience('sim-api')
+    .sign(secret)
+
+  return token
+}
+
+/**
+ * Verify an internal JWT token
+ * Returns verification result with userId if present in token
+ */
+export async function verifyInternalToken(
+  token: string
+): Promise<{ valid: boolean; userId?: string }> {
+  try {
+    const secret = getJwtSecret()
+
+    const { payload } = await jwtVerify(token, secret, {
+      issuer: 'sim-internal',
+      audience: 'sim-api',
+    })
+
+    // Check that it's an internal token
+    if (payload.type === 'internal') {
+      return {
+        valid: true,
+        userId: typeof payload.userId === 'string' ? payload.userId : undefined,
+      }
+    }
+
+    return { valid: false }
+  } catch (error) {
+    // Token verification failed
+    return { valid: false }
+  }
+}
+
+/**
+ * Verify CRON authentication for scheduled API endpoints
+ * Returns null if authorized, or a NextResponse with error if unauthorized
+ */
+export function verifyCronAuth(request: NextRequest, context?: string): NextResponse | null {
+  if (!env.CRON_SECRET) {
+    const contextInfo = context ? ` for ${context}` : ''
+    logger.warn(`CRON endpoint accessed but CRON_SECRET is not configured${contextInfo}`, {
+      ip: request.headers.get('x-forwarded-for') ?? request.headers.get('x-real-ip') ?? 'unknown',
+      userAgent: request.headers.get('user-agent') ?? 'unknown',
+      context,
+    })
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  }
+
+  const authHeader = request.headers.get('authorization')
+  const expectedAuth = `Bearer ${env.CRON_SECRET}`
+  if (authHeader !== expectedAuth) {
+    const contextInfo = context ? ` for ${context}` : ''
+    logger.warn(`Unauthorized CRON access attempt${contextInfo}`, {
+      providedAuth: authHeader,
+      ip: request.headers.get('x-forwarded-for') ?? request.headers.get('x-real-ip') ?? 'unknown',
+      userAgent: request.headers.get('user-agent') ?? 'unknown',
+      context,
+    })
+
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  }
+
+  return null
+}
+
+
+### FILE: sso\constants.ts
+export const SSO_TRUSTED_PROVIDERS = [
+  'okta',
+  'okta-saml',
+  'okta-prod',
+  'okta-dev',
+  'okta-staging',
+  'okta-test',
+  'azure-ad',
+  'azure-active-directory',
+  'azure-corp',
+  'azure-enterprise',
+  'adfs',
+  'adfs-company',
+  'adfs-corp',
+  'adfs-enterprise',
+  'auth0',
+  'auth0-prod',
+  'auth0-dev',
+  'auth0-staging',
+  'onelogin',
+  'onelogin-prod',
+  'onelogin-corp',
+  'jumpcloud',
+  'jumpcloud-prod',
+  'jumpcloud-corp',
+  'ping-identity',
+  'ping-federate',
+  'pingone',
+  'shibboleth',
+  'shibboleth-idp',
+  'google-workspace',
+  'google-sso',
+  'saml',
+  'saml2',
+  'saml-sso',
+  'oidc',
+  'oidc-sso',
+  'openid-connect',
+  'custom-sso',
+  'enterprise-sso',
+  'company-sso',
+]
+

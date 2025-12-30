@@ -1,0 +1,835 @@
+
+### FILE: sso\sso-form.tsx
+'use client'
+
+import { useEffect, useState } from 'react'
+import Link from 'next/link'
+import { useRouter, useSearchParams } from 'next/navigation'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
+import { client } from '@/lib/auth/auth-client'
+import { env, isFalsy } from '@/lib/core/config/env'
+import { cn } from '@/lib/core/utils/cn'
+import { createLogger } from '@/lib/logs/console/logger'
+import { quickValidateEmail } from '@/lib/messaging/email/validation'
+import { inter } from '@/app/_styles/fonts/inter/inter'
+import { soehne } from '@/app/_styles/fonts/soehne/soehne'
+
+const logger = createLogger('SSOForm')
+
+const validateEmailField = (emailValue: string): string[] => {
+  const errors: string[] = []
+
+  if (!emailValue || !emailValue.trim()) {
+    errors.push('Email is required.')
+    return errors
+  }
+
+  const validation = quickValidateEmail(emailValue.trim().toLowerCase())
+  if (!validation.isValid) {
+    errors.push(validation.reason || 'Please enter a valid email address.')
+  }
+
+  return errors
+}
+
+const validateCallbackUrl = (url: string): boolean => {
+  try {
+    if (url.startsWith('/')) {
+      return true
+    }
+
+    const currentOrigin = typeof window !== 'undefined' ? window.location.origin : ''
+    if (url.startsWith(currentOrigin)) {
+      return true
+    }
+
+    return false
+  } catch (error) {
+    logger.error('Error validating callback URL:', { error, url })
+    return false
+  }
+}
+
+export default function SSOForm() {
+  const router = useRouter()
+  const searchParams = useSearchParams()
+  const [isLoading, setIsLoading] = useState(false)
+  const [email, setEmail] = useState('')
+  const [emailErrors, setEmailErrors] = useState<string[]>([])
+  const [showEmailValidationError, setShowEmailValidationError] = useState(false)
+  const [buttonClass, setButtonClass] = useState('auth-button-gradient')
+  const [callbackUrl, setCallbackUrl] = useState('/workspace')
+
+  useEffect(() => {
+    if (searchParams) {
+      const callback = searchParams.get('callbackUrl')
+      if (callback) {
+        if (validateCallbackUrl(callback)) {
+          setCallbackUrl(callback)
+        } else {
+          logger.warn('Invalid callback URL detected and blocked:', { url: callback })
+        }
+      }
+
+      // Pre-fill email if provided in URL (e.g., from deployed chat SSO)
+      const emailParam = searchParams.get('email')
+      if (emailParam) {
+        setEmail(emailParam)
+      }
+
+      // Check for SSO error from redirect
+      const error = searchParams.get('error')
+      if (error) {
+        const errorMessages: Record<string, string> = {
+          account_not_found:
+            'No account found. Please contact your administrator to set up SSO access.',
+          sso_failed: 'SSO authentication failed. Please try again.',
+          invalid_provider: 'SSO provider not configured correctly.',
+        }
+        setEmailErrors([errorMessages[error] || 'SSO authentication failed. Please try again.'])
+        setShowEmailValidationError(true)
+      }
+    }
+
+    const checkCustomBrand = () => {
+      const computedStyle = getComputedStyle(document.documentElement)
+      const brandAccent = computedStyle.getPropertyValue('--brand-accent-hex').trim()
+
+      if (brandAccent && brandAccent !== '#6f3dfa') {
+        setButtonClass('auth-button-custom')
+      } else {
+        setButtonClass('auth-button-gradient')
+      }
+    }
+
+    checkCustomBrand()
+
+    window.addEventListener('resize', checkCustomBrand)
+    const observer = new MutationObserver(checkCustomBrand)
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['style', 'class'],
+    })
+
+    return () => {
+      window.removeEventListener('resize', checkCustomBrand)
+      observer.disconnect()
+    }
+  }, [searchParams])
+
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newEmail = e.target.value
+    setEmail(newEmail)
+
+    const errors = validateEmailField(newEmail)
+    setEmailErrors(errors)
+    setShowEmailValidationError(false)
+  }
+
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    setIsLoading(true)
+
+    const formData = new FormData(e.currentTarget)
+    const emailRaw = formData.get('email') as string
+    const emailValue = emailRaw.trim().toLowerCase()
+
+    const emailValidationErrors = validateEmailField(emailValue)
+    setEmailErrors(emailValidationErrors)
+    setShowEmailValidationError(emailValidationErrors.length > 0)
+
+    if (emailValidationErrors.length > 0) {
+      setIsLoading(false)
+      return
+    }
+
+    try {
+      const safeCallbackUrl = validateCallbackUrl(callbackUrl) ? callbackUrl : '/workspace'
+
+      await client.signIn.sso({
+        email: emailValue,
+        callbackURL: safeCallbackUrl,
+        errorCallbackURL: `/sso?error=sso_failed&callbackUrl=${encodeURIComponent(safeCallbackUrl)}`,
+      })
+    } catch (err) {
+      logger.error('SSO sign-in failed', { error: err, email: emailValue })
+
+      let errorMessage = 'SSO sign-in failed. Please try again.'
+      if (err instanceof Error) {
+        if (err.message.includes('NO_PROVIDER_FOUND')) {
+          errorMessage = 'SSO provider not found. Please check your configuration.'
+        } else if (err.message.includes('INVALID_EMAIL_DOMAIN')) {
+          errorMessage = 'Email domain not configured for SSO. Please contact your administrator.'
+        } else if (err.message.includes('network')) {
+          errorMessage = 'Network error. Please check your connection and try again.'
+        } else if (err.message.includes('rate limit')) {
+          errorMessage = 'Too many requests. Please wait a moment before trying again.'
+        } else if (err.message.includes('SSO_DISABLED')) {
+          errorMessage = 'SSO authentication is disabled. Please use another sign-in method.'
+        } else {
+          errorMessage = err.message
+        }
+      }
+
+      setEmailErrors([errorMessage])
+      setShowEmailValidationError(true)
+      setIsLoading(false)
+    }
+  }
+
+  return (
+    <>
+      <div className='space-y-1 text-center'>
+        <h1 className={`${soehne.className} font-medium text-[32px] text-black tracking-tight`}>
+          Sign in with SSO
+        </h1>
+        <p className={`${inter.className} font-[380] text-[16px] text-muted-foreground`}>
+          Enter your work email to continue
+        </p>
+      </div>
+
+      <form onSubmit={onSubmit} className={`${inter.className} mt-8 space-y-8`}>
+        <div className='space-y-6'>
+          <div className='space-y-2'>
+            <div className='flex items-center justify-between'>
+              <Label htmlFor='email'>Work email</Label>
+            </div>
+            <Input
+              id='email'
+              name='email'
+              placeholder='Enter your work email'
+              required
+              autoCapitalize='none'
+              autoComplete='email'
+              autoCorrect='off'
+              autoFocus
+              value={email}
+              onChange={handleEmailChange}
+              className={cn(
+                'rounded-[10px] shadow-sm transition-colors focus:border-gray-400 focus:ring-2 focus:ring-gray-100',
+                showEmailValidationError &&
+                  emailErrors.length > 0 &&
+                  'border-red-500 focus:border-red-500 focus:ring-red-100 focus-visible:ring-red-500'
+              )}
+            />
+            {showEmailValidationError && emailErrors.length > 0 && (
+              <div className='mt-1 space-y-1 text-red-400 text-xs'>
+                {emailErrors.map((error, index) => (
+                  <p key={index}>{error}</p>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+
+        <Button
+          type='submit'
+          className={`${buttonClass} flex w-full items-center justify-center gap-2 rounded-[10px] border font-medium text-[15px] text-white transition-all duration-200`}
+          disabled={isLoading}
+        >
+          {isLoading ? 'Redirecting to SSO provider...' : 'Continue with SSO'}
+        </Button>
+      </form>
+
+      {/* Only show divider and email signin button if email/password is enabled */}
+      {!isFalsy(env.NEXT_PUBLIC_EMAIL_PASSWORD_SIGNUP_ENABLED) && (
+        <>
+          <div className={`${inter.className} relative my-6 font-light`}>
+            <div className='absolute inset-0 flex items-center'>
+              <div className='auth-divider w-full border-t' />
+            </div>
+            <div className='relative flex justify-center text-sm'>
+              <span className='bg-white px-4 font-[340] text-muted-foreground'>Or</span>
+            </div>
+          </div>
+
+          <div className={`${inter.className} space-y-3`}>
+            <Link
+              href={`/login${callbackUrl ? `?callbackUrl=${encodeURIComponent(callbackUrl)}` : ''}`}
+            >
+              <Button
+                variant='outline'
+                className='w-full rounded-[10px] shadow-sm hover:bg-gray-50'
+                type='button'
+              >
+                Sign in with email
+              </Button>
+            </Link>
+          </div>
+        </>
+      )}
+
+      {/* Only show signup link if email/password signup is enabled */}
+      {!isFalsy(env.NEXT_PUBLIC_EMAIL_PASSWORD_SIGNUP_ENABLED) && (
+        <div className={`${inter.className} pt-6 text-center font-light text-[14px]`}>
+          <span className='font-normal'>Don't have an account? </span>
+          <Link
+            href={`/signup${callbackUrl ? `?callbackUrl=${encodeURIComponent(callbackUrl)}` : ''}`}
+            className='font-medium text-[var(--brand-accent-hex)] underline-offset-4 transition hover:text-[var(--brand-accent-hover-hex)] hover:underline'
+          >
+            Sign up
+          </Link>
+        </div>
+      )}
+
+      <div
+        className={`${inter.className} auth-text-muted absolute right-0 bottom-0 left-0 px-8 pb-8 text-center font-[340] text-[13px] leading-relaxed sm:px-8 md:px-[44px]`}
+      >
+        By signing in, you agree to our{' '}
+        <Link
+          href='/terms'
+          target='_blank'
+          rel='noopener noreferrer'
+          className='auth-link underline-offset-4 transition hover:underline'
+        >
+          Terms of Service
+        </Link>{' '}
+        and{' '}
+        <Link
+          href='/privacy'
+          target='_blank'
+          rel='noopener noreferrer'
+          className='auth-link underline-offset-4 transition hover:underline'
+        >
+          Privacy Policy
+        </Link>
+      </div>
+    </>
+  )
+}
+
+
+### FILE: verify\page.tsx
+import { isEmailVerificationEnabled, isProd } from '@/lib/core/config/feature-flags'
+import { hasEmailService } from '@/lib/messaging/email/mailer'
+import { VerifyContent } from '@/app/(auth)/verify/verify-content'
+
+export const dynamic = 'force-dynamic'
+
+export default function VerifyPage() {
+  const emailServiceConfigured = hasEmailService()
+
+  return (
+    <VerifyContent
+      hasEmailService={emailServiceConfigured}
+      isProduction={isProd}
+      isEmailVerificationEnabled={isEmailVerificationEnabled}
+    />
+  )
+}
+
+
+### FILE: verify\use-verification.ts
+'use client'
+
+import { useEffect, useState } from 'react'
+import { useRouter, useSearchParams } from 'next/navigation'
+import { client, useSession } from '@/lib/auth/auth-client'
+import { createLogger } from '@/lib/logs/console/logger'
+
+const logger = createLogger('useVerification')
+
+interface UseVerificationParams {
+  hasEmailService: boolean
+  isProduction: boolean
+  isEmailVerificationEnabled: boolean
+}
+
+interface UseVerificationReturn {
+  otp: string
+  email: string
+  isLoading: boolean
+  isVerified: boolean
+  isInvalidOtp: boolean
+  errorMessage: string
+  isOtpComplete: boolean
+  hasEmailService: boolean
+  isProduction: boolean
+  isEmailVerificationEnabled: boolean
+  verifyCode: () => Promise<void>
+  resendCode: () => void
+  handleOtpChange: (value: string) => void
+}
+
+export function useVerification({
+  hasEmailService,
+  isProduction,
+  isEmailVerificationEnabled,
+}: UseVerificationParams): UseVerificationReturn {
+  const router = useRouter()
+  const searchParams = useSearchParams()
+  const { refetch: refetchSession } = useSession()
+  const [otp, setOtp] = useState('')
+  const [email, setEmail] = useState('')
+  const [isLoading, setIsLoading] = useState(false)
+  const [isVerified, setIsVerified] = useState(false)
+  const [isSendingInitialOtp, setIsSendingInitialOtp] = useState(false)
+  const [isInvalidOtp, setIsInvalidOtp] = useState(false)
+  const [errorMessage, setErrorMessage] = useState('')
+  const [redirectUrl, setRedirectUrl] = useState<string | null>(null)
+  const [isInviteFlow, setIsInviteFlow] = useState(false)
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const storedEmail = sessionStorage.getItem('verificationEmail')
+      if (storedEmail) {
+        setEmail(storedEmail)
+      }
+
+      const storedRedirectUrl = sessionStorage.getItem('inviteRedirectUrl')
+      if (storedRedirectUrl) {
+        setRedirectUrl(storedRedirectUrl)
+      }
+
+      const storedIsInviteFlow = sessionStorage.getItem('isInviteFlow')
+      if (storedIsInviteFlow === 'true') {
+        setIsInviteFlow(true)
+      }
+    }
+
+    const redirectParam = searchParams.get('redirectAfter')
+    if (redirectParam) {
+      setRedirectUrl(redirectParam)
+    }
+
+    const inviteFlowParam = searchParams.get('invite_flow')
+    if (inviteFlowParam === 'true') {
+      setIsInviteFlow(true)
+    }
+  }, [searchParams])
+
+  useEffect(() => {
+    if (email && !isSendingInitialOtp && hasEmailService) {
+      setIsSendingInitialOtp(true)
+    }
+  }, [email, isSendingInitialOtp, hasEmailService])
+
+  const isOtpComplete = otp.length === 6
+
+  async function verifyCode() {
+    if (!isOtpComplete || !email) return
+
+    setIsLoading(true)
+    setIsInvalidOtp(false)
+    setErrorMessage('')
+
+    try {
+      const normalizedEmail = email.trim().toLowerCase()
+      const response = await client.signIn.emailOtp({
+        email: normalizedEmail,
+        otp,
+      })
+
+      if (response && !response.error) {
+        setIsVerified(true)
+
+        try {
+          await refetchSession()
+        } catch (e) {
+          logger.warn('Failed to refetch session after verification', e)
+        }
+
+        if (typeof window !== 'undefined') {
+          sessionStorage.removeItem('verificationEmail')
+
+          if (isInviteFlow) {
+            sessionStorage.removeItem('inviteRedirectUrl')
+            sessionStorage.removeItem('isInviteFlow')
+          }
+        }
+
+        setTimeout(() => {
+          if (isInviteFlow && redirectUrl) {
+            window.location.href = redirectUrl
+          } else {
+            window.location.href = '/workspace'
+          }
+        }, 1000)
+      } else {
+        logger.info('Setting invalid OTP state - API error response')
+        const message = 'Invalid verification code. Please check and try again.'
+        setIsInvalidOtp(true)
+        setErrorMessage(message)
+        logger.info('Error state after API error:', {
+          isInvalidOtp: true,
+          errorMessage: message,
+        })
+        setOtp('')
+      }
+    } catch (error: any) {
+      let message = 'Verification failed. Please check your code and try again.'
+
+      if (error.message?.includes('expired')) {
+        message = 'The verification code has expired. Please request a new one.'
+      } else if (error.message?.includes('invalid')) {
+        logger.info('Setting invalid OTP state - caught error')
+        message = 'Invalid verification code. Please check and try again.'
+      } else if (error.message?.includes('attempts')) {
+        message = 'Too many failed attempts. Please request a new code.'
+      }
+
+      setIsInvalidOtp(true)
+      setErrorMessage(message)
+      logger.info('Error state after caught error:', {
+        isInvalidOtp: true,
+        errorMessage: message,
+      })
+
+      setOtp('')
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
+  function resendCode() {
+    if (!email || !hasEmailService || !isEmailVerificationEnabled) return
+
+    setIsLoading(true)
+    setErrorMessage('')
+
+    const normalizedEmail = email.trim().toLowerCase()
+    client.emailOtp
+      .sendVerificationOtp({
+        email: normalizedEmail,
+        type: 'sign-in',
+      })
+      .then(() => {})
+      .catch(() => {
+        setErrorMessage('Failed to resend verification code. Please try again later.')
+      })
+      .finally(() => {
+        setIsLoading(false)
+      })
+  }
+
+  function handleOtpChange(value: string) {
+    if (value.length === 6) {
+      setIsInvalidOtp(false)
+      setErrorMessage('')
+    }
+    setOtp(value)
+  }
+
+  useEffect(() => {
+    if (otp.length === 6 && email && !isLoading && !isVerified) {
+      const timeoutId = setTimeout(() => {
+        verifyCode()
+      }, 300)
+
+      return () => clearTimeout(timeoutId)
+    }
+  }, [otp, email, isLoading, isVerified])
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      if (!isEmailVerificationEnabled) {
+        setIsVerified(true)
+
+        const handleRedirect = async () => {
+          try {
+            await refetchSession()
+          } catch (error) {
+            logger.warn('Failed to refetch session during verification skip:', error)
+          }
+
+          if (isInviteFlow && redirectUrl) {
+            window.location.href = redirectUrl
+          } else {
+            router.push('/workspace')
+          }
+        }
+
+        handleRedirect()
+      }
+    }
+  }, [isEmailVerificationEnabled, router, isInviteFlow, redirectUrl])
+
+  return {
+    otp,
+    email,
+    isLoading,
+    isVerified,
+    isInvalidOtp,
+    errorMessage,
+    isOtpComplete,
+    hasEmailService,
+    isProduction,
+    isEmailVerificationEnabled,
+    verifyCode,
+    resendCode,
+    handleOtpChange,
+  }
+}
+
+
+### FILE: verify\verify-content.tsx
+'use client'
+
+import { Suspense, useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation'
+import { Button } from '@/components/ui/button'
+import { InputOTP, InputOTPGroup, InputOTPSlot } from '@/components/ui/input-otp'
+import { cn } from '@/lib/core/utils/cn'
+import { inter } from '@/app/_styles/fonts/inter/inter'
+import { soehne } from '@/app/_styles/fonts/soehne/soehne'
+import { useVerification } from '@/app/(auth)/verify/use-verification'
+
+interface VerifyContentProps {
+  hasEmailService: boolean
+  isProduction: boolean
+  isEmailVerificationEnabled: boolean
+}
+
+function VerificationForm({
+  hasEmailService,
+  isProduction,
+  isEmailVerificationEnabled,
+}: {
+  hasEmailService: boolean
+  isProduction: boolean
+  isEmailVerificationEnabled: boolean
+}) {
+  const {
+    otp,
+    email,
+    isLoading,
+    isVerified,
+    isInvalidOtp,
+    errorMessage,
+    isOtpComplete,
+    verifyCode,
+    resendCode,
+    handleOtpChange,
+  } = useVerification({ hasEmailService, isProduction, isEmailVerificationEnabled })
+
+  const [countdown, setCountdown] = useState(0)
+  const [isResendDisabled, setIsResendDisabled] = useState(false)
+
+  useEffect(() => {
+    if (countdown > 0) {
+      const timer = setTimeout(() => setCountdown(countdown - 1), 1000)
+      return () => clearTimeout(timer)
+    }
+    if (countdown === 0 && isResendDisabled) {
+      setIsResendDisabled(false)
+    }
+  }, [countdown, isResendDisabled])
+
+  const router = useRouter()
+
+  const handleResend = () => {
+    resendCode()
+    setIsResendDisabled(true)
+    setCountdown(30)
+  }
+
+  const [buttonClass, setButtonClass] = useState('auth-button-gradient')
+
+  useEffect(() => {
+    const checkCustomBrand = () => {
+      const computedStyle = getComputedStyle(document.documentElement)
+      const brandAccent = computedStyle.getPropertyValue('--brand-accent-hex').trim()
+
+      if (brandAccent && brandAccent !== '#6f3dfa') {
+        setButtonClass('auth-button-custom')
+      } else {
+        setButtonClass('auth-button-gradient')
+      }
+    }
+
+    checkCustomBrand()
+
+    window.addEventListener('resize', checkCustomBrand)
+    const observer = new MutationObserver(checkCustomBrand)
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['style', 'class'],
+    })
+
+    return () => {
+      window.removeEventListener('resize', checkCustomBrand)
+      observer.disconnect()
+    }
+  }, [])
+
+  return (
+    <>
+      <div className='space-y-1 text-center'>
+        <h1 className={`${soehne.className} font-medium text-[32px] text-black tracking-tight`}>
+          {isVerified ? 'Email Verified!' : 'Verify Your Email'}
+        </h1>
+        <p className={`${inter.className} font-[380] text-[16px] text-muted-foreground`}>
+          {isVerified
+            ? 'Your email has been verified. Redirecting to dashboard...'
+            : !isEmailVerificationEnabled
+              ? 'Email verification is disabled. Redirecting to dashboard...'
+              : hasEmailService
+                ? `A verification code has been sent to ${email || 'your email'}`
+                : !isProduction
+                  ? 'Development mode: Check your console logs for the verification code'
+                  : 'Error: Email verification is enabled but no email service is configured'}
+        </p>
+      </div>
+
+      {!isVerified && isEmailVerificationEnabled && (
+        <div className={`${inter.className} mt-8 space-y-8`}>
+          <div className='space-y-6'>
+            <p className='text-center text-muted-foreground text-sm'>
+              Enter the 6-digit code to verify your account.
+              {hasEmailService ? " If you don't see it in your inbox, check your spam folder." : ''}
+            </p>
+
+            <div className='flex justify-center'>
+              <InputOTP
+                maxLength={6}
+                value={otp}
+                onChange={handleOtpChange}
+                disabled={isLoading}
+                className={cn('gap-2', isInvalidOtp && 'otp-error')}
+              >
+                <InputOTPGroup className='[&>div]:!rounded-[10px] gap-2'>
+                  <InputOTPSlot
+                    index={0}
+                    className={cn(
+                      '!rounded-[10px] h-12 w-12 border bg-white text-center font-medium text-lg shadow-sm transition-all duration-200',
+                      'border-gray-300 hover:border-gray-400',
+                      'focus:border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-100',
+                      isInvalidOtp && 'border-red-500 focus:border-red-500 focus:ring-red-100'
+                    )}
+                  />
+                  <InputOTPSlot
+                    index={1}
+                    className={cn(
+                      '!rounded-[10px] h-12 w-12 border bg-white text-center font-medium text-lg shadow-sm transition-all duration-200',
+                      'border-gray-300 hover:border-gray-400',
+                      'focus:border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-100',
+                      isInvalidOtp && 'border-red-500 focus:border-red-500 focus:ring-red-100'
+                    )}
+                  />
+                  <InputOTPSlot
+                    index={2}
+                    className={cn(
+                      '!rounded-[10px] h-12 w-12 border bg-white text-center font-medium text-lg shadow-sm transition-all duration-200',
+                      'border-gray-300 hover:border-gray-400',
+                      'focus:border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-100',
+                      isInvalidOtp && 'border-red-500 focus:border-red-500 focus:ring-red-100'
+                    )}
+                  />
+                  <InputOTPSlot
+                    index={3}
+                    className={cn(
+                      '!rounded-[10px] h-12 w-12 border bg-white text-center font-medium text-lg shadow-sm transition-all duration-200',
+                      'border-gray-300 hover:border-gray-400',
+                      'focus:border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-100',
+                      isInvalidOtp && 'border-red-500 focus:border-red-500 focus:ring-red-100'
+                    )}
+                  />
+                  <InputOTPSlot
+                    index={4}
+                    className={cn(
+                      '!rounded-[10px] h-12 w-12 border bg-white text-center font-medium text-lg shadow-sm transition-all duration-200',
+                      'border-gray-300 hover:border-gray-400',
+                      'focus:border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-100',
+                      isInvalidOtp && 'border-red-500 focus:border-red-500 focus:ring-red-100'
+                    )}
+                  />
+                  <InputOTPSlot
+                    index={5}
+                    className={cn(
+                      '!rounded-[10px] h-12 w-12 border bg-white text-center font-medium text-lg shadow-sm transition-all duration-200',
+                      'border-gray-300 hover:border-gray-400',
+                      'focus:border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-100',
+                      isInvalidOtp && 'border-red-500 focus:border-red-500 focus:ring-red-100'
+                    )}
+                  />
+                </InputOTPGroup>
+              </InputOTP>
+            </div>
+
+            {/* Error message */}
+            {errorMessage && (
+              <div className='mt-1 space-y-1 text-center text-red-400 text-xs'>
+                <p>{errorMessage}</p>
+              </div>
+            )}
+          </div>
+
+          <Button
+            onClick={verifyCode}
+            className={`${buttonClass} flex w-full items-center justify-center gap-2 rounded-[10px] border font-medium text-[15px] text-white transition-all duration-200`}
+            disabled={!isOtpComplete || isLoading}
+          >
+            {isLoading ? 'Verifying...' : 'Verify Email'}
+          </Button>
+
+          {hasEmailService && (
+            <div className='text-center'>
+              <p className='text-muted-foreground text-sm'>
+                Didn't receive a code?{' '}
+                {countdown > 0 ? (
+                  <span>
+                    Resend in <span className='font-medium text-foreground'>{countdown}s</span>
+                  </span>
+                ) : (
+                  <button
+                    className='font-medium text-[var(--brand-accent-hex)] underline-offset-4 transition hover:text-[var(--brand-accent-hover-hex)] hover:underline'
+                    onClick={handleResend}
+                    disabled={isLoading || isResendDisabled}
+                  >
+                    Resend
+                  </button>
+                )}
+              </p>
+            </div>
+          )}
+
+          <div className='text-center font-light text-[14px]'>
+            <button
+              onClick={() => {
+                if (typeof window !== 'undefined') {
+                  sessionStorage.removeItem('verificationEmail')
+                  sessionStorage.removeItem('inviteRedirectUrl')
+                  sessionStorage.removeItem('isInviteFlow')
+                }
+                router.push('/signup')
+              }}
+              className='font-medium text-[var(--brand-accent-hex)] underline-offset-4 transition hover:text-[var(--brand-accent-hover-hex)] hover:underline'
+            >
+              Back to signup
+            </button>
+          </div>
+        </div>
+      )}
+    </>
+  )
+}
+
+function VerificationFormFallback() {
+  return (
+    <div className='text-center'>
+      <div className='animate-pulse'>
+        <div className='mx-auto mb-4 h-8 w-48 rounded bg-gray-200' />
+        <div className='mx-auto h-4 w-64 rounded bg-gray-200' />
+      </div>
+    </div>
+  )
+}
+
+export function VerifyContent({
+  hasEmailService,
+  isProduction,
+  isEmailVerificationEnabled,
+}: VerifyContentProps) {
+  return (
+    <Suspense fallback={<VerificationFormFallback />}>
+      <VerificationForm
+        hasEmailService={hasEmailService}
+        isProduction={isProduction}
+        isEmailVerificationEnabled={isEmailVerificationEnabled}
+      />
+    </Suspense>
+  )
+}
+
