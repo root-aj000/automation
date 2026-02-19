@@ -29,6 +29,50 @@ export const tsvector = customType<{
   },
 })
 
+
+// ============================= Enums =============================
+export const notificationTypeEnum = pgEnum('notification_type', ['webhook', 'email', 'slack'])
+
+export const notificationDeliveryStatusEnum = pgEnum('notification_delivery_status', [
+  'pending',
+  'in_progress',
+  'success',
+  'failed',
+])
+
+export const usageLogCategoryEnum = pgEnum('usage_log_category', ['model', 'fixed'])
+export const usageLogSourceEnum = pgEnum('usage_log_source', ['workflow', 'wand', 'copilot'])
+
+
+export const billingBlockedReasonEnum = pgEnum('billing_blocked_reason', [
+  'payment_failed',
+  'dispute',
+])
+
+export const permissionTypeEnum = pgEnum('permission_type', ['admin', 'write', 'read'])
+
+export const workspaceInvitationStatusEnum = pgEnum('workspace_invitation_status', [
+  'pending',
+  'accepted',
+  'rejected',
+  'cancelled',
+])
+
+export const templateStatusEnum = pgEnum('template_status', ['pending', 'approved', 'rejected'])
+export const templateCreatorTypeEnum = pgEnum('template_creator_type', ['user', 'organization'])
+
+
+
+
+
+
+
+
+
+
+
+
+
 export const user = pgTable('user', {
   id: text('id').primaryKey(),
   name: text('name').notNull(),
@@ -543,14 +587,7 @@ export const webhook = pgTable(
   }
 )
 
-export const notificationTypeEnum = pgEnum('notification_type', ['webhook', 'email', 'slack'])
 
-export const notificationDeliveryStatusEnum = pgEnum('notification_delivery_status', [
-  'pending',
-  'in_progress',
-  'success',
-  'failed',
-])
 
 export const workspaceNotificationSubscription = pgTable(
   'workspace_notification_subscription',
@@ -658,10 +695,7 @@ export const apiKey = pgTable(
   })
 )
 
-export const billingBlockedReasonEnum = pgEnum('billing_blocked_reason', [
-  'payment_failed',
-  'dispute',
-])
+
 
 export const userStats = pgTable('user_stats', {
   id: text('id').primaryKey(),
@@ -905,14 +939,7 @@ export const workspaceFiles = pgTable(
   })
 )
 
-export const permissionTypeEnum = pgEnum('permission_type', ['admin', 'write', 'read'])
 
-export const workspaceInvitationStatusEnum = pgEnum('workspace_invitation_status', [
-  'pending',
-  'accepted',
-  'rejected',
-  'cancelled',
-])
 
 export type WorkspaceInvitationStatus = (typeof workspaceInvitationStatusEnum.enumValues)[number]
 
@@ -1428,8 +1455,7 @@ export const workflowCheckpoints = pgTable(
   })
 )
 
-export const templateStatusEnum = pgEnum('template_status', ['pending', 'approved', 'rejected'])
-export const templateCreatorTypeEnum = pgEnum('template_creator_type', ['user', 'organization'])
+
 
 export const templateCreators = pgTable(
   'template_creators',
@@ -1743,8 +1769,7 @@ export const workflowMcpTool = pgTable(
   })
 )
 
-export const usageLogCategoryEnum = pgEnum('usage_log_category', ['model', 'fixed'])
-export const usageLogSourceEnum = pgEnum('usage_log_source', ['workflow', 'wand', 'copilot'])
+
 
 export const usageLog = pgTable(
   'usage_log',
